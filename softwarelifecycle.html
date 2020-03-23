@@ -10,6 +10,7 @@
 	<meta name="keywords" content="Eclipse Free BIRD Tools" />
 	<meta name="author" content="Neil Mackenzie" />
 
+
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -51,14 +52,14 @@
 
 	</head>
 	<body>
-		
+
 	<div class="gtco-loader"></div>
-	
+
 	<div id="page">
 
 		<nav class="gtco-nav" role="navigation">
 			<div class="gtco-container">
-				
+
 				<div class="row">
 					<div class="col-sm-2 col-xs-12">
 						<div id="gtco-logo"><a href="index.html">Eclipse Free BIRD Tools</a></div>
@@ -71,7 +72,7 @@
 						</ul>
 					</div>
 				</div>
-				
+
 			</div>
 		</nav>
 
@@ -83,8 +84,8 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin">Task Focussed</h1>
-										<p>Save time where you spend the most time.</p>
+										<h1 class="no-margin">Supporting the Tasks of the Software Lifecycle</h1>
+										<p>Task Focussed Development, Debug , Testing , and Change Management</p>
 									</div>
 								</div>
 							</div>
@@ -95,59 +96,62 @@
 		</header>
 		<!-- END #gtco-header -->
 
-		
+
 
 		<div class="gtco-section">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
-						<h2>Tool support for your most common tasks.</h2>
-						<p>The goal of Eclipse Free BIRD Tools is to be a task oriented environment , providing  the maximum tool support possible in completing the common time consuming tasks to be done while developing, changing , or using a regulatory calculation engine written  using VTL and SMCubes, such as BIRD.<br><br>
-							The goal is to speed up the tasks, and this is the overriding principle in the entire design of Eclipse Free BIRD Tools.<br><br>
-							The tools focus on collaboration, supporting the software lifecycle, and the task of data mapping from banking systems.
-							<br>
-					
-						</p>
+						<h2>Task Focussed Development, Debug , Testing , and Change Management</h2>
+						<p>Eclipse Free BIRD Tools is designed to provide maximum tool support for the common tasks in development, debug , testing , and change management of programs written with VTL and SMCubes.<br> 
+<h3>Development</h3>
+The  <a href="tfalm.html">task-focussed attribute lineage model</a> gives  us a fine grained view of dependencies between artifacts such as report cells and columns. <br><br>
+It also allows us to exclude the hundreds or thousands of  elements (report cells, calculation, intermediate columns, input layer columns) which are not  related to our task.<br><br>
+
+This allows us to answer questions such as <br>
+<ul>
+		<li>Which report cells will be affected if I change this line of VTL code?</li>					
+		<li>Which report cells will be affected if  I delete or change the name of this input column?</li>
+
+						</ul>
+  <br>
+
+<h3>Debugging</h3> 
+The  <a href="tfdlm.html">task-focussed data lineage model</a> gives us a fine grained view of the numbers and transactions used to calculate a value in a report cell.<br><br>
+It also allows us to exclude the thousands or millions of elements (report cells, calculations, intermediate results, input layer column values) which are not relevant to our task.<br><br>
+The data lineage model follows the familiar concepts of basic spreadsheets with  formula.<br><br>
+
+This allows us to answer questions such as 
+<ul>
+		<li>How is the value 10 in report cell X calculated?</li>					
+		<li>Which individual transactions and which numbers from those transactions went into making report cell X populated as 10? </li>
+</ul>
+  <br> 
+<h3>Testing</h3>.
+Our  <a href="tfdlm.html">testing model</a> allow us to answer  questions such as 
+<ul>
+		<li>Which business  concepts and scenarios are being tested by this  test?</li>					
+		<li>Which sections of regulatory text are being checked in this test? </li>
+		<li>What percentage of the code base are my tests covering? </li>
+</ul>
+<br> 
+<h3>Change management</h3>
+Our fine grained  <a href="tfalm.html">task-focussed attribute lineage model</a> of dependencies can be compared between versions of a program to answer questions such as 
+<ul>
+		<li>Which report cells have zero change in their calculation between version x and version y of a VTL program?</li>					
+		<li>Did the usage of a particular  column in the input layer change between 2 versions of a VTL/SMCubes program? </li>
+</ul>
+						
+						
 					</div>
-				</div>
-				<div class="row">
-
-					<div class="col-md-12">
-						<div class="owl-carousel owl-carousel-carousel">
-							<div class="item">
-								<div class="gtco-item">
-									<a href=collaboration.html><img src="images/img_1.jpg" alt="" class="img-responsive"></a>
-									<h2><a href="collaboration.html">Task-Focussed Collaboration</a></h2>
-									<p class="role">Task-Focussed Collaboration</p>
-								</div>
-							</div>
-							<div class="item">
-								<div class="gtco-item">
-									<a href="softwarelifecycle.html"><img src="images/img_2.jpg" alt="" class="img-responsive"></a>
-									<h2><a href="softwarelifecycle.html">Supporting the Tasks of the Software Lifecycle</a></h2>
-									<p class="role">Task-Focussed Development, Debug , Testing , and Change Management</p>
-								</div>
-							</div>
-
-							<div class="item">
-								<div class="gtco-item">
-									<a href="datamapping.html"><img src="images/img_1.jpg" alt="" class="img-responsive"></a>
-									<h2><a href="datamapping.html">Task-Focussed Data Mapping </a></h2>
-									<p class="role">Task-Focussed Data Mapping</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</div>
 		<!-- END .gtco-services -->
 
-		
 
-		
+
+
 
 		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
 
@@ -170,7 +174,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
