@@ -10,6 +10,7 @@
 	<meta name="keywords" content="Eclipse Free BIRD Tools" />
 	<meta name="author" content="Neil Mackenzie" />
 
+
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -51,45 +52,40 @@
 
 	</head>
 	<body>
-		
+
 	<div class="gtco-loader"></div>
-	
+
 	<div id="page">
 
 		<nav class="gtco-nav" role="navigation">
 			<div class="gtco-container">
-				
+
 				<div class="row">
 					<div class="col-sm-2 col-xs-12">
 						<div id="gtco-logo"><a href="index.html">Eclipse Free BIRD Tools</a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-
 <li><a href="opensource.html">Open Source</a></li>					
 <li><a href="model_driven.html">Model Driven</a></li>
-<li><a href="componentbased.html">Component Based</a></li>		
-							
-							
+<li><a href="componentbased.html">Component Based</a></li>	
 						</ul>
 					</div>
 				</div>
-				
+
 			</div>
 		</nav>
 
-		<header id="gtco-header" class="gtco-cover" role="banner">
+		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-left">
 						<div class="display-t">
 							<div class="display-tc">
 								<div class="row">
-									<div class="col-md-5 text-center header-img animate-box">
-										
-									</div>
-									<div class="col-md-7 copy animate-box">
-										<h1>Open Source, Model Driven , Component Based Tools for BIRD.</h1>
+									<div class="col-md-8 animate-box">
+										<h1 class="no-margin">Model Driven</h1>
+										<p>Model Driven</p>
 									</div>
 								</div>
 							</div>
@@ -100,48 +96,44 @@
 		</header>
 		<!-- END #gtco-header -->
 
-		<div class="gtco-client">
 
-		</div>
-		<!-- END .gtco-client -->
 
-		<div class="gtco-services gtco-section">
+		<div class="gtco-section">
 			<div class="gtco-container">
-				<div class="row row-pb-sm">
-					<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-						<h2>What is BIRD</h2>
-						<p><a href="https://youtu.be/CUreE2REzvA" class="btn btn-special popup-vimeo">Watch The Video</a></p>
-					</div>
-				</div>
-				<div class="row row-pb-md">
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-ruler-pencil"></i> <a href="taskfocussed.html">Task Focussed</a></h3>
-							<p>The primary goal of Eclipse Free BIRD Tools is to be a task oriented environment , providing  the maximum tool support possible in completing the common time consuming tasks to be done while developing, changing , or using a regulatory calculation engine written  using VTL and SMCubes, such as BIRD.</p>
-						</div>
-					</div>
-					
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-pie-chart"></i><a href="model_driven.html">Model Driven</a></h3>
-							<p>Eclipse Free BIRD Tools is driven by a  set of clear open  models designed specifically to enable regulatory tasks.</p>
-	
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-settings"></i><a href="componentbased.html">Component Based</a></h3>
-							<p>Being components based it is possible to choose just the components that you need, maybe you want your own visualization, but want to re-use the VTL engine, that is fine.</p>
-					</div>
-					</div>
-					
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
+						<h2>Model Driven</h2>
+						<p>At the core of Eclipse Free BIRD Tools are its models, each of these models can be described both as UML Class diagrams, Or Ecore Class Diagrams (Ecore is a standard for Model Driven Engineering) <br><br>
+Here is the SMCubes  model as UML ,which says amongst other things , that a VARIABLE is associated with one domain, and that a MEMBER is associated with one DOMAIN. <br>
+<img src="core_class_diagram.png" alt="" height="600" width="800"> <br>
+A ‘model instance’ is a concrete instance of some classes (e.g. a VARIABLE with the name attribute set to ‘CountryOfResidence’ with an associated Domain Object with a name attribute set to ‘Countries’) . <br> <br>
+Instances of the models can be stored as XML, and can be loaded into memory as in memory objects. <br> <br>
+The model transformation components in EFBT transform these instances of these models in to instances of other models , this is highlighted in this diagram <br>
+<img src="process_focus.PNG" alt="" height="300" width="600"> <br>
 
-					<div class="clearfix visible-md-block visible-sm-block"></div>
+The model visualization components of EFBT allow us to visualize instances of the model from different points of view.
 
+The sets of models in the application are as follows
+<ul>
+<li><a href="smcubes.html">SMCubes</a></li>					
+<li><a href="inputdatamodels.html">Input Data Models</a></li>
+<li><a href="tfalm.html">Task-Focussed Attribute Lineage Models</a></li>
+<li><a href="tfdlm.html">Task-Focussed Data Lineage Models</a></li>
+<li><a href="testingmodels.html">Testing Models</a></li>
+</ul>
+
+							</p>
+						
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- END .gtco-services -->
+
+
+
+
+
 		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
 
 			<div class="gtco-copyright">
@@ -163,7 +155,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
