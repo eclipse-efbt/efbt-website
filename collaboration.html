@@ -84,8 +84,8 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin">Task Focussed Collaboration</h1>
-										<p>Track tasks and collaborate on tasks</p>
+										<h1 class="no-margin">Collaboration</h1>
+										
 									</div>
 								</div>
 							</div>
@@ -102,29 +102,39 @@
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
-						<h2>Track tasks and collaborate on tasks</h2>
-						<p>Eclipse Free BIRD Tools is designed to integrate well with standard collaborative software such as Github.<br> 
-This allows the tracking, discussion, and review of tasks.<br><br>
-Using SMCube models stored as XML files and Testing Models we can also track which actual files that were changed  to complete  a task and also track :
+						<h2>Introduction</h2>
+						Using Eclipse Free BIRD Tools means that transformation developers, domain experts, and testers, can interact with the SAME instances of the SAME model, stored in one place.<br><br>
+We do not need that testers artefacts are all stored in  Excel, Data modellers and Developers artefacts in an  AcessDB, and  domain experts in  Visio.<br><br>
+We appreciate that these are useful tools, and export and import tools  provide different representations to be maintained (such as Access DB, SQLDeveloper, Excel). <br><br>
+We wish that there is one artefact where by we are immediately informed when the action of one discipline (say a data modeller deletes a column from a cube) has  consequences to tests (that use  that column in input data) and transformations (that use that column)<br><br>
+Different visualisations of the model can highlight  the aspect of the model which is most relevant to a particular discipline like testing.<br><br>
 
-<ul>
-							<li>Who changed them</li>
-							<li>Why they were changed</li>
-							<li>Who reviewed and approved the change</li>							
-							<li>Which test tested the change.</li>
-							<li>Does the test still pass.</li>
-						</ul>
-						
-						<br> 
+It is essential for the for swift collaborative development of the BIRD that BIRD tools can integrate with standard collaborative software such as Source control (Git /SVN) and Issue trackers (JIRA/RedMine) and  Continuous integration tools for Automated Testing(Jenkins/Team City/Bamboo). <br>
+This allows for organised  progress to be made without waiting for all parties to be available in a meeting whichis a major project blocker.<br><br>
+We address this integration with 3 features.<br><br>
 
- 
+<h3>BIRDSON</h3>
+The core of EFBT is a set of UML models, such as SMCubes.<br><br> 
+We need a way to describe instances (also known as objects) of these models such as specific Variables or Domains in the SMCubes Model like NotionalValue or Country.<br><br>
+Currently we do this by creating a specific XML Schema Definition from the UML for describing this.<br><br>
+ We have visual tools which focus on creating and manipulating the instances of the Model, and then persist them into this XML format.<br><br>
+  However, for source control and comparison of versions a persisted text version which is easier to read than XML would be better. <br><br>
+For this purpose we introduce BIRDSON (BIRD Simple Object Notation) which is based upon the popular JSON format (Java Script Object  Notation). <br><br>BIRDSON is almost identical to Eclipse ESON , which is a notation for describing Ecore models in a JSON style format. <br><br>
 
-<br><br>	These videos gives an example of code review and integration with an issue tracker and source control using SMCubes XML.
-					    <br>
+<h3>Testing DSL</h3>
+We have a Domain Specific Language for describing Tests using the popular Gherkin language for testing which is summarised as "Given" , "When" , "Then" clauses. <br> <br>
+The testing DSL allows us to put constraints on a class of tests, then, choose specifically constrained parts of the entire model for parameters of the clauses. <br><br>
+Test Data is also provided in line with  the Input Data UML Model , which is linked to the SMCubes Data Structures model.<br><br>
+This means that if the model changes (for example we change delete a column in a Cube structure) then we are told immediately if a Test is affected because it refers to that element  of the model.<br><br>
+As the Tests are parameterised by a few variables, we can create a GRID of coverage for each class of Tests.<br><br>
+<h3>Functionality modules</h3>
+In the Functional Design UML model we provide a way for domain experts to describe the functional design as a breakdown of functional modules, and the different scenarios of execution.<br><br> 
+ The modules and scenarios can be linked to  the precise parts of the regulatory text (Such as CRR) which is also stored in the Requirements UML model. <br><br> 
+As tests can refer to other parts of the model, this means that tests can then be linked to specific modules and scenarios also, allowing a navigation and strict link between domain experts functional design and the test descriptions. This promotes better communication and coverage.<br><br> 
 
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/D-BdZVTW_bM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/eo2CT55zIls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
+Here is an example of part of the Market Risk FRTB processing from CRR2 described as a model and visualised with Eclipse Sirius.</h3></h3>
+<img src="FF_FRTB_vis.png" alt="" height="600" width="800"> <br>
+
 						
 					</div>
 				</div>
