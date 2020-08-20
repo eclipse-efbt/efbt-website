@@ -68,7 +68,7 @@
 						<ul>
 <li><a href="opensource.html">Open Source</a></li>					
 <li><a href="model_driven.html">Model Driven</a></li>
-<li><a href="componentbased.html">Component Based</a></li>	
+<li><a href="collaboration.html">Collaborative</a></li>	
 						</ul>
 					</div>
 				</div>
@@ -131,22 +131,22 @@ Typically, we split this API in to Model Queries and more advanced manipulations
 <h3>Reference Implementation with UI</h3>
 We provide an implementation of the models , model queries, component API, and models in Java, in particular we use the Eclipse  Modelling Framework, which describes models using the Ecore standard.<br><br>
  Ecore is an implementation of the EMOF Standard for model driven engineering, provided by the Object Management Group who also manage the UML Standard.<br><br>
-We provide a visual User interface based on Eclipse Sirius model visualization tool. Other user interfaces could be built on top of the Technology independent UI.<br><br>
+We provide a visual user interface based on Eclipse Sirius model visualization tool. Other user interfaces could be built on top of the technology independent API.<br><br>
 
-<h3>Full lineage</h3>
-EFBT will provide a translator from VTL and VTL++ to an Attribte Lineage Model which describes at a very fine level the dependency between the variables of transformed datasets and their source datasets. <br>
+<h3>Full Lineage</h3>
+EFBT will provide a translator from VTL and VTL++ to an Attribute Lineage Model which describes at a very fine level the dependency between the variables of transformed datasets and their source datasets. <br>
 The Attribute Lineage Model contains all the information required to run a VTL or VTL++ engine, and we foresee runtimes being built for the Attribute Lineage Model.<br><br>
 
 <h3>Logical Data Model Ready:</h3>
 		 
 		<h4>SQLDeveloper to Ecore Translator</h4>
-			The SQLDeveloper to Ecore Translator allows us to translate a Logical Data Model written in SQLDeveloper, into a model defined in the Open source Ecore standard. <br><br>
-			There are multiple open source libraries based around the Ecore standard for visualization, text representation, model comparison, model management , model transformation(e.g. to another standard like SDD\SMCubes standard)<br><br>
+			The SQLDeveloper to Ecore Translator allows us to translate a Logical Data Model written in SQLDeveloper, into a model defined in the open-source Ecore standard. <br><br>
+			There are multiple open source libraries based around the Ecore standard for visualization, text representation, model comparison, model management , model transformation (e.g. to another standard like SDD\SMCubes standard)<br><br>
 		<h4>Forward Engineering with VTL Migration</h4>
- 			Using the Eclipse  Edapt open source library for forward engineering Models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD logical Data Model, while at the same time generating equivalent  VTL transformation to translate  data from the forward engineered model into the Logical Data Model. This can complement a set of VTL Transformations which start from the Logical Data Model.<br><br>
+ 			Using the Eclipse  Edapt open source library for forward engineering models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD Logical Data Model, while at the same time generating equivalent  VTL transformation to translate  data from the forward engineered model into the Logical Data Model (and vice versa). This can complement a set of VTL Transformations which start from the Logical Data Model.<br><br>
 		<h4>LDM Text navigator</h4>
  			 An important advantage of using a text based version of the model is that we can have very detailed version control, using standard tools such as git which have great tools support in code editors. <br><br>
-We  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current Large subway map of squares and lines. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>
+We use  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current large subway map of squares and lines. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>
 The XCore text representing an Ecore model is generated at the click of a button.<br><br>
 <h4>VTL++ </h4>
 			VTL++ is a small addition to VTL to make it easier to deal with structures like the LDM that include subtypes, this small change can make for much more concise transformations in BIRD which are more flexible as data structures change. <br>
