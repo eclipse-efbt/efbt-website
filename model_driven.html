@@ -118,41 +118,41 @@ Eclipse Free BIRD Tools focusses on producing a UML model for 8 different compon
 
 </ul><br>
 	
-	Note that the UML for data structures is basically the same as the UML of SMCubes and the UML of the BIRD Logical Datamodel.<br>
+	Note that the UML for data structures is basically the same as the UML of SMCubes and the UML of the BIRD Logical Data Model.<br>
 An example of the UML for one component is here:<br>
 <img src="core_class_diagram.png" alt="" height="600" width="800"> <br>
 A ‘model instance’ is a concrete instance of some classes (e.g. a VARIABLE with the name attribute set to ‘CountryOfResidence’ with an associated Domain Object with a name attribute set to ‘Countries’) . <br> <br>
 Instances of the models can be stored as XML or BIRDSON, and can be loaded into memory as in memory objects. <br> <br>
 
-<h3>Technology independent API </h3>
-For each UML model we provide an API of useful functions around that model, for example providing the results of queries on that model to a UI, or translating from one model to another (e.g. translating a VTL language program to a Lineage model). <br>
-Typically, we split this API in to Model Queries and more advanced manipulations which we call the component API.<br><br>
+<h3>Technology-Independent API </h3>
+For each UML model we provide an API of useful functions around that model, for example providing the results of queries on that model (e.g. to provide to a UI), or translating from one model to another (e.g. translating a VTL language program to a lineage model). <br>
+Typically, we split this API in to model queries and more advanced manipulations which we call the component API.<br><br>
 
 <h3>Reference Implementation with UI</h3>
 We provide an implementation of the models , model queries, component API, and models in Java, in particular we use the Eclipse  Modelling Framework, which describes models using the Ecore standard.<br><br>
- Ecore is an implementation of the EMOF Standard for model driven engineering, provided by the Object Management Group who also manage the UML Standard.<br><br>
+ Ecore is an implementation of the EMOF standard for model driven engineering, provided by the Object Management Group who also manage the UML Standard.<br><br>
 We provide a visual user interface based on Eclipse Sirius model visualization tool. Other user interfaces could be built on top of the technology independent API.<br><br>
 
 <h3>Full Lineage</h3>
-EFBT will provide a translator from VTL and VTL++ to an Attribute Lineage Model which describes at a very fine level the dependency between the variables of transformed datasets and their source datasets. <br>
-The Attribute Lineage Model contains all the information required to run a VTL or VTL++ engine, and we foresee runtimes being built for the Attribute Lineage Model.<br><br>
+Eclipse Free BIRD Tools will provide a translator from VTL and VTL++ to an attribute lineage model which describes at a very fine level the dependency between the variables of transformed datasets and their source datasets. <br>
+The attribute lineage model contains all the information required to run a VTL or VTL++ program, and we foresee runtimes being built for the attribute lineage model.<br><br>
 
 <h3>Logical Data Model Ready:</h3>
 		 
 		<h4>SQLDeveloper to Ecore Translator</h4>
 			The SQLDeveloper to Ecore Translator allows us to translate a Logical Data Model written in SQLDeveloper, into a model defined in the open-source Ecore standard. <br><br>
-			There are multiple open source libraries based around the Ecore standard for visualization, text representation, model comparison, model management , model transformation (e.g. to another standard like SDD\SMCubes standard)<br><br>
+			There are multiple open source libraries based around the Ecore standard for visualization, text representation, model comparison, model management , model transformation (e.g. to another standard like SDD\SMCubes )<br><br>
 		<h4>Forward Engineering with VTL Migration</h4>
- 			Using the Eclipse  Edapt open source library for forward engineering models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD Logical Data Model, while at the same time generating equivalent  VTL transformation to translate  data from the forward engineered model into the Logical Data Model (and vice versa). This can complement a set of VTL Transformations which start from the Logical Data Model.<br><br>
-		<h4>LDM Text navigator</h4>
+ 			Using the Eclipse  Edapt open source library for forward engineering models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD Logical Data Model, while at the same time generating equivalent  VTL transformations to translate  data from the forward engineered model into the Logical Data Model (and vice versa). This can complement a set of VTL transformations which start from the Logical Data Model.<br><br>
+		<h4>Logical Data Model Text Navigator</h4>
  			 An important advantage of using a text based version of the model is that we can have very detailed version control, using standard tools such as git which have great tools support in code editors. <br><br>
-We use  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current large subway map of squares and lines. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>
+We use  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current very large diagram. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>
 The XCore text representing an Ecore model is generated at the click of a button.<br><br>
 <h4>VTL++ </h4>
-			VTL++ is a small addition to VTL to make it easier to deal with structures like the LDM that include subtypes, this small change can make for much more concise transformations in BIRD which are more flexible as data structures change. <br>
-			The changes are the addition of Structs and Arrays which are part of the SQL99 standard, and a very simple approach to subtyping which is easy to work with . <br><br>
+			VTL++ is a small addition to VTL to make it easier to deal with structures like the Logical Data Model which include subtypes, this small change can make for much more concise transformations in BIRD which are more flexible as data structures change. <br>
+			The changes are the addition of structs and arrays which are part of the SQL99 standard, and a very simple approach to subtyping which is easy to work with . <br><br>
 			An existing  open language called TRL (Traceable Reporting Language), which is very similar to VTL  and uses SMCubes as its data structures, already has these features, and has a translator to an advanced lineage model which shows the relevant lineage of programs. <br>
-			TRL can be considered as a Proof Of Concept for  VTL++, and we will use experience from TRL to create VTL. <br><br>
+			TRL can be considered as a Proof Of Concept for  VTL++, and we will use experience from TRL to create VTL++. <br><br>
 			Any VTL++ engine will also be able to execute VTL as VTL is a subset of VTL++<br><br>
 We show here a visualization of the lineage model derived from a  TRL program:<br><br>
 <img src="fullPicWithTracability.PNG" alt="" height="600" width="800"> <br>
