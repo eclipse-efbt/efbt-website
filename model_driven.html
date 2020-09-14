@@ -66,9 +66,11 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-<li><a href="opensource.html">Open Source</a></li>					
-<li><a href="model_driven.html">Model Driven</a></li>
+<li><a href="opensource.html">Open Source</a></li>		
 <li><a href="collaboration.html">Collaborative</a></li>	
+<li><a href="calculation.html">Calculation</a></li>				
+<li><a href="model_driven.html">Model</a></li>
+<li><a href="ldm.html">LDM Tools</a></li>
 						</ul>
 					</div>
 				</div>
@@ -84,8 +86,8 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin">Model Driven</h1>
-										<p>Model Driven</p>
+										<h1 class="no-margin">Model</h1>
+										<p>Model</p>
 									</div>
 								</div>
 							</div>
@@ -102,44 +104,41 @@
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
-						<h2>Model Driven</h2>
+						<h2>Model</h2>
 					
 <h3>UML</h3>
-Eclipse Free BIRD Tools focusses on producing a UML model for 8 different components required for a working BIRD Solution, these are:<br><br>
+CoCaMo is a model, its defined as UML class diagrams and has documentation for each class and attribute, it has no operations.<br><br>
+We build up model instances, they are stored as CoCaSon files. <br><br>
+CoCoMo focusses on 4 different parts of the model:<br><br>
 <ul>
 <li>Requirements</li> 
 <li>Functional design</li>
-<li>Data Structures</li>
-<li>Input Data</li>
-<li>Language (VTL)</li>
-<li>Lineage</li>
 <li>Testing</li>
-<li>Controller (managing requests which may need to access more than one model)</li>
-
 </ul><br>
+
+CoCoMo for SMCubes adds the following parts to the model: <br><br>
+
+<ul>
+<li>Data Structures (defined by SMCubes)</li>
+<li>Input Data (which matches the dat structures)</li>
+	</ul><br>
 	
-	Note that the UML for data structures is basically the same as the UML of SMCubes and the UML of the BIRD Logical Data Model.<br>
-An example of the UML for one component is here:<br>
+	Note that the input data can be linked to tests. input data is linked to data structures, requirements are linked to functional design, and functional design is linked to tests.<br><br>
+	Note that the UML for data structures is basically the same as the UML of SMCubes .<br><br>
+An example of the UML for SMCubes is here:<br>
 <img src="core_class_diagram.png" alt="" height="600" width="800"> <br>
 A ‘model instance’ is a concrete instance of some classes (e.g. a VARIABLE with the name attribute set to ‘CountryOfResidence’ with an associated Domain Object with a name attribute set to ‘Countries’) . <br> <br>
-Instances of the models can be stored as XML or BIRDSON, and can be loaded into memory as in memory objects. <br> <br>
+Instances of the models can be stored as CoCaSon, and can be loaded into memory as in memory objects. <br> <br>
 
 <h3>Technology-Independent API </h3>
-For each UML model we provide an API of useful functions around that model, for example providing the results of queries on that model (e.g. to provide to a UI), or translating from one model to another (e.g. translating a VTL language program to a lineage model). <br>
-Typically, we split this API in to model queries and more advanced manipulations which we call the component API.<br><br>
+For each UML model we provide an API of useful functions around that model, for example providing the results of queries on that model (e.g. to provide to a UI), or translating from one model to another . <br><br>
+Typically, we split this API into model queries and more advanced manipulations which we call the component API.<br><br>
 
 <h3>Reference Implementation with UI</h3>
 We provide an implementation of the models , model queries, component API, and models in Java, in particular we use the Eclipse  Modelling Framework, which describes models using the Ecore standard.<br><br>
  Ecore is an implementation of the EMOF standard for model driven engineering, provided by the Object Management Group who also manage the UML Standard.<br><br>
 We provide a visual user interface based on Eclipse Sirius model visualization tool. Other user interfaces could be built on top of the technology independent API.<br><br>
 
-<h3>Full Lineage</h3>
-Eclipse Free BIRD Tools will provide a translator from VTL and VTL++ to an attribute lineage model which describes at a very fine level the dependency between the variables of transformed datasets and their source datasets. <br>
-The attribute lineage model contains all the information required to run a VTL or VTL++ program, and we foresee runtimes being built for the attribute lineage model.<br><br>
-
-<h3>Compatible with the Open-Source Eurostat VTL engine</h3>
-Data Structres and Test Data described in BIRDSON format, can be translated to input to the  Eurostat VTL Engine.
-This provides an alternative runtime to using a runtime for an attribute lineage model.
 
 <br><br>
 <h3>Logical Data Model Ready:</h3>
@@ -148,7 +147,7 @@ This provides an alternative runtime to using a runtime for an attribute lineage
 			The SQLDeveloper to Ecore Translator allows us to translate a Logical Data Model written in SQLDeveloper, into a model defined in the open-source Ecore standard. <br><br>
 			There are multiple open source libraries based around the Ecore standard for visualization, text representation, model comparison, model management , model transformation (e.g. to another standard like SDD\SMCubes )<br><br>
 		<h4>Forward Engineering with VTL Migration</h4>
- 			Using the Eclipse  Edapt open source library for forward engineering models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD Logical Data Model, while at the same time generating equivalent  VTL transformations to translate  data from the forward engineered model into the Logical Data Model (and vice versa). This can complement a set of VTL transformations which start from the Logical Data Model.<br><br>
+ 			Using the Eclipse  Edapt open source library for forward engineering models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD Logical Data Model, while at the same time generating equivalent transformations to translate  data from the forward engineered model into the Logical Data Model (and vice versa). This can complement a set of  transformations which start from the Logical Data Model.<br><br>
 		<h4>Logical Data Model Text Navigator</h4>
  			 An important advantage of using a text based version of the model is that we can have very detailed version control, using standard tools such as git which have great tools support in code editors. <br><br>
 We use  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current very large diagram. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>

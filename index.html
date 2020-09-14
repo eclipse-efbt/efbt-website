@@ -66,11 +66,12 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 
-<li><a href="opensource.html">Open Source</a></li>					
-<li><a href="model_driven.html">Model Driven</a></li>
-<li><a href="collaboration.html">Collaborative</a></li>		
-							
-							
+<li><a href="opensource.html">Open Source</a></li>		
+<li><a href="collaboration.html">Collaborative</a></li>	
+<li><a href="calculation.html">Calculation</a></li>				
+<li><a href="model_driven.html">Model</a></li>
+<li><a href="ldm.html">LDM Tools</a></li>	
+	
 						</ul>
 					</div>
 				</div>
@@ -109,29 +110,48 @@
 			<div class="gtco-container">
 				<div class="row row-pb-sm">
 					<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-						<h2>What is BIRD</h2>
+						<h2>What is BIRD?</h2>
 						<p><a href="https://youtu.be/CUreE2REzvA" class="btn btn-special popup-vimeo">Watch The Video</a></p>
 					</div>
-				</div>
+					</div>
+					 <h3>Introduction</h3> 
+					 <p>At the core of Eclipse Free BIRD Tools is CoCaMo, this is a Collaborative Calculation Model. <br><br>
+					 CoCaMo is used to provide one common model for calculation, to be used between different disciplines, specifically data modellers, developers, testers and domain experts. <br><br>
+					 An extension to CoCaMo called  “CoCaMo for SMCubes” is used to support the European Central Banks’ BIRD project. <br> <br>
+					 Aside from CoCaMo for SMCubes, Eclipse Free BIRD Tools also provides a set of tools to work with the Logical Data Model for BIRD. <br><br>
+					 </p>
+				 <h3> What is CoCaMo?</h3>
+				<p>From experience in the creation of calculation engines for regulatory logic we often find the following situation where different disciplines all store their knowledge 
+				in different formats and tools which cannot interact.  Like this:<br><br>
+				<img src="cocamoPicture2.png" alt="" height="600" width="800"> <br><br>
+				Therefore things get lost in translation.<br><br>
+				Also when a data modellers changes the data model (for example to rename a column or attribute), there is no immediate communication  that this affects another discipline ,
+				such as a test or computation which uses that attribute/column. <br><br>
+				In CoCaMo all disciplines store their information in one model like this:
+				<br><br>
+				<img src="cocamoPicture1.png" alt="" height="600" width="800"> <br><br>
+				More detail is provided below on the different aspects of CoCaMo.<br>
+				
 				<div class="row row-pb-md">
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
-							<h3><i class="ti-ruler-pencil"></i> <a href="opensource.html">Open Source</a></h3>
-							<p>The Eclipse Free BIRD Tools project is an open source project governed by the Eclipse Foundation.</p>
+							<h3><i class="ti-ruler-pencil"></i> <a href="collaboration.html">Collaborative</a></h3>
+							<p>CoCaSon (Collaborative Calculation Simple Object Notation) provides an easy to understand text representation for instances of the Collaborative Calculation Model, 
+							familiar to users of JSON, and easy to use  with collaborative software for source control and issue tracking. </p>
 						</div>
 					</div>
 					
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
-							<h3><i class="ti-pie-chart"></i><a href="model_driven.html">Model Driven</a></h3>
-							<p>Eclipse Free BIRD Tools is driven by a  set of clear open  models designed specifically to enable regulatory tasks.</p>
+							<h3><i class="ti-pie-chart"></i><a href="calculation.html">Calculation</a></h3>
+							<p>CoCaMo aims to be integratable with calculation languages such as  the VTL language for describing transformations in BIRD.</p>
 	
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
-							<h3><i class="ti-settings"></i><a href="collaboration.html">Collaborative</a></h3>
-							<p>Eclipse Free BIRD Tools enable collaboration regardless of location and timezone.</p>
+							<h3><i class="ti-settings"></i><a href="model_driven.html">Model</a></h3>
+							<p>CoCaMo is a model, its defined as a UML class diagram, and has documentation for each class and attribute, it has no operations.</p>
 					</div>
 					</div>
 					

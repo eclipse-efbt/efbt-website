@@ -66,9 +66,11 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-<li><a href="opensource.html">Open Source</a></li>					
-<li><a href="model_driven.html">Model Driven</a></li>
-<li><a href="collaboration.html">Collaborative</a></li>		
+<li><a href="opensource.html">Open Source</a></li>		
+<li><a href="collaboration.html">Collaborative</a></li>	
+<li><a href="calculation.html">Calculation</a></li>				
+<li><a href="model_driven.html">Model</a></li>
+<li><a href="ldm.html">LDM Tools</a></li>	
 						</ul>
 					</div>
 				</div>
@@ -103,40 +105,24 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
 						<h2>Introduction</h2>
-						Using Eclipse Free BIRD Tools means that transformation developers, domain experts, data modellers, and testers, can interact with the SAME instances of the SAME model, stored in one place.<br><br>
-We do not need that testers artefacts are all stored in  Excel, Data modellers and Developers artefacts in an  AcessDB, and  domain experts in  Visio.<br><br>
-We appreciate that these are useful tools, and export and import tools  allow different representations of the model to be maintained (such as Access DB, SQLDeveloper, Excel). <br><br>
-We wish that there is one artefact whereby we are immediately informed when the action of one discipline (say a data modeller deletes a column from a cube) has  consequences to tests (that use  that column in input data) and transformations (that use that column)<br><br>
-Different visualisations of the model can highlight  the aspect of the model which is most relevant to a particular discipline like testing.<br><br>
-
-It is essential for the for swift collaborative development of the BIRD that BIRD tools can integrate with standard collaborative software such as source control (Git /SVN) and issue trackers (JIRA/Github Issues) and  continuous integration tools for automated testing (Jenkins/Team City/Bamboo). <br>
-This allows for organised  progress to be made without waiting for all parties to be available in a meeting which is a major project blocker.<br><br>
-We address this integration with 3 features:<br><br>
-
-<h3>BIRDSON</h3>
-The core of Eclipse Free BIRD Tools is a set of UML models, such as SMCubes.<br><br> 
-We need a way to describe instances (also known as objects) of these models such as specific Variables or Domains in the SMCubes model like NotionalValue or Country.<br><br>
-Currently we do this by creating a specific XML Schema Definition from the UML for describing this.<br><br>
- We have visual tools which focus on creating and manipulating the instances of the model, and then persist them into this XML format.<br><br>
-  However, for source control and comparison of versions a persisted text version which is easier to read than XML would be better. <br><br>
-For this purpose we introduce BIRDSON (BIRD Simple Object Notation) which is based upon the popular JSON format (Java Script Object  Notation). <br><br>BIRDSON is almost identical to Eclipse ESON , which is a notation for describing Ecore models in a JSON style format. <br><br>
-Since BIRDSON and ESON are decribed using Eclipse XText they have autocompletion an automatic validation available in modern code editors such as VSCode<br><br>
-
-<h3>Testing DSL</h3>
-We have a Domain Specific Language for describing tests using the popular Gherkin language for testing which is summarised as "Given" , "When" , "Then" clauses. <br> <br>
-The testing DSL allows us to put constraints on a class of tests, then, choose specifically constrained parts of the entire model for parameters of the clauses. <br><br>
-Test Data is also provided in line with  the Input Data UML Model , which is linked to the SMCubes Data Structures model.<br><br>
-This means that if the model changes (for example we change or delete a column in a Cube structure) then we are told immediately if a test is affected because it refers to that element  of the model.<br><br>
-As the Tests are parameterised by a few variables, we can create a grid of coverage for each class of tests.<br><br>
-<h3>Functionality modules</h3>
-In the Functional Design UML model we provide a way for domain experts to describe the functional design as a breakdown of functional modules, and the different scenarios of execution.<br><br> 
-The modules and scenarios can be linked to  the precise parts of the regulatory text (Such as CRR) which is also stored in the Requirements UML model. <br><br> 
-As tests can refer to other parts of the model, this means that tests can then be linked to specific modules and scenarios also, allowing a navigation and strict link between domain experts functional design and the test descriptions. This promotes better communication and coverage.<br><br> 
-
-Here is an example of part of the Market Risk FRTB processing from CRR2 described as a model and visualised with Eclipse Sirius.</h3></h3>
-<img src="FF_FRTB_vis.png" alt="" height="600" width="800"> <br>
-
+						CoCaMo is used to provide one common model for calculations and their data models and requirements and tests and functional design. <br>
+						<br>This single model  can  be used by  different disciplines, specifically data modellers, developers, testers and domain experts. <br><br>
+						Links are maintained between relevant parts of the model, e.g. which tests test which part of the design, or which elements of the datamodel are used in which tests. <br><br>
+						The model is defined using UML class diagrams, more information on the model can be found <a href="model_driven.html">here</a>. <br><br>
 						
+						Users from these disciplines build up an instance of the model. <br><br>
+						Sometimes this is referred to an object graph of the model.<br><br>
+						Each discipline is given its own visual  tools to view and interact with the instance of the model in a way that is useful and familiar for that discipline.<br><br>
+						 We say that each discipline has its own Viewpoint on the model.  <br><br>
+The instance of the model is stored into files using a textual notation called CoCaSon, which stands for Collaborative Calculation Simple Object Notation.
+<br><br> CoCaSon is very similar to the popular format JSON (JavaScript Object Notation). <br>
+It is easy to understand, and we have CoCaSon editors which give great validation and auto-complete of text using context assist. 
+<br><br>These editors follow a specification called the language server protocol which means that they can be used from different code editors such 
+as Eclipse , VSCode, or web based Theia.<br><br>
+ Those code editors provide excellent integration with different source control (e.g Git) and issue management systems (e.g. Jira)
+  for effective collaboration, allowing for excellent management of CoCaSon files, allowing the tracking of changes, 
+ who changed what and why, and if desired, who reviewed or approved a change.<br><br>
+
 					</div>
 				</div>
 			</div>
