@@ -141,26 +141,6 @@ We provide a visual user interface based on Eclipse Sirius model visualization t
 
 
 <br><br>
-<h3>Logical Data Model Ready:</h3>
-		 
-		<h4>SQLDeveloper to Ecore Translator</h4>
-			The SQLDeveloper to Ecore Translator allows us to translate a Logical Data Model written in SQLDeveloper, into a model defined in the open-source Ecore standard. <br><br>
-			There are multiple open source libraries based around the Ecore standard for visualization, text representation, model comparison, model management , model transformation (e.g. to another standard like SDD\SMCubes )<br><br>
-		<h4>Forward Engineering with VTL Migration</h4>
- 			Using the Eclipse  Edapt open source library for forward engineering models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD Logical Data Model, while at the same time generating equivalent transformations to translate  data from the forward engineered model into the Logical Data Model (and vice versa). This can complement a set of  transformations which start from the Logical Data Model.<br><br>
-		<h4>Logical Data Model Text Navigator</h4>
- 			 An important advantage of using a text based version of the model is that we can have very detailed version control, using standard tools such as git which have great tools support in code editors. <br><br>
-We use  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current very large diagram. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>
-The XCore text representing an Ecore model is generated at the click of a button.<br><br>
-<h4>VTL++ </h4>
-			VTL++ is a small addition to VTL to make it easier to deal with structures like the Logical Data Model which include subtypes, this small change can make for much more concise transformations in BIRD which are more flexible as data structures change. <br>
-			The changes are the addition of structs and arrays which are part of the SQL99 standard, and a very simple approach to subtyping which is easy to work with . <br><br>
-			An existing  open language called TRL (Traceable Reporting Language), which is very similar to VTL  and uses SMCubes as its data structures, already has these features, and has a translator to an advanced lineage model which shows the relevant lineage of programs. <br>
-			TRL can be considered as a Proof Of Concept for  VTL++, and we will use experience from TRL to create VTL++. <br><br>
-			Any VTL++ engine will also be able to execute VTL as VTL is a subset of VTL++<br><br>
-We show here a visualization of the lineage model derived from a  TRL program:<br><br>
-<img src="fullPicWithTracability.PNG" alt="" height="600" width="800"> <br>
- <br>
 
 
 
