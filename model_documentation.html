@@ -63,18 +63,7 @@
 					<div class="col-sm-2 col-xs-12">
 						<div id="gtco-logo"><a href="model_documentation.html">Model Documentation</a></div>
 					</div>
-					<div class="col-xs-10 text-right menu-1">
-						<ul>
-
-<li><a href="module_management.html">Module Management</a></li>					
-<li><a href="core.html">Core</a></li>
-<li><a href="data_definition.html">Data Definition</a></li>	
-<li><a href="efbt_data_definition.html">EFBT Data Definition</a></li>		
-<li><a href="smcubes.html">SMCubes</a></li>			
-							
-							
-						</ul>
-					</div>
+				
 				</div>
 				
 			</div>
@@ -109,8 +98,70 @@
 
 		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
-				
-				
+				<div class="row row-pb-sm">
+					
+					</div>
+					 <h3>Introduction</h3> 
+					 <p>The core of CoCaMo is a UML model. To facilitate easy understanding this model is split into multiple sections (packages).<br><br>
+					 For each package we have  a UML class diagram, and a set of documentation for each attribute and association of the class diagram. 
+					 We note that their are no operations in the class diagrams. <br><br>
+					 Each package may have some references to other classes in other packages. To keep our UML class diagrams concise we deal with this in the following fashion.<br><br>
+					 1.) If a class has a superclass from another package, then we include that superclass in the class diagram, it will be grey and have an arrow in the top right corner,
+ like the Module class in the efbt_data_definition package. <br><br>
+					 2.) If a class has an association or composition relationship with a class from another package, then we record this like an attribute with attribute type being the class from the other package ,
+					  for example in the data_definition package, the class CUBE_STRUCTURE_ITEM has an association with MEMBER, which is represented as member_id:MEMBER. 
+					  Annotated next to this will be the cardinality such as 0..* (for zero to many), if there is no such annotation this implies a 1 to 1 relationship. 
+					  The annotation does not show if the relationship is is an association or composition, 
+					   however that information is available by looking at the references section of the documentation which  shows the word  Containment if the relationship is a composition.<br><br>
+					 3.) In the package documentation we show the association, composition , or inheritance using hyper links. <br>
+					 The hyper links to classes in different packages do not yet work as this documentation is automatically generated.<br><br>
+					  
+					  </p>
+				 <h3> The Packages, Diagrams and Documentation</h3>
+				<p> *Note that this is not yet the complete set.
+
+
+<table style="width:100%">
+  <tr>
+    <th style="text-align:left">Name</th>
+    <th style="text-align:left">Class Diagram</th>
+    <th style="text-align:left">Documentation</th>
+  </tr>
+  <tr>
+    <td>Core</td>
+    <td><a href="core.jpg">UML Class Diagram</a></td>
+      <td><a href="core.html">Documentation</a></td>
+  </tr>
+  <tr>
+    <td>Data Definition</td>
+    <td><a href="data_definition.jpg">UML Class Diagram</a></td>
+      <td><a href="data_definition.html">Documentation</a>
+  </tr>
+  <tr>
+    <td>EFBT Data Definition</td>
+    <td><a href="efbt_data_definition.jpg">UML Class Diagram</a></td>
+      <td><a href="efbt_data_definition.html">Documentation</a></td>
+  </tr>
+ 
+ <tr>
+    <td>SM Cubes</td>
+    <td><a href="smcubes_model.jpg">UML Class Diagram</a></td>
+      <td><a href="smcubes_model.html">Documentation</a></td>
+  </tr>
+ 
+ <tr>
+    <td>Module Management</td>
+    <td><a href="module_management.jpg">UML Class Diagram</a></td>
+      <td><a href="module_management.html">Documentation</a></td>
+  </tr>
+</table>
+
+
+	
+
+
+			
+			
 			</div>
 		</div>
 		<!-- END .gtco-services -->
