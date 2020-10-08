@@ -119,12 +119,12 @@
 We use  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current very large diagram. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>
 The XCore text representing an Ecore model is generated at the click of a button.<br><br>
 <h4>SparkSQL for LDM</h4>
-			SparkSQL is a language based on SQL 199 standard which included ways of dealing with more structured data (particularly structs and arrays).<br><br>
+			SparkSQL is a language based on SQL 1999 standard which included ways of dealing with more structured data (particularly structs and arrays).<br><br>
 			SparkSQL can run on the popular Apache Spark analytics engine.<br><br>
 			Like VTL, SparkSQL focusses on chaining together dataset transformations which are immutable and side effect free, 
 			this makes transformations easier to test and easier to run in a fast and parallel fashion.<br><br>
 			The goal of SparkSQL for LDM is to allow more concise transformations, by allowing a component (column) of an intermediate dataset to
-			be a full entity (like an instrument) instead of only primitve types (numbers, strings and enumrations), and also to allow for
+			be a full entity (like an instrument) instead of only primitive types (numbers, strings and enumerations), and also to allow for
 			differentiating behaviour based on subtypes, but done in a way that is intuitive to users of SQL (hence allowing for some useful levels of abstraction).<br><br>
 We show here a visualization of the kind of lineage model that we wish to derive from a SparkSQL program: <br><br>
 <img src="fullPicWithTracability.PNG" alt="" height="600" width="800"> <br>
