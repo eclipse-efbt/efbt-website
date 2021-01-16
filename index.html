@@ -68,9 +68,11 @@
 
 <li><a href="opensource.html">Open Source</a></li>		
 <li><a href="collaboration.html">Collaborative</a></li>	
-<li><a href="calculation.html">Calculation</a></li>				
+<li><a href="calculation.html">Calculation</a></li>	
+<li><a href="lineage.html">Lineage</a></li>				
 <li><a href="model_driven.html">Model</a></li>
 <li><a href="ldm.html">LDM Tools</a></li>	
+<li><a href="testing.html">Testing Tools</a></li>	
 	
 						</ul>
 					</div>
@@ -115,22 +117,22 @@
 					</div>
 					</div>
 					 <h3>Introduction</h3> 
-					 <p>At the core of Eclipse Free BIRD Tools is CoCaMo, this is a Collaborative Calculation Model. <br><br>
-					 CoCaMo is used to provide one common model for calculation, to be used between different disciplines, specifically data modellers, developers, testers and domain experts. <br><br>
-					 An extension to CoCaMo called  “CoCaMo for SMCubes” is used to support the European Central Banks’ BIRD project. <br> <br>
-					 Aside from CoCaMo for SMCubes, Eclipse Free BIRD Tools also provides a set of tools to work with the Logical Data Model for BIRD. <br><br>
+					 <p>At the core of Eclipse Free BIRD Tools is CoCaLiMo, this is a Collaborative Calculation Lineage Model. <br><br>
+					 CoCaLiMo is used to provide one common model for calculation, to be used between different disciplines, specifically data modellers, developers, testers and domain experts. <br><br>
+					 An extension to CoCaLiMo called 'CoCaLiMo for SMCubes' is used to support the European Central Banks' BIRD project. <br> <br>
+					 Aside from CoCaLiMo for SMCubes, Eclipse Free BIRD Tools also provides a set of tools to work with the Logical Data Model for BIRD. <br><br>
 					 </p>
-				 <h3> What is CoCaMo?</h3>
+				 <h3> What is CoCaLiMo?</h3>
 				<p>From experience in the creation of calculation engines for regulatory logic we often find the following situation where different disciplines all store their knowledge 
 				in different formats and tools which cannot interact.  Like this:<br><br>
-				<img src="cocamoPicture2.png" alt="" height="600" width="800"> <br><br>
+				<img src="CoCaMoPicture2.png" alt="" height="600" width="800"> <br><br>
 				Therefore things get lost in translation.<br><br>
 				Also when a data modellers changes the data model (for example to rename a column or attribute), there is no immediate communication  that this affects another discipline ,
 				such as a test or computation which uses that attribute/column. <br><br>
-				In CoCaMo all disciplines store their information in one model like this:
+				In CoCaLiMo all disciplines store their information in one model like this:
 				<br><br>
-				<img src="cocamoPicture1.png" alt="" height="600" width="800"> <br><br>
-				More detail is provided below on the different aspects of CoCaMo.<br>
+				<img src="CoCaMoPicture1.png" alt="" height="600" width="800"> <br><br>
+				More detail is provided below on the different aspects of CoCaLiMo.<br>
 				
 				<div class="row row-pb-md">
 					<div class="col-md-4 col-sm-4 service-wrap">
@@ -144,14 +146,23 @@
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
 							<h3><i class="ti-pie-chart"></i><a href="calculation.html">Calculation</a></h3>
-							<p>CoCaMo aims to be integratable with calculation languages such as  the VTL language for describing transformations in BIRD.</p>
+							<p>CoCaLiMo aims to be integratable with calculation languages such as  the VTL language for describing transformations in BIRD.</p>
 	
 						</div>
 					</div>
+					
+					<div class="col-md-4 col-sm-4 service-wrap">
+						<div class="service">
+							<h3><i class="ti-pie-chart"></i><a href="lineage.html">Lineage</a></h3>
+							<p>CoCaLiMo aims to track the lineage between regulatory artefacts like regulatory rule book text, regulatory tests, and data models</p>
+	
+						</div>
+					</div>
+					
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
 							<h3><i class="ti-settings"></i><a href="model_driven.html">Model</a></h3>
-							<p>CoCaMo is a model, its defined as a UML class diagram, and has documentation for each class and attribute, it has no operations.</p>
+							<p>CoCaLiMo is a model, its defined as a UML class diagram, and has documentation for each class and attribute, it has no operations.</p>
 					</div>
 					</div>
 					

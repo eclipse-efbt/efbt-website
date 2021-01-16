@@ -88,8 +88,8 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin">LDM Tools</h1>
-										<p>LDM Tools</p>
+										<h1 class="no-margin">AORTA</h1>
+										<p>An Open Regulatory Testing Architecture</p>
 									</div>
 								</div>
 							</div>
@@ -106,23 +106,31 @@
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
-						<h2>LDM Tools</h2>
+						
 					
 
-<h3>Logical Data Model Tools</h3>
+<h3>Open Standards For Testing Regulatory Calculations</h3>
 		 
-		<h4>SQLDeveloper to Ecore Translator</h4>
-			The SQLDeveloper to Ecore Translator allows us to translate a Logical Data Model written in SQLDeveloper, into a model defined in the open-source Ecore standard. <br><br>
-			There are multiple open source libraries based around the Ecore standard for visualization, text representation, model comparison, model management , model transformation (e.g. to another standard like SDD\SMCubes )<br><br>
-		<h4>Forward Engineering with VTL Migration</h4>
- 			Using the Eclipse  Edapt open source library for forward engineering models, and migrating model data, we look to provide a solution whereby we can easily define forward engineering of the  BIRD Logical Data Model, while at the same time generating equivalent  transformations to translate  data from the forward engineered model into the Logical Data Model (and vice versa). <br><br>
-		<h4>Logical Data Model Text Navigator</h4>
- 			 An important advantage of using a text based version of the model is that we can have very detailed version control, using standard tools such as git which have great tools support in code editors. <br><br>
-We use  Eclipse Xcore as a means of describing and navigating models in a means that is easier than navigating the current very large diagram. As Eclipse XCore uses Eclipse Xtext , and Eclipse XText supports the language server protocol, the we can integrate this with any code editor that works with the language server protocol, such as Microsoft VSCode and Eclipse Theia or Eclipse IDE.<br><br>
-The XCore text representing an Ecore model is generated at the click of a button.<br><br>
-
+		AORTA provides open standards for defining regulatory test scenarios, and regulatory test data and results. <br><br>
+		AORTA is built on top of CoCaLiMo and provides lineage from regulatory rulebook text, to regulatory scenarios definitions, via high level functional descriptions of regulations which are easy for domain experts to create. <br><br>
+		AORTA provides some standard means for defining input test data. In the first instance two input formats are supported, data that matches BIRD SMCubes format, and data that Matches BIRD's Logical Data Model format. In both cases we describe this data with a version of CaCaSon for easy source control and comparison of versions. <br><br>
+		AORTA provides a standard means for defining expected results, re-using BIRD's format for defining regulatory reports.<br><br>
+		AORTA provides organised measurable coverage for regulatory tests scenarios.<br><br>
+		Different user interfaces can be built on top of this standard, but the artefacts stored to files will always follow the single standard so they can be accessed by different compatible tools.<br><br> 
+		
+		Below is an example of the high level functional description for FRTB curvature interest rate curvature processing. <br><br>
+		The description acts as a colour coded  functional breakdown.<br><br>
+		For example behaviour inside brown boxes (parallel modules) can be run in parallel (i.e. they have no dependencies between them) and behaviour in blue boxes (serial modules) must be run serially.<br><br>
+		Modules can contain processes or other modules.<br><br> 
+		Yellow boxes relate to processes reading in data, red boxes are processes processing data, green boxes are processes righting results to report cells.<br><br>
+		White ovals are processing scenarios <br><br>
+		Note that 'processes' and 'modules' here relate to functionality (ie. they are not technical concepts), they may or may not be translated into technical modules and processes, this is up to the technical implementation. Parallel modules contain things that are functionality that is not dependant, perhaps technically such behaviour is run in parallel but this is not a necessity. The focus of the functional breakdown is to give structure to the test scenarios, it does not need to be used to drive the technical implementation of regulatory calculations, although it may be useful to do so.
+		
+	    Scenarios can be highlighted on the breakdown like upshock and downshocks.<br><br>
+		As this breakdown is stored as a model instance (it is an instance of a CoCaLiMo model) we can link items from the functional breakdown to actual regulatory rulebook text (which is also stored as an instance of a CoCaLiMo model).<br><br>
+		We can also link from parts of the breakdown model (like modules or scenarios) To actaul test scenario descriptions in AORTA, since these are also stored as instances of CoCaLiMo models. This allows full lineage between regulatory tests and regulatory requirements, and allows domain experts to help in shaping the structure of a set of test scenarios.
  <br>
-
+<img src="functionalityModule.jpg" alt="" height="600" width="800"> <br>
 
 
 						
