@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Eclipse Free BIRD Tools" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools" />
+	<meta name="author" content="Neil Mackenzie" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+				
+				<div class="row">
+					<div class="col-sm-2 col-xs-12">
+						<div id="gtco-logo"><a href="model_documentation.html">Model Documentation</a></div>
+					</div>
+				
+				</div>
+				
+			</div>
+		</nav>
+
+		<header id="gtco-header" class="gtco-cover" role="banner">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0 text-left">
+						<div class="display-t">
+							<div class="display-tc">
+								<div class="row">
+									<div class="col-md-5 text-center header-img animate-box">
+										
+									</div>
+									<div class="col-md-7 copy animate-box">
+										<h1>Model Documentation</h1>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END #gtco-header -->
+
+		<div class="gtco-client">
+
+		</div>
+		<!-- END .gtco-client -->
+
+		<div class="gtco-services gtco-section">
+			<div class="gtco-container">
+				<div class="row row-pb-sm">
+					
+					</div>
+					 <h3>Introduction</h3> 
+					 <p>The core of CoCaMo is a UML model. To facilitate easy understanding this model is split into multiple sections (packages).<br><br>
+					 For each package we have  a UML class diagram, and a set of documentation for each attribute and association of the class diagram. 
+					 We note that their are no operations in the class diagrams. <br><br>
+					 Each package may have some references to other classes in other packages. To keep our UML class diagrams concise we deal with this in the following fashion.<br><br>
+					 1.) If a class has a superclass from another package, then we include that superclass in the class diagram, it will have an arrow in the top right corner,
+ like the Module class in the efbt_data_definition package. <br><br>
+					 2.) If a class has an association or composition relationship with a class from another package, then we record this like an attribute with attribute type being the class from the other package ,
+					  for example in the data_definition package, the class CUBE_STRUCTURE_ITEM has an association with MEMBER, which is represented as member_id:MEMBER. 
+					  Annotated next to this will be the cardinality such as 0..* (for zero to many), if there is no such annotation this implies a 1 to 1 relationship. 
+					  The annotation does not show if the relationship is is an association or composition, 
+					   however that information is available by looking at the references section of the documentation which  shows the word  Containment if the relationship is a composition.<br><br>
+					 3.) In the package documentation we show the association, composition , or inheritance using hyper links. <br>
+					 The hyper links to classes in different packages do not yet work as this documentation is automatically generated.<br><br>
+					  
+					  </p>
+				 <h3> The Packages, Diagrams and Documentation</h3>
+				<p>
+
+
+<table style="width:100%">
+  <tr>
+    <th style="text-align:left">Name</th>
+    <th style="text-align:left">Class Diagram</th>
+    <th style="text-align:left">Documentation</th>
+  </tr>
+  <tr>
+    <td>Core</td>
+    <td><a href="core.jpg">UML Class Diagram</a></td>
+      <td><a href="core.html">Documentation</a></td>
+  </tr>
+  <tr>
+    <td>Data Definition</td>
+    <td><a href="data_definition.jpg">UML Class Diagram</a></td>
+      <td><a href="data_definition.html">Documentation</a>
+  </tr>
+  <tr>
+    <td>EFBT Data Definition</td>
+    <td><a href="efbt_data_definition.jpg">UML Class Diagram</a></td>
+      <td><a href="efbt_data_definition.html">Documentation</a></td>
+  </tr>
+  
+    
+    <tr>
+    <td>VTL Transformation</td>
+    <td><a href="vtl_transformation.jpg">UML Class Diagram</a></td>
+      <td><a href="vtl_transformation.html">Documentation</a></td>
+  </tr>
+  
+  
+    <tr>
+    <td>EFBT VTL Transformation</td>
+    <td><a href="efbt_vtl_transformation.jpg">UML Class Diagram</a></td>
+      <td><a href="efbt_vtl_transformation.html">Documentation</a></td>
+  </tr>
+ 
+ <tr>
+    <td>SM Cubes</td>
+    <td><a href="smcubes_model.jpg">UML Class Diagram</a></td>
+      <td><a href="smcubes_model.html">Documentation</a></td>
+  </tr>
+ 
+ <tr>
+    <td>Module Management</td>
+    <td><a href="module_management.jpg">UML Class Diagram</a></td>
+      <td><a href="module_management.html">Documentation</a></td>
+  </tr>
+  
+    <tr>
+    <td>Column Structured Data</td>
+    <td><a href="column_structured_data.jpg">UML Class Diagram</a></td>
+      <td><a href="column_structured_data.html">Documentation</a></td>
+  </tr>
+  
+  
+  <tr>
+    <td>Base Column Structured Data</td>
+    <td><a href="base_column_structured_data.jpg">UML Class Diagram</a></td>
+      <td><a href="base_column_structured_data.html">Documentation</a></td>
+  </tr>
+  
+  <tr>
+    <td>CocaMo Program</td>
+    <td><a href="cocamo.jpg">UML Class Diagram</a></td>
+      <td><a href="cocamo.html">Documentation</a></td>
+  </tr>
+  
+  
+  
+    <tr>
+    <td>Functionality Module</td>
+    <td><a href="functionality_module.jpg">UML Class Diagram</a></td>
+      <td><a href="functionality_module.html">Documentation</a></td>
+  </tr>
+  
+  
+    <tr>
+    <td>Scenarios</td>
+    <td><a href="scenarios.jpg">UML Class Diagram</a></td>
+      <td><a href="scenarios.html">Documentation</a></td>
+  </tr>
+  
+    <tr>
+    <td>Requirements Text</td>
+    <td><a href="requirements_text.jpg">UML Class Diagram</a></td>
+      <td><a href="requirements_text.html">Documentation</a></td>
+  </tr>
+  
+  
+    <tr>
+    <td>Test Definition</td>
+    <td><a href="test_definition.jpg">UML Class Diagram</a></td>
+      <td><a href="test_definition.html">Documentation</a></td>
+  </tr>
+  
+    <tr>
+    <td>Test Input Data</td>
+    <td><a href="test_input_data.jpg">UML Class Diagram</a></td>
+      <td><a href="test_input_data.html">Documentation</a></td>
+  </tr>
+  
+  
+    <tr>
+    <td>Test</td>
+    <td><a href="test.jpg">UML Class Diagram</a></td>
+      <td><a href="test.html">Documentation</a></td>
+  </tr>
+
+  
+</table>
+
+
+	
+
+
+			
+			
+			</div>
+		</div>
+		<!-- END .gtco-services -->
+		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
+
+			<div class="gtco-copyright">
+				<div class="gtco-container">
+					<div class="row">
+						<div class="col-md-6 text-left">
+							
+						</div>
+						<div class="col-md-6 text-right">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

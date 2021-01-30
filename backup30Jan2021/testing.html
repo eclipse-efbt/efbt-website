@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Eclipse Free BIRD Tools" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools" />
+	<meta name="author" content="Neil Mackenzie" />
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+
+				<div class="row">
+					<div class="col-sm-2 col-xs-12">
+						<div id="gtco-logo"><a href="index.html">Eclipse Free BIRD Tools</a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+<li><a href="opensource.html">Open Source</a></li>		
+<li><a href="collaboration.html">Collaborative</a></li>	
+<li><a href="calculation.html">Calculation</a></li>	
+<li><a href="lineage.html">Lineage</a></li>				
+<li><a href="model_driven.html">Model</a></li>
+<li><a href="ldm.html">LDM Tools</a></li>	
+<li><a href="testing.html">Testing Tools</a></li>	
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+
+		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0 text-left">
+						<div class="display-t">
+							<div class="display-tc">
+								<div class="row">
+									<div class="col-md-8 animate-box">
+										<h1 class="no-margin">AORTA</h1>
+										<p>An Open Regulatory Testing Architecture</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END #gtco-header -->
+
+
+
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
+						
+					
+
+<h3>Open Standards For Testing Regulatory Calculations</h3>
+		 
+		AORTA provides open standards for defining regulatory test scenarios, and regulatory test data and results. <br><br>
+		AORTA allows non-technical users to have a full understanding of test scenarios and tests, for example risk managers signing off on calculations. <br><br>
+		AORTA is built on top of CoCaLiMo and provides lineage from regulatory rulebook text, to regulatory scenarios definitions, via high level functional descriptions of regulations which are easy for domain experts to create. <br><br>
+		AORTA provides some standard means for defining input test data. In the first instance two input formats are supported, data that matches BIRD SMCubes format, and data that Matches BIRD's Logical Data Model format. In both cases we describe this data with a version of CaCaSon for easy source control and comparison of versions. <br><br>
+		AORTA provides a standard means for defining expected results, re-using BIRD's format for defining regulatory reports.<br><br>
+		AORTA provides organised measurable coverage for regulatory tests scenarios.<br><br>
+		Different user interfaces can be built on top of this standard, but the artefacts stored to files will always follow the single standard so they can be accessed by different compatible tools.<br><br> 
+		
+		Below is an example of the high level functional description for FRTB curvature interest rate curvature processing. <br><br>
+		The description acts as a colour coded  functional breakdown.<br><br>
+		For example behaviour inside brown boxes (parallel modules) can be run in parallel (i.e. they have no dependencies between them) and behaviour in blue boxes (serial modules) must be run serially.<br><br>
+		Modules can contain processes or other modules.<br><br> 
+		Yellow boxes relate to processes reading in data, red boxes are processes processing data, green boxes are processes righting results to report cells.<br><br>
+		White ovals are processing scenarios <br><br>
+		Note that 'processes' and 'modules' here relate to functionality (ie. they are not technical concepts), they may or may not be translated into technical modules and processes, this is up to the technical implementation. Parallel modules contain things that are functionality that is not dependant, perhaps technically such behaviour is run in parallel but this is not a necessity. The focus of the functional breakdown is to give structure to the test scenarios, it does not need to be used to drive the technical implementation of regulatory calculations, although it may be useful to do so.
+		
+	    Scenarios can be highlighted on the breakdown like upshock and downshocks.<br><br>
+		As this breakdown is stored as a model instance (it is an instance of a CoCaLiMo model) we can link items from the functional breakdown to actual regulatory rulebook text (which is also stored as an instance of a CoCaLiMo model).<br><br>
+		We can also link from parts of the breakdown model (like modules or scenarios) To actaul test scenario descriptions in AORTA, since these are also stored as instances of CoCaLiMo models. This allows full lineage between regulatory tests and regulatory requirements, and allows domain experts to help in shaping the structure of a set of test scenarios.
+ <br>
+<img src="functionalityModule.jpg" alt="" height="300" width="800"> <br>
+
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END .gtco-services -->
+
+
+
+
+
+		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
+
+			<div class="gtco-copyright">
+				<div class="gtco-container">
+					<div class="row">
+						<div class="col-md-6 text-left">
+							
+						</div>
+						<div class="col-md-6 text-right">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

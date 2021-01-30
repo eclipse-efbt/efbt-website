@@ -66,14 +66,7 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 
-<li><a href="opensource.html">Open Source</a></li>		
-<li><a href="collaboration.html">Collaborative</a></li>	
-<li><a href="calculation.html">Calculation</a></li>	
-<li><a href="lineage.html">Lineage</a></li>				
-<li><a href="model_driven.html">Model</a></li>
-<li><a href="ldm.html">LDM Tools</a></li>	
-<li><a href="testing.html">Testing Tools</a></li>	
-	
+<li><a href="aorta.html">AORTA</a></li>		
 						</ul>
 					</div>
 				</div>
@@ -92,7 +85,7 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>Open Source, Model Driven , Collaborative Tools for BIRD.</h1>
+										<h1>Test Driven Regulation with BIRD.</h1>
 									</div>
 								</div>
 							</div>
@@ -117,56 +110,37 @@
 					</div>
 					</div>
 					 <h3>Introduction</h3> 
-					 <p>At the core of Eclipse Free BIRD Tools is CoCaLiMo, this is a Collaborative Calculation Lineage Model. <br><br>
-					 CoCaLiMo is used to provide one common model for calculation, to be used between different disciplines, specifically data modellers, developers, testers and domain experts. <br><br>
-					 An extension to CoCaLiMo called 'CoCaLiMo for SMCubes' is used to support the European Central Banks' BIRD project. <br> <br>
-					 Aside from CoCaLiMo for SMCubes, Eclipse Free BIRD Tools also provides a set of tools to work with the Logical Data Model for BIRD. <br><br>
-					 </p>
-				 <h3> What is CoCaLiMo?</h3>
-				<p>From experience in the creation of calculation engines for regulatory logic we often find the following situation where different disciplines all store their knowledge 
-				in different formats and tools which cannot interact.  Like this:<br><br>
-				<img src="cocamoPicture2.png" alt="" height="600" width="800"> <br><br>
-				Therefore things get lost in translation.<br><br>
-				Also when a data modellers changes the data model (for example to rename a column or attribute), there is no immediate communication  that this affects another discipline ,
-				such as a test or computation which uses that attribute/column. <br><br>
-				In CoCaLiMo all disciplines store their information in one model like this:
-				<br><br>
-				<img src="cocamoPicture1.png" alt="" height="600" width="800"> <br><br>
-				More detail is provided below on the different aspects of CoCaLiMo.<br>
+					 <p>Eclipse Free BIRD Tools provides open source tools for a test driven regulation approach to the ECB's BIRD project.</p>
+				 <h3> What is Test Driven Regulation?</h3>
+				<p>Test Driven Regulation is an approach where regulatory experts from banks , regulators and vendors collaborate to define openly available test suites for regulatory calculations. <br><br>
+					Such test suites contain links to the regulatory text that they are testing.<br><br>
+				    Banks have the legal responsibility for the calculated numbers that they report to regulators (regardless of who wrote the technical calculations). This means that the testing of regulatory calculations is a task that banks  always need to do when regulations and their technical implementations change (which is constantly). Currently each bank does this expensive task separately, creating a huge duplication of effort. <br><br>
+				   Software vendors can  benefit greatly being involved in such collaboration, gaining agreement from users up front on the correct implementation of regulatory calculations. <br><br>
+				   Regulators can provide clarity on the correct interpretation of regulatory rules by being involved in the collaboration<p>
+				<h3> The Rise of Standard Regulatory Data Models?</h3>
+				Many regulators now are looking at the use of standard open regulatory datamodels as a way to reduce the burdens of reg reporting on banks. <br><br>
+				Open, standard data models, allow the  for test driven regulation, and tools for test driven regulation, where domain experts can create test data and expected results for different scenarios, and software vendors can use these standards as the base for calculations. <br><br>  
+
+				<h3> New Rulebook Standards</h3>
+				Many regulators are investigating how rulebooks can be described in ways that enable easier  digital interaction.<br><br>
+				As the representation of rules change, the general goal of calculations will likely remain the same, particularly those that are already entrenched in a banks management and risk reporting. <br><br>
+Test driven regulation supports the transition of the description of regulatory rules to new formats, in a safe manner. <br><br>
+
+				<h3> Incentives dichotomy</h3>
+				Regulatory and banking initiatives  to simplify the vast duplication of effort that exists in regulatory reporting via open standards need the tech sector and the banking sector to collaborate.<br><br>
+				However, simplification , standardisation and reduction in duplication of effort in reg reporting is not always good for the regulatory tech  sector.<br><br>
+				Test driven development allows vendors to focus on fast flexible extendible  calculation engines, and in depth understanding of open datamodels. Competition in this space is good for customers (banks).<br><br>
+				Test driven development allows , for the first time , collaboration between banks on the costly, process of testing regulatory calculations, which is very good for banks, who (bearing the responsibility) retain the best understanding of regulatory rules.<br><br>
 				
+
 				<div class="row row-pb-md">
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
-							<h3><i class="ti-ruler-pencil"></i> <a href="collaboration.html">Collaborative</a></h3>
-							<p>CoCaSon (Collaborative Calculation Simple Object Notation) provides an easy to understand text representation for instances of the Collaborative Calculation Model, 
-							familiar to users of JSON, and easy to use  with collaborative software for source control and issue tracking. </p>
+							<h3><i class="ti-ruler-pencil"></i> <a href="aorta.html">AORTA</a></h3>
+							<p>AORTA (An Open Regulatory Testing Architecture) provides an open standard for test driven regulation, with an initial focus on using the ECB's BIRD data model. It also provides a set of open source tools using the standard.</p>
 						</div>
 					</div>
-					
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-pie-chart"></i><a href="calculation.html">Calculation</a></h3>
-							<p>CoCaLiMo aims to be integratable with calculation languages such as  the VTL language for describing transformations in BIRD.</p>
-	
-						</div>
-					</div>
-					
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-pie-chart"></i><a href="lineage.html">Lineage</a></h3>
-							<p>CoCaLiMo aims to track the lineage between regulatory artefacts like regulatory rule book text, regulatory tests, and data models</p>
-	
-						</div>
-					</div>
-					
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-settings"></i><a href="model_driven.html">Model</a></h3>
-							<p>CoCaLiMo is a model, its defined as a UML class diagram, and has documentation for each class and attribute, it has no operations.</p>
-					</div>
-					</div>
-					
-
+														
 					<div class="clearfix visible-md-block visible-sm-block"></div>
 
 				</div>
