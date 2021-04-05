@@ -90,7 +90,7 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>Free Tools for BIRD</h1>
+										<h1>Notation</h1>
 									</div>
 								</div>
 							</div>
@@ -108,39 +108,15 @@
 
 		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
-				<div class="row row-pb-sm">
-					<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-						<h2>What is BIRD?</h2>
-						<p><a href="https://youtu.be/CUreE2REzvA" class="btn btn-special popup-vimeo">Watch The Video</a></p>
-					</div>
-					</div>
-					 <h3>Overview</h3> 
-					 <p>Eclipse Free BIRD Tools aims to provide a free set of tools to aid the development and understanding of the BIRD artefacts.<br><br>
-It also aims to enable and fast track the development of commercial tools through the sharing of re-usable ideas , models ,  notations, and software components.<br><br>
-The sharable artefacts come in 3 forms, and each one builds on the previous. These are:<br><br></p>
-<h3>Transformation and testing models</h3> 
- <p>Eclipse Free BIRD Tools provides a set of UML class diagrams named <a href="aorta.html">AORTA</a> for  describing  semantic transformations and tests.<br><br>
-  These models supplement and link to the existing SMCubes UML model and Logical Data Model which already exist in BIRD to describe <a href="metadata.html">Meta Data</a>. <br><br>
-  The semantic transformations model links to the Logical Data Model, and the testing model link to the semantic transformations model to demonstrate full test coverage.<br><br>
-The semantic transformation model and Logical Data Model can be considered together as a semantic layer. <br><br>
-We also provide a technical transformation model which  is called <a href="datum.html">DaTuM</a> (Dataset Transformation Model) which represents a chain of data set transformations similar to a set of chained SQL views. From this model we can generate the text of VTL transformations  or a chain of SQL views. The technical transformation model links to the semantic datamodel so that we can link from an element  in the sematic transformation model to a group of elements in the technical transformations.<br><br>
- DaTuM also has an advanced mode which can transform data directly from the Logical Data Model concisely using the concepts of  Structs and Arrays from SQL 1999.<br><br>
-These models are provided as documented diagrams at <a href="model_documentation.html">Models</a> and are completely technology independent.  <br><br>
-Note that the class diagrams have only attributes and relationships , and no operations, which keeps them simple. <br><br>
- </p>
- <h3>A visual and textual notation</h3> 
- <p>Eclipse Free BIRD Tools provides a visual <a href="notation.html">Notation</a> for displaying instances of the models, and a text notation for storing these, allowing for interoperability between any tool that adopts the same notation. <br><br>
- This is inspired by BPMN which is a notation for describing business processes. <br><br>
- BPMN is managed my the Object Management Group standard body, who also manage UML. <br><br>
- BPMN has a model at its core, a well documented way of describing instances of the model visually, and a formal way of storing instances of the model as text.<br><br>
-  This means that if software tools implement the standard exactly then they can all open and edit visually  the same text version of a business process. This has enable the development of <a href="https://bpmnmatrix.github.io/">over 70 tools</a>  for BPMN  </p>
 				
- <h3>A set of reusable software components</h3> 
- <p>Using the mature and well supported open source Eclipse Modelling Framework, we provide a set of software components for visualizing, navigating, creating, editing, persisting, querying, transforming, migrating, refactoring, and forward engineering models and instances of the models.<br><br>
-  These are released with a commercially friendly open source license, and can be used in commercial software. <br><br>
-  The Eclipse Modelling Framework itself has many companies offering free and commercial support, and it is used in for industry by companies such as Bosch, Seimens , Thales, Nasa, and also in a number of banks. </p>
-	
-				
+					 <h3>Notation</h3> 
+					 <p>Like BPMN, Eclipse Free BIRD Tools provides a notation for visualizing its models, and also a text means for storing instances of the models.<br><br>
+					 Previoulsy we have used XMI or XML following an XMLSchema (these are alos the 2 options provided by BPMN), however we have decided that <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> is a better text format for this purpose. <br><br>
+					 JSON in our view is easier to read if you need to read it, and easier to compare between versions.<br><br>
+					 We dont consider that users should ever need to look at the JSON directly (just like users of BPMN never look at the text storage of the file), as the project aims to provide visual rendering, and simple visual builders using drag and drop and property views for all models.<br><br>
+					  
+					 
+					 </p>
 			</div>
 		</div>
 		<!-- END .gtco-services -->

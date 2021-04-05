@@ -10,7 +10,6 @@
 	<meta name="keywords" content="Eclipse Free BIRD Tools" />
 	<meta name="author" content="Neil Mackenzie" />
 
-
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -52,40 +51,46 @@
 
 	</head>
 	<body>
-
+		
 	<div class="gtco-loader"></div>
-
+	
 	<div id="page">
 
 		<nav class="gtco-nav" role="navigation">
 			<div class="gtco-container">
-
+				
 				<div class="row">
 					<div class="col-sm-2 col-xs-12">
 						<div id="gtco-logo"><a href="index.html">Eclipse Free BIRD Tools</a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-<li><a href="aorta.html">AORTA</a></li>	
-<li><a href="tdr.html">Test Driven Regulation</a></li>			
 
+<li><a href="index.html">Overview</a></li>		
+<li><a href="metadata.html">Meta Data</a></li>
+<li><a href="aorta.html">AORTA</a></li>
+<li><a href="datum.html">DaTuM</a></li>	
+<li><a href="notation.html">Notation</a></li>
+<li><a href="model_documentation.html">Models</a></li>				
 						</ul>
 					</div>
 				</div>
-
+				
 			</div>
 		</nav>
 
-		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+		<header id="gtco-header" class="gtco-cover" role="banner">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-left">
 						<div class="display-t">
 							<div class="display-tc">
 								<div class="row">
-									<div class="col-md-8 animate-box">
-										<h1 class="no-margin">AORTA</h1>
-										<p>An Open Regulatory Testing Architecture</p>
+									<div class="col-md-5 text-center header-img animate-box">
+										
+									</div>
+									<div class="col-md-7 copy animate-box">
+										<h1>AORTA: An Open Regulatory Testing Architecture</h1>
 									</div>
 								</div>
 							</div>
@@ -96,52 +101,25 @@
 		</header>
 		<!-- END #gtco-header -->
 
+		<div class="gtco-client">
 
+		</div>
+		<!-- END .gtco-client -->
 
-		<div class="gtco-section">
+		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 gtco-heading text-left">
-						
-					
-
-<h3>Open Standards For Testing Regulatory Calculations</h3>
-		 
-		AORTA provides open standards for defining regulatory test scenarios, and regulatory test data and results. <br><br>
-		AORTA is designed to work well with automated testing insfrastructure (continuous integration). <br><br>
-		AORTA allows non-technical users to have a full understanding of test scenarios and tests, for example risk managers signing off on calculations. <br><br>
-		AORTA provides lineage from regulatory rulebook text, to regulatory scenarios definitions, via high level functional descriptions of regulations which are easy for domain experts to create. <br><br>
-		AORTA provides some standard means for defining input test data. In the first instance two input formats are supported, data that matches BIRD SMCubes format, and data that matches BIRD's logical data model format. In both cases we describe this data with a version of JSON for easy source control and comparison of versions. <br><br>
-		AORTA provides a standard means for defining expected results, re-using BIRD's DPM descriptions for defining regulatory reports.<br><br>
-		AORTA provides organised measurable coverage for regulatory tests scenarios.<br><br>
-		Different user interfaces can be built on top of this standard, but the artefacts stored to files will always follow the single json based standard so they can be accessed by different compatible tools.<br><br> 
-		
-		Below is an example of the high level functional description for FRTB curvature interest rate curvature processing. <br><br>
-		The description acts as a colour coded  functional breakdown.<br><br>
-		For example behaviour inside brown boxes (parallel modules) can be run in parallel (i.e. they have no dependencies between them) and behaviour in blue boxes (serial modules) must be run serially.<br><br>
-		Modules can contain processes or other modules.<br><br> 
-		Yellow boxes relate to processes reading in data, red boxes are processes processing data, green boxes are processes righting results to report cells.<br><br>
-		White ovals are processing scenarios <br><br>
-		Note that 'processes' and 'modules' here relate to functionality (ie. they are not technical concepts), they may or may not be translated into technical modules and processes, this is up to the technical implementation. Parallel modules contain things that are functionality that is not dependent, perhaps technically such behaviour is run in parallel but this is not a necessity. The focus of the functional breakdown is to give structure to the test scenarios, it does not need to be used to drive the technical implementation of regulatory calculations, although it may be useful to do so.
-		
-	    Scenarios can be highlighted on the breakdown like upshock and downshocks.<br><br>
-		We can link items from the functional breakdown to actual regulatory rulebook text .<br><br>
-		We can also link from parts of the breakdown model (like modules or scenarios) To actual test scenario descriptions in AORTA. This allows full lineage between regulatory tests and regulatory requirements, and allows domain experts to shape the structure of a set of test scenarios.
- <br>
-<img src="functionalityModule.jpg" alt="" height="300" width="800"> <br>
-
-
-						
-					</div>
-				</div>
+				
+					 <h3>AORTA</h3> 
+					 <p>AORTA provides a model from Semantic transformations which gives a business user friendly functional breakdown of regulations.<br><br>
+					 AORTA also provides a simple model for storing regulatory text, and the functional breakdowns can therefore link to regulatory text.<br><br>
+					 AORTA also provides a model  for test definitions which reference the functional breakdown so that test coverage can be measured.<br><br>
+					 AORTA also provides a model for tests, test input data, and expected results, which links to the SMCubes model, so it can represent input data and report data in the BIRD format.</p>
+					 AORTA uses a custom model for functional breakdowns, however we are currently looking at replacing this with a cutdown version of BPMN . We do not consider it a good idea to use all of BPMN as this would provide obstacles to providing  good linkage to the Logical Data Model and technical transformation rules.</p>
+	
+				
 			</div>
 		</div>
 		<!-- END .gtco-services -->
-
-
-
-
-
 		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
 
 			<div class="gtco-copyright">
@@ -163,7 +141,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-
+	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
