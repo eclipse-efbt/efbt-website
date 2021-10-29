@@ -67,10 +67,9 @@
 						<ul>
 
 <li><a href="index.html">Overview</a></li>		
-<li><a href="metadata.html">Meta Data</a></li>
+<li><a href="metadata.html">BIRD Data Model</a></li>
 <li><a href="aorta.html">AORTA</a></li>
-<li><a href="notation.html">Notation</a></li>
-<li><a href="model_documentation.html">Models</a></li>				
+<li><a href="model_documentation.html">Model Documentation</a></li>					
 						</ul>
 					</div>
 				</div>
@@ -109,11 +108,12 @@
 			<div class="gtco-container">
 				
 					 <h3>AORTA</h3> 
-					 <p>AORTA provides a model from Semantic transformations which gives a business user friendly  breakdown of regulations as a workflow of tasks.<br><br>
-					 AORTA also provides a simple model for storing regulatory text, and tasks in the workflow can therefore link to regulatory text.<br><br>
-					 AORTA also provides a model  for test definitions which reference the tasks so that test coverage can be measured.<br><br>
-					 AORTA also provides a model for tests, test input data, and expected results, which links to the SMCubes model, so it can represent input data and report data in the BIRD format.</p>
-					 AORTA uses a custom model for a workflow of tasks, however we are currently looking at replacing this with a cutdown version of BPMN . We do not consider it a good idea to use all of BPMN as this would provide obstacles to providing  good linkage to the Logical Data Model and technical transformation rules.</p>
+					 <p>AORTA uses a small subset of BPMN to encode regulatory business requirements as a business user friendly logical transformation. Steps of the transformation can link to items in the BIRD Data Model<br><br>					 
+					 AORTA also provides a simple model for storing regulatory text, and steps in the logical transformation can therefore link to regulatory text.<br><br>
+					 AORTA also provides a model  for test definitions which reference the steps so that test coverage can be measured.<br><br>
+					 AORTA also provides a model for tests, test input data, and expected results, which links to the BIRD Data Model, so it can represent input data and report data in the BIRD format.<br><br>
+					 By linking high-level visually represented transformation steps, and regulatory and requirements text, with formal test cases  referencing concrete data structures, AORTA bridges the gap between business-friendly and formal developer-friendly requirements.</p>
+			
 	
 				
 			</div>

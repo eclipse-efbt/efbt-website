@@ -67,10 +67,9 @@
 						<ul>
 
 <li><a href="index.html">Overview</a></li>		
-<li><a href="metadata.html">Meta Data</a></li>
+<li><a href="metadata.html">BIRD Data Model</a></li>
 <li><a href="aorta.html">AORTA</a></li>
-<li><a href="notation.html">Notation</a></li>
-<li><a href="model_documentation.html">Models</a></li>				
+<li><a href="model_documentation.html">Model Documentation</a></li>				
 						</ul>
 					</div>
 				</div>
@@ -115,22 +114,21 @@
 					</div>
 					 <h3>Overview</h3> 
 					 <p>Eclipse Free BIRD Tools aims to provide a free set of tools to aid the development and understanding of the BIRD artefacts.<br><br>
-It also aims to enable and fast track the development of commercial tools through the sharing of re-usable ideas , models ,  notations, and software components.<br><br>
-The sharable artefacts come in 3 forms, and each one builds on the previous. These are:<br><br></p>
-<h3>Transformation and testing models</h3> 
- <p>Eclipse Free BIRD Tools provides a set of UML class diagrams named <a href="aorta.html">AORTA</a> for  describing  semantic transformations and tests.<br><br>
-  These models supplement and link to the existing SMCubes UML model and Logical Data Model which already exist in BIRD to describe <a href="metadata.html">Meta Data</a>. <br><br>
-  The semantic transformations model links to the Logical Data Model, and the testing model link to the semantic transformations model to demonstrate full test coverage.<br><br>
-The semantic transformation model and Logical Data Model can be considered together as a semantic layer. <br><br>
-These models are provided as documented diagrams at <a href="model_documentation.html">Models</a> and are completely technology independent.  <br><br>
+It also aims to enable and fast track the development of commercial tools through the sharing of re-usable models and software components.<br><br>
+The sharable components come in 3 parts, and each one builds on the previous. These are:<br><br></p>
+<h3>BIRD Data Models</h3> 
+ <p>Eclipse Free BIRD Tools provides a set of UML class diagrams to describe the <a href="metadata.html">BIRD Data Model</a><br><br>
+  These follow the SMCubes UML model used by the ECB to describe the BIRD Artefacts.<br><br>
+These models are provided as documented diagrams at <a href="model_documentation.html">Model Documentation</a> and are completely technology independent.  <br><br>
 Note that the class diagrams have only attributes and relationships , and no operations, which keeps them simple. <br><br>
  </p>
- <h3>A visual and textual notation</h3> 
- <p>Eclipse Free BIRD Tools provides a visual <a href="notation.html">Notation</a> for displaying instances of the models, and a text notation for storing these, allowing for interoperability between any tool that adopts the same notation. <br><br>
- This is inspired by BPMN which is a notation for describing business processes. <br><br>
- BPMN is managed my the Object Management Group standard body, who also manage UML. <br><br>
- BPMN has a model at its core, a well documented way of describing instances of the model visually, and a formal way of storing instances of the model as text.<br><br>
-  This means that if software tools implement the standard exactly then they can all open and edit visually  the same text version of a business process. This has enable the development of <a href="https://bpmnmatrix.github.io/">over 70 tools</a>  for BPMN  </p>
+<h3>Business Requirements and Testing Models</h3> 
+ <p>Eclipse Free BIRD Tools provides a set of UML class diagrams named <a href="aorta.html">AORTA</a> for  describing business requirements and tests.<br><br>
+  These models link to the <a href="metadata.html">BIRD Data Model</a>. <br><br>
+  Business Requirements are recorded as business-friendly Logical Transformations with links to regulatory text and relevant test cases.<br><br>
+These models are provided as documented diagrams at <a href="model_documentation.html">Model Documentation</a> and are completely technology independent.  <br><br>
+Note that the class diagrams have only attributes and relationships , and no operations, which keeps them simple. <br><br>
+ </p>
 				
  <h3>A set of reusable software components</h3> 
  <p>Using the mature and well supported open source Eclipse Modelling Framework, we provide a set of software components for visualizing, navigating, creating, editing, persisting, querying, transforming, migrating, refactoring, and forward engineering models and instances of the models.<br><br>
