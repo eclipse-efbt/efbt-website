@@ -115,7 +115,17 @@
 					 <h3>Overview</h3> 
 					 <p>Eclipse Free BIRD Tools aims to provide a free set of tools to aid the development and understanding of the BIRD artefacts.<br><br>
 It also aims to enable and fast track the development of commercial tools through the sharing of re-usable models and software components.<br><br>
-The sharable components come in 3 parts, and each one builds on the previous. These are:<br><br></p>
+The sharable components come in 4 parts, and each one builds on the previous. These are:<br><br></p>
+<h3>Universal and Unified formats</h3> 
+ <p>To simplify the collaboration on BIRD artefacts we use universal commonly understood formats such as CSV, structured text (markdown), and json so that we avoid 
+  the need for learning a new format  before participants can contribute.<br><br> 
+  For example test data is in CSV, business requirements in markdown text, and lineage  information is in JSON. <br><br>
+  Using this approach we avoid the need for learning or purchasing custom tools for contribution to the BIRD, although universal free tools like Excel exist for editing csv files.<br><br>
+  To allow full navigation and automatic  validation across all information, we also have a unified format which stores all information (data models, transformation, tests, requirements) in one unified model described using the UML standard (Unified Modeling Language)<br><br>
+  We can always convert from the  universal formats to the unified format and vice-versa. The Unified Model is  split into "BIRD Data Models" for data structures and also "Business Requirements and Testing Models" as described below.
+    <br><br>
+ </p>
+ 
 <h3>BIRD Data Models</h3> 
  <p>Eclipse Free BIRD Tools provides a set of UML class diagrams to describe the <a href="metadata.html">BIRD Data Model</a><br><br>
   These follow the SMCubes UML model used by the ECB to describe the BIRD Artefacts.<br><br>
@@ -132,7 +142,8 @@ Note that the class diagrams have only attributes and relationships , and no ope
 				
  <h3>A set of reusable software components</h3> 
  <p>Using the mature and well supported open source Eclipse Modelling Framework, we provide a set of software components for visualizing, navigating, creating, editing, persisting, querying, transforming, migrating, refactoring, and forward engineering models and instances of the models.<br><br>
-  These are released with a commercially friendly open source license, and can be used in commercial software. <br><br>
+  The project also provides translators from the universal formats to the the unified model by using the Eclipse Modelling Framework to represent instances of the unified format .<br><br>
+  These components are released with a commercially friendly open source license, and can be used in commercial software. <br><br>
   These components are available on the <a href="https://github.com/eclipse/efbt">EFBT Github Repository</a> along with a <a href="https://github.com/eclipse/efbt/wiki">wiki</a>  giving technical advice of how to build and deploy them.
   They are also combined into a usable application.<br><br>
   The Eclipse Modelling Framework itself has many companies offering free and commercial support, and it is used in for industry by companies such as Bosch, Seimens , Thales, Nasa, and also in a number of banks. </p>
