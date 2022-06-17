@@ -1,9 +1,9 @@
 <!-- This file was created using the HTML documentation generator. -->
-<!-- Creation date: Sun Nov 07 16:37:07 GMT 2021-->
+<!-- Creation date: Wed Jun 15 07:00:19 BST 2022-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-      	<title>Metamodel Documentation (platform:/resource/org.eclipse.efbt.cocalimo.smcubes.model.testing/model/testing.ecore)</title>
+      	<title>Metamodel Documentation (platform:/resource/efbt/openregspecs/model/core_model/testing.ecore)</title>
     	<script type="text/javascript">
 //<![CDATA[				    	
 // TOC script based on code taken from http://www.quirksmode.org/dom/toc.html
@@ -128,13 +128,11 @@ function getElementsByTagNames(list,obj) {
 	<body onload="makeTOC();">
 <h1 id="testing"><a href="#testing"><span class="packageName">testing</span> package</a></h1>
 
-<p>This package describes the storage of base cube data (as opposed to derived cube data) </p>
 <div class="">EPackage properties:</div>
 <div class="keyValue"><span class="label">Namespace Prefix: </span><span class="teletype">testing</span></div>
 <div class="keyValue"><span class="label">Namespace URI: </span><span class="teletype">http://www.eclipse.org/efbt/testing</span></div>
-<h2 id="testingCell"><a href="#testingCell"><a href="#testingCell">Cell</a></a></h2>
+<h2 id="testingCSVFile"><a href="#testingCSVFile"><a href="#testingCSVFile">CSVFile</a></a></h2>
 
-<p>Cell data of the Rows of populated cubes</p>
 <table>
 <tr>
 	<th colspan="3"><div class="tableHeader">Attributes</div></th>
@@ -144,15 +142,13 @@ function getElementsByTagNames(list,obj) {
 	<th><div class="columnHeader">Properties</div></th>
 	<th><div class="columnHeader">Documentation</div></th>
 </tr>
-<tr>	<td><div id="testingCell.cellID" class="teletype">cellID</div>
+<tr>	<td><div id="testingCSVFile.fileName" class="teletype">fileName</div>
 	</td>
 	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EString</span></div>
 <div class="label">Cardinality: [0..1]</div>
-<div class="label">Identifier</div>
- </td> <td><p>The unique ID of a cell</p>
-</td>
+ </td> <td></td>
 		</tr></table>
-<a href="#testing.Cell.attr"></a>
+<a href="#testing.CSVFile.attr"></a>
 <table>
 <tr>
 	<th colspan="3"><div class="tableHeader">References</div></th>
@@ -162,166 +158,17 @@ function getElementsByTagNames(list,obj) {
 	<th><div class="columnHeader">Properties</div></th>
 	<th><div class="columnHeader">Documentation</div></th>
 </tr>
-<tr>	<td><div id="testingCell.column" class="teletype">column</div>
+<tr>	<td><div id="testingCSVFile.rows" class="teletype">rows</div>
 	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#coreVARIABLE">VARIABLE</a></span></div>
-<div class="label">Cardinality: [0..1]</div>
-</td> 
-<td> <p>The variable associated with the cell</p>
-</td>
-		</tr></table>
-<a href="#testing.Cell.ref"></a>
-<h2 id="testingCellWithEnumeratedValue"><a href="#testingCellWithEnumeratedValue"><a href="#testingCellWithEnumeratedValue">CellWithEnumeratedValue</a></a></h2>
-
-<p>Cell data which contains one member of a list of enumerated values (e.g. a currency)</p>
-<h4><b>Supertype:</b><a href="#testingCell">Cell</a></h4><table>
-<tr>
-	<th colspan="3"><div class="tableHeader">References</div></th>
-</tr>
-<tr>
-	<th><div class="columnHeader">Name</div></th>
-	<th><div class="columnHeader">Properties</div></th>
-	<th><div class="columnHeader">Documentation</div></th>
-</tr>
-<tr>	<td><div id="testingCellWithEnumeratedValue.value" class="teletype">value</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#coreMEMBER">MEMBER</a></span></div>
-<div class="label">Cardinality: [0..1]</div>
-</td> 
-<td> <p>The member</p>
-</td>
-		</tr></table>
-<a href="#testing.CellWithEnumeratedValue.ref"></a>
-<h2 id="testingCellWithValue"><a href="#testingCellWithValue"><a href="#testingCellWithValue">CellWithValue</a></a></h2>
-
-<p>Cell data which contains a value (e.g. price)</p>
-<h4><b>Supertype:</b><a href="#testingCell">Cell</a></h4><table>
-<tr>
-	<th colspan="3"><div class="tableHeader">Attributes</div></th>
-</tr>
-<tr>
-	<th><div class="columnHeader">Name</div></th>
-	<th><div class="columnHeader">Properties</div></th>
-	<th><div class="columnHeader">Documentation</div></th>
-</tr>
-<tr>	<td><div id="testingCellWithValue.value" class="teletype">value</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EString</span></div>
-<div class="label">Cardinality: [0..1]</div>
- </td> <td><p>The value of the cell represented as a String</p>
-</td>
-		</tr></table>
-<a href="#testing.CellWithValue.attr"></a>
-<h2 id="testingCubeData"><a href="#testingCubeData"><a href="#testingCubeData">CubeData</a></a></h2>
-
-<p>Data For a Cube</p>
-<table>
-<tr>
-	<th colspan="3"><div class="tableHeader">Attributes</div></th>
-</tr>
-<tr>
-	<th><div class="columnHeader">Name</div></th>
-	<th><div class="columnHeader">Properties</div></th>
-	<th><div class="columnHeader">Documentation</div></th>
-</tr>
-<tr>	<td><div id="testingCubeData.name" class="teletype">name</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EString</span></div>
-<div class="label">Cardinality: [0..1]</div>
-<div class="label">Identifier</div>
- </td> <td><p>The unique ID of the data</p>
-</td>
-		</tr></table>
-<a href="#testing.CubeData.attr"></a>
-<table>
-<tr>
-	<th colspan="3"><div class="tableHeader">References</div></th>
-</tr>
-<tr>
-	<th><div class="columnHeader">Name</div></th>
-	<th><div class="columnHeader">Properties</div></th>
-	<th><div class="columnHeader">Documentation</div></th>
-</tr>
-<tr>	<td><div id="testingCubeData.cube" class="teletype">cube</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#datadefinitionCUBE">CUBE</a></span></div>
-<div class="label">Cardinality: [0..1]</div>
-</td> 
-<td> <p>The cube with which the data is associated</p>
-</td>
-		</tr><tr>	<td><div id="testingCubeData.rows" class="teletype">rows</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingRowData">RowData</a></span></div>
-<div class="label">Cardinality: [0..*]</div>
-<div class="label">Containment</div>
-</td> 
-<td> <p>The rows which make up the cube data</p>
-</td>
-		</tr></table>
-<a href="#testing.CubeData.ref"></a>
-<h2 id="testingInputData"><a href="#testingInputData"><a href="#testingInputData">InputData</a></a></h2>
-
-<p>Input Data for tests</p>
-<table>
-<tr>
-	<th colspan="3"><div class="tableHeader">Attributes</div></th>
-</tr>
-<tr>
-	<th><div class="columnHeader">Name</div></th>
-	<th><div class="columnHeader">Properties</div></th>
-	<th><div class="columnHeader">Documentation</div></th>
-</tr>
-<tr>	<td><div id="testingInputData.name" class="teletype">name</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EString</span></div>
-<div class="label">Cardinality: [0..1]</div>
- </td> <td><p>The name associated with the input data.</p>
-</td>
-		</tr></table>
-<a href="#testing.InputData.attr"></a>
-<table>
-<tr>
-	<th colspan="3"><div class="tableHeader">References</div></th>
-</tr>
-<tr>
-	<th><div class="columnHeader">Name</div></th>
-	<th><div class="columnHeader">Properties</div></th>
-	<th><div class="columnHeader">Documentation</div></th>
-</tr>
-<tr>	<td><div id="testingInputData.sourceCubeData" class="teletype">sourceCubeData</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingCubeData">CubeData</a></span></div>
-<div class="label">Cardinality: [0..*]</div>
-<div class="label">Unordered</div>
-<div class="label">Containment</div>
-</td> 
-<td> <p>The set of pupulated Cubes that represent the input data.</p>
-</td>
-		</tr></table>
-<a href="#testing.InputData.ref"></a>
-<h2 id="testingReportResults"><a href="#testingReportResults"><a href="#testingReportResults">ReportResults</a></a></h2>
-
-<table>
-<tr>
-	<th colspan="3"><div class="tableHeader">References</div></th>
-</tr>
-<tr>
-	<th><div class="columnHeader">Name</div></th>
-	<th><div class="columnHeader">Properties</div></th>
-	<th><div class="columnHeader">Documentation</div></th>
-</tr>
-<tr>	<td><div id="testingReportResults.reportResults" class="teletype">reportResults</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#cocalimosmcubesextensionReportCellValue">ReportCellValue</a></span></div>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingCSVRow">CSVRow</a></span></div>
 <div class="label">Cardinality: [0..*]</div>
 <div class="label">Containment</div>
 </td> 
 <td> </td>
 		</tr></table>
-<a href="#testing.ReportResults.ref"></a>
-<h2 id="testingRowData"><a href="#testingRowData"><a href="#testingRowData">RowData</a></a></h2>
+<a href="#testing.CSVFile.ref"></a>
+<h2 id="testingCSVRow"><a href="#testingCSVRow"><a href="#testingCSVRow">CSVRow</a></a></h2>
 
-<p>Data For Rows of cubes</p>
 <table>
 <tr>
 	<th colspan="3"><div class="tableHeader">Attributes</div></th>
@@ -331,16 +178,21 @@ function getElementsByTagNames(list,obj) {
 	<th><div class="columnHeader">Properties</div></th>
 	<th><div class="columnHeader">Documentation</div></th>
 </tr>
-<tr>	<td><div id="testingRowData.rowID" class="teletype">rowID</div>
+<tr>	<td><div id="testingCSVRow.isHeader" class="teletype">isHeader</div>
+	</td>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EBoolean</span></div>
+<div class="label">Cardinality: [0..1]</div>
+ </td> <td></td>
+		</tr><tr>	<td><div id="testingCSVRow.value" class="teletype">value</div>
 	</td>
 	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EString</span></div>
-<div class="label">Cardinality: [0..1]</div>
-<div class="label">Identifier</div>
- </td> <td><p>The unique ID of the row data</p>
-</td>
+<div class="label">Cardinality: [0..*]</div>
+ </td> <td></td>
 		</tr></table>
-<a href="#testing.RowData.attr"></a>
-<table>
+<a href="#testing.CSVRow.attr"></a>
+<h2 id="testingE2ETestScope"><a href="#testingE2ETestScope"><a href="#testingE2ETestScope">E2ETestScope</a></a></h2>
+
+<h4><b>Supertype:</b><a href="#testingTestScope">TestScope</a></h4><table>
 <tr>
 	<th colspan="3"><div class="tableHeader">References</div></th>
 </tr>
@@ -349,16 +201,26 @@ function getElementsByTagNames(list,obj) {
 	<th><div class="columnHeader">Properties</div></th>
 	<th><div class="columnHeader">Documentation</div></th>
 </tr>
-<tr>	<td><div id="testingRowData.cells" class="teletype">cells</div>
+<tr>	<td><div id="testingE2ETestScope.layer" class="teletype">layer</div>
 	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingCell">Cell</a></span></div>
-<div class="label">Cardinality: [0..*]</div>
-<div class="label">Containment</div>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#bpmnliteSelectionLayer">SelectionLayer</a></span></div>
+<div class="label">Cardinality: [0..1]</div>
 </td> 
-<td> <p>The cells containing the data associated with the Rows</p>
-</td>
+<td> </td>
+		</tr><tr>	<td><div id="testingE2ETestScope.scenarios" class="teletype">scenarios</div>
+	</td>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#bpmnliteScenario">Scenario</a></span></div>
+<div class="label">Cardinality: [0..*]</div>
+</td> 
+<td> </td>
+		</tr><tr>	<td><div id="testingE2ETestScope.scriptTask" class="teletype">scriptTask</div>
+	</td>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#bpmnliteScriptTask">ScriptTask</a></span></div>
+<div class="label">Cardinality: [0..1]</div>
+</td> 
+<td> </td>
 		</tr></table>
-<a href="#testing.RowData.ref"></a>
+<a href="#testing.E2ETestScope.ref"></a>
 <h2 id="testingTest"><a href="#testingTest"><a href="#testingTest">Test</a></a></h2>
 
 <table>
@@ -387,22 +249,25 @@ function getElementsByTagNames(list,obj) {
 	<th><div class="columnHeader">Properties</div></th>
 	<th><div class="columnHeader">Documentation</div></th>
 </tr>
-<tr>	<td><div id="testingTest.inputData" class="teletype">inputData</div>
+<tr>	<td><div id="testingTest.expectedResult" class="teletype">expectedResult</div>
 	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingInputData">InputData</a></span></div>
-<div class="label">Cardinality: [0..1]</div>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingCSVFile">CSVFile</a></span></div>
+<div class="label">Cardinality: [0..*]</div>
+<div class="label">Containment</div>
 </td> 
 <td> </td>
-		</tr><tr>	<td><div id="testingTest.reportResults" class="teletype">reportResults</div>
+		</tr><tr>	<td><div id="testingTest.inputData" class="teletype">inputData</div>
 	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingReportResults">ReportResults</a></span></div>
-<div class="label">Cardinality: [0..1]</div>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingCSVFile">CSVFile</a></span></div>
+<div class="label">Cardinality: [0..*]</div>
+<div class="label">Containment</div>
 </td> 
 <td> </td>
-		</tr><tr>	<td><div id="testingTest.scenario" class="teletype">scenario</div>
+		</tr><tr>	<td><div id="testingTest.scope" class="teletype">scope</div>
 	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#logicaltransformationsScenario">Scenario</a></span></div>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingTestScope">TestScope</a></span></div>
 <div class="label">Cardinality: [0..1]</div>
+<div class="label">Containment</div>
 </td> 
 <td> </td>
 		</tr></table>
@@ -418,19 +283,7 @@ function getElementsByTagNames(list,obj) {
 	<th><div class="columnHeader">Properties</div></th>
 	<th><div class="columnHeader">Documentation</div></th>
 </tr>
-<tr>	<td><div id="testingTestModule.SMCubesModel" class="teletype">SMCubesModel</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#cocalimosmcubesextensionSmcubesModel">SmcubesModel</a></span></div>
-<div class="label">Cardinality: [0..*]</div>
-</td> 
-<td> </td>
-		</tr><tr>	<td><div id="testingTestModule.logicalTransformations" class="teletype">logicalTransformations</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#logicaltransformationsLogicalTransformationModule">LogicalTransformationModule</a></span></div>
-<div class="label">Cardinality: [0..1]</div>
-</td> 
-<td> </td>
-		</tr><tr>	<td><div id="testingTestModule.tests" class="teletype">tests</div>
+<tr>	<td><div id="testingTestModule.tests" class="teletype">tests</div>
 	</td>
 	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#testingTest">Test</a></span></div>
 <div class="label">Cardinality: [0..*]</div>
@@ -439,5 +292,43 @@ function getElementsByTagNames(list,obj) {
 <td> </td>
 		</tr></table>
 <a href="#testing.TestModule.ref"></a>
+<h2 id="testingTestScope"><a href="#testingTestScope"><a href="#testingTestScope">TestScope</a></a></h2>
+
+<table>
+<tr>
+	<th colspan="3"><div class="tableHeader">Attributes</div></th>
+</tr>
+<tr>
+	<th><div class="columnHeader">Name</div></th>
+	<th><div class="columnHeader">Properties</div></th>
+	<th><div class="columnHeader">Documentation</div></th>
+</tr>
+<tr>	<td><div id="testingTestScope.name" class="teletype">name</div>
+	</td>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EString</span></div>
+<div class="label">Cardinality: [0..1]</div>
+<div class="label">Identifier</div>
+ </td> <td></td>
+		</tr></table>
+<a href="#testing.TestScope.attr"></a>
+<h2 id="testingUnitTestScope"><a href="#testingUnitTestScope"><a href="#testingUnitTestScope">UnitTestScope</a></a></h2>
+
+<h4><b>Supertype:</b><a href="#testingTestScope">TestScope</a></h4><table>
+<tr>
+	<th colspan="3"><div class="tableHeader">References</div></th>
+</tr>
+<tr>
+	<th><div class="columnHeader">Name</div></th>
+	<th><div class="columnHeader">Properties</div></th>
+	<th><div class="columnHeader">Documentation</div></th>
+</tr>
+<tr>	<td><div id="testingUnitTestScope.scenarios" class="teletype">scenarios</div>
+	</td>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#bpmnliteScenario">Scenario</a></span></div>
+<div class="label">Cardinality: [0..1]</div>
+</td> 
+<td> </td>
+		</tr></table>
+<a href="#testing.UnitTestScope.ref"></a>
 </body>
 </html>

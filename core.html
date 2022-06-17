@@ -1,9 +1,9 @@
 <!-- This file was created using the HTML documentation generator. -->
-<!-- Creation date: Fri Nov 13 14:15:48 GMT 2020-->
+<!-- Creation date: Fri Jun 10 10:34:54 BST 2022-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-      	<title>Metamodel Documentation (platform:/resource/org.eclipse.efbt.cocalimo.smcubes.model.core/model/core.ecore)</title>
+      	<title>Metamodel Documentation (platform:/resource/efbt/openregspecs/model/smcubes_model/core.ecore)</title>
     	<script type="text/javascript">
 //<![CDATA[				    	
 // TOC script based on code taken from http://www.quirksmode.org/dom/toc.html
@@ -515,7 +515,7 @@ function getElementsByTagNames(list,obj) {
 <a href="#core.MAINTENANCE_AGENCY.attr"></a>
 <h2 id="coreMEMBER"><a href="#coreMEMBER"><a href="#coreMEMBER">MEMBER</a></a></h2>
 
-<table>
+<h4><b>Supertype:</b><a href="#datametamodelEnumMember">EnumMember</a></h4><table>
 <tr>
 	<th colspan="3"><div class="tableHeader">Attributes</div></th>
 </tr>
@@ -701,7 +701,7 @@ function getElementsByTagNames(list,obj) {
 <a href="#core.MEMBER_HIERARCHY_NODE.ref"></a>
 <h2 id="coreSUBDOMAIN"><a href="#coreSUBDOMAIN"><a href="#coreSUBDOMAIN">SUBDOMAIN</a></a></h2>
 
-<table>
+<h4><b>Supertype:</b><a href="#datametamodelType">Type</a></h4><table>
 <tr>
 	<th colspan="3"><div class="tableHeader">Attributes</div></th>
 </tr>
@@ -728,11 +728,6 @@ function getElementsByTagNames(list,obj) {
 		</tr><tr>	<td><div id="coreSUBDOMAIN.is_natural" class="teletype">is_natural</div>
 	</td>
 	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EBoolean</span></div>
-<div class="label">Cardinality: [0..1]</div>
- </td> <td></td>
-		</tr><tr>	<td><div id="coreSUBDOMAIN.name" class="teletype">name</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype">EString</span></div>
 <div class="label">Cardinality: [0..1]</div>
  </td> <td></td>
 		</tr><tr>	<td><div id="coreSUBDOMAIN.subdomain_id" class="teletype">subdomain_id</div>
@@ -762,6 +757,13 @@ function getElementsByTagNames(list,obj) {
 	</td>
 	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#coreFACETCOLLECTION">FACET_COLLECTION</a></span></div>
 <div class="label">Cardinality: [0..1]</div>
+</td> 
+<td> </td>
+		</tr><tr>	<td><div id="coreSUBDOMAIN.items" class="teletype">items</div>
+	</td>
+	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#coreSUBDOMAINENUMERATION">SUBDOMAIN_ENUMERATION</a></span></div>
+<div class="label">Cardinality: [0..*]</div>
+<div class="label">Containment</div>
 </td> 
 <td> </td>
 		</tr><tr>	<td><div id="coreSUBDOMAIN.maintenance_agency_id" class="teletype">maintenance_agency_id</div>
@@ -815,17 +817,11 @@ function getElementsByTagNames(list,obj) {
 <div class="label">Cardinality: [0..1]</div>
 </td> 
 <td> </td>
-		</tr><tr>	<td><div id="coreSUBDOMAINENUMERATION.subdomain_id" class="teletype">subdomain_id</div>
-	</td>
-	<td><div class="keyValue"><span class="label">T: </span><span class="teletype"><a href="#coreSUBDOMAIN">SUBDOMAIN</a></span></div>
-<div class="label">Cardinality: [0..1]</div>
-</td> 
-<td> </td>
 		</tr></table>
 <a href="#core.SUBDOMAIN_ENUMERATION.ref"></a>
 <h2 id="coreVARIABLE"><a href="#coreVARIABLE"><a href="#coreVARIABLE">VARIABLE</a></a></h2>
 
-<table>
+<h4><b>Supertype:</b><a href="#datametamodelConcept">Concept</a></h4><table>
 <tr>
 	<th colspan="3"><div class="tableHeader">Attributes</div></th>
 </tr>
