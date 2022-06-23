@@ -66,21 +66,17 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 
-<li><a href="opensource.html">Open Source</a></li>		
-<li><a href="collaboration.html">Collaborative</a></li>	
-<li><a href="calculation.html">Calculation</a></li>	
-<li><a href="lineage.html">Lineage</a></li>				
-<li><a href="model_driven.html">Model</a></li>
-<li><a href="ldm.html">LDM Tools</a></li>	
-<li><a href="testing.html">Testing Tools</a></li>	
-	
+<li><a href="index.html">Overview</a></li>		
+<li><a href="ors_users.html">Reg Experts </a></li>
+<li><a href="rpmn_solution_providers.html">Solution Providers</a></li>
+<li><a href="rpmn_for_tool_developers.html">Tools</a></li>
+<li><a href="rpmn_for_bird.html">BIRD</a></li>
 						</ul>
 					</div>
 				</div>
 				
 			</div>
 		</nav>
-
 		<header id="gtco-header" class="gtco-cover" role="banner">
 			<div class="gtco-container">
 				<div class="row">
@@ -92,7 +88,8 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>Open Source, Model Driven , Collaborative Tools for BIRD.</h1>
+										<h1>RPMN for Tool Developers</h1>
+										<h1>RPMN Tools</h1>
 									</div>
 								</div>
 							</div>
@@ -111,65 +108,80 @@
 		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
 				<div class="row row-pb-sm">
-					<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-						<h2>What is BIRD?</h2>
-						<p><a href="https://youtu.be/CUreE2REzvA" class="btn btn-special popup-vimeo">Watch The Video</a></p>
-					</div>
+					
 					</div>
 					 <h3>Introduction</h3> 
-					 <p>At the core of Eclipse Free BIRD Tools is AORTA, this is a Collaborative Calculation Lineage Model. <br><br>
-					 AORTA is used to provide one common model for calculation, to be used between different disciplines, specifically data modellers, developers, testers and domain experts. <br><br>
-					 An extension to AORTA called 'AORTA for SMCubes' is used to support the European Central Banks' BIRD project. <br> <br>
-					 Aside from AORTA for SMCubes, Eclipse Free BIRD Tools also provides a set of tools to work with the Logical Data Model for BIRD. <br><br>
-					 </p>
-				 <h3> What is AORTA?</h3>
-				<p>From experience in the creation of calculation engines for regulatory logic we often find the following situation where different disciplines all store their knowledge 
-				in different formats and tools which cannot interact.  Like this:<br><br>
-				<img src="cocamoPicture2.png" alt="" height="600" width="800"> <br><br>
-				Therefore things get lost in translation.<br><br>
-				Also when a data modellers changes the data model (for example to rename a column or attribute), there is no immediate communication  that this affects another discipline ,
-				such as a test or computation which uses that attribute/column. <br><br>
-				In AORTA all disciplines store their information in one model like this:
-				<br><br>
-				<img src="cocamoPicture1.png" alt="" height="600" width="800"> <br><br>
-				More detail is provided below on the different aspects of AORTA.<br>
-				
-				<div class="row row-pb-md">
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-ruler-pencil"></i> <a href="collaboration.html">Collaborative</a></h3>
-							<p>CoCaSon (Collaborative Calculation Simple Object Notation) provides an easy to understand text representation for instances of the Collaborative Calculation Model, 
-							familiar to users of JSON, and easy to use  with collaborative software for source control and issue tracking. </p>
-						</div>
-					</div>
+					 <p>RPMN is a definition of  diagrams and associated file formats allowing regulatory experts to describe and collaborate on  regulatory artefacts as a machine readable requirements document</b><br><br>
+					   It is  possible to create software to build tool support for the standard such as
+					  <ul>   
+							  <li>Text editors for the file formats with auto-completion</li>
+							  <li>Autocreation of diagrams from the text formats</li>
+							  <li>Visual and textual navigation of the artefacts</li>
+						</ul> 
+						
+					 To this end we have a UML model which can describe the artefacts such as data model and workflow. <br><br>
+					 This model is decribed in <a href="rpmn_solution_providers.html">Solution Providers</a>
+										 
+					 As part of Eclipse Free BIRD tools we have an example of this which uses the Eclipse Modelling Frameworks and its Sirius visualisation component to create diagrams.<br><br>
 					
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-pie-chart"></i><a href="calculation.html">Calculation</a></h3>
-							<p>AORTA aims to be integratable with calculation languages such as  the VTL language for describing transformations in BIRD.</p>
-	
-						</div>
-					</div>
-					
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-pie-chart"></i><a href="lineage.html">Lineage</a></h3>
-							<p>AORTA aims to track the lineage between regulatory artefacts like regulatory rule book text, regulatory tests, and data models</p>
-	
-						</div>
-					</div>
-					
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-settings"></i><a href="model_driven.html">Model</a></h3>
-							<p>AORTA is a model, its defined as a UML class diagram, and has documentation for each class and attribute, it has no operations.</p>
-					</div>
-					</div>
-					
+					 <h3> The UML Class diagrams and their documentation </h3>
+				<p>
 
-					<div class="clearfix visible-md-block visible-sm-block"></div>
 
-				</div>
+<table style="width:100%">
+  <tr>
+  	<th style="text-align:left">Group</th>
+    <th style="text-align:left">Name</th>
+    <th style="text-align:left">Class Diagram</th>
+    <th style="text-align:left">Documentation</th>
+  </tr>
+  <tr>
+    <td>RPMN</td>
+    <td>Data Model</td>
+    <td><a href="data_meta_model class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="data_meta_model.html">Documentation</a></td>
+  </tr>
+  
+  <tr>
+    <td>RPMN</td>
+    <td>Workflow</td>
+    <td><a href="bpmn_lite class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="bpmn_lite.html">Documentation</a></td>
+  </tr>
+  <tr>
+    <td>RPMN</td>
+    <td>Report Generation</td>
+    <td><a href="sql_lite class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="sql_lite.html">Documentation</a></td>
+  </tr>
+  <tr>
+    <td>RPMN</td>
+    <td>Business Requirements/Regulations</td>
+    <td><a href="requirements_text class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="requirements_text.html">Documentation</a></td>
+  </tr>
+   <tr>
+    <td>RPMN</td>
+    <td>Tests</td>
+    <td><a href="testing class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="testing.html">Documentation</a></td>
+  </tr>
+  <tr>
+    <td>RPMN</td>
+    <td>Module Management</td>
+    <td><a href="module_management class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="module_management.html">Documentation</a></td>
+  </tr>
+  
+ 
+</table>
+
+
+	
+
+
+			
+			
 			</div>
 		</div>
 		<!-- END .gtco-services -->

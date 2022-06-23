@@ -67,8 +67,10 @@
 						<ul>
 
 <li><a href="index.html">Overview</a></li>		
-<li><a href="ors_users.html">OpenRegSpecs for Users</a></li>
-<li><a href="ors_tech.html">OpenRegSpecs for Tool Developers</a></li>				
+<li><a href="ors_users.html">Reg Experts </a></li>
+<li><a href="rpmn_solution_providers.html">Solution Providers</a></li>
+<li><a href="rpmn_for_tool_developers.html">Tools</a></li>
+<li><a href="rpmn_for_bird.html">BIRD</a></li>
 						</ul>
 					</div>
 				</div>
@@ -86,7 +88,8 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>OpenRegSpecs for Tool Developers</h1>
+										<h1>RPMN for Solution Providers</h1>
+										<h1>Machine Written Solution Skeletons</h1>
 									</div>
 								</div>
 							</div>
@@ -108,33 +111,21 @@
 					
 					</div>
 					 <h3>Introduction</h3> 
-					 <p>OpenRegSpecs is a definition of file formats and associated diagrams allowing regulatory experts to describe and collaborate on  regulatory artefacts<br><br>
-					 It is useful to build tools on top of this to use these artefacts, such as:
+					 <p>RPMN is a definition of  diagrams and associated file formats allowing regulatory experts to describe and collaborate on  regulatory artefacts as a machine readable requirements document</b><br><br>
+					   It is  possible to create software to read this format and build concrete solutions such as:
 					  <ul>
-							  <li>Text editors for the file formats with auto-completion</li>
-							  <li>Visual and textual navigation of the artefacts</li>
-							  <li>Translating from the artefacts into other formats such as SQL schemas</li>
-							  <li>Translating from existing schemas/BPMN workflow definitions/Test data/requirements into the OpenRegSpecsFormat</li>
-							  <li>Tests</li>
+							   <li>Database Schemas</li>
+							   <li>Function outlines in any programming language such as Python or Java</li>
+							   <li>Workflow logic</li>
+							   <li>Executable test that can be run in existing automated testing frameworks</li>
 						</ul> 
 						
-					 To this end we have a UML model which can describe the artefacts such as data model and workflow, this UML model can store all the structured information represented in the text files. The UML class diagrams represents an information model only, they have attributes and relationships, but no methods/functions.<br><br>
-					 
+					 To this end we have a UML model which can describe the artefacts such as data model and workflow. <br><br>
+					 This UML model can store all the structured information represented in the text files. <br><br>
+					 The UML class diagrams represents an information model only, they have attributes and relationships, but no methods/functions.<br><br>
 					 As part of Eclipse Free BIRD tools we have code that converts to/from the text format into an in-memory object tree using the classes defined in the UML format.<br><br>
-					 
-					 Having this in-memory representation of the files, allows any kind of manipulation/navigation/query/transformation/visualisation of the artefacts<br><br>
-					 
-					 As part of Eclipse Free BIRD tools we have an example of this which uses the Eclipse Modelling Frameworks and its Sirius visualisation component to create diagrams.<br><br>
-					
-					 OpenRegSpecs aims to work with other datamodels and regulatory projects, not just BIRD.<br><br>
-					 
-					 Specifically for BIRD we have some extra text formats to represent artefacts specific to BIRD (such as SubDomains).<br><br>
-					
-					 Also to support BIRD we have Python programs to translate from published BIRD Artefacts into the Python classes representing the classes of the UML diagram. This provides a full information model of all BIRD artefacts including logical transformation rules and tests, allowing for an in-memory representation to use in tool support such as validation of test data against data models.<br><br>
-					 
-					 Object Trees of these  Python classes can be serialised into a common Ecore XMI format if desired, From this Ecore format the Python objects can be recreated, or Java Objects can be created also (allowing integration with the example visual tools in Eclipse Free BIRD Tools)<br><br>
-					 
-					 The Python classes have a very clean and simple interface which is easy to use, and enforces type safety.<br><br>
+					 Having this in-memory representation of the files, allows any kind of manipulation/navigation/query/transformation/visualisation of the artefacts to create the skeleton of executable solutions<br><br>
+					 These executable solutions can therefore always stay in synch with the machine readable requirements document, and lineage can built in also if required from requirement to executable code.<br><br>
 					 
 				 <h3> The UML Class diagrams and their documentation </h3>
 				<p>
@@ -148,71 +139,43 @@
     <th style="text-align:left">Documentation</th>
   </tr>
   <tr>
-    <td>OpenRegSpecs</td>
+    <td>RPMN</td>
     <td>Data Model</td>
     <td><a href="data_meta_model class diagram.svg">UML Class Diagram</a></td>
     <td><a href="data_meta_model.html">Documentation</a></td>
   </tr>
   
   <tr>
-    <td>OpenRegSpecs</td>
+    <td>RPMN</td>
     <td>Workflow</td>
     <td><a href="bpmn_lite class diagram.svg">UML Class Diagram</a></td>
     <td><a href="bpmn_lite.html">Documentation</a></td>
   </tr>
   <tr>
-    <td>OpenRegSpecs</td>
+    <td>RPMN</td>
     <td>Report Generation</td>
     <td><a href="sql_lite class diagram.svg">UML Class Diagram</a></td>
     <td><a href="sql_lite.html">Documentation</a></td>
   </tr>
   <tr>
-    <td>OpenRegSpecs</td>
+    <td>RPMN</td>
     <td>Business Requirements/Regulations</td>
     <td><a href="requirements_text class diagram.svg">UML Class Diagram</a></td>
     <td><a href="requirements_text.html">Documentation</a></td>
   </tr>
    <tr>
-    <td>OpenRegSpecs</td>
+    <td>RPMN</td>
     <td>Tests</td>
     <td><a href="testing class diagram.svg">UML Class Diagram</a></td>
     <td><a href="testing.html">Documentation</a></td>
   </tr>
   <tr>
-    <td>OpenRegSpecs</td>
+    <td>RPMN</td>
     <td>Module Management</td>
     <td><a href="module_management class diagram.svg">UML Class Diagram</a></td>
     <td><a href="module_management.html">Documentation</a></td>
   </tr>
   
- <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>SMCubes Core</td>
-    <td><a href="core class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="core.html">Documentation</a></td>
-  </tr>
-  
-   <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>SMCubes Data Definition</td>
-    <td><a href="data_definition class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="data_definition.html">Documentation</a></td>
-  </tr>
-  
-   <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>OpenRegSpecs SMCubes Extensions</td>
-    <td><a href="openregspecs_smcubes_core_extension class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="openregspecs_smcubes_extra_extension.html">Documentation</a></td>
-  </tr>
-  
-   <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>OpenRegSpecs</td>
-    <td><a href="open_reg_specs class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="open_reg_specs.html">Documentation</a></td>
-  </tr>
-   
 </table>
 
 
