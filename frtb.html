@@ -89,7 +89,8 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>RPMN for BIRD</h1>
+										<h1>Open FRTB</h1>
+										<h2>Open Requirements and Tests for FRTB</h2>
 										
 									</div>
 								</div>
@@ -111,72 +112,31 @@
 				<div class="row row-pb-sm">
 					
 					</div>
-					 <h3>Introduction</h3> 
+					 <h3>FRTB</h3> 
 					
-					 RPMN  aims to work with different  datamodels and regulatory projects, including  BIRD.<br><br>
+					 Eclipse Free BIRD Tools introduces RPMN (Regulatory Process and Modelling Notation) as a means for Regulatory experts to easily describe and collaborate on <b>machine readable requirements documents </b> without programming experience.<br><br>
+					   
+					 As a showcase of RPMN we use it to record the requirements <b> and tests </b> for the FRTB Sensitivities Based Approach regulations, which is amongst the most complex regulations existing.<br><br>
 					 
-					 In the RPMN Data Model representation we have the idea of Types (like Number , String, Currency, Country) and Concepts.<br><br>
+					 Since tests can be traced back to regulatory text and a precise part of processing in the workflow we hope that this will be a valuable open free tool for model validation for banks testing their FRTB solutions<br><br>
 					 
-					 Specifically for BIRD we have some extra text formats to represent types of BIRD, which are known as SubDomains in BIRD (such as currency) and their associated Members (such as USD) and optionally their associated concept (known as Variables in the language of BIRD.).<br><br>
-					
-					 Also to support BIRD we have Python programs to translate from published BIRD Artefacts (which are stored in <b>universal</b> formats such as xml, csv, etc) into the Python objects following the  classes of the UML diagram. This provides a full <b>unified</b>  information model of all BIRD artefacts including logical transformation rules and tests, allowing for an in-memory representation to use in tool support such as validation of test data against data models, or visual navigation between the related artefacts (like workflow task to data model attribute)<br><br>
-					 
-					 Object Trees of these  Python classes can be serialised into a common Ecore XMI format if desired, From this Ecore format the Python objects can be recreated, or Java Objects can be created also (allowing integration with the example visual tools for RPMN in Eclipse Free BIRD Tools)<br><br>
-					 
-					 The Python classes have a very clean and simple interface which is easy to use, and enforces type safety.<br><br>
-					 
-					 As with the core of RPMN, their is a UML model and text formats for describing the BIRD Specific Data Model such as Subdomain, Domain, Variable and Member. This model is mostly the core and data definition UML models of the SMCubes Methodology published by the ECB <a href="https://www.ecb.europa.eu/stats/ecb_statistics/co-operation_and_standards/smcube/shared/files/SMCubeInformationModel201707.pdf">here</a><br><br> 
-					 
-					 Note that this addition to the UML model has a relationship with the main model in that SubDomain is a now subclass of Type , Variable is now a subclass of Concept, and Member is now a subclass of EnumMember<br><br>
-					 
-				 <h3> The BIRD Specific UML Class diagrams and their documentation </h3>
+							 
+				 <h3> FRTB data model and Process model </h3>
+				 
+				 We show below the FRTB datamodel derived from the regulatory requirements, and the workflow of processing.<br><br>
+				 
+				 The formal workflow is used to to guide completeness in the tests.<br><br>
+				 
+				 Work is continuing to improve traceability from tests to workflow to regulatory text and increase the number of tests. Since this is  open source project, contributions and  review and discussion are always welcome<br><br>
+				 
+				 The RPMN text files are available on  <a href="https://github.com/eclipse/efbt/tree/master/openregspecs/java_examples/plugins/org.eclipse.efbt.openregspecs.examples.core/examples/org.eclipse.efbt.example.frtb/src">Github</a><br><br>
+				 You can install the Eclipse Free BIRD tools application and open FRTB as an example by following the instructions on the Eclipse Free BIRD Tools <a href="https://github.com/eclipse/efbt/wiki/Usage-Guide-for-Eclipse-Free-BIRD-Tools-with-Eclipse-IDE">Wiki</a><br><br>
 				<p>
 
 
-<table style="width:100%">
-  <tr>
-  	<th style="text-align:left">Group</th>
-    <th style="text-align:left">Name</th>
-    <th style="text-align:left">Class Diagram</th>
-    <th style="text-align:left">Documentation</th>
-  </tr>
-  
- <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>SMCubes Core</td>
-    <td><a href="core class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="core.html">Documentation</a></td>
-  </tr>
-  
-   <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>SMCubes Data Definition</td>
-    <td><a href="data_definition class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="data_definition.html">Documentation</a></td>
-  </tr>
-  
-   <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>RPMN SMCubes Extensions</td>
-    <td><a href="openregspecs_smcubes_core_extension class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="openregspecs_smcubes_extra_extension.html">Documentation</a></td>
-  </tr>
-  
-   <tr>
- 	<td>BIRD Specific DataModel</td>
-    <td>RPMN</td>
-    <td><a href="open_reg_specs class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="open_reg_specs.html">Documentation</a></td>
-  </tr>
-   
-</table>
+				<img src="frtb_with_derived_fields.png" alt="workflow" height="600" width="600"/><br>
+				<img src="frtb_full_workflow_vertical_layout.jpg" alt="workflow" height="800" width="250"/>
 
-<br><br>
-
-<h3> An example of the text file </h3>	
-<img src="bird_dm.PNG" alt="workflow" height="400" width="550"/>
-
-			
 			
 			</div>
 		</div>
