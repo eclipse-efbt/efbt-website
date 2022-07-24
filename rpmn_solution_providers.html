@@ -67,9 +67,8 @@
 						<ul>
 
 <li><a href="index.html">Overview</a></li>		
-<li><a href="ors_users.html">Reg Experts </a></li>
+<li><a href="ors_users.html">Business Users</a></li>
 <li><a href="rpmn_solution_providers.html">Solution Providers</a></li>
-<li><a href="rpmn_for_tool_developers.html">Tools</a></li>
 <li><a href="rpmn_for_bird.html">BIRD</a></li>
 <li><a href="frtb.html">FRTB</a></li>
 						</ul>
@@ -90,7 +89,7 @@
 									</div>
 									<div class="col-md-7 copy animate-box">
 										<h1>RPMN for Solution Providers</h1>
-										<h1>Machine Written Solution Skeletons</h1>
+										<h1>Machine Written Solution Skeletons and RPMN tools</h1>
 									</div>
 								</div>
 							</div>
@@ -112,8 +111,14 @@
 					
 					</div>
 					 <h3>Introduction</h3> 
-					 <p>RPMN is a definition of  diagrams and associated file formats allowing regulatory experts to describe and collaborate on  regulatory artefacts as a machine readable requirements document</b><br><br>
-					   It is  possible to create software to read this format and build concrete solutions such as:
+					 <p>RPMN is a definition of  diagrams and associated human readable file formats allowing regulatory experts to describe and collaborate on  regulatory artefacts as a machine readable requirements document.<br><br>
+					 Associated with these file formats is a UML model. This model describes classes, their attributes and relationships.<br><br>
+					 Technical users can use this model to programmatically generate solution skeletons in an executable language of there choice.<br><br>
+					  The same model can be used by technical developers who wish to create tools for editing and visualising RPMN.<br><br>
+					 
+					  <h3>Generating Solution Skeletons</h3> 
+					
+					   It is  possible to create software to read RPMN files and build concrete solutions such as:
 					  <ul>
 							   <li>Database Schemas</li>
 							   <li>Function outlines in any programming language such as Python or Java</li>
@@ -121,13 +126,30 @@
 							   <li>Executable test that can be run in existing automated testing frameworks</li>
 						</ul> 
 						
-					 To this end we have a UML model which can describe the artefacts such as data model and workflow. <br><br>
-					 This UML model can store all the structured information represented in the text files. <br><br>
-					 The UML class diagrams represents an information model only, they have attributes and relationships, but no methods/functions.<br><br>
+					 To make this easy for technical developers we have a UML model which can describe the artefacts of RPMN such as data model and workflow. <br><br>
+					 This is inspired by the approach used in the BPMN standard from the OMG standards group which has a UML model (described in a cmof file <a href="https://www.omg.org/spec/BPMN/20100501/BPMN20.cmof">here</a> , although the RPMN model is much simpler) <br><br>
+					 RPMN's UML model can store all the structured information represented in the RPMN text files. Similarly BPMN's UML model can store all the structured information stored in BPMN files, although BPMN files are not easily human readable.<br><br>
 					 As part of Eclipse Free BIRD tools we have code that converts to/from the text format into an in-memory object tree using the classes defined in the UML format.<br><br>
-					 Having this in-memory representation of the files, allows any kind of manipulation/navigation/query/transformation/visualisation of the artefacts to create the skeleton of executable solutions<br><br>
+					 Having this in-memory representation of the files, allows any kind of manipulation/navigation/query/transformation/visualisation of the artefacts to create the skeleton of executable solutions.<br><br>
 					 These executable solutions can therefore always stay in synch with the machine readable requirements document, and lineage can built in also if required from requirement to executable code.<br><br>
 					 
+					 <h3>Creating RPMN Tools</h3> 
+					     The UML model can be used to create software to build tool support for the standard such as
+					  <ul>   
+							  <li>Text editors for the file formats with auto-completion</li>
+							  <li>Auto-creation of diagrams from the text formats</li>
+							  <li>Visual and textual navigation of the artefacts</li>
+						</ul> 
+						
+										 
+					 As part of Eclipse Free BIRD tools we have an example of this which uses the Eclipse Modelling Frameworks and its Sirius visualisation component to create diagrams. It also includes tooling in Python.<br><br>
+				 
+				 <h3> The link between text and UML model </h3>
+				 As a very technical note, there is a grammar associated with the text file formats of RPMN.<br><br>
+				  The UML model is complete enough to store the items of the abstract tree of any text file written which follows that grammar.<br><br>
+				  We indicate how a file in the grammar can be translated to an object tree made of objects which are instances of the classes in the UML diagram.<br><br>
+				  When we have an object tree, this is a great starting point for generating visualisations, or other structures such as database schemas or Python/Java/Django classes. A common way to do this is with templating frameworks. <br><br>
+				  Eclipse Free BIRD tools provides an implementation which translates between text files following the RPMN grammar, and object trees in Java or Python <br><br>
 				 <h3> The UML Class diagrams and their documentation </h3>
 				<p>
 
