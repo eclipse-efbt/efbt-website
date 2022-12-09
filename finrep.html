@@ -71,6 +71,8 @@
 <li><a href="tools.html">Tools</a></li>
 <li><a href="finrep.html">Finrep</a></li>
 <li><a href="frtb.html">FRTB</a></li>
+
+	
 						</ul>
 					</div>
 				</div>
@@ -89,7 +91,8 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>Enabling Open Digital Regulatory Reporting for Prudential and Financial Regulations with BIRD</h1>
+										<h1>Finrep</h1>
+										<h2>Finrep described in RPMN</h2>
 									</div>
 								</div>
 							</div>
@@ -107,35 +110,30 @@
 
 		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
-				<div class="row row-pb-sm">
+				
+					 <h1>Finrep </h1> 
+					 
+					 	 <h2>Goal</h2> 
+					     The BIRD project, a collaboration of European banks and central banks, led by the ECB, previously created and published openly the logic of the EBA Finrep 2.8 regulation in an executable language called VTL.<br><br>
+					     A lot of test data for this was created also by the project.<br><br>
+					     This VTL program transforms data in the BIRD data model into the data required by EBA's Finrep 2.8 templates.<br><br>
+					     Since its creation the BIRD data model has moved on a bit, and the same items are redistrubuted some what to different entities, and the VTL is not currently being updated as the BIRD project considers other  business friendly means of describing regulatory transformations.<br><br>
+					     We would like to see the value of this effort preserved (and grown) in an open environment, this also provides a good means to show RPMN as fit for its purpose for EBA reports.<br><br>
+					     
+					     
+					  <h2>Porting the VTL to RPMN</h2> 
 					
-					</div>
-					 <h3>Enabling Open Digital Regulatory Reporting for Prudential and Financial Regulations with BIRD</h3> 
-					 <p> 
-					 Eclipse Free BIRD Tools provides an open standard called <a href="rpmn.html">RPMN</a> (Regulatory Process and Modelling Notation) for describing regulatory data models and regulatory logic for financial and prudential reporting and the unique lineage challenges of this kind of regulatory logic.<br><br>
-Eclipse Free BIRD Tools also provides a reference implementation of  open source <a href="tools.html">tools</a> for creating content in the standard and even executing regulatory logic defined in the standard, and encourages the further development of other open or commercial tools for RPMN.<br><br>
-Eclipse Free BIRD Tools is also providing an open port of the <a href="finrep.html">Finrep</a> logic implementation developed by the ECB’s BIRD project in VTL, into the RPMN standard, and build on top of the BIRD Data Model developed collaboratively by the ECB and member banks and central banks of the EU.<br><br>
-Eclipse Free BIRD Tools is also providing a collaborative description of the <a href="frtb.html">FRTB SBA </a> regulation, which can help banks  in the model validation and testing of this regulation required globally by 2025<br><br>
-
-Eclipse Free BIRD Tools provides translators of the ECB BIRD artifacts in its published formats into RPMN<br><br>
-
-The code and standard definitions are freely available on <a href="https://github.com/eclipse/efbt">Github</a><br><br>
-The initial RPMN specification is available at the <a href="https://github.com/eclipse/efbt/wiki/RPMN-Specification-%E2%80%93-an-open-standard-for-Regulatory-Models-and-Transformations-%E2%80%93-initial-draft">Github Wiki </a><br><br> 
-					    The Eclipse Free BIRD Project  is governed by the open source  <a href="https://www.eclipse.org/">Eclipse Foundation</a> , and as such is vendor nuetral with full IP tracability and a strong open source but commercially friendly license.<br><br>
-					   We show below a comparison between ISDAs DRR Process for Trade/Transaction reporting and DRR with BIRD enabled by Eclipse Free BIRD Tools<br><br>
-
-					 
-					 <img src="bird_isda.PNG" alt="datamodel" height="700" width="1200"/><br><br>
-					 
-					  An overview of the ECB BIRD project is provided below: <br><br>
-					 </p>
-					 
-					    
+					  We can consider that some of this work needs to be done by hand, but we know that some of it can be automated, and we know that the 
+					  task will be easier if we have tools for navigating the VTL and its dependencies.<br><br>
+					  So we create an in memory version of the VTL code, and some tools for navigating it, and some tools for autogenerating rpmn text files from the VTL 
+					  (or at least their skeletons, and whatever flesh we can add/estimate)<br><br>
+					  The skeleton files can be improved manually and tracked and discussed through Github, and also the autogenration program (open source of course, and written in Python) can be improved and re-run also.<br><br>
+					  An input to the Python program is also high level info about how the BIRD data model has changed since the 2.8 VTL was written.<br><br>
+					  
+					  here is an example of the VTL navigation tool:<br><br>
+					  
+					  <img src="vtl_analysis.PNG" alt="datamodel" height="700" width="1200"/><br><br> 
 			</div>
-			<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-						<h2>What is BIRD?</h2>
-						<p><a href="https://youtu.be/CUreE2REzvA" class="btn btn-special popup-vimeo">Watch The Video</a></p>
-					</div>
 		</div>
 		<!-- END .gtco-services -->
 		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
