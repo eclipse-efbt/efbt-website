@@ -72,8 +72,6 @@
 <li><a href="tools.html">Tools</a></li>
 <li><a href="finrep.html">Finrep</a></li>
 <li><a href="frtb.html">FRTB</a></li>
-
-	
 						</ul>
 					</div>
 				</div>
@@ -92,8 +90,7 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>Tools</h1>
-										<h2>Reference Implementation of tools for writing and running RPMN content</h2>
+										<h1>BIRD on Ecore</h1>
 									</div>
 								</div>
 							</div>
@@ -111,53 +108,45 @@
 
 		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
-				
-					 <h1>Tools </h1> 
-					 
-					 	 <h2>RPMN collaborative content creation tools</h2> 
-					     Eclipse Free BIRD Tools provides open source implementations of:
-					    <ul>   
-							  <li>Text editors for the file formats with auto-completion</li>
-							  <li>Auto-creation of diagrams from the text formats</li>
-							  <li>Visual and textual navigation of the artefacts</li>
-						</ul> 
-						using the stable Eclipse RCP desktop environment, the  Eclipse Sirius visualisation framework, and Language Server Protocol integration (all of which are themselves open source)<br><br>
-						
-						Other web based environments considered are the VSCode environment (which can run in the web and is language server compliant), and Sirius Web..as these are not too tricky to port to<br><br>
-					 
-					  <h2>Generating Solution Skeletons</h2> 
+				<div class="row row-pb-sm">
 					
-					  Eclipse Free BIRD Tools provides a code generator which takes RPMN text files as input and produces working prototypes. The current code generators create Java prototypes which work well in the many stable mature java run/debug/develop environments and can be easily understood by the millions of Java developers in the world.<br><br>
-					  It is not a big leap to make this into a Python/Scala/C-sharp code generator, to integrate with those stable environments also. The code generator takes RPMN as an input and creates:
-					  <ul>
-							   <li>UI forms for test data, with instant data validation against the data model</li>
-							   <li>Executable functions in Java, with clear lineage back to the RPMN business friendly description</li>
-							   <li>Workflow logic to run the Java functions in the correct order</li>
-							   <li>Post execution results which describe very clearly the data-lineage of the calculated results</li>
-							   <li>Tests that can be run in existing automated testing frameworks (work in progress)</li>
-					  </ul> 
-								 
-					 
-				 <h2> Connectors </h2>
-					Eclipse Free BIRD Tools provides open source connectors written in Python which take as input the arefacts (such as the Data Model) produced by the BIRD project and translates them to RPMN text files.
-					Connectors could be provided to other open or closed regulatory data models also.	<br><br>
-					
-				<h2> LDM Tools</h2>		
+					</div>
+					 <h3>BIRD on Ecore</h3> 
+					 <p> 
+					 Eclipse Free BIRD Tools allows the BIRD data model to be described in the ubiquitous Ecore standard, enabling the use of the many stable open source libraries that work with the Ecore standard allowing rapid development of working prototypes using the BIRD data model. <br><br>
+					 Describing BIRD in Ecore also allows:<br>
 
-The BIRD LDM is a great primary source of information without duplication of business concerns and can be used as a source for “flatter” de-normalised models such as IREF which may be more compatible with data mapping from banks systems, or submission to regulator's systems.<br><br>
-We would like to develop collaboratively a working interactive prototypes and  great tools for working with LDM to open up its full potential. We build these tools on fully open-source standards and frameworks (RPMN and <a href="https://www.eclipse.org/edapt/">Eclipse Edapt</a> ) under the Eclipse License so that they can be incorporated easily into commercially supported tools if desired without the restrictions of proprietary formats, proprietary tools, and proprietary licenses.<br><br>
-We use Eclipse Edapt for Forward engineering and data migration, since it is very fit for purpose, interactive,  and completely customisable and extendable as an open source solution published under the commercially friendly , open source, Eclipse License. An example of Edapt in action:  <br><br>
+<ul>
 
-<a href="https://youtu.be/KF3N8YcF6ow">forward engineering edapt1</a> <br><br>
-<a href="https://youtu.be/gpW2-ub6wW4">forward engineering edapt2</a> <br><br>
-<a href="https://youtu.be/ex-1285CcuU">Automatic data migrations of LDM data matching the FE structural migrations</a> <br><br>
+<li>BIRD transformation rules and their tests to be described using the RPMN standard that is part of Eclipse Free BIRD Tools</li>	
+<li>BIRD LDM Forward Engineering rules to be described with the interactive Eclipse EDapt tools for model refactoring and automatic data migrations</li>	
+<li>Excellent source control and change management using the Eclipse XCore persistence format for human (and machine) readable storage of Ecore models</li>
+</ul>
 
-				<p>
+Eclipse Free BIRD Tools provides translators from the published storage format of the BIRD data models into the Ecore Standard.<br><br>
+Ecore is the reference implementation of the OMG’s (Object Management Group) standard for model driven engineering called EMOF (Essential Meta Object Facility). EMOF can be considered as a subset of UML (allowing the description of UML class diagrams) combined with a tech-neutral way of creating and describing objects of those classes. The related CMOF (Comprehensive Meta Object Facility) is used as the meta model to describe both the complete UML and BPMN standards in their specifications from OMG.<br><br>
+Ecore is used for modelling within banks, RegTech firms, engineering firms (such as Thales, Siemens, Bosch) and multiple aerospace agencies such as NASA Jet Propulsion Labs.<br><br>
+A subset of the mature open-source libraries that work out of the box with Ecore:<br><br>
 
+<ul>
 
-	
-				
+<li>Ecore Java API from Eclipse modelling Framework</li>	
+<li>Ecore Python API from PyEcore</li>	
+<li>Validation framework, flexible serialization framework, change notification framework, UI editor framework from the Eclipse Modeling Framework</li>	
+<li>Advanced visualization framework from Eclipse Sirius</li>	
+<li>Forward engineering and data migration from Eclipse Edapt</li>	
+<li>Autogenerated model documentation with EcoreDocGen</li>	
+<li>Flexible queries with Acceleo Query Language</li>	
+<li>Human readable persistence with Eclipse Xcore</li>	
+<li>Programmatic enrichment with Xcore + Xbase</li>	
+<li>Regulatory processes and tests descriptions with RPMN</li>	
+
+</ul>
+
+					 </p>
+
 			</div>
+			
 		</div>
 		<!-- END .gtco-services -->
 		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
