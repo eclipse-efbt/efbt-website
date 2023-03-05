@@ -68,7 +68,7 @@
 
 <li><a href="index.html">DRR with BIRD</a></li>		
 <li><a href="bird_ecore.html">BIRD on Ecore</a></li>
-<li><a href="rpmn.html">RPMN</a></li>
+<li><a href="rpmn.html">XCoreL</a></li>
 <li><a href="tools.html">Tools</a></li>
 <li><a href="finrep.html">Finrep</a></li>
 <li><a href="frtb.html">FRTB</a></li>
@@ -92,8 +92,8 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>RPMN</h1>
-										<h2>An Open Standard for Machine Readable Requirements Documents </h2>
+										<h1>XCoreL</h1>
+										<h2>An Open Standard for Machine Readable Regulatory Requirements Documents </h2>
 									</div>
 								</div>
 							</div>
@@ -112,20 +112,21 @@
 		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
 				
-					 <h3>RPMN </h3> 
+					 <h3>XCoreL </h3> 
 					 
-					 <p>Eclipse Free BIRD Tools introduces RPMN (Regulatory Process and Modelling Notation) as an open standard for Regulatory experts to easily describe and collaborate on <b>machine readable requirements documents </b> without programming experience.<br><br>
-						RPMN is compatible with the artefacts published by BIRD for data models and transformations (and can be used with other regulatory data models and logic also)<br><br>
-						RPMN  allows solution developers to auto-create a skeleton of a tech solution (e.g. data base schemas and programming language functions) from RPMN as <b>machine written solutions</b>.<br><br>
+					 <p>Eclipse Free BIRD Tools introduces XCoreL (XCore with Lineage Extensions) as an open standard for Regulatory experts to easily describe and collaborate on <b>machine readable requirements documents </b> without programming experience.<br><br>
+					    XCoreL is an extension of the existing <a href="https://wiki.eclipse.org/Xcore">Eclipse XCore</a> standard, which is a human (and computer) readable version of Ecore.<br><br>
+						XCoreL is compatible with the artefacts published by BIRD for data models and transformations (and can be used with other regulatory data models and logic also)<br><br>
+						XCoreL  allows solution developers to auto-create a skeleton of a tech solution (e.g. data base schemas and programming language functions) from XCoreL as <b>machine written solutions</b>.<br><br>
 						These machine written solutions are always in synch with the requirements doc, and gaps in functionality can be completed by technical programmers.<br><br>
-						RPMN is inspired by and re-uses other standards typically used in defining regulatory requirements docs such as BPMN,ER-Diagrams and SQL, but refines these to use only what is most appropriate  for regulatory processes, and establishes navigable links between the parts of the standard such as workflow to datamodel<br><br>
-					    RPMN is an open standard, RPMN has a language-neutral model to help technical tool developers to create business-user friendly tools on top of RPMN. The Eclipse Free BIRD Tools project provides open source tools based on RPMN in Python and Java.<br><br>
-					    The initial RPMN specification is available at the <a href="https://github.com/eclipse/efbt/wiki/RPMN-Specification-%E2%80%93-an-open-standard-for-Regulatory-Models-and-Transformations-%E2%80%93-initial-draft">Github Wiki </a><br><br> 
-					    RPMN has 3 parts as shown in the diagram below, these are described in more detail below<br><br>
+						XCoreL is inspired by and re-uses other standards typically used in defining regulatory requirements docs such as BPMN,ER-Diagrams and SQL, but refines these to use only what is most appropriate  for regulatory processes, and establishes navigable links between the parts of the standard such as workflow to datamodel<br><br>
+					    XCoreL is an open standard, XCoreL has a language-neutral model to help technical tool developers to create business-user friendly tools on top of XCoreL. The Eclipse Free BIRD Tools project provides open source tools based on XCoreL in Python and Java.<br><br>
+					    The initial XCoreL specification is available at the <a href="https://github.com/eclipse/efbt/wiki/XCoreL-Specification-%E2%80%93-an-open-standard-for-Regulatory-Models-and-Transformations-%E2%80%93-initial-draft">Github Wiki </a><br><br> 
+					    XCoreL has 3 parts as shown in the diagram below, these are described in more detail below<br><br>
 					    <img src="rpmn_overview.png" alt="datamodel" height="700" width="1200"/><br><br>
 					 
-					 <h2>RPMN For Regulatory Subject Matter Experts</h3>
-					 <p> For business users RPMN (Regulatory Process Model and Notation) is just 2 things: Some simple diagrams and associated simple text formats.<br><br>
+					 <h2>XCoreL For Regulatory Subject Matter Experts</h3>
+					 <p> For business users XCoreL  is just 2 things: Some simple diagrams and associated simple text formats.<br><br>
 					 Users can choose to  interact with either visual or text formats .<br><br>
 					 The text files are human readable text files and easily stored in version control systems like Git/GitHub/GitLab/SVN .<br><br>
 					 It is easy to display and understand the difference between 2 versions of the text file<br><br>				 
@@ -206,15 +207,15 @@
 
 					</table>
 					<br><br>
-	 <h2>RPMN for Technical users</h2> 
-					 <p>RPMN is a definition of  diagrams and associated human readable file formats allowing regulatory experts to describe and collaborate on  regulatory artefacts as a machine readable requirements document.<br><br>
+	 <h2>XCoreL for Technical users</h2> 
+					 <p>XCoreL is a definition of  diagrams and associated human readable file formats allowing regulatory experts to describe and collaborate on  regulatory artefacts as a machine readable requirements document.<br><br>
 					 Associated with these file formats is a UML model. This model describes classes, their attributes and relationships.<br><br>
 					 Technical users can use this model to programmatically generate solution skeletons in an executable language of there choice.<br><br>
-					  The same model can be used by technical developers who wish to create tools for editing and visualising RPMN.<br><br>
+					  The same model can be used by technical developers who wish to create tools for editing and visualising XCoreL.<br><br>
 					 
 					  <h3>Generating Solution Skeletons</h3> 
 					
-					   It is  possible to create software to read RPMN files and build concrete solutions such as:
+					   It is  possible to create software to read XCoreL files and build concrete solutions such as:
 					  <ul>
 							   <li>Database Schemas</li>
 							   <li>Function outlines in any programming language such as Python or Java</li>
@@ -222,14 +223,14 @@
 							   <li>Executable test that can be run in existing automated testing frameworks</li>
 						</ul> 
 						
-					 To make this easy for technical developers we have a UML model which can describe the artefacts of RPMN such as data model and workflow. <br><br>
-					 This is inspired by the approach used in the BPMN standard from the OMG standards group which has a UML model (described in a cmof file <a href="https://www.omg.org/spec/BPMN/20100501/BPMN20.cmof">here</a> , although the RPMN model is much simpler) <br><br>
-					 RPMN's UML model can store all the structured information represented in the RPMN text files. Similarly BPMN's UML model can store all the structured information stored in BPMN files, although BPMN files are not easily human readable.<br><br>
+					 To make this easy for technical developers we have a UML model which can describe the artefacts of XCoreL such as data model and workflow. <br><br>
+					 This is inspired by the approach used in the BPMN standard from the OMG standards group which has a UML model (described in a cmof file <a href="https://www.omg.org/spec/BPMN/20100501/BPMN20.cmof">here</a> , although the XCoreL model is much simpler) <br><br>
+					 XCoreL's' UML model can store all the structured information represented in the XCoreL text files. Similarly BPMN's UML model can store all the structured information stored in BPMN files, although BPMN files are not easily human readable.<br><br>
 					 As part of Eclipse Free BIRD tools we have code that converts to/from the text format into an in-memory object tree using the classes defined in the UML format.<br><br>
 					 Having this in-memory representation of the files, allows any kind of manipulation/navigation/query/transformation/visualisation of the artefacts to create the skeleton of executable solutions.<br><br>
 					 These executable solutions can therefore always stay in synch with the machine readable requirements document, and lineage can built in also if required from requirement to executable code.<br><br>
 					 
-					 <h2>Creating RPMN Tools</h3> 
+					 <h2>Creating XCoreL Tools</h3> 
 					     The UML model can be used to create software to build tool support for the standard such as
 					  <ul>   
 							  <li>Text editors for the file formats with auto-completion</li>
@@ -241,11 +242,11 @@
 					 As part of Eclipse Free BIRD tools we have an example of this which uses the Eclipse Modelling Frameworks and its Sirius visualisation component to create diagrams. It also includes tooling in Python.<br><br>
 				 
 				 <h2> The link between text and UML model </h3>
-				 As a very technical note, there is a grammar associated with the text file formats of RPMN.<br><br>
+				 As a very technical note, there is a grammar associated with the text file formats of XCoreL.<br><br>
 				  The UML model is complete enough to store the items of the abstract tree of any text file written which follows that grammar.<br><br>
 				  We indicate how a file in the grammar can be translated to an object tree made of objects which are instances of the classes in the UML diagram.<br><br>
 				  When we have an object tree, this is a great starting point for generating visualisations, or other structures such as database schemas or Python/Java/Django classes. A common way to do this is with templating frameworks. <br><br>
-				  Eclipse Free BIRD tools provides an implementation which translates between text files following the RPMN grammar, and object trees in Java or Python <br><br>
+				  Eclipse Free BIRD tools provides an implementation which translates between text files following the XCoreL grammar, and object trees in Java or Python <br><br>
 				 <h2> The UML Class diagrams and their documentation </h3>
 				<p>
 
@@ -258,38 +259,38 @@
     <th style="text-align:left">Documentation</th>
   </tr>
   <tr>
-    <td>RPMN</td>
+    <td>XCoreL</td>
     <td>Data Model</td>
     <td><a href="xcore class diagram.svg">UML Class Diagram</a></td>
     <td><a href="Xcore.html">Documentation</a></td>
   </tr>
   
   <tr>
-    <td>RPMN</td>
+    <td>XCoreL</td>
     <td>Workflow</td>
     <td><a href="bpmn_lite class diagram.svg">UML Class Diagram</a></td>
     <td><a href="bpmn_lite.html">Documentation</a></td>
   </tr>
   <tr>
-    <td>RPMN</td>
+    <td>XCoreL</td>
     <td>Report Generation</td>
     <td><a href="sql_lite class diagram.svg">UML Class Diagram</a></td>
     <td><a href="sql_lite.html">Documentation</a></td>
   </tr>
   <tr>
-    <td>RPMN</td>
+    <td>XCoreL</td>
     <td>Business Requirements/Regulations</td>
     <td><a href="requirements_text class diagram.svg">UML Class Diagram</a></td>
     <td><a href="requirements_text.html">Documentation</a></td>
   </tr>
    <tr>
-    <td>RPMN</td>
+    <td>XCoreL</td>
     <td>Tests</td>
     <td><a href="testing class diagram.svg">UML Class Diagram</a></td>
     <td><a href="testing.html">Documentation</a></td>
   </tr>
   <tr>
-    <td>RPMN</td>
+    <td>XCoreL</td>
     <td>Module Management</td>
     <td><a href="module_management class diagram.svg">UML Class Diagram</a></td>
     <td><a href="module_management.html">Documentation</a></td>
