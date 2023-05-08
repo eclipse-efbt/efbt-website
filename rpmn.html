@@ -68,7 +68,7 @@
 
 <li><a href="index.html">DRR with BIRD</a></li>		
 <li><a href="bird_ecore.html">BIRD on Ecore</a></li>
-<li><a href="rpmn.html">XCoreL</a></li>
+<li><a href="rpmn.html">Ecore4Reg</a></li>
 <li><a href="tools.html">Tools</a></li>
 <li><a href="finrep.html">Finrep</a></li>
 <li><a href="frtb.html">FRTB</a></li>
@@ -92,7 +92,7 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>XCoreL</h1>
+										<h1>Ecore4Reg</h1>
 										<h2>An Open Standard for Machine Readable Regulatory Requirements Documents</h2>
 									</div>
 								</div>
@@ -112,154 +112,91 @@
 		<div class="gtco-services gtco-section">
 			<div class="gtco-container">
 				
-					 <h3>XCoreL </h3> 
+					 <h2>Ecore4Reg </h2> 
 					 
-					 <p>Eclipse Free BIRD Tools introduces XCoreL (XCore with Lineage Extensions) as an open standard for Regulatory experts to easily describe and collaborate on <b>machine readable requirements documents </b> without programming experience.<br><br>
-					    XCoreL is an extension of the existing <a href="https://wiki.eclipse.org/Xcore">Eclipse XCore</a> standard, which is a human (and computer) readable version of Ecore.<br><br>
-						XCoreL is compatible with the artefacts published by BIRD for data models and transformations <br><br>
-						XCoreL is inspired by and re-uses other standards typically used in defining regulatory requirements docs such as BPMN,ER-Diagrams and SQL, but refines these to use only what is most appropriate  for regulatory processes, and establishes navigable links between the parts of the standard such as workflow to datamodel<br><br>
-					    XCoreL is an open standard
-					    The initial XCoreL specification is available at the <a href="https://github.com/eclipse/efbt/wiki/XCoreL-Specification-%E2%80%93-an-open-standard-for-Regulatory-Models-and-Transformations-%E2%80%93-initial-draft">Github Wiki </a><br><br> 
-					    XCoreL has 3 parts as shown in the diagram below, these are described in more detail below<br><br>
-					    <img src="rpmn_overview.png" alt="datamodel" height="700" width="1200"/><br><br>
+					 <p>Eclipse Free BIRD Tools introduces Ecore4Reg as an open standard for regulatory experts to easily describe and collaborate on <b>machine readable requirements documents </b> without programming experience.<br><br>
+					    ECore4Reg extends a simple subset of Ecore with a means of defining business friendly logic for  financial and prudential reporting. This allows datamodels and regulatory logic to be defined together in the same format and tools instead of constantly switching between tools, and manually keeping data models and transformations in synch.<br><br>
+						ECore4Reg is compatible with the artefacts published by BIRD for data models and transformations <br><br>						
+					    ECore4Reg is an open standard<br><br>
+					    The initial ECore4Reg specification is available at the <a href="https://github.com/eclipse/efbt/wiki/XCoreL-Specification-%E2%80%93-an-open-standard-for-Regulatory-Models-and-Transformations-%E2%80%93-initial-draft">Github Wiki </a><br><br>
+					    We plan to add soon links also to Regulatory text within tools support <br><br>
+					    
 					 
-					 <h2>XCoreL For Regulatory Subject Matter Experts</h3>
-					 <p> For business users XCoreL  is just 2 things: Some simple diagrams and associated simple text formats.<br><br>
-					 Users can choose to  interact with either visual or text formats .<br><br>
-					 The text files are human readable text files and easily stored in version control systems like Git/GitHub/GitLab/SVN .<br><br>
-					 It is easy to display and understand the difference between 2 versions of the text file<br><br>				 
-						We  have a different diagram and text format for each of these regulatory artefacts <br>
-						 <ul>
-							  <li>Data Model</li>
-							  <li>Workflow</li>
-							  <li>Report Generation</li>
-							  <li>Business Requirements/Regulations</li>
-							  <li>Tests</li>
-						</ul> 
-						We show examples of these below <br><br>
-						<table style="width:100%">
-						  <tr>
-						  	<th style="text-align:left">Artefact Type</th>
-						    <th style="text-align:left">Image Type</th>
-						    <th style="text-align:left">Diagram</th>
-						    <th style="text-align:left">Text Example</th>
-						  </tr>
-						  <tr>
-						    <td>DataModel</td>
-						    <td>DataModel</td>
-						    <td><img src="ldm_mini.PNG" alt="datamodel" height="200" width="300"/></td>
-						    <td><img src="data_model_text.PNG" alt="datamodel" height="200" width="300"/></td>
-						    
-						  </tr>
-						  <tr>
-						    <td>Workflow</td>
-						    <td>Workflow</td>
-						    <td><img src="bpmn_unfiltered.PNG" alt="workflow" height="200" width="300"/></td>
-						    <td><img src="workflow_text.PNG" alt="workflow_text" height="200" width="300"/></td>
-						    
-						  </tr>
+					 <h3>Ecore4Reg For Regulatory Subject Matter Experts</h3>
+					 
+					 		Ecore4Reg allows SME's' to navigate  bird data models, and allows SMEs to write transformation logic which links to the data model.<br><br>
+					 		Tools provide code complete, and automatic validation as the SME types.<br><br>
+					 		SME's can change the data model and immediately see which transformation rules are affected.<br><br>
+					 		Ecore4Reg always autogenerates full Ecore (with standard defaults) for the data model part, and that can be used in the many open-source tools available for Ecore.<br><br>
+					 		It is always possible to translate from full Ecore to Ecore4Reg also. <br><br>
+					 		Note in the examples below that the regulatory logic file is referencing the data model file (see blue box) and had autocomplete to help the SME find it. Note that if we reference something that is not (or is no loner) in the data model then this will be highlighted as a validation error with red underline..
+					 		
 						  
-						   <tr>
-						    <td>Report Generation</td>
-						    <td>No Diagram just text</td>
-						    <td><img src="sql_text.PNG" alt="sql_text" height="200" width="300"/></td>
-						    <td><img src="sql_text.PNG" alt="sql_text" height="200" width="300"/></td>
-						    
-						  </tr>
-						   <tr>
-						    <td>Requirements</td>
-						    <td>Requirements book</td>
-						    <td><img src="requirements_image.PNG" alt="requiements_image" height="100" width="300"/></td>
-						    <td><img src="requierments_text.PNG" alt="requiremnts_text" height="200" width="300"/></td>						    
-						  </tr>
-						   </tr>
-						   <tr>
-						    <td>Test</td>
-						    <td>Test Data</td>
-						    <td><img src="test_data.PNG" alt="test_data" height="80" width="300"/></td>
-						    <td><img src="tests_text.PNG" alt="tests_text" height="200" width="300"/></td>
-						    
-						  </tr>
-						  
-
-					</table>
+						 
 					<br><br>
-	 <h2>XCoreL for Technical users</h2> 
-					 <p>XCoreL is a definition of  diagrams and associated human readable file formats allowing regulatory experts to describe and collaborate on  regulatory artefacts as a machine readable requirements document.<br><br>
-					 Associated with these file formats is a UML model. This model describes classes, their attributes and relationships.<br><br>
+					<img src="cash_on_hand.PNG" alt="sql_text" height="150" width="500"/>
+					<img src="finrep_f01.PNG" alt="sql_text" height="300" width="600"/>
+					<br><br>
+	 <h3>Ecore4Reg for Technical users and tool providers</h3> 
+					 <p>
+					 Ecore4Reg is specified as set of UML class diagrams, authored using Ecore.<br><br>
+					 Technical users or tool providers can interact with Ecore4Reg using a Java or Python API, in essence working with a neat API for objects which match Java or Python classes for each of the UML classes <br><br>
 					 
-					  
-					 To make this easy for technical developers we have a UML model which can describe the artefacts of XCoreL such as data model and workflow. <br><br>
-					 This is inspired by the approach used in the BPMN standard from the OMG standards group which has a UML model (described in a cmof file <a href="https://www.omg.org/spec/BPMN/20100501/BPMN20.cmof">here</a> , although the XCoreL model is much simpler) <br><br>
-					 XCoreL's' UML model can store all the structured information represented in the XCoreL text files. Similarly BPMN's UML model can store all the structured information stored in BPMN files, although BPMN files are not easily human readable.<br><br>
-					 As part of Eclipse Free BIRD tools we have code that converts to/from the text format into an in-memory object tree using the classes defined in the UML format.<br><br>
-					 Having this in-memory representation of the files, allows any kind of manipulation/navigation/query/transformation/visualisation of the artefacts.<br><br>
-					 
-					 <h2>Creating XCoreL Tools</h3> 
+					 <h3>Creating XCoreL Tools</h3> 
 					     The UML model can be used to create software to build tool support for the standard such as
 					  <ul>   
 							  <li>Text editors for the file formats with auto-completion</li>
 							  <li>Auto-creation of diagrams from the text formats</li>
 							  <li>Visual and textual navigation of the artefacts</li>
 						</ul> 
-						
-										 
-					 As part of Eclipse Free BIRD tools we have an example of this which uses the Eclipse Modelling Frameworks and its Sirius visualisation component to create diagrams. It also includes tooling in Python.<br><br>
-				 
-				 <h2> The link between text and UML model </h3>
-				 As a very technical note, there is a grammar associated with the text file formats of XCoreL.<br><br>
+				<br><br>
+						 
+				 <h3> The link between text and UML model </h3>
+				 Ecore4Reg can be strored as XML or JSON or we can associate a grammar. <br><br>
+				 As a very technical note, there is a grammar associated with the text file formats of Ecore4Reg.<br><br>
+				 For the datamodeling part we associate the grammar of existing Eclipse Xcore which is semantically equivalent to Ecore<br><br>
+				 For the regulatory transformations/logic part we associate with a greatly cut down version of the familiar SQL language<br><br>
 				  The UML model is complete enough to store the items of the abstract tree of any text file written which follows that grammar.<br><br>
-				  We indicate how a file in the grammar can be translated to an object tree made of objects which are instances of the classes in the UML diagram.<br><br>
+				  We indicate how a file in the grammar can be translated to and from an object tree made of objects which are instances of the classes in the UML diagram.<br><br>
 				 
 				 
-				 <h2> The UML Class diagrams and their documentation </h3>
+				 <h3> The UML Class diagrams and their documentation </h3>
 				<p>
 
 
 <table style="width:100%">
   <tr>
-  	<th style="text-align:left">Group</th>
-    <th style="text-align:left">Name</th>
+  	<th style="text-align:left">Name</th>
+    <th style="text-align:left">Description</th>
     <th style="text-align:left">Class Diagram</th>
     <th style="text-align:left">Documentation</th>
   </tr>
   <tr>
-    <td>XCoreL</td>
-    <td>Data Model</td>
-    <td><a href="xcore class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="Xcore.html">Documentation</a></td>
-  </tr>
-  
-  <tr>
-    <td>XCoreL</td>
-    <td>Workflow</td>
-    <td><a href="bpmn_lite class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="bpmn_lite.html">Documentation</a></td>
+    <td>EcoreLite</td>
+    <td>A simple subset of Ecore</td>
+    <td><a href="ecore_lite class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="ecore_lite.html">Documentation</a></td>
   </tr>
   <tr>
-    <td>XCoreL</td>
-    <td>Report Generation</td>
+    <td>SQLLite</td>
+    <td>A simple subset of SQL</td>
     <td><a href="sql_lite class diagram.svg">UML Class Diagram</a></td>
     <td><a href="sql_lite.html">Documentation</a></td>
   </tr>
-  <tr>
-    <td>XCoreL</td>
-    <td>Business Requirements/Regulations</td>
-    <td><a href="requirements_text class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="requirements_text.html">Documentation</a></td>
-  </tr>
-   <tr>
-    <td>XCoreL</td>
-    <td>Tests</td>
-    <td><a href="testing class diagram.svg">UML Class Diagram</a></td>
-    <td><a href="testing.html">Documentation</a></td>
-  </tr>
-  <tr>
-    <td>XCoreL</td>
+    <tr>
     <td>Module Management</td>
+    <td>A means to split workinto independant modules</td>
     <td><a href="module_management class diagram.svg">UML Class Diagram</a></td>
     <td><a href="module_management.html">Documentation</a></td>
   </tr>
+  <tr>
+    <td>Regulatory Text</td>
+    <td>(Coming Soon)</td>
+    <td><a href="requirements_text class diagram.svg">UML Class Diagram</a></td>
+    <td><a href="requirements_text.html">Documentation</a></td>
+  </tr>
+
+
   
 </table>
 
