@@ -91,8 +91,8 @@
 										
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>BIRDSeed</h1>
-										<h2>A RegSeed Containing the Data Model and Transformations of BIRD</h2>
+										<h1>RegPlatforms</h1>
+										<h2>Extendable Platforms for Working With Regulatory Datamodels and Logic</h2>
 										
 									</div>
 								</div>
@@ -114,11 +114,39 @@
 				<div class="row row-pb-sm">
 					
 					</div>
-					<img src="reg_seed.jpg" alt="workflow" height="600" width="600"/><br>
-					 <ul>
-            <li>A RegSeed is an artefact that describes a regulatory datamodel and Regulatory Logic in one artefact.</li>
-            <li>A RegSeed is written in the open machine and human-readable <a href="regdna.html">RegDNA</a> standard.</li>
-            <li>BIRDSeed is a RegSeed containing the data model and transformations of BIRD.</li>	           
+					<img src="platform.jpg" alt="workflow" height="600" width="600"/><br>
+			<h3>RegPlatforms = RegPot + Base Platform + Add-ons</h3>
+			
+A RegPlatform is a usable platform for working with regutory datamodels and regulatory logic (transformations).<br>
+
+Eclipse Free BIRD Tools currently provides one free RegPlatform based on <a href="https://eclipseide.org/">The Eclipse IDE</a>, and a set of add-ons providing extra functionality.<br>
+<br>
+A RegPlatform has 3 parts:
+<br>
+ <ul>
+<li> A mature existing extendable platform with existing useful add-ons and a mature well documented means to create add-ons.</li> 
+<li> Add-ons for the base platform, these can be custom add-ons to provide behavior for regulatory data models and transformations, or general or existing add-ons like version control integration.</li>
+<li> A RegPot, which converts regulatory datamodels and transformations described in the open <a href="regdna.html">RegDNA</a>  format into a format suitable for that base platform.</li>
+</ul>
+<br>
+
+<h3>Base Platforms</h3>
+ 
+We consider 3 mature base platforms.
+<ul>
+<li> <a href="https://eclipseide.org/">The Eclipse IDE</a> , and its plug-in architecture for creating and installing add-ons.</li>
+<li> <a href="https://code.visualstudio.com/">Microsoft VSCode</a>  which runs on the desktop or web-browser via Github codespaces and its extension mechanism which allows users to choose and install addons.</li>
+<li> <a href="https://www.djangoproject.com/"> Python Django</a> web framework, which allows the ddition of compatible Python components.</li>
+</ul>
+<br>
+<h3>Building an ecosystem of free and  commercial inter-operable tools for regulatory datamodels and logic</h3>
+ 
+Since platforms are extendable using proven mature methods of <a href="birdsdk.html">Add-on Developement</a>, this encourages the creation of an ecosystem of interoperable add-ons. This has enormous benefits for Add-on developers:
+<ul>
+<li> Developers of Addons can develop quickly because they are not starting from zero, they have all the features of the base platform available.</li>
+<li> New add-ons can instantly benefit from being inter-operable with other add-ons for the platform, so one add-on can focus precisely on its need/utility and does not need to solve all problems.</li>
+</ul>
+					
 			
 			</div>
 		</div>
