@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Documentation - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, API, Guide" />
+	<meta name="author" content="Neil Mackenzie" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Documentation - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Complete documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Documentation - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		.doc-section {
+			padding: 80px 0;
+			border-bottom: 1px solid #eee;
+		}
+		.doc-section:last-child {
+			border-bottom: none;
+		}
+		.doc-icon {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto 30px;
+			background: #52d3aa;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 48px;
+			color: white;
+			transition: all 0.3s ease;
+		}
+		.doc-icon:hover {
+			background: #46b892;
+			transform: translateY(-5px);
+		}
+		.doc-card {
+			text-align: center;
+			padding: 40px 20px;
+			margin-bottom: 30px;
+		}
+		.doc-card h3 {
+			margin: 20px 0;
+			color: #333;
+		}
+		.doc-card p {
+			color: #666;
+			margin-bottom: 30px;
+		}
+		.feedback-form {
+			background: #f8f9fa;
+			padding: 40px;
+			border-radius: 10px;
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.form-control {
+			border-radius: 5px;
+			border: 1px solid #ddd;
+			padding: 12px 15px;
+		}
+		.btn-feedback {
+			background: #52d3aa;
+			color: white;
+			border: none;
+			padding: 12px 30px;
+			border-radius: 5px;
+			font-weight: 500;
+			transition: all 0.3s ease;
+		}
+		.btn-feedback:hover {
+			background: #46b892;
+			color: white;
+		}
+		.user-guide-placeholder {
+			background: #f8f9fa;
+			padding: 30px;
+			border-radius: 8px;
+			margin: 20px 0;
+			border-left: 4px solid #52d3aa;
+		}
+		.coming-soon {
+			color: #999;
+			font-style: italic;
+		}
+		.btn-codespace {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: #238636;
+			color: white;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 6px;
+			font-weight: 500;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			font-size: 14px;
+		}
+		.btn-codespace:hover {
+			background: #2ea043;
+			color: white;
+			text-decoration: none;
+			transform: translateY(-1px);
+		}
+		.codespace-icon {
+			fill: currentColor;
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-sm-2 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">Eclipse Free BIRD Tools&trade;</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="freebirdapplication.html">FreeBIRD Application</a></li>
+						<li class="active"><a href="documentation.html">Documentation</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Documentation</h1>
+					<h2>Your gateway to Eclipse Free BIRD Tools</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Quickstart Section -->
+	<section class="doc-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="doc-card">
+						<div class="doc-icon">
+							<i class="ti-bolt"></i>
+						</div>
+						<h3>Quickstart</h3>
+						<p>Get up and running with Eclipse Free BIRD Tools in minutes using our simple installation scripts.</p>
+
+
+
+						<div class="text-left" style="max-width: 500px; margin: 0 auto;">
+    						<h4 style="margin-top: 30px;">For Windows (and Servers):</h4>
+    						<div class="code-block">
+    							<code>
+    								windows_startup.bat
+    							</code>
+    						</div>
+
+							<h4>Otherwise:</h4>
+							<div class="code-block">
+								<code>
+									chmod +x linux_startup.sh<br>
+									./linux_startup.sh
+								</code>
+							</div>
+
+
+
+							<p style="margin-top: 20px; color: #666; font-size: 14px;">
+								<strong>Note:</strong> The linux_startup.sh script works for both Linux based and macOS systems.
+							</p>
+
+							<div style="margin-top: 30px;">
+								<h4 style="margin-bottom: 15px;">Or try instantly in your browser:</h4>
+								<a href="https://github.com/codespaces/new?hide_repo_select=true&ref=master&repo=235610689"
+								   target="_blank"
+								   class="btn-codespace"
+								   title="Open in GitHub Codespace">
+									<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" class="codespace-icon">
+										<path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path>
+									</svg>
+									Open in GitHub Codespace
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="doc-card">
+						<div class="doc-icon">
+							<i class="ti-book"></i>
+						</div>
+						<h3>User Guides</h3>
+						<p>Comprehensive guides and tutorials for mastering Eclipse Free BIRD Tools.</p>
+
+						<div class="user-guide-placeholder">
+							<h5>API Reference <span class="coming-soon">(Coming Soon)</span></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+
+						<div class="user-guide-placeholder">
+							<h5>Data Models <span class="coming-soon">(Coming Soon)</span></h5>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+
+						<div class="user-guide-placeholder">
+							<h5>Transformations <span class="coming-soon">(Coming Soon)</span></h5>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Feedback Section -->
+	<section class="doc-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="text-center" style="margin-bottom: 50px;">
+						<h2>Feedback & Support</h2>
+						<p>Have questions, suggestions, or need help? We'd love to hear from you!</p>
+					</div>
+
+					<div class="feedback-form">
+						<form id="feedbackForm">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="name">Name *</label>
+										<input type="text" class="form-control" id="name" name="name" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="email">Email *</label>
+										<input type="email" class="form-control" id="email" name="email" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="subject">Subject</label>
+								<input type="text" class="form-control" id="subject" name="subject">
+							</div>
+
+							<div class="form-group">
+								<label for="category">Category</label>
+								<select class="form-control" id="category" name="category">
+									<option value="">Select a category</option>
+									<option value="bug-report">Bug Report</option>
+									<option value="feature-request">Feature Request</option>
+									<option value="general-question">General Question</option>
+									<option value="technical-support">Technical Support</option>
+									<option value="documentation">Documentation</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="message">Message *</label>
+								<textarea class="form-control" id="message" name="message" rows="6" required placeholder="Please describe your feedback, question, or issue..."></textarea>
+							</div>
+
+							<div class="text-center">
+								<button type="submit" class="btn-feedback">Send Feedback</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer role="contentinfo" id="gtco-footer" class="footer-modern">
+		<div class="container">
+			<div class="row">
+				<section id="footer-eclipse-foundation" class="col-xs-offset-1 col-xs-11 col-sm-7 col-md-6 col-md-offset-0 hidden-print">
+					<h2 class="section-title">Eclipse Foundation</h2>
+					<ul class="nav">
+						<li><a href="https://www.eclipse.org/org/">About Us</a></li>
+						<li><a href="https://www.eclipse.org/org/foundation/contact.php">Contact Us</a></li>
+						<li><a href="https://www.eclipse.org/membership/">Membership</a></li>
+						<li><a href="https://www.eclipse.org/sponsors/">Sponsors</a></li>
+					</ul>
+				</section>
+
+				<section id="footer-legal" class="col-xs-offset-1 col-xs-11 col-sm-7 col-md-6 col-md-offset-0 hidden-print">
+					<h2 class="section-title">Legal</h2>
+					<ul class="nav">
+						<li><a href="https://www.eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+						<li><a href="https://www.eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+						<li><a href="https://www.eclipse.org/legal/copyright.php">Copyright Agent</a></li>
+						<li><a href="https://www.eclipse.org/legal/">Legal Resources</a></li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="footer-bottom">
+				<p>&copy; 2024 Eclipse Foundation. Eclipse Free BIRD Tools and the Eclipse logo are trademarks of the Eclipse Foundation.</p>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+<div class="gototop js-top">
+	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="js/main.js"></script>
+
+<!-- Feedback Form Handler -->
+<script>
+$(document).ready(function() {
+	$('#feedbackForm').on('submit', function(e) {
+		e.preventDefault();
+
+		// Get form data
+		var formData = {
+			name: $('#name').val(),
+			email: $('#email').val(),
+			subject: $('#subject').val(),
+			category: $('#category').val(),
+			message: $('#message').val()
+		};
+
+		// Create email content
+		var emailSubject = formData.subject ?
+			'EFBT Feedback: ' + formData.subject :
+			'EFBT Feedback from ' + formData.name;
+
+		var emailBody =
+			'Name: ' + formData.name + '%0D%0A' +
+			'Email: ' + formData.email + '%0D%0A' +
+			'Category: ' + (formData.category || 'Not specified') + '%0D%0A%0D%0A' +
+			'Message:%0D%0A' + formData.message + '%0D%0A%0D%0A' +
+			'----%0D%0A' +
+			'This message was sent from the EFBT Documentation feedback form.';
+
+		// Create mailto URL
+		var mailtoUrl = 'mailto:info@birdsoftwaresolutions.com?subject=' +
+			encodeURIComponent(emailSubject) + '&body=' + emailBody;
+
+		// Open email client
+		window.location.href = mailtoUrl;
+
+		// Show success message
+		alert('Thank you for your feedback! Your default email client should now open with a pre-filled message.');
+
+		// Reset form
+		this.reset();
+	});
+});
+</script>
+
+</body>
+</html>

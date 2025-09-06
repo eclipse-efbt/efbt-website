@@ -19,6 +19,485 @@ body {
   background: #fff;
 }
 
+/* =======================================================
+*
+* 	New Modern Design Classes
+*
+* ======================================================= */
+
+/* Hero Section with Gradient */
+.hero-section {
+  background: linear-gradient(135deg, #17B794 0%, #0091EA 100%);
+  padding: 80px 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  opacity: 0.1;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-section h2 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  font-weight: 300;
+  animation: fadeInUp 0.8s ease 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Feature Cards */
+.card-feature {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-feature h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card-feature p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.card-feature .icon {
+  font-size: 3rem;
+  color: #17B794;
+  margin-bottom: 20px;
+}
+
+/* Documentation Sidebar */
+.doc-sidebar {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+.doc-sidebar h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.doc-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.doc-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.doc-sidebar ul li a {
+  color: #666;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.doc-sidebar ul li a:hover,
+.doc-sidebar ul li a.active {
+  background: #17B794;
+  color: white;
+}
+
+/* Code Blocks */
+.code-block {
+  background: #282c34;
+  color: #abb2bf;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 20px 0;
+  position: relative;
+}
+
+.code-block::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #abb2bf;
+}
+
+/* Section Divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+  margin: 60px 0;
+}
+
+/* Modern Buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #17B794 0%, #0091EA 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(23, 183, 148, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(23, 183, 148, 0.5);
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: #17B794;
+  border: 2px solid #17B794;
+}
+
+.btn-secondary:hover {
+  background: #17B794;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Modern Footer */
+.footer-modern,
+#gtco-footer {
+  background: linear-gradient(135deg, #0F7562 0%, #005B9F 100%);
+  color: white;
+  padding: 80px 0 40px;
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-modern::before,
+#gtco-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="footerpattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="white" opacity="0.08"/><circle cx="0" cy="0" r="1.5" fill="white" opacity="0.08"/><circle cx="60" cy="0" r="1.5" fill="white" opacity="0.08"/><circle cx="0" cy="60" r="1.5" fill="white" opacity="0.08"/><circle cx="60" cy="60" r="1.5" fill="white" opacity="0.08"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footerpattern)"/></svg>');
+  opacity: 1;
+  pointer-events: none;
+}
+
+.footer-modern .container,
+#gtco-footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-modern h2,
+#gtco-footer h2,
+.footer-modern .section-title,
+#gtco-footer .section-title {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.footer-modern h2::after,
+#gtco-footer h2::after,
+.footer-modern .section-title::after,
+#gtco-footer .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #17B794 0%, transparent 100%);
+}
+
+.footer-modern .nav,
+#gtco-footer .nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-modern .nav li,
+#gtco-footer .nav li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-modern .nav li a,
+#gtco-footer .nav li a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer-modern .nav li a::before,
+#gtco-footer .nav li a::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #17B794;
+}
+
+.footer-modern .nav li a:hover,
+#gtco-footer .nav li a:hover {
+  color: #17B794 !important;
+  padding-left: 30px;
+}
+
+.footer-modern .nav li a:hover::before,
+#gtco-footer .nav li a:hover::before {
+  opacity: 1;
+  left: 10px;
+}
+
+/* Footer Sections Card Style */
+#footer-eclipse-foundation,
+#footer-legal {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+#footer-eclipse-foundation:hover,
+#footer-legal:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Bottom Copyright */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 25px 0;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+  .footer-modern,
+  #gtco-footer {
+    padding: 60px 0 30px;
+  }
+  
+  #footer-eclipse-foundation,
+  #footer-legal {
+    margin-bottom: 30px;
+  }
+  
+  .footer-modern h2,
+  #gtco-footer h2,
+  .footer-modern .section-title,
+  #gtco-footer .section-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+/* Content Section */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content-section.bg-light {
+  background: #f8f9fa;
+}
+
+/* Documentation Styles */
+.doc-content {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.doc-content h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.doc-content h2 {
+  color: #444;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.doc-content h3 {
+  color: #555;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.doc-content pre {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation Consistency */
+.gtco-nav .menu-1 ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gtco-nav .menu-1 ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.gtco-nav .menu-1 ul li a {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.gtco-nav .menu-1 ul li a:hover,
+.gtco-nav .menu-1 ul li.active a {
+  color: #17B794;
+  border-bottom: 2px solid #17B794;
+}
+
+#gtco-logo a {
+  color: #17B794;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .doc-sidebar {
+    position: static;
+    margin-bottom: 30px;
+  }
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -98,6 +577,9 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   padding: 0;
   width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
   padding: 10px 0;
   z-index: 1001;
   background: #fff;
@@ -584,11 +1066,26 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #gtco-footer {
-  background: #262626;
-  padding: 7em 0 0 0 !important;
+  background: linear-gradient(135deg, #0F7562 0%, #005B9F 100%);
+  padding: 80px 0 40px 0 !important;
   margin-bottom: 0 !important;
+  margin-top: 100px;
   width: 100%;
   float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+#gtco-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="footergrid" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footergrid)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
 }
 #gtco-footer a:hover {
   color: #fff !important;
