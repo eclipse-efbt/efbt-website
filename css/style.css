@@ -168,6 +168,34 @@ body {
   margin: 60px 0;
 }
 
+.btn-codespace {
+  background: #21262d;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #30363d;
+  transition: all 0.2s ease;
+}
+
+.btn-codespace:hover {
+  background: #30363d;
+  color: white;
+  text-decoration: none;
+  border-color: #444c56;
+  transform: translateY(-1px);
+}
+
+.codespace-icon {
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 /* Modern Buttons */
 .btn-primary,
 .btn-secondary {
@@ -319,25 +347,17 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   margin-bottom: 30px;
 }
 
-#footer-eclipse-foundation:hover,
-#footer-legal:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
-}
+/* Footer section hover effects removed - only link hover remains */
 
 /* Footer Bottom Copyright */
 .footer-bottom {
   background: rgba(0, 0, 0, 0.2);
   padding: 25px 0;
   margin-top: 50px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 }
 

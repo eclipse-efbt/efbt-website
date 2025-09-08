@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pull Request Guide - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Pull Request Guide - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Pull Request Guide" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Pull Request Guide - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Pull Request Guide documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Pull Request Guide - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		.doc-content {
+			padding: 80px 0;
+			min-height: 600px;
+		}
+		.doc-content h1 {
+			color: #2c3e50;
+			border-bottom: 2px solid #ecf0f1;
+			padding-bottom: 10px;
+			margin-bottom: 30px;
+		}
+		.doc-content h2 {
+			color: #34495e;
+			margin-top: 40px;
+			margin-bottom: 20px;
+		}
+		.doc-content h3 {
+			color: #34495e;
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+		.doc-content pre {
+			background-color: #f4f4f4;
+			padding: 15px;
+			border-radius: 5px;
+			overflow-x: auto;
+			margin: 20px 0;
+		}
+		.doc-content code {
+			background-color: #f4f4f4;
+			padding: 2px 5px;
+			border-radius: 3px;
+			font-family: 'Courier New', Courier, monospace;
+		}
+		.doc-content blockquote {
+			border-left: 4px solid #52d3aa;
+			margin: 20px 0;
+			padding-left: 20px;
+			color: #666;
+			font-style: italic;
+		}
+		.doc-content table {
+			margin: 20px 0;
+		}
+		.doc-content img {
+			margin: 20px 0;
+		}
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 1px solid #ddd;
+			border-radius: 8px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			margin: 30px 0;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+		.doc-content .guide-image:hover {
+			transform: scale(1.02);
+			box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+		}
+		.doc-content ul, .doc-content ol {
+			margin: 15px 0;
+			padding-left: 30px;
+		}
+		.doc-content li {
+			margin: 8px 0;
+			line-height: 1.6;
+		}
+		.doc-content p {
+			margin: 15px 0;
+			line-height: 1.8;
+			color: #555;
+		}
+		.doc-content a {
+			color: #52d3aa;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+		.doc-content a:hover {
+			color: #46b892;
+			text-decoration: underline;
+		}
+		.doc-content hr {
+			border: none;
+			border-top: 1px solid #eee;
+			margin: 40px 0;
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Pull Request Guide</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<section class="doc-content">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- Breadcrumb -->
+					<ol class="breadcrumb">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../documentation.html">Documentation</a></li>
+						<li class="active">Pull Request Guide</li>
+					</ol>
+					
+					<!-- Markdown Content -->
+					<div class="content-wrapper">
+						<h1>Pull Request Creation Guide</h1>
+<p>Eclipse Free BIRD Tools provides seamless GitHub integration for creating pull requests with your processed regulatory data and transformations. This guide covers both automated and manual approaches to submit your work for review.</p>
+<h2>Overview</h2>
+<p>Pull requests in Eclipse Free BIRD Tools allow you to:</p>
+<ul>
+<li>Share processed regulatory data and transformations</li>
+<li>Submit work for peer review and approval</li>
+<li>Maintain secure, isolated development workflows</li>
+<li>Contribute to collaborative regulatory reporting projects</li>
+</ul>
+
+<h2>Prerequisites</h2>
+<p>Before creating pull requests, ensure you have:</p>
+<table class="table table-bordered">
+<tr><td>Requirement</td><td>Description</td></tr>
+<tr><td><strong>System Setup</strong></td><td>Database ready and configuration completed</td></tr>
+<tr><td><strong>GitHub Account</strong></td><td>Access to the target repository</td></tr>
+<tr><td><strong>Personal Access Token</strong></td><td>GitHub token with repository permissions</td></tr>
+<tr><td><strong>Completed Workflow</strong></td><td>Finished processing tasks (recommended)</td></tr>
+</table>
+<h2>Quick Actions: Create Review (Automated)</h2>
+<p>The recommended approach for creating pull requests after completing your workflow tasks.</p>
+<p><img src="../images/screenshots/quickactionmenu_setup_finished.png" alt="Quick Actions Setup Finished" class="img-responsive guide-image"></p>
+<h3>When Available</h3>
+<p>The <strong>&quot;Create Review&quot;</strong> button appears in Quick Actions when:</p>
+<table class="table table-bordered">
+<tr><td>Condition</td><td>Status</td></tr>
+<tr><td>Database setup is complete</td><td>✅ Ready</td></tr>
+<tr><td>Configuration is saved</td><td>✅ Configured</td></tr>
+<tr><td>Workflow tasks have been executed</td><td>Required</td></tr>
+<tr><td>System is ready for review submission</td><td>Ready</td></tr>
+</table>
+<h3>Key Steps</h3>
+<table class="table table-bordered">
+<tr><td>Step</td><td>Action</td></tr>
+<tr><td>1. <strong>Complete Your Workflow</strong></td><td>Finish executing Tasks 1-4 or your desired endpoint</td></tr>
+<tr><td>2. <strong>Verify System Status</strong></td><td>Confirm database and configuration are ready</td></tr>
+<tr><td>3. <strong>Click &quot;Create Review&quot;</strong></td><td>Located in the Quick Actions → Automode Execution section</td></tr>
+<tr><td>4. <strong>Automatic Processing</strong></td><td>System handles fork, branch, and pull request creation</td></tr>
+</table>
+<h3>What Happens Automatically</h3>
+<table class="table table-bordered">
+<tr><td>Process</td><td>Description</td></tr>
+<tr><td><strong>Repository Fork</strong></td><td>Creates a secure fork of the target repository</td></tr>
+<tr><td><strong>Branch Creation</strong></td><td>Generates a new branch for your changes</td></tr>
+<tr><td><strong>Data Export</strong></td><td>Exports processed data and transformations</td></tr>
+<tr><td><strong>Commit &amp; Push</strong></td><td>Commits changes and pushes to your fork</td></tr>
+<tr><td><strong>Pull Request</strong></td><td>Creates a pull request back to the original repository</td></tr>
+</table>
+<h2>Manual Export: Database to CSV Files</h2>
+<p>For advanced users who need more control over the export process.</p>
+<p><img src="../images/screenshots/pull_request.png" alt="Export Database to CSV" class="img-responsive guide-image"></p>
+<h3>Access Export Functionality</h3>
+<table class="table table-bordered">
+<tr><td>Step</td><td>Action</td></tr>
+<tr><td>1. Navigate</td><td><strong>Export Database to CSV Files</strong></td></tr>
+<tr><td>2. Choose</td><td><strong>&quot;Export to GitHub&quot;</strong> option (right panel)</td></tr>
+<tr><td>3. Configure</td><td>GitHub settings as needed</td></tr>
+</table>
+<h3>GitHub Configuration</h3>
+<h3>GitHub Configuration</h3>
+<table class="table table-bordered">
+<tr><td>Setting</td><td>Purpose</td><td>Details</td></tr>
+<tr><td><strong>GitHub Token</strong></td><td>Required authentication</td><td>Personal access token with repository permissions. Token is not stored and only used for this export. Ensure token has fork, push, and pull request creation rights</td></tr>
+<tr><td><strong>Repository URL</strong> (Optional)</td><td>Custom repository</td><td><code>https://github.com/username/repository</code> - Leave empty to use repository from automode settings. Specify custom repository if different from configuration</td></tr>
+<tr><td><strong>Fork to Organization</strong> (Optional)</td><td>Organizational workflow</td><td><code>organization-name</code> - Leave empty to fork to your personal account. Specify organization name for institutional workflows</td></tr>
+<tr><td><strong>Target Branch</strong></td><td>PR destination</td><td><code>develop</code> - Default: <code>develop</code> branch (recommended). Custom: Specify alternative target branch if required. Purpose: Branch in target repository for the pull request</td></tr>
+</table>
+<h3>Fork Workflow (Recommended)</h3>
+<p><strong>Use Fork Workflow</strong> checkbox provides:</p>
+<table class="table table-bordered">
+<tr><td><strong>Security Benefits</strong></td><td><strong>Process Step</strong></td><td><strong>Alternative</strong></td></tr>
+<tr><td><strong>Isolated Changes</strong> - Work in your own fork without affecting original repository</td><td><strong>Fork Creation</strong> - System automatically forks the target repository</td><td><strong>Direct Push</strong> - Uncheck for direct push (requires write access). Only recommended for trusted contributors. Bypasses fork security layer</td></tr>
+<tr><td><strong>Permission Control</strong> - No direct write access required to main repository</td><td><strong>Secure Development</strong> - Make changes in your isolated fork</td><td></td></tr>
+<tr><td><strong>Review Process</strong> - Changes must be reviewed before integration</td><td><strong>Pull Request</strong> - Submit changes back via pull request</td><td></td></tr>
+<tr><td></td><td><strong>Review &amp; Merge</strong> - Repository maintainers review and approve changes</td><td></td></tr>
+</table>
+<h2>Export Process Steps</h2>
+<table class="table table-bordered">
+<tr><td><strong>Step 1: Configure</strong></td><td><strong>Step 2: Execute</strong></td><td><strong>Step 3: Verify</strong></td></tr>
+<tr><td>Enter GitHub Token - Your personal access token</td><td>Click &quot;Export to GitHub&quot; - Start the export process</td><td>Success Message - Confirms successful export and PR creation</td></tr>
+<tr><td>Specify Repository URL - If different from configuration</td><td>System processes configuration - Automated processing</td><td>GitHub Link - Direct link to created pull request</td></tr>
+<tr><td>Set Fork to Organization - If applicable for institutional use</td><td>Automated fork and branch creation - System handles repository setup</td><td>Review Status - Shows pull request pending review</td></tr>
+<tr><td>Confirm Target Branch - Default: develop</td><td>CSV files generated and uploaded - Data export and upload</td><td></td></tr>
+<tr><td>Ensure &quot;Use Fork Workflow&quot; - Checked for security</td><td>Pull request created automatically - PR creation with summary</td><td></td></tr>
+</table>
+<h2>Export Details</h2>
+<table class="table table-bordered">
+<tr><td>Component</td><td>Description</td></tr>
+<tr><td><strong>Database Tables</strong></td><td>Each table exported to separate CSV file</td></tr>
+<tr><td><strong>File Structure</strong></td><td>CSV files named after corresponding tables</td></tr>
+<tr><td><strong>Archive Format</strong></td><td>All files bundled in zip archive</td></tr>
+<tr><td><strong>Headers</strong></td><td>CSV files include database column names as headers</td></tr>
+<tr><td><strong>Individual CSV files</strong></td><td>Generated for each database table</td></tr>
+<tr><td><strong>Complete zip archive</strong></td><td>Contains all exports</td></tr>
+<tr><td><strong>Commit message</strong></td><td>Descriptive message included</td></tr>
+<tr><td><strong>Pull request</strong></td><td>Created with export summary</td></tr>
+</table>
+<h2>Best Practices</h2>
+<table class="table table-bordered">
+<tr><td><strong>Security</strong></td><td><strong>Workflow Management</strong></td><td><strong>Collaboration</strong></td></tr>
+<tr><td>Always use <strong>Fork Workflow</strong> for isolated, secure development</td><td>Complete workflow tasks first before creating pull requests</td><td>Target appropriate <strong>branch</strong> for your changes</td></tr>
+<tr><td>Limit <strong>GitHub Token</strong> permissions to minimum required</td><td>Use <strong>&quot;Create Review&quot;</strong> for routine submissions</td><td>Follow repository <strong>contribution guidelines</strong></td></tr>
+<tr><td>Use <strong>organizational forks</strong> for institutional workflows</td><td>Use <strong>manual export</strong> for specialized requirements</td><td>Coordinate with <strong>repository maintainers</strong></td></tr>
+<tr><td>Regular token rotation and access review</td><td>Include descriptive commit messages and PR descriptions</td><td>Respond promptly to <strong>review feedback</strong></td></tr>
+</table>
+<h2>Troubleshooting</h2>
+<table class="table table-bordered">
+<tr><td><strong>Authentication Issues</strong></td><td><strong>Repository Access</strong></td><td><strong>Fork Workflow Problems</strong></td><td><strong>Export Failures</strong></td></tr>
+<tr><td>GitHub token authentication fails</td><td>Cannot access target repository</td><td>Fork creation fails</td><td>Export process fails or times out</td></tr>
+<tr><td>• Verify token has correct permissions<br>• Check token expiration date<br>• Ensure token is for correct GitHub account</td><td>• Verify repository URL is correct<br>• Confirm you have read access<br>• Check if repository is private</td><td>• Ensure you don&#39;t already have a fork<br>• Verify GitHub account has forking permissions<br>• Check if organization allows forking</td><td>• Verify database connectivity and integrity<br>• Check system resources and network connectivity<br>• Retry export with smaller datasets</td></tr>
+</table>
+<h2>Advanced Features</h2>
+<table class="table table-bordered">
+<tr><td><strong>Workflow Integration</strong></td><td><strong>Organizational Features</strong></td><td><strong>Performance Features</strong></td></tr>
+<tr><td><strong>Create Review</strong> - Integrates with completed workflow tasks</td><td><strong>Fork to Organization</strong> - Support for institutional development</td><td><strong>Multiple Exports</strong> - Handle large datasets efficiently</td></tr>
+<tr><td><strong>Automatic exports</strong> - Triggered after successful task completion</td><td><strong>Branch Strategies</strong> - Flexible branching for different workflow types</td><td><strong>Incremental Updates</strong> - Support for iterative development workflows</td></tr>
+<tr><td><strong>Session tracking</strong> - Links pull requests to specific workflow executions</td><td><strong>Access Control</strong> - Integration with organizational GitHub permissions</td><td><strong>Automated Reviews</strong> - Scheduled and triggered review creation</td></tr>
+</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<div class="gototop js-top">
+	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+
+</body>
+</html>

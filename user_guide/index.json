@@ -1,0 +1,38 @@
+{
+  "generated_at": "2025-09-08T11:55:50.009693",
+  "total_guides": 4,
+  "guides": [
+    {
+      "title": "Workflow Dashboard",
+      "description": "The Eclipse Free BIRD Tools Workflow Dashboard is your central hub for regulatory reporting workflows. This guide covers the essential steps to execute the 4-task sequential process for BIRD data processing and transformation.",
+      "filename": "workflow_dashboard.html",
+      "path": "user_guide/workflow_dashboard.html",
+      "last_modified": "2025-09-08T11:55:50.006033",
+      "slug": "workflow_dashboard"
+    },
+    {
+      "title": "Pull Request Guide",
+      "description": "Eclipse Free BIRD Tools provides seamless GitHub integration for creating pull requests with your processed regulatory data and transformations. This guide covers both automated and manual approaches to submit your work for review.",
+      "filename": "pull_request_guide.html",
+      "path": "user_guide/pull_request_guide.html",
+      "last_modified": "2025-09-08T11:55:50.008002",
+      "slug": "pull_request_guide"
+    },
+    {
+      "title": "Anacredit Transformation",
+      "description": "The AnaCRedit Transformation Process converts regulatory data models into executable transformations for ANACREDIT reporting. This 4-step workflow ensures compliance with ECB (European Central Bank) analytical credit data requirements.",
+      "filename": "anacredit_transformation.html",
+      "path": "user_guide/anacredit_transformation.html",
+      "last_modified": "2025-09-08T11:55:50.008918",
+      "slug": "anacredit_transformation"
+    },
+    {
+      "title": "Dpm Operations",
+      "description": "DPM (Data Point Model) Operations provides a 3-step workflow for processing regulatory data according to European Banking Authority (EBA) standards. This guide covers the essential steps to prepare, import, and create output layers from DPM data.",
+      "filename": "dpm_operations.html",
+      "path": "user_guide/dpm_operations.html",
+      "last_modified": "2025-09-08T11:55:50.009684",
+      "slug": "dpm_operations"
+    }
+  ]
+}
