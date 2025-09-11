@@ -158,19 +158,50 @@ class DynamicSidebar {
             /* On mobile screens, hide the sidebar and adjust main content */
             @media screen and (max-width: 768px) {
                 .sidenav {
-                    display: none;
+                    display: none !important;
+                    visibility: hidden !important;
                 }
 
                 .main {
-                    margin-left: 0;
+                    margin-left: 0 !important;
                 }
 
                 .gtco-nav {
-                    margin-left: 0;
+                    margin-left: 0 !important;
                 }
 
                 .gtco-nav .gtco-container {
                     max-width: 1140px;
+                }
+
+                /* Ensure footer is visible on mobile */
+                .footer-modern,
+                #gtco-footer {
+                    position: relative !important;
+                    z-index: 1 !important;
+                    margin-left: 0 !important;
+                    width: 100% !important;
+                }
+            }
+
+            /* Additional mobile safety for very narrow screens */
+            @media screen and (max-width: 480px) {
+                .sidenav {
+                    display: none !important;
+                    visibility: hidden !important;
+                    pointer-events: none !important;
+                }
+                
+                body {
+                    overflow-x: hidden;
+                }
+
+                .footer-modern,
+                #gtco-footer {
+                    position: relative !important;
+                    z-index: 1 !important;
+                    margin-left: 0 !important;
+                    width: 100vw !important;
                 }
             }
 
@@ -239,7 +270,7 @@ class DynamicSidebar {
                     { text: 'Overview', href: '#overview', icon: 'ti-eye' },
                     { text: 'Features', href: '#features', icon: 'ti-star' },
                     { text: 'Getting Started', href: '#getting-started', icon: 'ti-rocket' },
-                    { text: 'Documentation', href: `${this.pathPrefix}documentation.html`, icon: 'ti-book' },
+                    { text: 'Ready to Build with FreeBIRD?', href: `#ready-to-build`, icon: 'ti-book' },
                     { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
                 ]
             },

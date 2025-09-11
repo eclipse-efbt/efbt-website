@@ -203,7 +203,7 @@ body {
 }
 
 .btn-codespace {
-  background: #21262d;
+  background: #38162F;
   color: white;
   padding: 12px 20px;
   text-decoration: none;
@@ -218,7 +218,7 @@ body {
 }
 
 .btn-codespace:hover {
-  background: #16381f;
+  background: #16381F;
   color: white;
   text-decoration: none;
   border-color: #444c56;
@@ -270,16 +270,107 @@ body {
   transform: translateY(-2px);
 }
 
-/* Modern Footer */
+/* Modern Footer - Force consistent full-width layout */
 .footer-modern,
 #gtco-footer {
-  background: #16381f;
-  color: white;
-  padding: 80px 0 40px;
-  margin-top: 0;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+  background:  #16381f !important;
+  color: white !important;
+  padding: 100px 0 60px !important;
+  margin: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100vw !important;
+  z-index: 1 !important;
+  clear: both !important;
+}
+
+/* Mobile footer safety */
+@media screen and (max-width: 768px) {
+  .footer-modern,
+  #gtco-footer {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 60px 0 40px !important;
+  }
+
+  .footer-modern .gtco-container,
+  #gtco-footer .gtco-container {
+    padding: 0 20px !important;
+  }
+
+  .footer-modern section,
+  #gtco-footer section {
+    margin-bottom: 30px !important;
+    text-align: center !important;
+  }
+
+  .footer-modern .footer-bottom,
+  #gtco-footer .footer-bottom {
+    margin-top: 40px !important;
+    padding-top: 25px !important;
+  }
+}
+
+/* Ensure footer content is properly centered and compact */
+.footer-modern .gtco-container,
+#gtco-footer .gtco-container {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+}
+
+/* Make footer sections more compact */
+.footer-modern section,
+#gtco-footer section {
+  margin-bottom: 40px !important;
+}
+
+.footer-modern .section-title,
+#gtco-footer .section-title,
+.footer-modern h2,
+#gtco-footer h2 {
+  font-size: 16px !important;
+  margin-bottom: 20px !important;
+  font-weight: 600 !important;
+}
+
+.footer-modern .nav,
+#gtco-footer .nav {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer-modern .nav li,
+#gtco-footer .nav li {
+  margin-bottom: 8px !important;
+}
+
+.footer-modern .nav li a,
+#gtco-footer .nav li a {
+  font-size: 14px !important;
+  padding: 4px 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Footer bottom section */
+.footer-modern .footer-bottom,
+#gtco-footer .footer-bottom {
+  margin-top: 50px !important;
+  padding-top: 30px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.footer-modern .footer-bottom p,
+#gtco-footer .footer-bottom p {
+  font-size: 16px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin: 0 !important;
+  text-align: center !important;
 }
 
 .footer-modern::before,
@@ -290,7 +381,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="footerpattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="white" opacity="0.08"/><circle cx="0" cy="0" r="1.5" fill="white" opacity="0.08"/><circle cx="60" cy="0" r="1.5" fill="white" opacity="0.08"/><circle cx="0" cy="60" r="1.5" fill="white" opacity="0.08"/><circle cx="60" cy="60" r="1.5" fill="white" opacity="0.08"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footerpattern)"/></svg>');
+  background:  #16381f;
   opacity: 1;
   z-index: -1;
   pointer-events: none;
@@ -354,16 +445,6 @@ body {
   padding-left: 20px;
 }
 
-.footer-modern .nav li a::before,
-#gtco-footer .nav li a::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-  color: #38162F;
-}
-
 .footer-modern .nav li a:hover,
 #gtco-footer .nav li a:hover {
   color: #38162F !important;
@@ -400,7 +481,7 @@ body {
 .footer-bottom p {
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* Footer responsive */

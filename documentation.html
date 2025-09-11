@@ -67,7 +67,7 @@
 			transition: all 0.3s ease;
 		}
 		.doc-icon:hover {
-			background: #46b892;
+			background: #16381F;
 			transform: translateY(-5px);
 		}
 		.doc-card {
@@ -84,29 +84,56 @@
 			margin-bottom: 30px;
 		}
 		.feedback-form {
-			background: #f8f9fa;
-			padding: 40px;
-			border-radius: 10px;
+			background: white;
+			padding: 50px;
+			border-radius: 15px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			border: 1px solid #e9ecef;
 		}
 		.form-group {
-			margin-bottom: 20px;
+			margin-bottom: 25px;
+		}
+		.form-group label {
+			font-weight: 600;
+			color: #333;
+			margin-bottom: 8px;
+			display: block;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
 		}
 		.form-control {
-			border-radius: 5px;
-			border: 1px solid #ddd;
-			padding: 12px 15px;
+			border-radius: 8px;
+			border: 2px solid #e9ecef;
+			padding: 15px 20px;
+			font-size: 16px;
+			width: 100%;
+			background: #f8f9fa;
+			transition: all 0.3s ease;
+		}
+		.form-control:focus {
+			outline: none;
+			border-color: #16381f;
+			background: white;
+			box-shadow: 0 0 0 3px rgba(22, 56, 31, 0.1);
 		}
 		.btn-feedback {
-			background: #38162F;
+			background: #16381f;
 			color: white;
 			border: none;
 			padding: 12px 30px;
-			border-radius: 5px;
+			border-radius: 50px;
 			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 			transition: all 0.3s ease;
+			cursor: pointer;
+			font-size: 14px;
+			box-shadow: 0 4px 15px rgba(22, 56, 31, 0.4);
 		}
 		.btn-feedback:hover {
-			background: #16381f;
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(22, 56, 31, 0.5);
 			color: white;
 		}
 		.user-guide-placeholder {
@@ -135,7 +162,7 @@
 			font-size: 14px;
 		}
 		.btn-codespace:hover {
-			background: #38162F;
+			background: #16381F;
 			color: white;
 			text-decoration: none;
 			transform: translateY(-1px);
@@ -339,12 +366,12 @@
 		}
 
 		.miniature-badge.coming-soon {
-			background: #ffc107;
-			color: #212529;
+			background:#381F16;
+			color:white;
 		}
 
 		.miniature-badge.available {
-			background: #28a745;
+			background: #16381F
 			color: white;
 		}
 
