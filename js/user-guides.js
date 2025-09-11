@@ -27,10 +27,12 @@ class UserGuidesLoader {
      * Load guides from the index.json file
      */
     async loadGuides() {
+        console.log('UserGuidesLoader: Loading guides...');
+
         this.guidesContainer = document.getElementById('dynamic-user-guides');
-        
+
         if (!this.guidesContainer) {
-            console.warn('User guides container not found');
+            console.error('User guides container with id "dynamic-user-guides" not found');
             return;
         }
 
@@ -39,13 +41,20 @@ class UserGuidesLoader {
 
         try {
             const response = await fetch('user_guide/index.json');
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
             const data = await response.json();
             this.guides = data.guides || [];
+            console.log(`Found ${this.guides.length} guides`);
+
+            // Log disabled guides
+            const disabledCount = this.guides.filter(g => g.disabled === true || g.status === 'coming_soon').length;
+            if (disabledCount > 0) {
+                console.log(`${disabledCount} guides are disabled/coming soon`);
+            }
 
             // Clear loading state and render guides
             this.clearLoading();
@@ -64,7 +73,7 @@ class UserGuidesLoader {
         this.guidesContainer.innerHTML = `
             <div class="loading-guides text-center">
                 <div class="loading-spinner">
-                    <i class="icon-refresh animate-spin" style="font-size: 24px; color: #52d3aa;"></i>
+                    <i class="icon-refresh animate-spin" style="font-size: 24px; color: #38162F;"></i>
                 </div>
                 <p style="margin-top: 10px; color: #666;">Loading user guides...</p>
             </div>
@@ -98,16 +107,21 @@ class UserGuidesLoader {
      * Render the user guides
      */
     renderGuides() {
+        console.log('🎨 Starting to render guides...');
+
         if (!this.guides || this.guides.length === 0) {
+            console.log('📭 No guides to render, showing empty state');
             this.renderEmptyState();
             return;
         }
+
 
         const guidesHtml = `
             <div class="user-guides-grid">
                 ${this.guides.map(guide => this.createGuideMiniature(guide)).join('')}
             </div>
         `;
+
         this.guidesContainer.innerHTML = guidesHtml;
     }
 
@@ -136,33 +150,44 @@ class UserGuidesLoader {
         const truncatedDescription = this.truncateText(guide.description, 150);
         const formattedDate = this.formatDate(guide.last_modified);
         const guideIcon = this.getGuideIcon(guide.slug);
+        const isDisabled = guide.disabled === true || guide.status === 'coming_soon';
+
+        // Different styling and behavior for disabled guides
+        const linkClass = isDisabled ? 'user-guide-miniature disabled' : 'user-guide-miniature';
+        const badgeText = isDisabled ? 'Coming Soon' : 'Available Now';
+        const badgeClass = isDisabled ? 'miniature-badge coming-soon' : 'miniature-badge available';
+        const iconClass = isDisabled ? `${guideIcon} disabled-icon` : guideIcon;
+        // For disabled guides, use a div instead of a link to make them non-clickable
+        const elementTag = isDisabled ? 'div' : 'a';
+        const hrefAttribute = isDisabled ? '' : `href="${guide.path}"`;
 
         return `
-            <a href="${guide.path}" class="user-guide-miniature">
+            <${elementTag} ${hrefAttribute} class="${linkClass}">
                 <div class="miniature-header">
-                    <div class="miniature-icon">
-                        <i class="${guideIcon}"></i>
+                    <div class="miniature-icon ${isDisabled ? 'disabled' : ''}">
+                        <i class="${iconClass}"></i>
+                        ${isDisabled ? '<i class="ti-clock overlay-icon"></i>' : ''}
                     </div>
                     <div class="miniature-title-area">
                         <h4 class="miniature-title">${this.escapeHtml(guide.title)}</h4>
-                        <span class="miniature-badge">Available Now</span>
+                        <span class="${badgeClass}">${badgeText}</span>
                     </div>
                 </div>
-                
-                <p class="miniature-description">
+
+                <p class="miniature-description ${isDisabled ? 'disabled' : ''}">
                     ${this.escapeHtml(truncatedDescription)}
                 </p>
-                
-                <div class="miniature-footer">
+
+                <div class="miniature-footer ${isDisabled ? 'disabled' : ''}">
                     <div class="miniature-meta">
                         <i class="ti-calendar"></i>
-                        Updated ${formattedDate}
+                        ${isDisabled ? 'Coming Soon' : `Updated ${formattedDate}`}
                     </div>
                     <div class="miniature-arrow">
-                        <i class="ti-arrow-right"></i>
+                        <i class="${isDisabled ? 'ti-clock' : 'ti-arrow-right'}"></i>
                     </div>
                 </div>
-            </a>
+            </${elementTag}>
         `;
     }
 
@@ -179,6 +204,16 @@ class UserGuidesLoader {
             'api-reference': 'ti-code',
             'data_models': 'ti-database',
             'data-models': 'ti-database',
+            'dataset_transformation': 'ti-exchange-vertical',
+            'dataset-transformation': 'ti-exchange-vertical',
+            'workflow_dashboard': 'ti-dashboard',
+            'workflow-dashboard': 'ti-dashboard',
+            'pull_request_guide': 'ti-git',
+            'pull-request-guide': 'ti-git',
+            'execute_datapoint': 'ti-play',
+            'execute-datapoint': 'ti-play',
+            'dpm_operations': 'ti-layers',
+            'dpm-operations': 'ti-layers',
             'transformations': 'ti-settings',
             'installation': 'ti-download',
             'configuration': 'ti-settings',
@@ -187,7 +222,7 @@ class UserGuidesLoader {
             'tutorial': 'ti-book',
             'advanced': 'ti-star'
         };
-        
+
         return iconMap[slug] || 'ti-book';
     }
 

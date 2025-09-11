@@ -61,16 +61,18 @@
 					<h1>FreeBIRD Application</h1>
 					<h2>Describing BIRD in a well-known language, easily extended by AI tooling</h2>
 					<div style="margin-top: 40px;">
-						<a href="documentation.html#quickstart" class="btn-primary">Get Started</a>
-						<a href="https://github.com/eclipse/efbt" class="btn-secondary" style="margin-left: 20px;">View Source</a>
-					</div>
+					<a href="documentation.html#quickstart" class="btn-primary"><b>Get Started</b></a>
+					<a href="https://github.com/eclipse/efbt" class="btn-secondary" style="margin-left: 20px;"><b>View on GitHub</b></a>					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
 	<!-- Main Content -->
-	<div class="content-section">
+	<div class="main">
+		<div class="content-section" id="overview">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
@@ -104,8 +106,8 @@
 		</div>
 	</div>
 
-	<!-- Technical Features Section -->
-	<div class="content-section bg-light">
+		<!-- Technical Features Section -->
+		<div class="content-section bg-light" id="features">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
@@ -118,27 +120,23 @@
 					<ul style="line-height: 2.2;">
 						<li><strong>Data Models:</strong> Complete BIRD data model implementation</li>
 						<li><strong>Transformations:</strong> Built-in transformation engine</li>
-						<li><strong>Validation:</strong> Comprehensive data validation rules</li>
-						<li><strong>REST API:</strong> Full-featured REST API for integration</li>
-						<li><strong>Admin Interface:</strong> Django admin for data management</li>
 					</ul>
 				</div>
 				<div class="col-md-6">
 					<h3>Integration Points</h3>
 					<ul style="line-height: 2.2;">
-						<li><strong>Database Support:</strong> PostgreSQL, MySQL, Oracle, SQL Server</li>
-						<li><strong>Export Formats:</strong> XBRL, XML, JSON, CSV</li>
-						<li><strong>Authentication:</strong> OAuth2, SAML, LDAP support</li>
-						<li><strong>Monitoring:</strong> Built-in metrics and logging</li>
-						<li><strong>Scalability:</strong> Horizontal scaling support</li>
+						<li><strong>Database Support:</strong> Sqlite, more to come ...</li>
+						<li><strong>Export Format:</strong> CSV</li>
+						<li><strong>Monitoring:</strong> Built-in lineage</li>
+						<li><strong>Versioning:</strong> Github</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Quick Start Section -->
-	<div class="content-section">
+		<!-- Quick Start Section -->
+		<div class="content-section">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -160,8 +158,8 @@
 		</div>
 	</div>
 
-	<!-- Getting Started Section -->
-	<div class="content-section bg-light">
+		<!-- Getting Started Section -->
+		<div class="content-section bg-light" id="getting-started">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
@@ -197,8 +195,8 @@
 		</div>
 	</div>
 
-	<!-- Call to Action -->
-	<div class="content-section">
+		<!-- Call to Action -->
+		<div class="content-section">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -239,6 +237,8 @@
 <script src="js/main.js"></script>
 <!-- W3 Include -->
 <script src="js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="js/dynamic-sidebar.js"></script>
 
 </body>
 </html>

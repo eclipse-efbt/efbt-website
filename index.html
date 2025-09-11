@@ -3,20 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Eclipse Free BIRD Tools</title>
+	<title>FreeBIRD Application - Eclipse Free BIRD Tools</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Eclipse Free BIRD Tools - Building an Open Source Core for BIRD Implementations" />
-	<meta name="keywords" content="Eclipse Free BIRD Tools, BIRD, ECB, Banking Regulation" />
+	<meta name="description" content="FreeBIRD Application - Describing BIRD in a well-known language" />
+	<meta name="keywords" content="FreeBIRD Application, Eclipse Free BIRD Tools, Django, Python" />
 	<meta name="author" content="Neil Mackenzie" />
-	<meta name="coauthor" content="Benjamin Arfa" />
 
 	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:title" content="FreeBIRD Application"/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
 	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
-	<meta property="og:description" content="Building an Open Source Core for BIRD Implementations"/>
-	<meta name="twitter:title" content="Eclipse Free BIRD Tools" />
+	<meta property="og:description" content="Describing BIRD in a well-known language, easily extended by AI tooling"/>
+	<meta name="twitter:title" content="FreeBIRD Application" />
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
@@ -52,7 +51,7 @@
 
 <div id="page">
 
-	<!-- Navigation Include -->
+    <!-- Navigation Include -->
 	<div w3-include-html="navbar.html"></div>
 
 	<header class="hero-section">
@@ -62,17 +61,20 @@
 					<h1>Eclipse Free BIRD Tools</h1>
 					<h2>Building an Open Source Core for BIRD Implementations</h2>
 					<div style="margin-top: 40px;">
-						<a href="documentation.html#quickstart" class="btn-primary">Get Started</a>
-						<a href="https://github.com/eclipse/efbt" class="btn-secondary" style="margin-left: 20px;">View on GitHub</a>
+						<a href="documentation.html#quickstart" class="btn-primary"><b>Get Started</b></a>
+						<a href="https://github.com/eclipse/efbt" class="btn-secondary" style="margin-left: 20px;"><b>View on GitHub</b></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
 	<!-- Main Content Section -->
-	<div class="content-section">
-		<div class="gtco-container">
+	<div class="main">
+		<div class="content-section" id="about">
+			<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
 					<h2>A Shared Open Core for BIRD Implementations</h2>
@@ -105,8 +107,8 @@
 		</div>
 	</div>
 
-	<!-- FreeBIRD Application Section -->
-	<div class="content-section bg-light">
+		<!-- FreeBIRD Application Section -->
+		<div class="content-section bg-light" id="freebird">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
@@ -146,8 +148,8 @@
 		</div>
 	</div>
 
-	<!-- What is BIRD Section -->
-	<div class="content-section">
+		<!-- What is BIRD Section -->
+		<div class="content-section" id="what-is-bird">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
@@ -155,8 +157,8 @@
 					<p style="margin-bottom: 30px;">
 						BIRD (Banks' Integrated Reporting Dictionary) is a comprehensive data model developed by the ECB and national central banks to standardize regulatory reporting across the European banking sector.
 					</p>
-					<p><a href="https://www.ecb.europa.eu/stats/ecb_statistics/reporting/bird/html/index.en.html" class="btn-primary popup-vimeo">Learn More About BIRD</a></p>
-					<!--<p><a href="https://youtu.be/CUreE2REzvA" class="btn-primary popup-vimeo">Watch the videoß</a></p>-->
+					<p><a href="https://www.youtube.com/watch?v=CUreE2REzvA" class="btn-primary popup-youtube">Watch the Video</a></p>
+					<p style="margin-top: 15px;"><a href="https://www.ecb.europa.eu/stats/ecb_statistics/reporting/bird/html/index.en.html" class="btn-secondary" target="_blank">Learn More on ECB Website</a></p>
 				</div>
 			</div>
 		</div>
@@ -188,6 +190,8 @@
 <script src="js/main.js"></script>
 <!-- W3 Include -->
 <script src="js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="js/dynamic-sidebar.js"></script>
 
 </body>
 </html>

@@ -11,7 +11,17 @@ function includeHTML() {
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 200) {
+            var content = this.responseText;
+            /* Adjust paths if we're in a subdirectory */
+            if (window.location.pathname.includes('/user_guide/')) {
+              /* We're in user_guide directory, adjust navbar paths to go up one level */
+              content = content.replace(/href="index\.html"/g, 'href="../index.html"');
+              content = content.replace(/href="freebirdapplication\.html"/g, 'href="../freebirdapplication.html"');
+              content = content.replace(/href="documentation\.html"/g, 'href="../documentation.html"');
+            }
+            elmnt.innerHTML = content;
+          }
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
           /* Remove the attribute, and call this function once more */
           elmnt.removeAttribute("w3-include-html");

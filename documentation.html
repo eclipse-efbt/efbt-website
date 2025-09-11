@@ -57,7 +57,7 @@
 			width: 120px;
 			height: 120px;
 			margin: 0 auto 30px;
-			background: #52d3aa;
+			background: #38162F;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
@@ -97,7 +97,7 @@
 			padding: 12px 15px;
 		}
 		.btn-feedback {
-			background: #52d3aa;
+			background: #38162F;
 			color: white;
 			border: none;
 			padding: 12px 30px;
@@ -106,7 +106,7 @@
 			transition: all 0.3s ease;
 		}
 		.btn-feedback:hover {
-			background: #46b892;
+			background: #16381f;
 			color: white;
 		}
 		.user-guide-placeholder {
@@ -114,7 +114,7 @@
 			padding: 30px;
 			border-radius: 8px;
 			margin: 20px 0;
-			border-left: 4px solid #52d3aa;
+			border-left: 4px solid #38162F;
 		}
 		.coming-soon {
 			color: #999;
@@ -124,7 +124,7 @@
 			display: inline-flex;
 			align-items: center;
 			gap: 8px;
-			background: #238636;
+			background: #38162F;
 			color: white;
 			border: none;
 			padding: 12px 20px;
@@ -135,7 +135,7 @@
 			font-size: 14px;
 		}
 		.btn-codespace:hover {
-			background: #2ea043;
+			background: #38162F;
 			color: white;
 			text-decoration: none;
 			transform: translateY(-1px);
@@ -169,7 +169,7 @@
 		.user-guide-miniature:hover {
 			transform: translateY(-3px);
 			box-shadow: 0 8px 25px rgba(82, 211, 170, 0.15);
-			border-color: #52d3aa;
+			border-color: #38162F;
 			text-decoration: none;
 		}
 
@@ -180,7 +180,7 @@
 			left: 0;
 			right: 0;
 			height: 4px;
-			background: linear-gradient(90deg, #52d3aa, #46b892);
+			background: #38162F;
 		}
 
 		.miniature-header {
@@ -194,7 +194,7 @@
 			flex-shrink: 0;
 			width: 50px;
 			height: 50px;
-			background: linear-gradient(135deg, #52d3aa, #46b892);
+			background: #38162F;
 			border-radius: 10px;
 			display: flex;
 			align-items: center;
@@ -222,7 +222,7 @@
 
 		.miniature-badge {
 			background: #e8f5e8;
-			color: #52d3aa;
+			color: #38162F;
 			font-size: 11px;
 			padding: 3px 8px;
 			border-radius: 12px;
@@ -260,11 +260,11 @@
 
 		.miniature-meta i {
 			margin-right: 5px;
-			color: #52d3aa;
+			color: #38162F;
 		}
 
 		.miniature-arrow {
-			color: #52d3aa;
+			color: #38162F;
 			font-size: 16px;
 			transition: transform 0.3s ease;
 		}
@@ -286,6 +286,70 @@
 		@keyframes spin {
 			from { transform: rotate(0deg); }
 			to { transform: rotate(360deg); }
+		}
+
+		/* Disabled Guide Styles */
+		.user-guide-miniature.disabled {
+			opacity: 0.6 !important;
+			background: #f8f9fa !important;
+			border: 2px dashed #dee2e6 !important;
+			cursor: not-allowed !important;
+			position: relative;
+			pointer-events: none;
+		}
+
+		.user-guide-miniature.disabled:hover {
+			transform: none !important;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+			background: #f8f9fa !important;
+			border: 2px dashed #dee2e6 !important;
+		}
+
+		.user-guide-miniature.disabled .miniature-icon {
+			position: relative;
+			background: #6c757d;
+			color: #fff;
+		}
+
+		.user-guide-miniature.disabled .miniature-icon .overlay-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 16px;
+			color: #fff;
+			z-index: 1;
+		}
+
+		.user-guide-miniature.disabled .miniature-icon i:not(.overlay-icon) {
+			opacity: 0.3;
+		}
+
+		.user-guide-miniature.disabled .miniature-title {
+			color: #6c757d;
+		}
+
+		.user-guide-miniature.disabled .miniature-description.disabled {
+			color: #6c757d;
+			font-style: italic;
+		}
+
+		.user-guide-miniature.disabled .miniature-footer.disabled {
+			color: #6c757d;
+		}
+
+		.miniature-badge.coming-soon {
+			background: #ffc107;
+			color: #212529;
+		}
+
+		.miniature-badge.available {
+			background: #28a745;
+			color: white;
+		}
+
+		.user-guide-miniature.disabled .miniature-arrow i {
+			color: #6c757d;
 		}
 
 		/* Responsive adjustments */
@@ -315,6 +379,45 @@
 				-webkit-line-clamp: 2;
 			}
 		}
+
+		/* Installation methods responsive layout */
+		.installation-methods .installation-column {
+			margin-bottom: 30px;
+			text-align: left;
+		}
+
+		.installation-methods .installation-column h4 {
+			color: #333;
+			margin-bottom: 15px;
+			font-weight: 600;
+			text-align: left;
+		}
+
+		.installation-methods .code-block {
+			text-align: left;
+		}
+
+		/* Single column for mobile and thin resolutions */
+		@media (max-width: 1199px) {
+			.installation-methods .installation-column {
+				width: 100%;
+				float: none;
+			}
+		}
+
+		/* Two columns for wider screens (1200px and above) */
+		@media (min-width: 1200px) {
+			.installation-methods .installation-column {
+				width: 50%;
+				float: left;
+				padding-right: 15px;
+			}
+
+			.installation-methods .installation-column:last-child {
+				padding-right: 0;
+				padding-left: 15px;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -337,15 +440,16 @@
 		</div>
 	</header>
 
-	<!-- Quickstart Section -->
-	<section class="doc-section">
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<div class="main">
+
+		<!-- Quickstart Section -->
+	<section class="doc-section" id="quickstart">
 		<div class="gtco-container">
-		<ol class="breadcrumb">
-			<li><a href="../index.html">Home</a></li>
-			<li class="active">Documentation</li>
-		</ol>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-12">
 					<div class="doc-card">
 						<div class="doc-icon">
 							<i class="ti-bolt"></i>
@@ -353,55 +457,64 @@
 						<h3>Quickstart</h3>
 						<p>Get up and running with Eclipse Free BIRD Tools in minutes using our simple installation scripts.</p>
 
-
-
-						<div class="text-left" style="max-width: 500px; margin: 0 auto;">
-    						<h4 style="margin-top: 30px;">For Windows (and Servers):</h4>
-    						<div class="code-block">
-                                git clone https://github.com/eclipse-efbt/efbt.git
-                                <br>
-                                cd efbt
-                                <br>
-                                <code>windows_startup.bat</code>
-    						</div>
-
-							<h4>Otherwise:</h4>
-							<div class="code-block">
-							    git clone https://github.com/eclipse-efbt/efbt.git
-								<br>
-                                cd efbt
-								<br>
-								chmod +x linux_startup.sh
-								<br>
-								<code>./linux_startup.sh</code>
+						<div class="installation-methods" style="margin-top: 30px;">
+							<div class="row">
+								<div class="col-md-6 col-sm-12 installation-column">
+									<h4>For Windows (and Servers):</h4>
+									<div class="code-block">
+										git clone https://github.com/eclipse-efbt/efbt.git
+										<br>
+										cd efbt
+										<br>
+										<code>windows_startup.bat</code>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12 installation-column">
+									<h4>For Linux and macOS:</h4>
+									<div class="code-block">
+										git clone https://github.com/eclipse-efbt/efbt.git
+										<br>
+										cd efbt
+										<br>
+										chmod +x linux_startup.sh
+										<br>
+										<code>./linux_startup.sh</code>
+									</div>
+									<p style="margin-top: 15px; color: #666; font-size: 14px;">
+										<strong>Note:</strong> The linux_startup.sh script works for both Linux based and macOS systems.
+									</p>
+								</div>
 							</div>
 
-
-
-							<p style="margin-top: 20px; color: #666; font-size: 14px;">
-								<strong>Note:</strong> The linux_startup.sh script works for both Linux based and macOS systems.
-							</p>
-
-							<div style="margin-top: 30px;">
-								<h4 style="margin-bottom: 5px;">Or try instantly in your browser:</h4>
-								<p style="margin-top: 10px; color: #666; font-size: 14px;">
+							<div style="margin-top: 40px;">
+								<h4 style="margin-bottom: 15px; text-align: center;">Or try instantly in your browser:</h4>
+								<p style="margin-bottom: 20px; color: #666; font-size: 14px; text-align: center;">
 									Requires a github account.
 								</p>
-								<a href="https://github.com/codespaces/new?hide_repo_select=true&ref=master&repo=235610689"
-								   target="_blank"
-								   class="btn-codespace"
-								   title="Open in GitHub Codespace">
-									<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" class="codespace-icon">
-										<path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path>
-									</svg>
-									Open in GitHub Codespace
-								</a>
+								<div style="text-align: center;">
+									<a href="https://github.com/codespaces/new?hide_repo_select=true&ref=master&repo=235610689"
+									   target="_blank"
+									   class="btn-codespace"
+									   title="Open in GitHub Codespace">
+										<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" class="codespace-icon">
+											<path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path>
+										</svg>
+										Open in GitHub Codespace
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
 
-				<div class="col-md-6">
+	<!-- User Guides Section -->
+	<section class="doc-section" id="user-guides">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12">
 					<div class="doc-card">
 						<div class="doc-icon">
 							<i class="ti-book"></i>
@@ -420,7 +533,7 @@
 	</section>
 
 	<!-- Feedback Section -->
-	<section class="doc-section">
+	<section class="doc-section" id="feedback">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
@@ -478,6 +591,8 @@
 			</div>
 		</div>
 	</section>
+
+	</div>
 
 	<!-- Footer Include -->
 	<div w3-include-html="footer.html"></div>
@@ -537,7 +652,7 @@ $(document).ready(function() {
 			'This message was sent from the EFBT Documentation feedback form.';
 
 		// Create mailto URL
-		var mailtoUrl = 'mailto:info@birdsoftwaresolutions.com?subject=' +
+		var mailtoUrl = 'mailto:efbt-dev@eclipse.org?subject=' +
 			encodeURIComponent(emailSubject) + '&body=' + emailBody;
 
 		// Open email client
@@ -551,6 +666,9 @@ $(document).ready(function() {
 	});
 });
 </script>
+
+<!-- Dynamic Sidebar -->
+<script src="js/dynamic-sidebar.js"></script>
 
 </body>
 </html>

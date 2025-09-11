@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -17,6 +17,23 @@ body {
   line-height: 1.7;
   color: #777;
   background: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Content background */
+.main {
+  background: white;
+  position: relative;
+  z-index: 1;
+  margin-left: 200px;
+  min-height: 100vh;
+}
+
+.main section {
+  padding: 60px 0;
+  position: relative;
+  background: white;
 }
 
 /* =======================================================
@@ -25,13 +42,15 @@ body {
 *
 * ======================================================= */
 
-/* Hero Section with Gradient */
+/* Hero Section with Solid Background */
 .hero-section {
-  background: linear-gradient(135deg, #17B794 0%, #0091EA 100%);
+  background: #16381f;
   padding: 80px 0;
   color: white;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+  margin-left: 200px;
 }
 
 .hero-section::before {
@@ -43,6 +62,7 @@ body {
   bottom: 0;
   background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
   opacity: 0.1;
+  z-index: -1;
 }
 
 .hero-section h1 {
@@ -51,6 +71,7 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   animation: fadeInUp 0.8s ease;
+  text-align: center;
 }
 
 .hero-section h2 {
@@ -59,6 +80,7 @@ body {
   font-weight: 300;
   animation: fadeInUp 0.8s ease 0.2s;
   animation-fill-mode: both;
+  text-align: center;
 }
 
 /* Feature Cards */
@@ -91,8 +113,20 @@ body {
 
 .card-feature .icon {
   font-size: 3rem;
-  color: #17B794;
+  color: #38162F;
   margin-bottom: 20px;
+}
+
+/* Sidebar styles are now handled dynamically by JavaScript */
+
+/* Responsive adjustments for sections with sidebar */
+@media (max-width: 768px) {
+  .main,
+  .hero-section,
+  .footer-modern,
+  #gtco-footer {
+    margin-left: 0;
+  }
 }
 
 /* Documentation Sidebar */
@@ -131,7 +165,7 @@ body {
 
 .doc-sidebar ul li a:hover,
 .doc-sidebar ul li a.active {
-  background: #17B794;
+  background: #38162F;
   color: white;
 }
 
@@ -184,7 +218,7 @@ body {
 }
 
 .btn-codespace:hover {
-  background: #30363d;
+  background: #16381f;
   color: white;
   text-decoration: none;
   border-color: #444c56;
@@ -213,25 +247,25 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #17B794 0%, #0091EA 100%);
+  background: #16381f;
   color: white;
-  box-shadow: 0 4px 15px rgba(23, 183, 148, 0.4);
+  box-shadow: 0 4px 15px rgba(22, 56, 31, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(23, 183, 148, 0.5);
+  box-shadow: 0 6px 20px rgba(22, 56, 31, 0.5);
   color: white;
 }
 
 .btn-secondary {
   background: white;
-  color: #17B794;
-  border: 2px solid #17B794;
+  color: #38162F;
+  border: 2px solid #38162F;
 }
 
 .btn-secondary:hover {
-  background: #17B794;
+  background: #38162F;
   color: white;
   transform: translateY(-2px);
 }
@@ -239,12 +273,13 @@ body {
 /* Modern Footer */
 .footer-modern,
 #gtco-footer {
-  background: linear-gradient(135deg, #0F7562 0%, #005B9F 100%);
+  background: #16381f;
   color: white;
   padding: 80px 0 40px;
-  margin-top: 100px;
+  margin-top: 0;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .footer-modern::before,
@@ -257,11 +292,12 @@ body {
   bottom: 0;
   background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="footerpattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="white" opacity="0.08"/><circle cx="0" cy="0" r="1.5" fill="white" opacity="0.08"/><circle cx="60" cy="0" r="1.5" fill="white" opacity="0.08"/><circle cx="0" cy="60" r="1.5" fill="white" opacity="0.08"/><circle cx="60" cy="60" r="1.5" fill="white" opacity="0.08"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footerpattern)"/></svg>');
   opacity: 1;
+  z-index: -1;
   pointer-events: none;
 }
 
-.footer-modern .container,
-#gtco-footer .container {
+.footer-modern .gtco-container,
+#gtco-footer .gtco-container {
   position: relative;
   z-index: 1;
 }
@@ -290,7 +326,7 @@ body {
   left: 0;
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, #17B794 0%, transparent 100%);
+  background: #16381f;
 }
 
 .footer-modern .nav,
@@ -325,12 +361,12 @@ body {
   left: 0;
   opacity: 0;
   transition: all 0.3s ease;
-  color: #17B794;
+  color: #38162F;
 }
 
 .footer-modern .nav li a:hover,
 #gtco-footer .nav li a:hover {
-  color: #17B794 !important;
+  color: #38162F !important;
   padding-left: 30px;
 }
 
@@ -373,12 +409,12 @@ body {
   #gtco-footer {
     padding: 60px 0 30px;
   }
-  
+
   #footer-eclipse-foundation,
   #footer-legal {
     margin-bottom: 30px;
   }
-  
+
   .footer-modern h2,
   #gtco-footer h2,
   .footer-modern .section-title,
@@ -487,12 +523,12 @@ body {
 
 .gtco-nav .menu-1 ul li a:hover,
 .gtco-nav .menu-1 ul li.active a {
-  color: #17B794;
-  border-bottom: 2px solid #17B794;
+  color: #38162F;
+  border-bottom: 2px solid #38162F;
 }
 
 #gtco-logo a {
-  color: #17B794;
+  color: #38162F;
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
@@ -503,15 +539,15 @@ body {
   .hero-section h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero-section h2 {
     font-size: 1.2rem;
   }
-  
+
   .feature-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .doc-sidebar {
     position: static;
     margin-bottom: 30px;
@@ -546,13 +582,13 @@ body {
 }
 
 a {
-  color: #17B794;
+  color: #38162F;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #17B794;
+  color: #38162F;
   outline: none;
   text-decoration: none;
 }
@@ -570,17 +606,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #17B794;
+  background: #38162F;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #17B794;
+  background: #38162F;
 }
 
 ::selection {
   color: #fff;
-  background: #17B794;
+  background: #38162F;
 }
 
 .gtco-container {
@@ -617,7 +653,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: bold;
 }
 .gtco-nav #gtco-logo em {
-  color: #17B794;
+  color: #38162F;
 }
 @media screen and (max-width: 768px) {
   .gtco-nav .menu-1, .gtco-nav .menu-2 {
@@ -737,7 +773,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #33a3bd;
 }
 .gtco-nav ul li.btn-cta a {
-  color: #17B794;
+  color: #38162F;
 }
 .gtco-nav ul li.btn-cta a span {
   background: #fff;
@@ -804,7 +840,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 0 !important;
 }
 .gtco-cover a {
-  color: #17B794;
+  color: #38162F;
 }
 .gtco-cover a:hover {
   color: white;
@@ -940,7 +976,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   left: 0;
   top: -0.1em;
-  color: #17B794;
+  color: #38162F;
   font-size: 22px !important;
 }
 .gtco-services .service p {
@@ -1031,12 +1067,6 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   opacity: .8;
   background: #3dcdbc;
-  background: -moz-linear-gradient(left, #3dcdbc 0%, #33a1bd 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #3dcdbc), color-stop(100%, #33a1bd));
-  background: -webkit-linear-gradient(left, #3dcdbc 0%, #33a1bd 100%);
-  background: -o-linear-gradient(left, #3dcdbc 0%, #33a1bd 100%);
-  background: -ms-linear-gradient(left, #3dcdbc 0%, #33a1bd 100%);
-  background: linear-gradient(to right, #3dcdbc 0%, #33a1bd 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dcdbc', endColorstr='#33a1bd', GradientType=1 );
 }
 .gtco-products .gtco-item:hover .overlay {
@@ -1085,104 +1115,6 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 700;
 }
 
-#gtco-footer {
-  background: linear-gradient(135deg, #0F7562 0%, #005B9F 100%);
-  padding: 80px 0 40px 0 !important;
-  margin-bottom: 0 !important;
-  margin-top: 100px;
-  width: 100%;
-  float: left;
-  position: relative;
-  overflow: hidden;
-}
-
-#gtco-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="footergrid" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footergrid)"/></svg>');
-  opacity: 0.3;
-  pointer-events: none;
-}
-#gtco-footer a:hover {
-  color: #fff !important;
-}
-#gtco-footer .gtco-cta {
-  margin-bottom: 30px;
-}
-#gtco-footer .gtco-cta h3 {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 300;
-}
-#gtco-footer .gtco-cta .btn-white {
-  padding: 15px 20px !important;
-}
-#gtco-footer .gtco-cta .btn-white.btn-outline:hover {
-  color: #000 !important;
-}
-#gtco-footer .gtco-footer-paragraph h3 {
-  color: #fff;
-  margin-bottom: 10px;
-}
-#gtco-footer .gtco-footer-link {
-  padding-left: 30px;
-}
-@media screen and (max-width: 768px) {
-  #gtco-footer .gtco-footer-link {
-    padding-left: 15px;
-  }
-}
-#gtco-footer .gtco-footer-link .gtco-list-link {
-  padding: 0;
-  margin: 0;
-}
-#gtco-footer .gtco-footer-link .gtco-list-link li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-#gtco-footer .gtco-footer-link .gtco-list-link li a {
-  text-transform: uppercase;
-  font-size: 13px !important;
-}
-#gtco-footer .gtco-footer-subscribe {
-  padding-left: 30px;
-}
-@media screen and (max-width: 768px) {
-  #gtco-footer .gtco-footer-subscribe {
-    padding-left: 15px;
-  }
-}
-#gtco-footer .gtco-footer-subscribe .form-control {
-  background: #fff !important;
-  border: none !important;
-}
-#gtco-footer .gtco-footer-subscribe .btn {
-  margin-top: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  height: 54px !important;
-  line-height: 1.5;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-}
-#gtco-footer .gtco-copyright {
-  background: #1a1a1a;
-  padding: 30px 0;
-  float: left;
-  width: 100%;
-}
-#gtco-footer .gtco-copyright p:last-child {
-  margin-bottom: 0;
-}
 
 .bg-img {
   background-position: center center;
@@ -1233,7 +1165,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-staff .fh5co-social li a, .gtco-item .fh5co-social li a {
   font-size: 20px;
-  color: #17b794;
+  color: #38162F;
 }
 .gtco-staff .fh5co-social li a:hover, .gtco-item .fh5co-social li a:hover {
   color: #000;
@@ -1257,7 +1189,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #17B794;
+  color: #38162F;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -1415,7 +1347,7 @@ form label {
 #gtco-counter .counter {
   font-size: 50px;
   margin-bottom: 10px;
-  color: #17B794;
+  color: #38162F;
   font-weight: 100;
   display: block;
 }
@@ -1742,21 +1674,21 @@ form label {
 }
 
 .btn-primary {
-  background: #17B794;
+  background: #38162F;
   color: #fff;
-  border: 2px solid #17B794 !important;
+  border: 2px solid #38162F !important;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #1acea6 !important;
-  border-color: #1acea6 !important;
+  background: #0f2617 !important;
+  border-color: #0f2617 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #17B794;
-  border: 2px solid #17B794;
+  color: #38162F;
+  border: 2px solid #38162F;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #17B794;
+  background: #38162F;
   color: #fff;
 }
 
@@ -1926,7 +1858,7 @@ form label {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #17B794;
+  border-color: #38162F;
 }
 
 .row-pb-md {
@@ -1970,7 +1902,7 @@ form label {
   margin-left: 0px;
 }
 .gtco-nav .gtco-contact ul li a i {
-  color: #17B794;
+  color: #38162F;
 }
 .gtco-nav .gtco-contact ul li a:hover i {
   color: #fff;
@@ -1989,7 +1921,7 @@ form label {
   width: 33.33%;
   float: left;
   padding: 30px;
-  background: #17B794;
+  background: #38162F;
   position: relative;
   text-align: center;
 }
