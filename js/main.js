@@ -1,5 +1,5 @@
 ;(function () {
-	
+
 	'use strict';
 
 	var mobileMenuOutsideClick = function() {
@@ -13,10 +13,10 @@
 
     			$('body').removeClass('offcanvas');
     			$('.js-gtco-nav-toggle').removeClass('active');
-				
+
 	    	}
-	    
-	    	
+
+
 	    }
 		});
 
@@ -27,6 +27,26 @@
 
 		$('#page').prepend('<div id="gtco-offcanvas" />');
 		$('#page').prepend('<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle "><i></i></a>');
+
+		// Add trademark header
+		$('#gtco-offcanvas').append('<div class="offcanvas-trademark">Eclipse Free BIRD Tools&trade;</div>');
+		
+		// Determine the base path based on current location
+		var basePath = window.location.pathname.includes('/user_guide/') ? '../' : '';
+		
+		$('#gtco-offcanvas').append(
+			'<ul>' +
+				'<li><a href="' + basePath + 'index.html">Home</a></li>' +
+				'<li><a href="' + basePath + 'freebirdapplication.html">FreeBIRD Application</a></li>' +
+				'<li><a href="' + basePath + 'documentation.html">Documentation</a></li>' +
+			'</ul>'
+		);
+
+
+
+
+
+		// Clone main navigation
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#gtco-offcanvas').append(clone1);
 		var clone2 = $('.menu-2 > ul').clone();
@@ -44,14 +64,14 @@
 			$this
 				.addClass('active')
 				.find('ul')
-				.slideDown(500, 'easeOutExpo');				
+				.slideDown(500, 'easeOutExpo');
 		}).mouseleave(function(){
 
 			var $this = $(this);
 			$this
 				.removeClass('active')
 				.find('ul')
-				.slideUp(500, 'easeOutExpo');				
+				.slideUp(500, 'easeOutExpo');
 		});
 
 
@@ -61,7 +81,7 @@
 
     			$('body').removeClass('offcanvas');
     			$('.js-gtco-nav-toggle').removeClass('active');
-				
+
 	    	}
 		});
 	};
@@ -95,7 +115,7 @@
 			$('.animate-box').waypoint( function( direction ) {
 
 				if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
-					
+
 					i++;
 
 					$(this.element).addClass('item-animate');
@@ -118,9 +138,9 @@
 								el.removeClass('item-animate');
 							},  k * 50, 'easeInOutExpo' );
 						});
-						
+
 					}, 100);
-					
+
 				}
 
 			} , { offset: '85%' } );
@@ -138,7 +158,7 @@
 			$('.animate-change').waypoint( function( direction ) {
 
 				if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
-					
+
 					i++;
 
 					$(this.element).addClass('item-animate');
@@ -151,9 +171,9 @@
 								el.removeClass('item-animate');
 							},  k * 100, 'easeInOutExpo' );
 						});
-						
+
 					}, 100);
-					
+
 				}
 
 			} , { offset: '85%' } );
@@ -184,7 +204,7 @@
 
 
 	var owlCarousel = function(){
-		
+
 		var owl = $('.owl-carousel-carousel');
 		owl.owlCarousel({
 			items: 3,
@@ -226,7 +246,7 @@
 		});
 
 
-		
+
 
 	};
 
@@ -255,7 +275,7 @@
 				});
 
 			}, 100);
-			
+
 		};
 
 		autoHeight();
@@ -263,7 +283,7 @@
 
 		// Click tab menu
 		$('.gtco-tab-nav a').on('click', function(event){
-			
+
 			var $this = $(this),
 				tab = $this.data('tab');
 
@@ -274,7 +294,7 @@
 				.removeClass('active');
 
 			$('.gtco-tab-nav li').removeClass('active');
-			
+
 			$this
 				.closest('li')
 					.addClass('active')
@@ -289,20 +309,20 @@
 			autoHeight();
 			event.preventDefault();
 
-		}); 
+		});
 	};
 
 
 	var goToTop = function() {
 
 		$('.js-gotop').on('click', function(event){
-			
+
 			event.preventDefault();
 
 			$('html, body').animate({
 				scrollTop: $('html').offset().top
 			}, 500, 'easeInOutExpo');
-			
+
 			return false;
 		});
 
@@ -316,7 +336,7 @@
 			}
 
 		});
-	
+
 	};
 
 
@@ -336,16 +356,16 @@
 	var counterWayPoint = function() {
 		if ($('#gtco-counter').length > 0 ) {
 			$('#gtco-counter').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
+					setTimeout( counter , 400);
 					$(this.element).addClass('animated');
 				}
 			} , { offset: '90%' } );
 		}
 	};
 
-	
+
 	$(function(){
 		mobileMenuOutsideClick();
 		offcanvasMenu();
