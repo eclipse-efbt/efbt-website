@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/Volumes/External Memory/benjaminarfa/Desktop/programming/github.com/benjamin-arfa/efbt/website/efbt-website/)",
+      "Bash(python3:*)",
+      "Bash(curl:*)",
+      "Read(//Volumes/External Memory/benjaminarfa/Desktop/programming/github.com/benjamin-arfa/efbt/website/**)",
+      "Bash(awk:*)",
+      "Bash(for:*)",
+      "Bash(while read -r img)",
+      "Bash(do if [ -f \"$img\" ])",
+      "Bash(then echo \"  ✓ $img exists\" else echo \"  ✗ $img NOT FOUND\" fi done echo \"\" done)",
+      "Read(//Volumes/**)",
+      "Bash(open:*)",
+      "Bash(node:*)",
+      "Bash(do echo \"=== Theme: $theme ===\")",
+      "Bash(grep:*)",
+      "Bash(done)",
+      "Bash(find:*)",
+      "Bash(sed:*)",
+      "Bash(echo:*)",
+      "Bash(do echo \"=== Checking $theme theme for remaining original colors ===\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
