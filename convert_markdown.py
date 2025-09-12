@@ -348,7 +348,7 @@ def create_coming_soon_template(title="Document", relative_path=""):
     path_prefix = '../' * path_depth if path_depth > 0 else ''
 
     coming_soon_content = f"""<div class="text-center" style="padding: 60px 0;">
-        <i class="icon-clock" style="font-size: 72px; color: #38162F; margin-bottom: 30px;"></i>
+        <i class="icon-clock" style="font-size: 72px; color: #0077be; margin-bottom: 30px;"></i>
         <h1 style="margin-bottom: 20px;">Coming Soon</h1>
         <p style="font-size: 18px; color: #666; margin-bottom: 30px;">
             The {title} user guide is currently under development and will be available soon.
@@ -545,7 +545,7 @@ def create_html_template(content, title="Document", relative_path=""):
 		.doc-content .guide-image:hover {{
 			transform: translateY(-2px);
 			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-			border-color: #16381f;
+			border-color: #008793;
 		}}
 
 		/* Links */

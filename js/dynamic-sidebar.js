@@ -48,7 +48,7 @@ class DynamicSidebar {
                 z-index: 1000;
                 top: 0;
                 left: 0;
-                background: #16381f;
+                background: #008793;
                 overflow-x: hidden;
                 overflow-y: auto;
                 padding: 20px 0 30px 0;
@@ -191,7 +191,7 @@ class DynamicSidebar {
                     visibility: hidden !important;
                     pointer-events: none !important;
                 }
-                
+
                 body {
                     overflow-x: hidden;
                 }
@@ -266,7 +266,6 @@ class DynamicSidebar {
             freebird: {
                 title: 'FreeBIRD App',
                 items: [
-                    { text: 'Home', href: `${this.pathPrefix}index.html`, icon: 'ti-home' },
                     { text: 'Overview', href: '#overview', icon: 'ti-eye' },
                     { text: 'Features', href: '#features', icon: 'ti-star' },
                     { text: 'Getting Started', href: '#getting-started', icon: 'ti-rocket' },
