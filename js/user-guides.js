@@ -73,7 +73,7 @@ class UserGuidesLoader {
         this.guidesContainer.innerHTML = `
             <div class="loading-guides text-center">
                 <div class="loading-spinner">
-                    <i class="icon-refresh animate-spin" style="font-size: 24px; color: #38162F;"></i>
+                    <i class="icon-refresh animate-spin" style="font-size: 24px; color: #0077be;"></i>
                 </div>
                 <p style="margin-top: 10px; color: #666;">Loading user guides...</p>
             </div>

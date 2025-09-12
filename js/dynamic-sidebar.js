@@ -48,7 +48,7 @@ class DynamicSidebar {
                 z-index: 1000;
                 top: 0;
                 left: 0;
-                background: #16381f;
+                background: #008793;
                 overflow-x: hidden;
                 overflow-y: auto;
                 padding: 20px 0 30px 0;
@@ -131,6 +131,19 @@ class DynamicSidebar {
                 opacity: 0.8;
             }
 
+            /* Sidebar separator */
+            .sidenav-separator {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                margin: 10px 24px;
+                opacity: 0.6;
+            }
+
+            /* GitHub section */
+            .sidenav-github {
+                margin-top: 5px;
+            }
+
             /* Main content adjustment - handled in style.css */
 
             /* Navbar adjustment to prevent overlap */
@@ -191,7 +204,7 @@ class DynamicSidebar {
                     visibility: hidden !important;
                     pointer-events: none !important;
                 }
-                
+
                 body {
                     overflow-x: hidden;
                 }
@@ -259,46 +272,45 @@ class DynamicSidebar {
                 items: [
                     { text: 'About', href: '#about', icon: 'ti-info' },
                     { text: 'FreeBIRD', href: '#freebird', icon: 'ti-package' },
-                    { text: 'What is BIRD', href: '#what-is-bird', icon: 'ti-help' },
-                    { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
-                ]
+                    { text: 'What is BIRD', href: '#what-is-bird', icon: 'ti-help' }
+                ],
+                githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
             },
             freebird: {
                 title: 'FreeBIRD App',
                 items: [
-                    { text: 'Home', href: `${this.pathPrefix}index.html`, icon: 'ti-home' },
                     { text: 'Overview', href: '#overview', icon: 'ti-eye' },
                     { text: 'Features', href: '#features', icon: 'ti-star' },
                     { text: 'Getting Started', href: '#getting-started', icon: 'ti-rocket' },
-                    { text: 'Ready to Build with FreeBIRD?', href: `#ready-to-build`, icon: 'ti-book' },
-                    { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
-                ]
+                    { text: 'Ready to Build with FreeBIRD?', href: `#ready-to-build`, icon: 'ti-book' }
+                ],
+                githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
             },
             documentation: {
                 title: 'Documentation',
                 items: [
                     { text: 'Quick Start', href: '#quickstart', icon: 'ti-rocket' },
                     { text: 'User Guides', href: '#user-guides', icon: 'ti-bookmark' },
-                    { text: 'Feedback', href: '#feedback', icon: 'ti-comment' },
-                    { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
-                ]
+                    { text: 'Feedback', href: '#feedback', icon: 'ti-comment' }
+                ],
+                githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
             },
             userguide: {
                 title: 'User Guide',
                 items: [
                     { text: 'All Guides', href: `${this.pathPrefix}documentation.html#user-guides`, icon: 'ti-list' },
-                    ...this.getGuideSpecificItems(),
-                    { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
-                ]
+                    ...this.getGuideSpecificItems()
+                ],
+                githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
             },
             default: {
                 title: 'Navigation',
                 items: [
                     { text: 'Home', href: `${this.pathPrefix}index.html`, icon: 'ti-home' },
                     { text: 'FreeBIRD App', href: `${this.pathPrefix}freebirdapplication.html`, icon: 'ti-package' },
-                    { text: 'Documentation', href: `${this.pathPrefix}documentation.html`, icon: 'ti-book' },
-                    { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
-                ]
+                    { text: 'Documentation', href: `${this.pathPrefix}documentation.html`, icon: 'ti-book' }
+                ],
+                githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
             }
         };
 
@@ -389,6 +401,13 @@ class DynamicSidebar {
             return `<a href="${item.href}"${target}>${icon}${item.text}</a>`;
         }).join('');
 
+        const githubLinkHTML = config.githubLink ? (() => {
+            const target = config.githubLink.target ? ` target="${config.githubLink.target}"` : '';
+            const icon = config.githubLink.icon ? `<i class="${config.githubLink.icon}"></i> ` : '';
+            
+            return `<a href="${config.githubLink.href}"${target}>${icon}${config.githubLink.text}</a>`;
+        })() : '';
+
         const trademarkHTML = `
             <div class="sidenav-trademark">
                 <div class="trademark-title">ECLIPSE FREE BIRD TOOLS&trade;</div>
@@ -401,7 +420,10 @@ class DynamicSidebar {
                 <div class="sidenav-navigation">
                     ${itemsHTML}
                 </div>
-
+                <hr class="sidenav-separator">
+                <div class="sidenav-github">
+                    ${githubLinkHTML}
+                </div>
             </div>
         `;
     }
