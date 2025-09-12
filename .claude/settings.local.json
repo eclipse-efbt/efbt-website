@@ -19,7 +19,9 @@
       "Bash(find:*)",
       "Bash(sed:*)",
       "Bash(echo:*)",
-      "Bash(do echo \"=== Checking $theme theme for remaining original colors ===\")"
+      "Bash(do echo \"=== Checking $theme theme for remaining original colors ===\")",
+      "Bash(chmod:*)",
+      "Bash(./launch_servers.sh)"
     ],
     "deny": [],
     "ask": []

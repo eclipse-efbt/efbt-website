@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pull Request Creation Guide - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Pull Request Creation Guide - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Pull Request Creation Guide" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Pull Request Creation Guide - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Pull Request Creation Guide documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Pull Request Creation Guide - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #073642;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Pull Request Creation Guide</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<p>Eclipse Free BIRD Tools provides seamless GitHub integration for creating pull requests with your processed regulatory data and transformations.</p>
+<h2 id="overview">Overview</h2>
+<p>Pull requests in Eclipse Free BIRD Tools allow you to share processed regulatory data and transformations, submit work for peer review and approval, maintain secure isolated development workflows, and contribute to collaborative regulatory reporting projects.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before creating pull requests, ensure you have your database ready and configuration completed. You need access to the target GitHub repository with a personal access token that has repository permissions. It is recommended to complete your workflow processing tasks before creating a pull request.</p>
+<h2 id="quick-actions-create-review-automated">Quick Actions: Create Review (Automated)</h2>
+<p>The recommended approach for creating pull requests is to use the automated &quot;Create Review&quot; feature after completing your workflow tasks.</p>
+<p><img src="../images/screenshots/quickaction/quickactionmenu_setup_finished_create_review.png" alt="Quick Actions Setup Finished" class="img-responsive guide-image"></p>
+<p>The <strong>&quot;Create Review&quot;</strong> button appears in Quick Actions when your database setup is complete, configuration is saved, workflow tasks have been executed, and the system is ready for review submission. To use this feature, first complete executing Tasks 1-4 or your desired endpoint. Verify that your database and configuration show ready status. Then click &quot;Create Review&quot; located in the Quick Actions Automode Execution section. The system will automatically handle the fork creation, branch setup, and pull request submission.</p>
+<p>When you click &quot;Create Review&quot;, the system automatically creates a secure fork of the target repository, generates a new branch for your changes, exports your processed data and transformations, commits the changes and pushes them to your fork, and creates a pull request back to the original repository.</p>
+<h2 id="manual-export-database-to-csv-files">Manual Export: Database to CSV Files</h2>
+<p>For advanced users who need more control over the export process, you can use the manual export functionality.</p>
+<p><img src="../images/screenshots/pull_request/pull_request.png" alt="Export Database to CSV" class="img-responsive guide-image"></p>
+<p>To access the export functionality, navigate to &quot;Export Database to CSV Files&quot; and choose the &quot;Export to GitHub&quot; option from the right panel. Then configure your GitHub settings as needed.</p>
+<h3 id="github-configuration">GitHub Configuration</h3>
+<p>You need to provide a GitHub token for authentication, which is your personal access token with repository permissions. The token is not stored and is only used for this export. Ensure your token has fork, push, and pull request creation rights.</p>
+<p>You can optionally specify a custom repository URL if different from your configuration settings. Leave this empty to use the repository from your automode settings. If you&#39;re working in an organizational context, you can specify an organization name for the fork. Leave this empty to fork to your personal account. The target branch defaults to &quot;develop&quot; but you can specify an alternative branch if required.</p>
+<h3 id="fork-workflow">Fork Workflow</h3>
+<p>The fork workflow is recommended for security. When enabled, it creates an isolated fork where you can work without affecting the original repository. This approach doesn&#39;t require direct write access to the main repository and ensures all changes go through a review process before integration. The system automatically handles fork creation, and repository maintainers can review and approve changes through the pull request.</p>
+<h2 id="export-process">Export Process</h2>
+<p>To export your data, first enter your GitHub token and configure any optional settings like repository URL or organization fork. Click &quot;Export to GitHub&quot; to start the process. The system will automatically create a fork if needed, generate CSV files from your database tables, create a new branch, commit the files, and open a pull request. You&#39;ll receive a success message with a direct link to the created pull request.</p>
+<p>The export creates individual CSV files for each database table, with column names included as headers. All files are bundled in a zip archive and uploaded to your fork with a descriptive commit message.</p>
+<h2 id="best-practices">Best Practices</h2>
+<p>Always use the fork workflow for isolated, secure development. Complete your workflow tasks before creating pull requests. Limit your GitHub token permissions to the minimum required for the operation. For routine submissions, use the &quot;Create Review&quot; feature in Quick Actions. Include descriptive commit messages and pull request descriptions to help reviewers understand your changes.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you encounter authentication issues, verify that your token has the correct permissions, check the token expiration date, and ensure you&#39;re using the token for the correct GitHub account. For repository access problems, verify the repository URL is correct, confirm you have read access, and check if the repository is private. If fork creation fails, ensure you don&#39;t already have a fork of the repository, verify your GitHub account has forking permissions, and check if the organization allows forking. For export failures, verify database connectivity and integrity, check system resources and network connectivity, and try exporting smaller datasets if the process times out.</p>
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>
