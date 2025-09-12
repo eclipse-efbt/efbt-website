@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-09-11T17:18:34.793708",
+  "generated_at": "2025-09-12T21:27:42.562174",
   "total_guides": 5,
   "guides": [
     {
@@ -7,7 +7,7 @@
       "description": "The Eclipse Free BIRD Tools Workflow Dashboard is your central hub for regulatory reporting workflows. This guide explains how to execute the 4-task sequential process for BIRD data processing.",
       "filename": "workflow_dashboard_guide.html",
       "path": "user_guide/workflow_dashboard_guide.html",
-      "last_modified": "2025-09-11T17:18:34.791538",
+      "last_modified": "2025-09-12T21:27:42.560313",
       "slug": "workflow_dashboard_guide",
       "disabled": false,
       "status": "available"
@@ -17,7 +17,7 @@
       "description": "The Execute Datapoint feature enables you to run calculations and transformations on populated template cells within the FreeBIRD application for regulatory reporting.",
       "filename": "execute_datapoint_guide.html",
       "path": "user_guide/execute_datapoint_guide.html",
-      "last_modified": "2025-09-11T17:18:34.792323",
+      "last_modified": "2025-09-12T21:27:42.561052",
       "slug": "execute_datapoint_guide",
       "disabled": false,
       "status": "available"
@@ -27,7 +27,7 @@
       "description": "Eclipse Free BIRD Tools provides seamless GitHub integration for creating pull requests with your processed regulatory data and transformations.",
       "filename": "pull_request_creation_guide.html",
       "path": "user_guide/pull_request_creation_guide.html",
-      "last_modified": "2025-09-11T17:18:34.792994",
+      "last_modified": "2025-09-12T21:27:42.561600",
       "slug": "pull_request_creation_guide",
       "disabled": false,
       "status": "available"
@@ -37,7 +37,7 @@
       "description": "This guide is currently under development and will be available soon.",
       "filename": "dataset_transformation_guide.html",
       "path": "user_guide/dataset_transformation_guide.html",
-      "last_modified": "2025-09-11T17:18:34.793141",
+      "last_modified": "2025-09-12T21:27:42.561738",
       "slug": "dataset_transformation_guide",
       "disabled": true,
       "status": "coming_soon"
@@ -47,7 +47,7 @@
       "description": "DPM (Data Point Model) Operations provides a 3-step workflow for processing regulatory data according to European Banking Authority (EBA) standards.",
       "filename": "dpm_operations_guide.html",
       "path": "user_guide/dpm_operations_guide.html",
-      "last_modified": "2025-09-11T17:18:34.793702",
+      "last_modified": "2025-09-12T21:27:42.562167",
       "slug": "dpm_operations_guide",
       "disabled": false,
       "status": "available"
