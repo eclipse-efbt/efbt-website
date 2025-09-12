@@ -2403,4 +2403,87 @@ form label {
   background: #004d7a;
 }
 
+/* Mobile Navigation Improvements */
+@media screen and (max-width: 768px) {
+  /* Hide the entire desktop navigation on mobile */
+  .gtco-nav {
+    display: none !important;
+  }
+
+  /* Ensure burger menu toggle is visible on mobile */
+  .gtco-nav-toggle {
+    display: block !important;
+    position: fixed !important;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+  }
+
+  /* Style the offcanvas menu */
+  #gtco-offcanvas {
+    display: block !important;
+    background: #004d7a;
+    padding-top: 20px;
+  }
+
+  /* Style the trademark header */
+  #gtco-offcanvas .offcanvas-trademark {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 20px 30px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+  }
+
+  /* Style offcanvas menu items */
+  #gtco-offcanvas ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  #gtco-offcanvas ul li {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  #gtco-offcanvas ul li a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #gtco-offcanvas ul li a:hover {
+    color: #fff !important;
+    padding-left: 10px;
+  }
+}
+
+/* Ensure burger menu colors match theme */
+.gtco-nav-toggle i,
+.gtco-nav-toggle i::before,
+.gtco-nav-toggle i::after {
+  background: #fff !important;
+}
+
+.gtco-nav-toggle.active i::before,
+.gtco-nav-toggle.active i::after {
+  background: #fff !important;
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  .gtco-nav-toggle {
+    top: 15px;
+    right: 15px;
+  }
+
+  #gtco-offcanvas::before {
+    font-size: 16px;
+    padding: 15px 15px 25px 15px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
