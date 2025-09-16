@@ -791,7 +791,7 @@ def convert_markdown_to_html(markdown_file_path, output_file_path):
         return None
 
 
-def generate_guide_index(guides_metadata, output_dir="user_guide"):
+def generate_guide_index(guides_metadata, output_dir="user-guide"):
     """
     Generate an index.json file with metadata about all guides.
 
@@ -839,7 +839,7 @@ def process_markdown_directory(source_dir="markdown_content", base_output_dir=".
         print("Creating a sample markdown file for demonstration...")
 
         # Create a sample structure for demonstration
-        sample_dir = Path("markdown_content/user_guide")
+        sample_dir = Path("markdown_content/user-guide")
         sample_dir.mkdir(parents=True, exist_ok=True)
 
         # Create a sample markdown file
