@@ -1,10 +1,28 @@
-The Execute Datapoint feature enables you to run calculations and transformations on populated template cells within the FreeBIRD application for regulatory reporting.
+## Feature Overview
 
-## Overview
+The Execute Datapoint feature is a powerful calculation engine within Eclipse Free BIRD Tools that enables you to run complex calculations and transformations on populated template cells. This feature processes individual datapoints or entire batches, applying regulatory formulas and validation rules to generate compliant reporting data.
 
-Execute Datapoint functionality allows you to view and manage populated templates, execute calculations on template cells, generate transformed data for regulatory reporting, and track execution status and results.
+## Purpose
 
-## Accessing Execute Datapoint
+Execute Datapoint addresses the critical need for accurate regulatory calculations in financial reporting. This feature provides:
+- **Automated Calculations**: Execute complex regulatory formulas with precision
+- **Batch Processing**: Handle multiple datapoints efficiently in a single operation
+- **Real-time Validation**: Ensure results meet regulatory requirements immediately
+- **Audit Trail**: Maintain complete records of all calculations for compliance
+- **Flexible Execution**: Choose between individual or batch processing based on needs
+
+Financial institutions rely on this feature to transform raw data into calculated regulatory metrics, ensuring accuracy in reporting while maintaining full transparency and auditability of the calculation process.
+
+## Getting Started
+
+### Prerequisites
+Before using Execute Datapoint, ensure:
+- Templates are populated with source data
+- You have appropriate execution permissions
+- Database connectivity is established
+- Regulatory formulas are up to date
+
+### Accessing Execute Datapoint
 
 To access the Execute Datapoint functionality, navigate to the FreeBIRD application homepage and click on **"View Populated Templates"**.
 
@@ -14,7 +32,9 @@ After clicking, you'll see a list of all populated templates available in the sy
 
 ![List of Populated Templates](images/screenshots/execute_datapoints/list_of_populated_templates.png)
 
-## Working with Populated Templates
+## Step-by-Step Guide
+
+### Working with Populated Templates
 
 The populated templates list displays the template name which identifies the specific regulatory template, the current status showing whether it's populated, executed, or pending, when the template was last modified, and the number of cells within the template.
 
@@ -24,7 +44,7 @@ Click on any template to view its individual cells. Each cell contains specific 
 
 Each cell shows a unique cell reference like R010C010, the specific datapoint to be calculated, the current or calculated value, the execution status indicating if it's pending, completed, or has an error, and the underlying calculation or transformation formula.
 
-## Executing Datapoints
+### Executing Datapoints
 
 ### Individual Cell Execution
 
@@ -38,7 +58,7 @@ For multiple datapoints, select multiple cells using checkboxes, click **"Execut
 
 During execution, the system validates input data, applies transformation rules, calculates results based on formulas, updates cell values, and logs execution details for audit purposes.
 
-## Monitoring Execution
+### Monitoring Execution
 
 Watch for status indicators during execution. A "Pending" status means the datapoint is awaiting execution and you should initiate it when ready. "In Progress" indicates the calculation is currently running and you should wait for completion. "Completed" means the execution was successful and you can review the results. An "Error" status indicates the execution failed and you should check the logs and retry. "Validated" means the results have been verified and are ready for submission.
 
@@ -71,3 +91,14 @@ Execute Datapoint integrates with the Workflow Dashboard where you can track exe
 ## Compliance Considerations
 
 Ensure all executions comply with ECB regulatory requirements, data quality standards, audit requirements, reporting deadlines, and your organization's data governance policies. Regular validation and proper documentation are essential for maintaining compliance throughout the execution process.
+
+## Conclusion
+
+The Execute Datapoint feature transforms raw financial data into calculated regulatory metrics through a controlled, auditable process. By providing both individual and batch execution capabilities, it offers the flexibility needed for various reporting scenarios while maintaining the accuracy and compliance required for regulatory submissions.
+
+### Next Steps
+- Review the [Workflow Dashboard Guide](workflow-dashboard-guide.html) to understand the complete workflow
+- Explore [DPM Operations](dpm-operations-guide.html) for data preparation
+- Learn about [Pull Request Creation](pull-request-creation-guide.html) to submit your calculated results
+
+For technical support or regulatory guidance, connect with the community via [Eclipse Chat](https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org) or email [efbt-dev@eclipse.org](mailto:efbt-dev@eclipse.org).

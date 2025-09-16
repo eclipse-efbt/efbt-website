@@ -21,7 +21,10 @@
       "Bash(echo:*)",
       "Bash(do echo \"=== Checking $theme theme for remaining original colors ===\")",
       "Bash(chmod:*)",
-      "Bash(./launch_servers.sh)"
+      "Bash(./launch_servers.sh)",
+      "Bash(cd:*)",
+      "Bash(while read file)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

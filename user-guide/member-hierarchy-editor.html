@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Member Hierarchy Editor - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Member Hierarchy Editor - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Member Hierarchy Editor" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Member Hierarchy Editor - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Member Hierarchy Editor documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Member Hierarchy Editor - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Member Hierarchy Editor</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h2 id="feature-overview">Feature Overview</h2>
+<p>The Member Hierarchy Editor is an intuitive visual tool within Eclipse Free BIRD Tools designed for creating, managing, and visualizing hierarchical relationships between data members. This drag-and-drop interface enables users to build complex parent-child relationships and organizational structures essential for regulatory data taxonomy and reporting frameworks.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The Member Hierarchy Editor addresses the critical need for structured data organization in regulatory environments by providing:</p>
+<ul>
+<li><strong>Visual Hierarchy Management</strong>: Create and modify complex data relationships through an intuitive interface</li>
+<li><strong>Drag-and-Drop Functionality</strong>: Easily organize members without complex coding or configuration</li>
+<li><strong>Relationship Validation</strong>: Ensure hierarchical integrity with built-in validation rules</li>
+<li><strong>Export Capabilities</strong>: Share hierarchy structures across systems and teams</li>
+<li><strong>Real-time Updates</strong>: See changes immediately as you build your data structures</li>
+<li><strong>Audit Trail</strong>: Track all modifications for compliance and governance requirements</li>
+</ul>
+
+<p>Data architects and compliance teams rely on this feature to maintain organized, compliant data structures that support accurate regulatory reporting and data governance initiatives.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before using the Member Hierarchy Editor, ensure:</p>
+<ul>
+<li>Access to the FreeBIRD Application with appropriate permissions</li>
+<li>Understanding of your organization&#39;s data taxonomy requirements</li>
+<li>Knowledge of the hierarchical relationships needed for your use case</li>
+<li>Familiarity with regulatory reporting structures if applicable</li>
+</ul>
+
+<h3 id="accessing-the-editor">Accessing the Editor</h3>
+<p>Navigate to the FreeBIRD Application and access the Member Hierarchy Editor from the main dashboard. The interface provides a visual workspace for creating and managing hierarchical relationships.</p>
+<p><img src="../images/screenshots/member_hierarchy_editor/MemberHierarchy_Editor_Screenshot__4.20.03PM.png" alt="Member Hierarchy Editor Main Interface" class="img-responsive guide-image"></p>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="understanding-the-interface">Understanding the Interface</h3>
+<p>The Member Hierarchy Editor consists of several key components:</p>
+<h4 id="control-panel-top-right">Control Panel (Top Right)</h4>
+<ul>
+<li><strong>Create Arrow</strong> (White icon): Establishes parent-child relationships between nodes</li>
+<li><strong>Delete Arrow</strong> (White icon): Removes existing relationships between nodes</li>
+<li><strong>Export</strong> (Blue): Exports the hierarchy structure to external formats</li>
+<li><strong>Save to Database</strong> (Blue): Persists the current hierarchy to the database</li>
+<li><strong>Clear</strong> (Red): Resets the workspace and removes all unsaved changes</li>
+<li><strong>Progress Indicator</strong>: Shows completion status percentage</li>
+<li><strong>Fit All</strong> (White): Adjusts zoom to display the entire hierarchy</li>
+</ul>
+
+<h4 id="left-panel-hierarchy-manager">Left Panel - Hierarchy Manager</h4>
+<ul>
+<li><strong>Select Hierarchy</strong>: Dropdown menu to choose from available hierarchies</li>
+<li><strong>Search Members</strong>: Text input for filtering available members</li>
+<li><strong>Member List</strong>: Organized by status (Not in Hierarchy, In Hierarchy, etc.)</li>
+</ul>
+
+<h4 id="central-workspace">Central Workspace</h4>
+<ul>
+<li><strong>Visual Canvas</strong>: Drag-and-drop area for building hierarchies</li>
+<li><strong>Node Representation</strong>: Visual elements representing data members</li>
+<li><strong>Relationship Lines</strong>: Arrows showing parent-child connections</li>
+</ul>
+
+<h3 id="creating-hierarchical-relationships">Creating Hierarchical Relationships</h3>
+<p><strong>Step 1: Select Working Hierarchy</strong></p>
+<ul>
+<li>Use the <strong>Select Hierarchy</strong> dropdown to choose the hierarchy you want to edit</li>
+<li>The current selection appears in the status indicator</li>
+<li>Available members populate in the left panel</li>
+</ul>
+
+<p><strong>Step 2: Add Members to Hierarchy</strong></p>
+<ul>
+<li>Locate desired members in the &quot;Not in Hierarchy&quot; section</li>
+<li>Use the search function to filter large member lists</li>
+<li>Drag members from the left panel to the central workspace</li>
+<li>Members appear as visual nodes on the canvas</li>
+</ul>
+
+<p><strong>Step 3: Create Parent-Child Relationships</strong></p>
+<ul>
+<li>Click the <strong>Create Arrow</strong> button to activate relationship mode</li>
+<li>Click on a parent node, then click on a child node</li>
+<li>An arrow appears showing the hierarchical relationship</li>
+<li>Repeat for all required relationships</li>
+</ul>
+
+<p><strong>Step 4: Validate and Organize</strong></p>
+<ul>
+<li>Use <strong>Fit All</strong> to see the complete hierarchy structure</li>
+<li>Verify that all relationships are correct</li>
+<li>Reorganize nodes by dragging them to optimal positions</li>
+<li>Check for any orphaned or disconnected members</li>
+</ul>
+
+<h3 id="managing-existing-hierarchies">Managing Existing Hierarchies</h3>
+<p><strong>Modifying Relationships:</strong></p>
+<ul>
+<li>Select the <strong>Delete Arrow</strong> tool</li>
+<li>Click on relationship lines to remove unwanted connections</li>
+<li>Use <strong>Create Arrow</strong> to establish new relationships as needed</li>
+</ul>
+
+<p><strong>Member Search and Filtering:</strong></p>
+<ul>
+<li>Type in the <strong>Search Members</strong> field to find specific members</li>
+<li>Results update in real-time as you type</li>
+<li>Clear the search to see all available members</li>
+</ul>
+
+<p><strong>Workspace Management:</strong></p>
+<ul>
+<li>Drag nodes to reorganize visual layout</li>
+<li>Use zoom controls to focus on specific hierarchy sections</li>
+<li><strong>Fit All</strong> returns to full hierarchy view</li>
+</ul>
+
+<h3 id="saving-and-exporting">Saving and Exporting</h3>
+<p><strong>Save Progress:</strong></p>
+<ul>
+<li>Click <strong>Save to Database</strong> to persist changes permanently</li>
+<li>Progress indicator shows completion status</li>
+<li>Saved hierarchies are immediately available across the system</li>
+</ul>
+
+<p><strong>Export Hierarchy:</strong></p>
+<ul>
+<li>Click <strong>Export</strong> to generate external formats</li>
+<li>Choose from available export options (XML, CSV, JSON)</li>
+<li>Use exported files for documentation or system integration</li>
+</ul>
+
+<p><strong>Clear Workspace:</strong></p>
+<ul>
+<li><strong>Clear</strong> button resets all unsaved changes</li>
+<li>Useful for starting over or abandoning modifications</li>
+<li>Saved hierarchies remain unaffected</li>
+</ul>
+
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="hierarchy-design">Hierarchy Design</h3>
+<ul>
+<li><strong>Plan Structure First</strong>: Sketch your hierarchy before starting in the tool</li>
+<li><strong>Follow Conventions</strong>: Use consistent naming and organizational patterns</li>
+<li><strong>Validate Logic</strong>: Ensure parent-child relationships make business sense</li>
+<li><strong>Document Changes</strong>: Save frequently and document modifications</li>
+</ul>
+
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ul>
+<li><strong>Work in Sections</strong>: Focus on specific branches for complex hierarchies</li>
+<li><strong>Use Search</strong>: Filter members to find specific items quickly</li>
+<li><strong>Save Regularly</strong>: Prevent data loss by saving progress frequently</li>
+<li><strong>Clear Unused</strong>: Remove unnecessary members to keep hierarchies clean</li>
+</ul>
+
+<h3 id="collaboration-guidelines">Collaboration Guidelines</h3>
+<ul>
+<li><strong>Version Control</strong>: Coordinate with team members before major changes</li>
+<li><strong>Export Documentation</strong>: Share hierarchy diagrams with stakeholders</li>
+<li><strong>Review Process</strong>: Have changes reviewed before final implementation</li>
+<li><strong>Training</strong>: Ensure team members understand the hierarchy structure</li>
+</ul>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<p><strong>Members Not Appearing:</strong></p>
+<ul>
+<li>Check the selected hierarchy in the dropdown</li>
+<li>Verify search filters aren&#39;t excluding desired members</li>
+<li>Confirm you have permissions to view all members</li>
+<li>Refresh the interface if data seems stale</li>
+</ul>
+
+<p><strong>Cannot Create Relationships:</strong></p>
+<ul>
+<li>Ensure <strong>Create Arrow</strong> mode is activated (tool is selected)</li>
+<li>Verify both parent and child nodes are properly placed</li>
+<li>Check for existing relationships that might conflict</li>
+<li>Confirm nodes are within the active workspace area</li>
+</ul>
+
+<p><strong>Save Failures:</strong></p>
+<ul>
+<li>Check database connectivity</li>
+<li>Verify you have write permissions for the hierarchy</li>
+<li>Ensure all required relationships are established</li>
+<li>Review system logs for specific error messages</li>
+</ul>
+
+<p><strong>Performance Issues:</strong></p>
+<ul>
+<li>Reduce the number of visible members using search filters</li>
+<li>Work with smaller sections of large hierarchies</li>
+<li>Close other applications to free system resources</li>
+<li>Use <strong>Fit All</strong> sparingly with very large hierarchies</li>
+</ul>
+
+<h3 id="validation-errors">Validation Errors</h3>
+<p>The system automatically checks for:</p>
+<ul>
+<li>Circular relationships (member cannot be its own ancestor)</li>
+<li>Orphaned members (members without proper connections)</li>
+<li>Duplicate relationships (same parent-child pair)</li>
+<li>Invalid node types (incompatible member types)</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>The Member Hierarchy Editor streamlines the process of creating and maintaining complex data relationships essential for regulatory compliance and data governance. Its visual approach makes sophisticated hierarchy management accessible to both technical and business users, ensuring that organizational data structures remain accurate and well-maintained.</p>
+<h3 id="next-steps">Next Steps</h3>
+<ul>
+<li>Explore the <a href="cube-links-view-and-edit.html">Cube Links View and Edit</a> feature for related data relationship management</li>
+<li>Review the <a href="mapping-editor.html">Mapping Editor</a> for detailed transformation rules</li>
+<li>Learn about <a href="workflow-dashboard-guide.html">Workflow Dashboard</a> integration with hierarchy data</li>
+</ul>
+
+<p>For assistance with complex hierarchy design or advanced member relationship modeling, connect with our community via <a href="https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org">Eclipse Chat</a> or email <a href="mailto:efbt-dev@eclipse.org">efbt-dev@eclipse.org</a>.</p>
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>
