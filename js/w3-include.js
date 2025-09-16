@@ -14,8 +14,8 @@ function includeHTML() {
           if (this.status == 200) {
             var content = this.responseText;
             /* Adjust paths if we're in a subdirectory */
-            if (window.location.pathname.includes('/user_guide/')) {
-              /* We're in user_guide directory, adjust navbar paths to go up one level */
+            if (window.location.pathname.includes('/user-guide/')) {
+              /* We're in user-guide directory, adjust navbar paths to go up one level */
               content = content.replace(/href="index\.html"/g, 'href="../index.html"');
               content = content.replace(/href="freebirdapplication\.html"/g, 'href="../freebirdapplication.html"');
               content = content.replace(/href="documentation\.html"/g, 'href="../documentation.html"');

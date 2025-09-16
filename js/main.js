@@ -32,7 +32,7 @@
 		$('#gtco-offcanvas').append('<div class="offcanvas-trademark">Eclipse Free BIRD Tools&trade;</div>');
 
 		// Determine the base path based on current location
-		var basePath = window.location.pathname.includes('/user_guide/') ? '../' : '';
+		var basePath = window.location.pathname.includes('/user-guide/') ? '../' : '';
 
 		$('#gtco-offcanvas').append(
 			'<ul>' +
