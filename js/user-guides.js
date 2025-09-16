@@ -40,7 +40,7 @@ class UserGuidesLoader {
         this.showLoading();
 
         try {
-            const response = await fetch('user_guide/index.json');
+            const response = await fetch('user-guide/index.json');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

@@ -30,15 +30,18 @@
 
 		// Add trademark header
 		$('#gtco-offcanvas').append('<div class="offcanvas-trademark">Eclipse Free BIRD Tools&trade;</div>');
-		
+
 		// Determine the base path based on current location
 		var basePath = window.location.pathname.includes('/user_guide/') ? '../' : '';
-		
+
 		$('#gtco-offcanvas').append(
 			'<ul>' +
 				'<li><a href="' + basePath + 'index.html">Home</a></li>' +
 				'<li><a href="' + basePath + 'freebirdapplication.html">FreeBIRD Application</a></li>' +
 				'<li><a href="' + basePath + 'documentation.html">Documentation</a></li>' +
+				'<li><a href="https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org" target="_blank"><i class="ti-comments"></i> Eclipse Chat</a></li>' +
+				'<li><a href="mailto:efbt-dev@eclipse.org"><i class="ti-email"></i> Contact Email</a></li>' +
+				'<li><a href="https://github.com/eclipse/efbt" target="_blank"><i class="ti-github"></i> GitHub</a></li>' +
 			'</ul>'
 		);
 

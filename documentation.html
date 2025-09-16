@@ -559,65 +559,6 @@
 		</div>
 	</section>
 
-	<!-- Feedback Section -->
-	<section class="doc-section" id="feedback">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="text-center" style="margin-bottom: 50px;">
-						<h2>Feedback & Support</h2>
-						<p>Have questions, suggestions, or need help? We'd love to hear from you!</p>
-					</div>
-
-					<div class="feedback-form">
-						<form id="feedbackForm">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="name">Name *</label>
-										<input type="text" class="form-control" id="name" name="name" required>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="email">Email *</label>
-										<input type="email" class="form-control" id="email" name="email" required>
-									</div>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="subject">Subject</label>
-								<input type="text" class="form-control" id="subject" name="subject">
-							</div>
-
-							<div class="form-group">
-								<label for="category">Category</label>
-								<select class="form-control" id="category" name="category">
-									<option value="">Select a category</option>
-									<option value="bug-report">Bug Report</option>
-									<option value="feature-request">Feature Request</option>
-									<option value="general-question">General Question</option>
-									<option value="technical-support">Technical Support</option>
-									<option value="documentation">Documentation</option>
-									<option value="other">Other</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<label for="message">Message *</label>
-								<textarea class="form-control" id="message" name="message" rows="6" required placeholder="Please describe your feedback, question, or issue..."></textarea>
-							</div>
-
-							<div class="text-center">
-								<button type="submit" class="btn-feedback">Send Feedback</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	</div>
 
@@ -650,49 +591,6 @@
 <!-- User Guides Dynamic Loader -->
 <script src="js/user-guides.js"></script>
 
-<!-- Feedback Form Handler -->
-<script>
-$(document).ready(function() {
-	$('#feedbackForm').on('submit', function(e) {
-		e.preventDefault();
-
-		// Get form data
-		var formData = {
-			name: $('#name').val(),
-			email: $('#email').val(),
-			subject: $('#subject').val(),
-			category: $('#category').val(),
-			message: $('#message').val()
-		};
-
-		// Create email content
-		var emailSubject = formData.subject ?
-			'EFBT Feedback: ' + formData.subject :
-			'EFBT Feedback from ' + formData.name;
-
-		var emailBody =
-			'Name: ' + formData.name + '%0D%0A' +
-			'Email: ' + formData.email + '%0D%0A' +
-			'Category: ' + (formData.category || 'Not specified') + '%0D%0A%0D%0A' +
-			'Message:%0D%0A' + formData.message + '%0D%0A%0D%0A' +
-			'----%0D%0A' +
-			'This message was sent from the EFBT Documentation feedback form.';
-
-		// Create mailto URL
-		var mailtoUrl = 'mailto:efbt-dev@eclipse.org?subject=' +
-			encodeURIComponent(emailSubject) + '&body=' + emailBody;
-
-		// Open email client
-		window.location.href = mailtoUrl;
-
-		// Show success message
-		alert('Thank you for your feedback! Your default email client should now open with a pre-filled message.');
-
-		// Reset form
-		this.reset();
-	});
-});
-</script>
 
 <!-- Dynamic Sidebar -->
 <script src="js/dynamic-sidebar.js"></script>

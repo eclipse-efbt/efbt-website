@@ -7,7 +7,7 @@ class DynamicSidebar {
     constructor() {
         this.currentPath = window.location.pathname;
         this.currentPage = this.getCurrentPageType();
-        this.isUserGuide = this.currentPath.includes('/user_guide/');
+        this.isUserGuide = this.currentPath.includes('/user-guide/');
         this.pathPrefix = this.getPathPrefix();
     }
 
@@ -245,7 +245,7 @@ class DynamicSidebar {
             return 'freebird';
         } else if (path.includes('documentation.html')) {
             return 'documentation';
-        } else if (path.includes('/user_guide/')) {
+        } else if (path.includes('/user-guide/')) {
             return 'userguide';
         }
 
@@ -404,9 +404,20 @@ class DynamicSidebar {
         const githubLinkHTML = config.githubLink ? (() => {
             const target = config.githubLink.target ? ` target="${config.githubLink.target}"` : '';
             const icon = config.githubLink.icon ? `<i class="${config.githubLink.icon}"></i> ` : '';
-            
+
             return `<a href="${config.githubLink.href}"${target}>${icon}${config.githubLink.text}</a>`;
         })() : '';
+
+        const communityLinksHTML = `
+            <div class="sidenav-community">
+                <a href="https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org" target="_blank">
+                    <i class="ti-comments"></i> Eclipse Chat
+                </a>
+                <a href="mailto:efbt-dev@eclipse.org">
+                    <i class="ti-email"></i> Contact Email
+                </a>
+            </div>
+        `;
 
         const trademarkHTML = `
             <div class="sidenav-trademark">
@@ -420,6 +431,8 @@ class DynamicSidebar {
                 <div class="sidenav-navigation">
                     ${itemsHTML}
                 </div>
+                <hr class="sidenav-separator">
+                ${communityLinksHTML}
                 <hr class="sidenav-separator">
                 <div class="sidenav-github">
                     ${githubLinkHTML}
