@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Member Hierarchy Editor - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Member Hierarchy Editor - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Member Hierarchy Editor" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Member Hierarchy Editor - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Member Hierarchy Editor documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Member Hierarchy Editor - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Member Hierarchy Editor</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h1 id="member-hierarchy-editor-user-guide">Member Hierarchy Editor User Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>The Member Hierarchy Editor is a visual tool within the FreeBIRD Application designed for creating, managing, and visualizing hierarchical relationships between data members. This interface provides an intuitive drag-and-drop environment for building complex parent-child relationships and organizational structures within your data taxonomy.</p>
+<p><img src="../images/screenshots/member_hierarchy_editor/MemberHierarchy_Editor_Screenshot__4.20.03PM.png" alt="Member Hierarchy Editor Main Interface" class="img-responsive guide-image"></p>
+<h2 id="interface-components">Interface Components</h2>
+<h3 id="header-section">Header Section</h3>
+<h4 id="navigation-bar">Navigation Bar</h4>
+<ul>
+<li><strong>FreeBIRD Application</strong>: Application title in the top-left corner</li>
+<li><strong>Home</strong>: Quick navigation to return to the main dashboard</li>
+<li><strong>Trail Lineage</strong>: Access to data lineage and audit trail features</li>
+</ul>
+
+<h4 id="status-indicator">Status Indicator</h4>
+<ul>
+<li>Displays current hierarchy being edited (e.g., <code>CRDT<em>QLTY</em>HIER_3</code>)</li>
+<li><strong>Back to Review</strong>: Link to return to the review screen</li>
+</ul>
+
+<h3 id="control-panel">Control Panel</h3>
+<h4 id="action-buttons-top-right">Action Buttons (Top Right)</h4>
+<ul>
+<li><strong>Create Arrow</strong> (White icon): Establishes parent-child relationships between nodes</li>
+<li><strong>Delete Arrow</strong> (White icon): Removes existing relationships between nodes</li>
+<li><strong>Export</strong> (Blue): Exports the hierarchy structure to external formats</li>
+<li><strong>Save to Database</strong> (Blue): Persists the current hierarchy to the database</li>
+<li><strong>Clear</strong> (Red): Resets the workspace and removes all unsaved changes</li>
+<li><strong>60%</strong> (Gray): Progress indicator showing completion status</li>
+<li><strong>Fit All</strong> (White): Adjusts zoom to display the entire hierarchy in view</li>
+</ul>
+
+<h3 id="left-panel-hierarchy-manager">Left Panel - Hierarchy Manager</h3>
+<h4 id="hierarchy-selection">Hierarchy Selection</h4>
+<ul>
+<li><strong>Select Hierarchy</strong>: Dropdown menu to choose from available hierarchies</li>
+<ul>
+<li>Displays currently selected hierarchy (e.g., <code>CRDT<em>QLTY</em>HIER_3</code>)</li>
+<li>Provides quick access to switch between different hierarchy structures</li>
+</ul>
+</ul>
+
+<h4 id="member-search">Member Search</h4>
+<ul>
+<li><strong>Search Members</strong>: Text input field with placeholder &quot;Type to filter members...&quot;</li>
+<ul>
+<li>Real-time filtering of available members</li>
+<li>Helps locate specific members in large datasets</li>
+</ul>
+</ul>
+
+<h4 id="member-list">Member List</h4>
+<p>The left panel displays available members organized by status:</p>
+<h5 id="not-in-hierarchy">Not in Hierarchy</h5>
+<ul>
+<li><strong>Orange indicator</strong>: Members available but not yet added to the hierarchy</li>
+<li>Shows member codes and descriptions</li>
+<li>Example: <code>CRDT\<em>QLTY\</em>14 Already in hierarchy</code></li>
+</ul>
+
+<h5 id="default-members">Default Members</h5>
+<ul>
+<li><strong>Yellow highlighting</strong>: Pre-defined default members</li>
+<li>Cannot be removed from the hierarchy</li>
+<li>Examples:</li>
+<ul>
+<li><code>Default\<em>because\</em>both\<em>unlikely\</em>to\<em>pay\</em>and\<em>more\</em>than\<em>90\</em>180\<em>days\</em>past\_due</code></li>
+<li><code>Default\<em>because\</em>unlikely\<em>to\</em>pay</code></li>
+<li><code>Default\<em>because\</em>more\<em>than\</em>90\<em>180\</em>days\<em>past\</em>due</code></li>
+<li><code>Default</code></li>
+</ul>
+</ul>
+
+<h2 id="visual-hierarchy-canvas">Visual Hierarchy Canvas</h2>
+<p><img src="../images/screenshots/member_hierarchy_editor/MemberHierarchy_Editor_Screenshot__4.21.46PM.png" alt="Hierarchy Visualization with Relationships" class="img-responsive guide-image"></p>
+<h3 id="node-structure">Node Structure</h3>
+<p>Each node in the hierarchy contains:</p>
+<ul>
+<li><strong>Red pin icon</strong>: Visual indicator for the node</li>
+<li><strong>Node name</strong>: Primary identifier (e.g., <code>root<em>gcm</em>4</code>)</li>
+<li><strong>NAME field</strong>: Display name or label</li>
+<li><strong>DESCRIPTION field</strong>: Detailed description of the member</li>
+<li>Additional metadata fields as configured</li>
+</ul>
+
+<h3 id="hierarchy-visualization">Hierarchy Visualization</h3>
+<p>The canvas displays the hierarchical structure with:</p>
+<ul>
+<li><strong>Parent nodes</strong> at higher levels</li>
+<li><strong>Child nodes</strong> connected below with relationship lines</li>
+<li><strong>Visual connectors</strong> showing parent-child relationships</li>
+<li>Interactive nodes that can be selected and modified</li>
+</ul>
+
+<h2 id="key-functions">Key Functions</h2>
+<h3 id="creating-a-new-hierarchy">Creating a New Hierarchy</h3>
+<ol>
+<li>Select &quot;Choose a hierarchy...&quot; from the dropdown</li>
+<li>Click on empty option to start a new hierarchy</li>
+<li>Begin adding members from the left panel</li>
+</ol>
+
+<h3 id="adding-members-to-hierarchy">Adding Members to Hierarchy</h3>
+<ol>
+<li><strong>Search or browse</strong> for members in the left panel</li>
+<li><strong>Drag</strong> the member from the left panel</li>
+<li><strong>Drop</strong> it onto the canvas workspace</li>
+<li>The member will appear as a node with editable fields</li>
+</ol>
+
+<h3 id="creating-relationships">Creating Relationships</h3>
+<ol>
+<li>Click <strong>Create Arrow</strong> button to enter relationship mode</li>
+<li><strong>Click</strong> on the parent node</li>
+<li><strong>Drag</strong> to the child node</li>
+<li><strong>Release</strong> to create the relationship</li>
+<li>A connecting line will appear between the nodes</li>
+</ol>
+
+<h3 id="deleting-relationships">Deleting Relationships</h3>
+<ol>
+<li>Click <strong>Delete Arrow</strong> button to enter deletion mode</li>
+<li><strong>Click</strong> on the relationship line you want to remove</li>
+<li>The connection will be deleted immediately</li>
+<li>Exit deletion mode by clicking another tool</li>
+</ol>
+
+<h3 id="editing-node-information">Editing Node Information</h3>
+<ol>
+<li><strong>Click</strong> on any node to select it</li>
+<li><strong>Edit fields</strong> directly within the node:</li>
+<ul>
+<li>Update NAME field</li>
+<li>Modify DESCRIPTION</li>
+<li>Edit any custom metadata fields</li>
+</ul>
+<li>Changes are saved automatically to the workspace</li>
+</ol>
+
+<h3 id="navigating-the-canvas">Navigating the Canvas</h3>
+<ul>
+<li><strong>Pan</strong>: Click and drag on empty canvas space to move the view</li>
+<li><strong>Zoom</strong>: Use mouse wheel or zoom controls</li>
+<li><strong>Fit All</strong>: Click the Fit All button to see the entire hierarchy</li>
+<li><strong>Select</strong>: Click on nodes to select them for editing</li>
+</ul>
+
+<h3 id="searching-for-members">Searching for Members</h3>
+<ol>
+<li>Click in the <strong>Search Members</strong> field</li>
+<li>Type part of the member name or code</li>
+<li>The list filters in real-time</li>
+<li>Select from filtered results</li>
+</ol>
+
+<h3 id="saving-your-work">Saving Your Work</h3>
+<ol>
+<li>Complete your hierarchy modifications</li>
+<li>Click <strong>Save to Database</strong> button</li>
+<li>Confirm the save operation if prompted</li>
+<li>Wait for confirmation message</li>
+</ol>
+
+<h3 id="exporting-hierarchies">Exporting Hierarchies</h3>
+<ol>
+<li>Click <strong>Export</strong> button</li>
+<li>Select export format from options</li>
+<li>Choose destination for the file</li>
+<li>The hierarchy will be exported with all relationships intact</li>
+</ol>
+
+<h2 id="working-with-complex-hierarchies">Working with Complex Hierarchies</h2>
+<h3 id="best-practices-for-large-hierarchies">Best Practices for Large Hierarchies</h3>
+<ol>
+<li><strong>Start from the top</strong>: Build from root nodes downward</li>
+<li><strong>Group related items</strong>: Keep similar members close together</li>
+<li><strong>Use consistent naming</strong>: Maintain naming conventions across levels</li>
+<li><strong>Regular saves</strong>: Save to database frequently to prevent data loss</li>
+</ol>
+
+<h3 id="managing-multiple-levels">Managing Multiple Levels</h3>
+<ul>
+<li>Create clear parent-child relationships</li>
+<li>Avoid circular dependencies</li>
+<li>Maintain consistent depth where possible</li>
+<li>Use descriptions to clarify complex relationships</li>
+</ul>
+
+<h2 id="visual-indicators">Visual Indicators</h2>
+<h3 id="node-states">Node States</h3>
+<ul>
+<li><strong>Orange text</strong>: Members not yet in hierarchy</li>
+<li><strong>Yellow background</strong>: Default members</li>
+<li><strong>Red pin icon</strong>: Active node marker</li>
+<li><strong>Connected lines</strong>: Established relationships</li>
+</ul>
+
+<h3 id="progress-tracking">Progress Tracking</h3>
+<ul>
+<li>The <strong>60%</strong> indicator shows overall completion</li>
+<li>Helps track progress on large hierarchy projects</li>
+<li>Updates as you add members and relationships</li>
+</ul>
+
+<h2 id="tips-for-efficient-usage">Tips for Efficient Usage</h2>
+<ol>
+<li><strong>Use search extensively</strong>: Quickly find members instead of scrolling</li>
+<li><strong>Keyboard shortcuts</strong>: Learn available shortcuts for faster editing</li>
+<li><strong>Batch operations</strong>: Select multiple nodes for group actions</li>
+<li><strong>Visual organization</strong>: Arrange nodes logically for better readability</li>
+<li><strong>Regular exports</strong>: Create backups through the export function</li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<ol>
+<li><strong>Nodes not connecting</strong>: Ensure Create Arrow mode is active</li>
+<li><strong>Cannot delete relationship</strong>: Activate Delete Arrow mode first</li>
+<li><strong>Members not appearing</strong>: Check if already in hierarchy (orange text)</li>
+<li><strong>Save fails</strong>: Verify database connectivity and permissions</li>
+<li><strong>Canvas performance</strong>: Use Fit All to reset view if navigation becomes sluggish</li>
+</ol>
+
+<h3 id="data-validation">Data Validation</h3>
+<ul>
+<li>The system prevents circular relationships</li>
+<li>Default members cannot be removed</li>
+<li>Duplicate members are automatically detected</li>
+<li>Invalid relationships are highlighted</li>
+</ul>
+
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="filtering-and-views">Filtering and Views</h3>
+<ul>
+<li>Filter members by type or category</li>
+<li>Show/hide different relationship types</li>
+<li>Adjust visual layout for presentation</li>
+</ul>
+
+<h3 id="collaboration">Collaboration</h3>
+<ul>
+<li>Multiple users can work on different hierarchies</li>
+<li>Changes are tracked in the trail lineage</li>
+<li>Export function enables sharing with stakeholders</li>
+</ul>
+
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>

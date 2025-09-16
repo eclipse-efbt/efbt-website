@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cube Links View And Edit - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Cube Links View And Edit - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Cube Links View And Edit" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Cube Links View And Edit - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Cube Links View And Edit documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Cube Links View And Edit - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Cube Links View And Edit</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h1 id="cube-links-view-and-edit-user-guide">Cube Links View and Edit User Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>The Cube Links View and Edit interface is a powerful tool within the FreeBIRD Application that enables users to create, manage, and visualize relationships between data cubes and their components. This feature provides both tabular and graphical representations of how data flows from source cubes through various transformations to target cubes, making it essential for understanding and maintaining complex data relationships in the regulatory reporting framework.</p>
+<p><img src="../images/screenshots/cube_links_view/CubeLinksView_Screenshot__4.38.32PM.png" alt="Cube Links View Main Interface" class="img-responsive guide-image"></p>
+<h2 id="interface-components">Interface Components</h2>
+<h3 id="header-section">Header Section</h3>
+<h4 id="navigation-bar">Navigation Bar</h4>
+<ul>
+<li><strong>FreeBIRD Application</strong>: Application title in the top-left corner</li>
+<li><strong>Home</strong>: Quick navigation to return to the main dashboard</li>
+<li><strong>Trail Lineage</strong>: Access to data lineage tracking and audit capabilities</li>
+<li><strong>Back to Review</strong>: Return link to the previous review screen</li>
+</ul>
+
+<h3 id="main-control-panel">Main Control Panel</h3>
+<h4 id="selection-filters">Selection Filters</h4>
+<h5 id="foreign-cube-selector">Foreign Cube Selector</h5>
+<ul>
+<li><strong>Dropdown menu</strong>: Select the source cube for viewing/editing links</li>
+<li>Example: <code>F<em>05</em>01<em>REF</em>FINREP<em>3</em>0</code></li>
+<li>Lists all available foreign cubes in the system</li>
+</ul>
+
+<h5 id="product-identifier-selector">Product Identifier Selector</h5>
+<ul>
+<li><strong>Dropdown menu</strong>: Filter cube links by product type</li>
+<li>Example: <code>Other loans</code></li>
+<li>Dynamically updates based on selected foreign cube</li>
+</ul>
+
+<h4 id="filter-controls-top-right">Filter Controls (Top Right)</h4>
+<ul>
+<li><strong>Apply Filters</strong> (Blue button): Apply selected filter criteria to the data grid</li>
+<li><strong>Reset Filters</strong> (Gray button): Clear all applied filters and return to default view</li>
+</ul>
+
+<h3 id="action-buttons">Action Buttons</h3>
+<h4 id="data-management">Data Management</h4>
+<ul>
+<li><strong>Add New Cube Link</strong> (Green button): Opens dialog to create new cube link relationships</li>
+</ul>
+
+<h4 id="visualization-options">Visualization Options</h4>
+<ul>
+<li><strong>View Network Graph</strong> (Blue button): Display graphical representation of cube relationships</li>
+<li><strong>Export Diagram</strong> (Purple button): Export the network diagram to various formats</li>
+</ul>
+
+<h2 id="data-grid">Data Grid</h2>
+<p>The main data grid displays cube link information with the following columns:</p>
+<h3 id="grid-columns">Grid Columns</h3>
+<ol>
+<li><strong>Maintenance Agency</strong>: Entity responsible for maintaining the cube link (typically &quot;None&quot;)</li>
+<li><strong>Cube Link ID</strong>: Unique identifier for each cube link relationship</li>
+<ul>
+<li>Format: <code>ForeignCube::TargetItem</code></li>
+<li>Example: <code>F<em>01</em>01<em>REF</em>FINREP<em>3</em>0::CLLTRL::Other loans</code></li>
+</ul>
+<li><strong>Code</strong>: Classification code (typically &quot;None&quot;)</li>
+<li><strong>Name</strong>: Descriptive name of the link relationship</li>
+<ul>
+<li>Format: <code>INSTRUMENT:Description:TARGET</code></li>
+<li>Example: <code>INSTRMNT:Other loans:CLLTRL</code></li>
+</ul>
+</ol>
+
+<h2 id="network-graph-visualization">Network Graph Visualization</h2>
+<p><img src="../images/screenshots/cube_links_view/CubeLinksView_Screenshot__4.38.39PM.png" alt="Network Graph Visualization" class="img-responsive guide-image"></p>
+<h3 id="understanding-the-visual-legend">Understanding the Visual Legend</h3>
+<p>The network graph uses specific shapes and colors to represent different components:</p>
+<h4 id="node-types">Node Types</h4>
+<ul>
+<li><strong>Source Cube</strong> (Orange cylinder): The originating data cube</li>
+<li><strong>Source Item</strong> (Blue rectangle): Individual data elements from the source</li>
+<li><strong>Target Item</strong> (Green diamond): Transformation or mapping points</li>
+<li><strong>Target Cube</strong> (Yellow cylinder): The destination data cube</li>
+</ul>
+
+<h4 id="data-flow">Data Flow</h4>
+<ul>
+<li>Arrows indicate the direction of data flow</li>
+<li>Lines connect related components</li>
+<li>Hierarchical layout shows transformation stages</li>
+</ul>
+
+<h3 id="reading-the-network-diagram">Reading the Network Diagram</h3>
+<h4 id="example-f_05_01_ref_finrep_3_0_other_loans">Example: F<em>05</em>01<em>REF</em>FINREP<em>3</em>0<em>Other</em>loans</h4>
+<p>The diagram shows:</p>
+<ol>
+<li><strong>Left Panel (INSTRMNT)</strong>:</li>
+<ul>
+<li>Source node (orange circle) labeled &quot;INSTRMNT&quot;</li>
+<li>Branches to two blue rectangles:</li>
+<ul>
+<li><code>TYP<em>INSTRMNT</code> � connects to green diamond <code>TYP</em>INSTRMNT</code></li>
+<li><code>RPYMNT<em>RGHTS</code> � connects to green diamond <code>RPYMNT</em>RGHTS</code></li>
+</ul>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Right Panel (F<em>05</em>01<em>REF</em>FINREP<em>3</em>0)</strong>:</li>
+<ul>
+<li>Shows the target cube structure</li>
+<li>Green diamonds represent mapped target items</li>
+<li>Connections flow into the yellow target cube</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Bottom Panel (PRTY)</strong>:</li>
+<ul>
+<li>Additional relationship layer</li>
+<li>Shows party-related mappings</li>
+</ul>
+</ol>
+
+<h2 id="key-functions">Key Functions</h2>
+<h3 id="creating-a-new-cube-link">Creating a New Cube Link</h3>
+<ol>
+<li>Click <strong>Add New Cube Link</strong> button</li>
+<li>In the dialog:</li>
+<ul>
+<li>Select source cube from dropdown</li>
+<li>Choose source items to link</li>
+<li>Define target items for mapping</li>
+<li>Specify transformation rules if applicable</li>
+</ul>
+<li>Click <strong>Save</strong> to create the link</li>
+<li>The new link appears in the data grid</li>
+</ol>
+
+<h3 id="viewing-cube-link-details">Viewing Cube Link Details</h3>
+<ol>
+<li>Select a row in the data grid</li>
+<li>View complete link information including:</li>
+<ul>
+<li>Full path from source to target</li>
+<li>Intermediate transformations</li>
+<li>Associated metadata</li>
+</ul>
+</ol>
+
+<h3 id="filtering-cube-links">Filtering Cube Links</h3>
+<ol>
+<li>Use the <strong>Foreign Cube</strong> dropdown to filter by source</li>
+<li>Use the <strong>Product Identifier</strong> to filter by product type</li>
+<li>Click <strong>Apply Filters</strong> to update the view</li>
+<li>Use <strong>Reset Filters</strong> to clear all filters</li>
+</ol>
+
+<h3 id="visualizing-relationships">Visualizing Relationships</h3>
+<ol>
+<li>Select cube links in the grid (or use filters)</li>
+<li>Click <strong>View Network Graph</strong></li>
+<li>The network diagram opens in a modal window:</li>
+<ul>
+<li>Pan by clicking and dragging the canvas</li>
+<li>Zoom using mouse wheel or controls</li>
+<li>Click nodes for additional details</li>
+</ul>
+<li>Click <strong>Close</strong> (red button) to exit the visualization</li>
+</ol>
+
+<h3 id="exporting-diagrams">Exporting Diagrams</h3>
+<ol>
+<li>With network graph open, click <strong>Export Diagram</strong></li>
+<li>Choose export format:</li>
+<ul>
+<li>PNG for images</li>
+<li>SVG for scalable graphics</li>
+<li>PDF for documentation</li>
+</ul>
+<li>Select destination and save</li>
+</ol>
+
+<h2 id="understanding-cube-link-relationships">Understanding Cube Link Relationships</h2>
+<h3 id="hierarchical-structure">Hierarchical Structure</h3>
+<p>Cube links follow a hierarchical pattern:</p>
+<ul>
+<li><strong>Level 1</strong>: Source cube definition</li>
+<li><strong>Level 2</strong>: Source items and attributes</li>
+<li><strong>Level 3</strong>: Transformation/mapping layer</li>
+<li><strong>Level 4</strong>: Target items and attributes</li>
+<li><strong>Level 5</strong>: Target cube destination</li>
+</ul>
+
+<h3 id="link-naming-convention">Link Naming Convention</h3>
+<p>Links follow the pattern:</p>
+<pre><code>
+[SourceCube]::[TransformationType]::[TargetDescription]
+</code></pre>
+<p>Example breakdown:</p>
+<ul>
+<li><code>F<em>01</em>01<em>REF</em>FINREP<em>3</em>0</code> - Source cube identifier</li>
+<li><code>INSTRMNT</code> - Transformation type (Instrument)</li>
+<li><code>Tangible assets</code> - Target description</li>
+</ul>
+
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="data-management-1">Data Management</h3>
+<ol>
+<li><strong>Consistent Naming</strong>: Use clear, descriptive names for cube links</li>
+<li><strong>Documentation</strong>: Export diagrams when making significant changes</li>
+<li><strong>Regular Review</strong>: Periodically review links for accuracy</li>
+<li><strong>Testing</strong>: Validate links with sample data before production use</li>
+</ol>
+
+<h3 id="visualization-tips">Visualization Tips</h3>
+<ol>
+<li><strong>Start Simple</strong>: Begin with filtered views of specific relationships</li>
+<li><strong>Use Colors</strong>: Leverage the color coding to quickly identify component types</li>
+<li><strong>Export Key Diagrams</strong>: Save important relationship diagrams for documentation</li>
+<li><strong>Layer Analysis</strong>: Review each hierarchical level separately for complex cubes</li>
+</ol>
+
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ol>
+<li><strong>Filter First</strong>: Apply filters before generating large network graphs</li>
+<li><strong>Batch Operations</strong>: Group related cube link creations</li>
+<li><strong>Regular Cleanup</strong>: Remove obsolete or duplicate links</li>
+</ol>
+
+<h2 id="common-use-cases">Common Use Cases</h2>
+<h3 id="regulatory-reporting-setup">Regulatory Reporting Setup</h3>
+<ol>
+<li>Map source system cubes to regulatory templates</li>
+<li>Define transformation rules for data aggregation</li>
+<li>Visualize complete data flow for audit purposes</li>
+</ol>
+
+<h3 id="data-quality-validation">Data Quality Validation</h3>
+<ol>
+<li>Trace data lineage through cube links</li>
+<li>Identify potential gaps in mappings</li>
+<li>Verify completeness of transformations</li>
+</ol>
+
+<h3 id="change-impact-analysis">Change Impact Analysis</h3>
+<ol>
+<li>View all relationships for a specific cube</li>
+<li>Assess impact of proposed changes</li>
+<li>Document current state before modifications</li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li><strong>Missing Cube Links</strong>:</li>
+<ul>
+<li>Verify filter settings</li>
+<li>Check user permissions</li>
+<li>Refresh the page</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Visualization Not Loading</strong>:</li>
+<ul>
+<li>Reduce data set with filters</li>
+<li>Check browser compatibility</li>
+<li>Clear browser cache</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Cannot Create New Link</strong>:</li>
+<ul>
+<li>Verify source and target cubes exist</li>
+<li>Check for duplicate links</li>
+<li>Ensure proper permissions</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Export Failures</strong>:</li>
+<ul>
+<li>Check available disk space</li>
+<li>Verify export permissions</li>
+<li>Try different format</li>
+</ul>
+</ol>
+
+<h3 id="data-validation">Data Validation</h3>
+<p>The system automatically validates:</p>
+<ul>
+<li>Circular reference prevention</li>
+<li>Duplicate link detection</li>
+<li>Required field completion</li>
+<li>Data type compatibility</li>
+</ul>
+
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="multi-level-mappings">Multi-Level Mappings</h3>
+<ul>
+<li>Create complex transformation chains</li>
+<li>Define conditional mappings</li>
+<li>Implement business rules in links</li>
+</ul>
+
+<h3 id="bulk-operations">Bulk Operations</h3>
+<ul>
+<li>Import cube links from templates</li>
+<li>Export link definitions for backup</li>
+<li>Mass update link properties</li>
+</ul>
+
+<h3 id="integration-points">Integration Points</h3>
+<ul>
+<li>Connect with data quality rules</li>
+<li>Link to validation frameworks</li>
+<li>Interface with reporting engines</li>
+</ul>
+
+<h2 id="tips-for-efficient-usage">Tips for Efficient Usage</h2>
+<ol>
+<li><strong>Keyboard Shortcuts</strong>: Learn available shortcuts for faster navigation</li>
+<li><strong>Template Usage</strong>: Create template links for common patterns</li>
+<li><strong>Regular Exports</strong>: Maintain diagram library for documentation</li>
+<li><strong>Collaborative Review</strong>: Share network graphs with stakeholders</li>
+<li><strong>Version Tracking</strong>: Document changes to critical cube links</li>
+</ol>
+
+<h2 id="security-and-governance">Security and Governance</h2>
+<ul>
+<li>All cube link modifications are logged</li>
+<li>Changes tracked in trail lineage</li>
+<li>Role-based access control for editing</li>
+<li>Approval workflow for critical links</li>
+</ul>
+
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>
