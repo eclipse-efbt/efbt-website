@@ -1,15 +1,13 @@
 ## Feature Overview
 
-The Cube Links View and Edit interface is a sophisticated visualization and management tool within Eclipse Free BIRD Tools that enables users to create, manage, and visualize relationships between data cubes and their components. This feature provides both tabular and graphical representations of data flow, showing how information moves from source cubes through transformations to target cubes in regulatory reporting frameworks.
+The Cube Links View and Edit interface is a sophisticated visualization and management tool within Eclipse Free BIRD Tools that enables users to create, manage, and visualize relationships between data cubes and their components. This feature provides both tabular and graphical representations of data linking, showing how information moves from source cubes through transformations to target cubes in regulatory reporting frameworks.
 
 ## Purpose
 
 Cube Links View and Edit addresses the complexity of modern regulatory data relationships by providing:
-- **Visual Data Lineage**: Understand how data flows through your regulatory system
+- **Visual Data Lineage**: Understand how data flows from input to output layer
 - **Relationship Management**: Create and maintain connections between data cubes
-- **Impact Analysis**: Assess the effects of changes on connected systems
 - **Network Visualization**: See complex relationships through interactive diagrams
-- **Audit Transparency**: Track all cube link modifications for compliance
 - **Quality Assurance**: Validate data transformation paths before production
 
 This feature is essential for data architects, compliance officers, and IT professionals who need to maintain transparent, auditable data flows in regulatory reporting environments.
@@ -18,10 +16,8 @@ This feature is essential for data architects, compliance officers, and IT profe
 
 ### Prerequisites
 Before using Cube Links View and Edit, ensure:
-- Data cubes are properly configured in the system
-- You have appropriate viewing and editing permissions
-- Source and target cubes contain valid data structures
-- Understanding of your organization's data architecture
+- Data cubes are properly configured in the system (through the launch of the first step in the workflow dashboard)
+- Source and target cubes contain valid data structures and the linkage has been generated (by step 2 in the workflow dashboard)
 
 ### Accessing the Interface
 Navigate to the FreeBIRD Application and access the Cube Links feature from the main dashboard. The interface provides both tabular views for detailed management and network graphs for visual understanding.
@@ -61,9 +57,8 @@ The main grid displays cube link information with these columns:
 
 **Step 2: Configure the Link**
 - Select source cube from dropdown menu
-- Choose source items to connect
-- Define target items for mapping
-- Specify any transformation rules
+- Choose source cube to connect
+- Define target cube for mapping
 
 **Step 3: Save and Validate**
 - Click **Save** to create the link
@@ -76,15 +71,13 @@ The main grid displays cube link information with these columns:
 
 **Understanding Visual Elements:**
 - **Source Cube** (Orange cylinder): Originating data cube
-- **Source Item** (Blue rectangle): Individual data elements
-- **Target Item** (Green diamond): Transformation points
+- **Source Items** (Blue rectangle): Individual data elements
+- **Target Items** (Green diamond): Transformation points
 - **Target Cube** (Yellow cylinder): Destination cube
 - **Arrows**: Data flow direction
 
 **Navigation Controls:**
-- **Pan**: Click and drag the canvas
-- **Zoom**: Use mouse wheel or zoom controls
-- **Node Details**: Click any node for additional information
+- **Scroll**: Use mouse wheel or zoom controls
 - **Close**: Red button to exit visualization
 
 ### Filtering and Searching
@@ -96,72 +89,29 @@ The main grid displays cube link information with these columns:
 4. Use **Reset Filters** to clear selections
 
 **View Filtered Results:**
-- The data grid updates to show only matching links
-- Network graph reflects the filtered dataset
-- Export functions work on filtered data
+- The data grid updates to show only defined matching links
+- Network graph reflects the links to the selected output layer cube.
 
 ### Exporting Diagrams
 
 **Export Process:**
 1. Open the network graph view
-2. Click **Export Diagram** button
-3. Choose export format:
-   - **PNG**: High-quality images for presentations
-   - **SVG**: Scalable graphics for documentation
-   - **PDF**: Complete documents with metadata
-4. Select destination and save file
-
-## Best Practices
-
-### Data Management
-- **Consistent Naming**: Use clear, descriptive names following organizational conventions
-- **Regular Validation**: Test links with sample data before production deployment
-- **Documentation**: Export key diagrams for reference and training materials
-- **Change Control**: Document all modifications with business justification
-
-### Visualization Strategy
-- **Start Simple**: Begin with filtered views to understand specific relationships
-- **Layer Analysis**: Review each hierarchical level separately for complex mappings
-- **Color Coding**: Use visual elements to quickly identify component types
-- **Export Library**: Maintain a collection of important relationship diagrams
-
-### Performance Optimization
-- **Filter Before Visualizing**: Apply filters before generating large network graphs
-- **Batch Operations**: Group related cube link creations for efficiency
-- **Regular Maintenance**: Remove obsolete or duplicate links to keep the system clean
-
-## Troubleshooting
+2. Click **Export Diagram** button (as Markdown)
 
 ### Common Issues and Solutions
 
 **Missing Cube Links:**
 - Verify current filter settings are not too restrictive
-- Check user permissions for viewing specific cubes
-- Refresh the browser page to reload data
 - Confirm the source cubes exist and are accessible
+- Add cube links if needed for your usecase (or defined join_configurations to get the cube links dependent on your type of instrument).
 
-**Visualization Problems:**
-- Reduce dataset size using filters for better performance
-- Check browser compatibility (modern browsers recommended)
-- Clear browser cache and cookies
-- Disable browser extensions that might interfere
-
-**Link Creation Failures:**
+**Link Creation Failures (running step 2):**
 - Verify both source and target cubes exist in the system
-- Check for duplicate link definitions
-- Ensure you have proper editing permissions
-- Validate that required fields are completed
-
-**Export Issues:**
-- Confirm available disk space on your device
-- Check browser download permissions
-- Try alternative export formats
-- Verify network connectivity for large files
 
 ### System Validation
 The system automatically performs:
 - Circular reference detection and prevention
-- Duplicate link identification
+- Duplicate link identification (Through the show duplicate member links view)
 - Required field validation
 - Data type compatibility checks
 

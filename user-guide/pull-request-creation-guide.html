@@ -270,15 +270,14 @@
 <li><strong>Collaborative Review Process</strong>: Submit work for peer review and approval before integration</li>
 <li><strong>Secure Development</strong>: Work in isolated forks without affecting the main repository</li>
 <li><strong>Automated Workflow</strong>: One-click creation of forks, branches, and pull requests</li>
-<li><strong>Compliance Tracking</strong>: Maintain an audit trail of all regulatory data submissions</li>
 </ul>
 
-<p>This feature is essential for teams working on regulatory reporting projects, enabling multiple contributors to collaborate while maintaining data integrity and review processes.</p>
+<p>This feature is essential for teams working on a common and open ontology projects, enabling multiple contributors to collaborate while maintaining the integrity of ontology and review processes.</p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>Before creating pull requests, ensure:</p>
 <ul>
-<li>Database is initialized and contains processed data</li>
+<li>Database is initialized and contains processed ontology</li>
 <li>Configuration is saved and validated</li>
 <li>GitHub personal access token with appropriate permissions</li>
 <li>Access to the target GitHub repository</li>
@@ -293,13 +292,13 @@
 </ol>
 
 <h2 id="step-by-step-guide">Step-by-Step Guide</h2>
-<h3 id="method-1-quick-actions-create-review-automated">Method 1: Quick Actions - Create Review (Automated)</h3>
+<h3 id="method-1-quick-actions-create-review">Method 1: Quick Actions - Create Review</h3>
 <p>The recommended approach for creating pull requests is to use the automated &quot;Create Review&quot; feature after completing your workflow tasks.</p>
 <p><img src="../images/screenshots/quickaction/quickactionmenu_setup_finished_create_review.png" alt="Quick Actions Setup Finished" class="img-responsive guide-image"></p>
 <p>The <strong>&quot;Create Review&quot;</strong> button appears in Quick Actions when your database setup is complete, configuration is saved, workflow tasks have been executed, and the system is ready for review submission. To use this feature, first complete executing Tasks 1-4 or your desired endpoint. Verify that your database and configuration show ready status. Then click &quot;Create Review&quot; located in the Quick Actions Automode Execution section. The system will automatically handle the fork creation, branch setup, and pull request submission.</p>
 <p>When you click &quot;Create Review&quot;, the system automatically creates a secure fork of the target repository, generates a new branch for your changes, exports your processed data and transformations, commits the changes and pushes them to your fork, and creates a pull request back to the original repository.</p>
 <h3 id="method-2-manual-export-database-to-csv-files">Method 2: Manual Export - Database to CSV Files</h3>
-<p>For advanced users who need more control over the export process, you can use the manual export functionality.</p>
+<p>For advanced users who need more control over the export and postprocessing process, you can use the manual export functionality.</p>
 <p><img src="../images/screenshots/pull_request/pull_request.png" alt="Export Database to CSV" class="img-responsive guide-image"></p>
 <p>To access the export functionality, navigate to &quot;Export Database to CSV Files&quot; and choose the &quot;Export to GitHub&quot; option from the right panel. Then configure your GitHub settings as needed.</p>
 <h3 id="github-configuration">GitHub Configuration</h3>
@@ -341,7 +340,6 @@
 <p><strong>Export Failures:</strong></p>
 <ul>
 <li>Verify database connectivity and data integrity</li>
-<li>Check available system resources (memory, disk space)</li>
 <li>Ensure stable network connectivity to GitHub</li>
 <li>Try exporting smaller datasets if timeouts occur</li>
 <li>Review export logs for specific error messages</li>

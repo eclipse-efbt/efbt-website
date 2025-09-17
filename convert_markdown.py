@@ -14,7 +14,8 @@ from datetime import datetime
 
 # Configuration for disabled guides (coming soon pages)
 DISABLED_GUIDES = [
-    'dataset-transformation-guide'   # Add guide slugs here to disable them
+    'dataset-transformation-guide',   # Add guide slugs here to disable them
+    'define-executable-tests'
 ]
 
 
@@ -180,20 +181,36 @@ class MarkdownToHTMLConverter:
         return text
 
     def process_formatting_with_images(self, text):
-        """Process text formatting while preserving image tag content."""
+        """Process text formatting while preserving image tag content and code blocks."""
         # Store image tags to protect them from formatting
         image_placeholders = {}
-        counter = 0
+        code_placeholders = {}
+        image_counter = 0
+        code_counter = 0
 
         def store_image_tag(match):
-            nonlocal counter
-            placeholder = f'IMGPLACEHOLDER{counter}IMGPLACEHOLDER'
+            nonlocal image_counter
+            placeholder = f'IMGPLACEHOLDER{image_counter}IMGPLACEHOLDER'
             image_placeholders[placeholder] = match.group(0)
-            counter += 1
+            image_counter += 1
+            return placeholder
+
+        def store_code_block(code_html):
+            nonlocal code_counter
+            placeholder = f'CODEPLACEHOLDER{code_counter}CODEPLACEHOLDER'
+            code_placeholders[placeholder] = code_html
+            code_counter += 1
             return placeholder
 
         # Temporarily replace image tags
         text = re.sub(r'<img[^>]*>', store_image_tag, text)
+
+        # First convert inline code and store it to protect from formatting
+        def process_code_match(match):
+            code_content = self.escape_html(match.group(1))
+            return store_code_block(f'<code>{code_content}</code>')
+
+        text = re.sub(r'`([^`]+)`', process_code_match, text)
 
         # Now safely apply text formatting (without HTML escaping for placeholders)
         # First escape HTML but preserve our placeholders
@@ -209,12 +226,9 @@ class MarkdownToHTMLConverter:
                 part = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', part)
                 part = re.sub(r'__(.+?)__', r'<strong>\1</strong>', part)
 
-                # Italic (* or _) - now safe from image paths
+                # Italic (* or _) - now safe from image paths and code blocks
                 part = re.sub(r'\*(.+?)\*', r'<em>\1</em>', part)
                 part = re.sub(r'_(.+?)_', r'<em>\1</em>', part)
-
-                # Code (`)
-                part = re.sub(r'`([^`]+)`', r'<code>\1</code>', part)
 
                 escaped_text += part
             else:  # Placeholder numbers - reconstruct placeholder
@@ -226,6 +240,10 @@ class MarkdownToHTMLConverter:
         # Restore image tags
         for placeholder, image_tag in image_placeholders.items():
             text = text.replace(placeholder, image_tag)
+
+        # Restore code blocks
+        for placeholder, code_block in code_placeholders.items():
+            text = text.replace(placeholder, code_block)
 
         return text
 

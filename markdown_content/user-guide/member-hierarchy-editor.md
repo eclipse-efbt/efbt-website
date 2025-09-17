@@ -7,10 +7,7 @@ The Member Hierarchy Editor is an intuitive visual tool within Eclipse Free BIRD
 The Member Hierarchy Editor addresses the critical need for structured data organization in regulatory environments by providing:
 - **Visual Hierarchy Management**: Create and modify complex data relationships through an intuitive interface
 - **Drag-and-Drop Functionality**: Easily organize members without complex coding or configuration
-- **Relationship Validation**: Ensure hierarchical integrity with built-in validation rules
 - **Export Capabilities**: Share hierarchy structures across systems and teams
-- **Real-time Updates**: See changes immediately as you build your data structures
-- **Audit Trail**: Track all modifications for compliance and governance requirements
 
 Data architects and compliance teams rely on this feature to maintain organized, compliant data structures that support accurate regulatory reporting and data governance initiatives.
 
@@ -73,7 +70,6 @@ The Member Hierarchy Editor consists of several key components:
 - Repeat for all required relationships
 
 **Step 4: Validate and Organize**
-- Use **Fit All** to see the complete hierarchy structure
 - Verify that all relationships are correct
 - Reorganize nodes by dragging them to optimal positions
 - Check for any orphaned or disconnected members
@@ -131,41 +127,6 @@ The Member Hierarchy Editor consists of several key components:
 - **Export Documentation**: Share hierarchy diagrams with stakeholders
 - **Review Process**: Have changes reviewed before final implementation
 - **Training**: Ensure team members understand the hierarchy structure
-
-## Troubleshooting
-
-### Common Issues and Solutions
-
-**Members Not Appearing:**
-- Check the selected hierarchy in the dropdown
-- Verify search filters aren't excluding desired members
-- Confirm you have permissions to view all members
-- Refresh the interface if data seems stale
-
-**Cannot Create Relationships:**
-- Ensure **Create Arrow** mode is activated (tool is selected)
-- Verify both parent and child nodes are properly placed
-- Check for existing relationships that might conflict
-- Confirm nodes are within the active workspace area
-
-**Save Failures:**
-- Check database connectivity
-- Verify you have write permissions for the hierarchy
-- Ensure all required relationships are established
-- Review system logs for specific error messages
-
-**Performance Issues:**
-- Reduce the number of visible members using search filters
-- Work with smaller sections of large hierarchies
-- Close other applications to free system resources
-- Use **Fit All** sparingly with very large hierarchies
-
-### Validation Errors
-The system automatically checks for:
-- Circular relationships (member cannot be its own ancestor)
-- Orphaned members (members without proper connections)
-- Duplicate relationships (same parent-child pair)
-- Invalid node types (incompatible member types)
 
 ## Conclusion
 

@@ -8,15 +8,15 @@ To access Dataset Transformation, launch the FreeBIRD Application, navigate to t
 
 ## 4-Step Dataset Workflow
 
-The Dataset workflow consists of four sequential steps that must be executed in order: Fetch CSV, Import Data, Create Joins, and Generate Code.
+The Dataset workflow consists of four sequential steps that must be executed in order: Fetch Metadata CSV, Import Metadata, Create Joins, and Generate Code.
 
-### Step 0: Fetch Dataset CSV
+### Step 0: Fetch Metadata CSV
 
 Click "Step 0: Fetch Dataset CSV" to download the latest Dataset specifications from the ECB. This step retrieves the current CSV files containing the Dataset data model definitions. The system will download and store these files locally, making them ready for the import process.
 
-### Step 1: Import Dataset Data
+### Step 1: Import Metadata
 
-Click "Step 1: Import Dataset Data" to process the downloaded CSV files and import the Dataset data model into your system. During this step, the system validates the CSV data, creates the necessary database structures, and imports all Dataset specifications. Once complete, your data model will be ready for join creation.
+Click "Step 1: Import Metadata" to process the downloaded CSV files and import the Dataset data model into your system. During this step, the system validates the CSV data, creates the necessary database structures, and imports all Dataset specifications. Once complete, your data model will be ready for join creation.
 
 ### Step 2: Create Joins Metadata
 

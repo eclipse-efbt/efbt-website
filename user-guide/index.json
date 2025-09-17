@@ -1,23 +1,33 @@
 {
-  "generated_at": "2025-09-16T17:18:09.494787",
-  "total_guides": 8,
+  "generated_at": "2025-09-17T09:26:30.076475",
+  "total_guides": 9,
   "guides": [
     {
       "title": "Mapping Editor",
       "description": "The Mapping Editor is a sophisticated data transformation tool within Eclipse Free BIRD Tools that enables users to create, manage, and modify complex mappings between source and target data variables. This interface serves as the bridge between various source systems and regulatory reporting structures, facilitating precise data alignment and transformation for compliance purposes.",
       "filename": "mapping-editor.html",
       "path": "user-guide/mapping-editor.html",
-      "last_modified": "2025-09-16T17:18:09.487176",
+      "last_modified": "2025-09-17T09:26:30.069601",
       "slug": "mapping-editor",
       "disabled": false,
       "status": "available"
+    },
+    {
+      "title": "Define Executable Tests",
+      "description": "This guide is currently under development and will be available soon.",
+      "filename": "define-executable-tests.html",
+      "path": "user-guide/define-executable-tests.html",
+      "last_modified": "2025-09-17T09:26:30.069805",
+      "slug": "define-executable-tests",
+      "disabled": true,
+      "status": "coming_soon"
     },
     {
       "title": "Dataset Transformation Guide",
       "description": "This guide is currently under development and will be available soon.",
       "filename": "dataset-transformation-guide.html",
       "path": "user-guide/dataset-transformation-guide.html",
-      "last_modified": "2025-09-16T17:18:09.487351",
+      "last_modified": "2025-09-17T09:26:30.069966",
       "slug": "dataset-transformation-guide",
       "disabled": true,
       "status": "coming_soon"
@@ -27,7 +37,7 @@
       "description": "The Member Hierarchy Editor is an intuitive visual tool within Eclipse Free BIRD Tools designed for creating, managing, and visualizing hierarchical relationships between data members. This drag-and-drop interface enables users to build complex parent-child relationships and organizational structures essential for regulatory data taxonomy and reporting frameworks.",
       "filename": "member-hierarchy-editor.html",
       "path": "user-guide/member-hierarchy-editor.html",
-      "last_modified": "2025-09-16T17:18:09.489094",
+      "last_modified": "2025-09-17T09:26:30.071442",
       "slug": "member-hierarchy-editor",
       "disabled": false,
       "status": "available"
@@ -37,17 +47,17 @@
       "description": "Eclipse Free BIRD Tools provides seamless GitHub integration for creating pull requests with your processed regulatory data and transformations. This feature enables collaborative development workflows by allowing you to export your work, create forks, and submit changes for review through GitHub's pull request mechanism.",
       "filename": "pull-request-creation-guide.html",
       "path": "user-guide/pull-request-creation-guide.html",
-      "last_modified": "2025-09-16T17:18:09.490144",
+      "last_modified": "2025-09-17T09:26:30.072609",
       "slug": "pull-request-creation-guide",
       "disabled": false,
       "status": "available"
     },
     {
       "title": "Cube Links View And Edit",
-      "description": "The Cube Links View and Edit interface is a sophisticated visualization and management tool within Eclipse Free BIRD Tools that enables users to create, manage, and visualize relationships between data cubes and their components. This feature provides both tabular and graphical representations of data flow, showing how information moves from source cubes through transformations to target cubes in regulatory reporting frameworks.",
+      "description": "The Cube Links View and Edit interface is a sophisticated visualization and management tool within Eclipse Free BIRD Tools that enables users to create, manage, and visualize relationships between data cubes and their components. This feature provides both tabular and graphical representations of data linking, showing how information moves from source cubes through transformations to target cubes in regulatory reporting frameworks.",
       "filename": "cube-links-view-and-edit.html",
       "path": "user-guide/cube-links-view-and-edit.html",
-      "last_modified": "2025-09-16T17:18:09.491742",
+      "last_modified": "2025-09-17T09:26:30.073912",
       "slug": "cube-links-view-and-edit",
       "disabled": false,
       "status": "available"
@@ -57,7 +67,7 @@
       "description": "The Execute Datapoint feature is a powerful calculation engine within Eclipse Free BIRD Tools that enables you to run complex calculations and transformations on populated template cells. This feature processes individual datapoints or entire batches, applying regulatory formulas and validation rules to generate compliant reporting data.",
       "filename": "execute-datapoint-guide.html",
       "path": "user-guide/execute-datapoint-guide.html",
-      "last_modified": "2025-09-16T17:18:09.492625",
+      "last_modified": "2025-09-17T09:26:30.074699",
       "slug": "execute-datapoint-guide",
       "disabled": false,
       "status": "available"
@@ -67,7 +77,7 @@
       "description": "DPM (Data Point Model) Operations is a specialized module within Eclipse Free BIRD Tools that provides a streamlined 3-step workflow for processing regulatory data according to European Banking Authority (EBA) standards. This feature transforms raw financial data into compliant regulatory reports through a systematic preparation, import, and output generation process.",
       "filename": "dpm-operations-guide.html",
       "path": "user-guide/dpm-operations-guide.html",
-      "last_modified": "2025-09-16T17:18:09.493475",
+      "last_modified": "2025-09-17T09:26:30.075448",
       "slug": "dpm-operations-guide",
       "disabled": false,
       "status": "available"
@@ -77,7 +87,7 @@
       "description": "The Eclipse Free BIRD Tools Workflow Dashboard is your central control center for managing and executing regulatory reporting workflows. It provides a streamlined interface for processing BIRD data through a systematic 4-task sequential workflow, enabling efficient regulatory compliance and data transformation.",
       "filename": "workflow-dashboard-guide.html",
       "path": "user-guide/workflow-dashboard-guide.html",
-      "last_modified": "2025-09-16T17:18:09.494772",
+      "last_modified": "2025-09-17T09:26:30.076468",
       "slug": "workflow-dashboard-guide",
       "disabled": false,
       "status": "available"

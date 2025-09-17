@@ -5,12 +5,8 @@ The Mapping Editor is a sophisticated data transformation tool within Eclipse Fr
 ## Purpose
 
 The Mapping Editor addresses the critical challenge of data transformation in regulatory environments by providing:
-- **Data Alignment**: Map source system data to regulatory reporting requirements
-- **Transformation Rules**: Define complex business logic for data conversion
+- **Semantic Integration Editor**: Map source system data to regulatory reporting requirements
 - **Variable Management**: Control both source and target variable definitions
-- **Validation Framework**: Ensure mapping accuracy and completeness
-- **Audit Capability**: Track all mapping changes for compliance purposes
-- **Batch Operations**: Efficiently manage multiple mappings simultaneously
 
 This feature is essential for data engineers, compliance officers, and business analysts who need to ensure accurate data flow from operational systems to regulatory reports while maintaining full transparency and control over transformation processes.
 
@@ -18,14 +14,13 @@ This feature is essential for data engineers, compliance officers, and business 
 
 ### Prerequisites
 Before using the Mapping Editor, ensure:
-- Understanding of source data structures and formats
+- The import of the relevant data (most likely done in step 1 of the workflow dashboard)
 - Knowledge of target regulatory requirements
-- Appropriate permissions for mapping creation and modification
-- Access to both source and target variable definitions
-- Familiarity with transformation business rules
+- Access and understanding to both source and target variable definitions
+- Familiarity with the reference terminology used in the BIRD
 
 ### Accessing the Mapping Editor
-Navigate to the FreeBIRD Application and access the Mapping Editor from the main dashboard. The interface provides comprehensive tools for creating and managing data transformations between systems.
+Navigate to the FreeBIRD Application and access the Mapping Editor from the main dashboard. The interface provides comprehensive tools for creating and managing data mapping between frameworks.
 
 ![Mapping Editor Main Interface](images/screenshots/mapping_editor/Mapping_Editor_Screenshot__4.20.17PM.png)
 
@@ -53,34 +48,28 @@ The Mapping Editor consists of several key areas:
 - **Add Target Variable** (Orange): Defines new target variables and members
 - **Add Source Variable** (Blue): Adds new source variables and members
 
-### Creating New Mappings
+### Managing New Mappings
 
-**Step 1: Initialize Mapping**
+As you can imagine, the mapping editor does not create any mapping, it only edits and duplicate existing mappings.
+
+![Mapping Editor with Data](images/screenshots/mapping_editor/Mapping_Editor_Screenshot__4.20.27PM.png)
+
+**Initialize Mapping**
 - Select an existing mapping from the **Select Mapping ID** dropdown as a template, or
 - Create a new mapping by using **Duplicate Mapping** with a new name
 - Choose appropriate naming conventions that reflect the data flow
 
-**Step 2: Define Source Variables**
+**Define Source Variables**
 - Click **Add Source Variable** to open the variable definition dialog
-- Specify variable name, data type, and source system details
-- Add member variables if the source represents hierarchical data
-- Define data validation rules and constraints
+- Specify variable, member name. Constraints are already defined, given the mapper only gives you a choice to map to data members for now.
 
-**Step 3: Define Target Variables**
-- Click **Add Target Variable** to create target definitions
-- Map to specific regulatory reporting requirements
-- Configure target data formats and validation rules
-- Establish hierarchical relationships if needed
+**Define Target Variables**
+- Click **Add Target Variable** to open the variable definition dialog
+- Specify variable, member name. Constraints are already defined, given the mapper only gives you a choice to map to data members for now.
 
-**Step 4: Create Mapping Rows**
+**Create Mapping Rows**
 - Click **Add Mapping Row** to establish source-to-target relationships
-- Select source variables from available options
-- Map to corresponding target variables
-- Define transformation logic and business rules
-
-### Managing Existing Mappings
-
-![Mapping Editor with Data](images/screenshots/mapping_editor/Mapping_Editor_Screenshot__4.20.27PM.png)
+- Select target data members from available options for all defined variables
 
 **Viewing Mapping Details:**
 - Use the dropdown to select specific mappings
@@ -100,89 +89,16 @@ The Mapping Editor consists of several key areas:
 - Confirm deletion to prevent accidental data loss
 - Review impact on dependent systems before finalizing
 
-### Working with Variables
-
-**Source Variable Management:**
-- Define variables that represent your source system data
-- Specify data types, formats, and validation rules
-- Create hierarchical relationships between variables
-- Document business context and usage guidelines
-
-**Target Variable Management:**
-- Map to specific regulatory reporting elements
-- Ensure compliance with reporting standards
-- Define aggregation and calculation rules
-- Establish quality validation checkpoints
-
-### Advanced Mapping Operations
-
-**Duplicate and Customize:**
-- Use **Duplicate Mapping** to create variations of existing mappings
-- Modify duplicate mappings for different regulatory frameworks
-- Maintain consistency while adapting to specific requirements
-- Document changes for audit and maintenance purposes
-
-**Batch Operations:**
-- Apply filters to select multiple related mappings
-- Perform bulk updates on transformation rules
-- Export mapping definitions for backup or migration
-- Import mapping templates for standardization
-
 ## Best Practices
 
 ### Mapping Design
 - **Standardize Naming**: Use consistent conventions for mapping IDs and variable names
-- **Document Logic**: Clearly describe transformation rules and business rationale
-- **Test Thoroughly**: Validate mappings with sample data before production use
-- **Version Control**: Maintain records of mapping changes and evolution
-
-### Performance Optimization
-- **Filter First**: Use filters to focus on relevant mapping subsets
-- **Batch Similar**: Group related variable definitions and mapping operations
-- **Regular Cleanup**: Remove obsolete mappings to maintain system performance
-- **Monitor Usage**: Track which mappings are actively used for optimization
+- **Version Control**: Maintain records of mapping changes and evolution and contribute if your mapping could be used (through the pull Request creation)
+- **Regular Cleanup**: Remove obsolete mappings to maintain usability
 
 ### Quality Assurance
-- **Validation Rules**: Implement comprehensive data validation at both source and target
 - **Cross-Reference**: Verify mappings against regulatory documentation
 - **Peer Review**: Have mapping logic reviewed by business and technical experts
-- **Regular Audits**: Periodically review mapping accuracy and completeness
-
-## Troubleshooting
-
-### Common Issues and Solutions
-
-**Mapping Not Found:**
-- Verify the mapping ID exists in the system
-- Check filter settings that might hide the desired mapping
-- Confirm you have permissions to view the specific mapping
-- Refresh the interface if data appears outdated
-
-**Variable Definition Errors:**
-- Validate source variable definitions against actual source systems
-- Check target variable alignment with regulatory requirements
-- Verify data type compatibility between source and target
-- Review hierarchical relationships for logical consistency
-
-**Transformation Failures:**
-- Test transformation logic with sample data
-- Validate business rules implementation
-- Check for missing or incomplete mapping rows
-- Review data quality validation rules
-
-**Performance Issues:**
-- Apply appropriate filters to reduce dataset size
-- Limit the number of concurrent mapping operations
-- Check system resources during complex transformations
-- Consider breaking large mappings into smaller, manageable components
-
-### Data Validation
-The system automatically validates:
-- Source-to-target variable compatibility
-- Transformation rule syntax and logic
-- Required field completion
-- Circular reference prevention
-- Duplicate mapping detection
 
 ## Conclusion
 
