@@ -266,21 +266,17 @@
 <h2 id="purpose">Purpose</h2>
 <p>DPM Operations addresses the critical need for standardized regulatory reporting in the financial sector. This feature enables:</p>
 <ul>
-<li><strong>Regulatory Compliance</strong>: Ensure your data meets EBA DPM specifications and reporting requirements</li>
-<li><strong>Data Validation</strong>: Automated checks throughout the process prevent non-compliant submissions</li>
-<li><strong>Efficient Processing</strong>: Transform complex financial data into structured regulatory formats</li>
-<li><strong>Framework Flexibility</strong>: Support for multiple regulatory frameworks including COREP, FINREP, and LCR</li>
-<li><strong>Quality Assurance</strong>: Built-in validation at each step reduces errors and rework</li>
+<li><strong>Import of uptodate EBA Information Technical Standards (ITS)</strong>: By using simple mappings, the application is able to translate the EBA ITS standards into SMCube methodology.</li>
+<li><strong>Generation of Output Layers</strong>: After importing the rendering package of the EBA ITS into our knowledge graph, we can then generate the structure used for the mapping and the generation of linking entities.</li>
 </ul>
 
-<p>Financial institutions use DPM Operations to streamline their regulatory reporting obligations, reduce manual processing errors, and maintain compliance with evolving European banking regulations.</p>
+<p>Financial institutions use DPM Operations to streamline their regulatory reporting obligations, and maintain compliance with evolving European banking regulations.</p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>Before using DPM Operations, ensure:</p>
 <ul>
-<li>Your source data is prepared in the required format</li>
-<li>You have selected the appropriate regulatory framework</li>
-<li>Database connectivity is established</li>
+<li>You ran the first two steps of the workflow.</li>
+<li>You have an internet connection.</li>
 <li>You understand the 3-step sequential process</li>
 </ul>
 
@@ -291,51 +287,17 @@
 <h3 id="overview-of-the-3-step-dpm-workflow">Overview of the 3-Step DPM Workflow</h3>
 <p>The DPM workflow consists of three sequential steps that must be executed in order: Prepare, Import, and Create Output Layers.</p>
 <h3 id="step-1-prepare-dpm-data">Step 1: Prepare DPM Data</h3>
-<p>Click the &quot;Prepare DPM Data&quot; card to validate and stage your source data for processing. This step ensures your data meets all requirements before moving to the import phase. The system will validate your source data and confirm it is ready for import.</p>
+<p>Click the &quot;Prepare DPM Data&quot; card to import and preprocess the data from the EBA website. This step ensures the ontology represented in the EBA ITS to the import phase. The system will validate your source data and confirm it is ready for import.</p>
 <h3 id="step-2-import-dpm-data">Step 2: Import DPM Data</h3>
-<p>Click the &quot;Import DPM Data&quot; card to process your source data and apply the necessary transformations. During this step, the system imports your data into DPM structures while performing validation checks. Once complete, your data will be properly structured according to DPM specifications.</p>
+<p>Click the &quot;Import DPM Data&quot; card to process the EBA ITS ontology and apply the necessary mapping to the SMCube methodology. During this step, the system imports your data into DPM structures while performing validation checks. Once complete, your EBA ITS ontology will be properly structured according to SMCube specifications.</p>
 <h3 id="step-3-create-output-layers">Step 3: Create Output Layers</h3>
 <p>Click the &quot;Create Output Layers&quot; card to generate your final regulatory reporting outputs. This step produces all required regulatory reports that are ready for submission to authorities.</p>
 <p><img src="../images/screenshots/dpm_operations/dpm_operations_output_layer_generation.png" alt="DPM Output Layer Generation" class="img-responsive guide-image"></p>
 <p>When creating output layers, you need to select your regulatory framework such as COREP, FINREP, or LCR. Then choose the specific version of your selected framework. You can also pick specific table codes if you want targeted output generation. After making your selections, the system will generate regulatory reports in the required smcube format, and your selected outputs will be ready for integration.</p>
 <h2 id="best-practices">Best Practices</h2>
-<p>Always execute the three steps in sequential order: Prepare, then Import, then Create Output Layers. Complete each step fully before proceeding to the next one. Address any data quality issues during the Prepare step before attempting to import. Monitor validation error rates during the Import process to catch issues early. Verify that your final outputs comply with EBA standards before submission.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
-<p><strong>Data Preparation Failures:</strong></p>
-<ul>
-<li>Check that your file formats and encoding are correct</li>
-<li>Verify that all required data elements are present</li>
-<li>Review the preparation logs for specific error messages</li>
-<li>Ensure source data meets DPM specifications</li>
-</ul>
-
-<p><strong>Import Errors:</strong></p>
-<ul>
-<li>Confirm that the preparation step completed successfully</li>
-<li>Check your transformation rule configurations</li>
-<li>Analyze exception reports for patterns</li>
-<li>Verify data type compatibility</li>
-</ul>
-
-<p><strong>Output Generation Problems:</strong></p>
-<ul>
-<li>Verify that the import completed successfully</li>
-<li>Check your output template configurations</li>
-<li>Review the calculation rules and logic for accuracy</li>
-<li>Ensure selected framework version is correct</li>
-</ul>
-
-<p><strong>Performance Issues:</strong></p>
-<ul>
-<li>Consider processing smaller data batches</li>
-<li>Check available system resources</li>
-<li>Verify database performance</li>
-<li>Review network connectivity for remote data sources</li>
-</ul>
-
+<p>Always execute the three steps in sequential order: Prepare, then Import, then Create Output Layers. Complete each step fully before proceeding to the next one.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>DPM Operations simplifies the complex task of regulatory reporting by providing a structured, validated approach to data processing. The 3-step workflow ensures that your financial data is properly prepared, imported, and transformed into compliant regulatory reports ready for submission to authorities.</p>
+<p>DPM Operations simplifies the complex task of importing regulatory reporting standard by providing a structured, validated approach to ontology processing. The 3-step workflow ensures that your favourite financial ontology is properly prepared, imported, and transformed into compliant regulatory reports ready for submission to authorities.</p>
 <h3 id="next-steps">Next Steps</h3>
 <ul>
 <li>Review the <a href="workflow-dashboard-guide.html">Workflow Dashboard Guide</a> for comprehensive workflow management</li>

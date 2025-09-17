@@ -267,10 +267,8 @@
 <p>Execute Datapoint addresses the critical need for accurate regulatory calculations in financial reporting. This feature provides:</p>
 <ul>
 <li><strong>Automated Calculations</strong>: Execute complex regulatory formulas with precision</li>
-<li><strong>Batch Processing</strong>: Handle multiple datapoints efficiently in a single operation</li>
 <li><strong>Real-time Validation</strong>: Ensure results meet regulatory requirements immediately</li>
 <li><strong>Audit Trail</strong>: Maintain complete records of all calculations for compliance</li>
-<li><strong>Flexible Execution</strong>: Choose between individual or batch processing based on needs</li>
 </ul>
 
 <p>Financial institutions rely on this feature to transform raw data into calculated regulatory metrics, ensuring accuracy in reporting while maintaining full transparency and auditability of the calculation process.</p>
@@ -279,9 +277,8 @@
 <p>Before using Execute Datapoint, ensure:</p>
 <ul>
 <li>Templates are populated with source data</li>
-<li>You have appropriate execution permissions</li>
 <li>Database connectivity is established</li>
-<li>Regulatory formulas are up to date</li>
+<li>Regulatory Framework data are has been loaded (Financial Reporting Output layer for example).</li>
 </ul>
 
 <h3 id="accessing-execute-datapoint">Accessing Execute Datapoint</h3>
@@ -291,36 +288,18 @@
 <p><img src="../images/screenshots/execute_datapoints/list_of_populated_templates.png" alt="List of Populated Templates" class="img-responsive guide-image"></p>
 <h2 id="step-by-step-guide">Step-by-Step Guide</h2>
 <h3 id="working-with-populated-templates">Working with Populated Templates</h3>
-<p>The populated templates list displays the template name which identifies the specific regulatory template, the current status showing whether it&#39;s populated, executed, or pending, when the template was last modified, and the number of cells within the template.</p>
+<p>The populated templates list displays the template name which identifies the specific regulatory template.</p>
 <p>Click on any template to view its individual cells. Each cell contains specific datapoints that can be executed.</p>
 <p><img src="../images/screenshots/execute_datapoints/list_of_populated_template_cells.png" alt="List of Populated Template Cells" class="img-responsive guide-image"></p>
-<p>Each cell shows a unique cell reference like R010C010, the specific datapoint to be calculated, the current or calculated value, the execution status indicating if it&#39;s pending, completed, or has an error, and the underlying calculation or transformation formula.</p>
-<h3 id="executing-datapoints">Executing Datapoints</h3>
+<p>Each cell shows a unique cell reference, the specific datapoint to be calculated, the current or calculated value.</p>
 <h3 id="individual-cell-execution">Individual Cell Execution</h3>
-<p>To execute a specific datapoint, select the desired cell from the template cell list, review the cell details and formula, click the <strong>&quot;Execute&quot;</strong> button to run the calculation, and monitor the execution progress.</p>
+<p>To execute a specific datapoint, select the desired cell from the template cell list, review the cell details, click the <strong>&quot;Execute&quot;</strong> button to run the calculation, and monitor the execution progress.</p>
 <p><img src="../images/screenshots/execute_datapoints/populated_template_cell_execution.png" alt="Populated Template Cell Execution" class="img-responsive guide-image"></p>
-<h3 id="batch-execution">Batch Execution</h3>
-<p>For multiple datapoints, select multiple cells using checkboxes, click <strong>&quot;Execute Selected&quot;</strong> to run calculations in batch, and track progress through the execution status panel.</p>
-<p>During execution, the system validates input data, applies transformation rules, calculates results based on formulas, updates cell values, and logs execution details for audit purposes.</p>
-<h3 id="monitoring-execution">Monitoring Execution</h3>
-<p>Watch for status indicators during execution. A &quot;Pending&quot; status means the datapoint is awaiting execution and you should initiate it when ready. &quot;In Progress&quot; indicates the calculation is currently running and you should wait for completion. &quot;Completed&quot; means the execution was successful and you can review the results. An &quot;Error&quot; status indicates the execution failed and you should check the logs and retry. &quot;Validated&quot; means the results have been verified and are ready for submission.</p>
-<p>After successful execution, cell values are updated with calculated results, execution timestamps are recorded, audit trails are maintained, and results become available for export.</p>
 <h2 id="best-practices">Best Practices</h2>
-<p>Before execution, ensure your input data is complete by reviewing source data completeness. Verify you&#39;ve selected the correct regulatory template by checking the template version and requirements. Understand the calculation logic by reviewing the formula documentation. Identify any linked datapoints by checking cell relationships and dependencies.</p>
-<p>During execution, monitor system resources when running large batch executions. Execute critical datapoints individually for better control. Keep execution logs for audit purposes and validate intermediate results when possible.</p>
-<p>After execution, verify results by cross-checking calculated values against expected outcomes. Review execution logs for any warnings or issues. Export data in the required format for reporting and document any discrepancies for investigation.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>If execution fails, it&#39;s often due to missing input data, so verify all required data is populated. Incorrect results may be caused by outdated formulas, requiring you to update the template to the latest version. Performance issues with large datasets can be resolved by executing in smaller batches. Access denied errors require contacting your administrator for proper permissions. If a template is not found, ensure you&#39;ve run the population process first.</p>
-<p>Common error messages include &quot;Missing Required Data&quot; when input cells are empty or invalid, &quot;Formula Error&quot; when the calculation formula contains errors, &quot;Timeout Error&quot; when execution exceeds the time limit, and &quot;Validation Failed&quot; when results don&#39;t meet validation rules.</p>
-<h2 id="advanced-features">Advanced Features</h2>
-<p>Use filters to find specific templates or cells quickly. Search by cell reference, datapoint name, or value. Sort results by status, date, or cell reference for better organization. Export your results in various formats including CSV for data analysis, Excel for regulatory submission, JSON for system integration, or XML for XBRL reporting.</p>
-<p>All executions maintain a complete audit trail recording who initiated the execution, when it occurred, what input values were used, which formula was applied, what result was generated, and any errors or warnings encountered.</p>
-<h2 id="integration-with-other-features">Integration with Other Features</h2>
-<p>Execute Datapoint integrates with the Workflow Dashboard where you can track execution tasks, set up automated schedules, and monitor performance metrics. It also works with DPM Operations to link executed datapoints to DPM models, validate against regulatory requirements, and generate compliance reports. The feature connects with Dataset Transformation to use executed results as input for transformations, chain multiple execution processes, and create complex reporting pipelines.</p>
-<h2 id="compliance-considerations">Compliance Considerations</h2>
-<p>Ensure all executions comply with ECB regulatory requirements, data quality standards, audit requirements, reporting deadlines, and your organization&#39;s data governance policies. Regular validation and proper documentation are essential for maintaining compliance throughout the execution process.</p>
+<p>Before execution, ensure your input data is complete by reviewing source data completeness. Verify you&#39;ve selected the correct regulatory template by checking the template version and requirements. Understand the calculation logic by reviewing the formula documentation.</p>
+<p>After execution, verify results by cross-checking calculated values against expected outcomes. Review execution logs for any warnings or issues.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>The Execute Datapoint feature transforms raw financial data into calculated regulatory metrics through a controlled, auditable process. By providing both individual and batch execution capabilities, it offers the flexibility needed for various reporting scenarios while maintaining the accuracy and compliance required for regulatory submissions.</p>
+<p>The Execute Datapoint feature transforms raw financial data into calculated regulatory metrics through a controlled process. By providing both individual execution capabilities, it offers the control needed for various reporting scenarios while maintaining the accuracy and compliance required for regulatory submissions.</p>
 <h3 id="next-steps">Next Steps</h3>
 <ul>
 <li>Review the <a href="workflow-dashboard-guide.html">Workflow Dashboard Guide</a> to understand the complete workflow</li>

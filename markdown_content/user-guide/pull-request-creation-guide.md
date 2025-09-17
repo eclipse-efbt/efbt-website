@@ -9,15 +9,14 @@ The Pull Request Creation feature serves as the bridge between your local data p
 - **Collaborative Review Process**: Submit work for peer review and approval before integration
 - **Secure Development**: Work in isolated forks without affecting the main repository
 - **Automated Workflow**: One-click creation of forks, branches, and pull requests
-- **Compliance Tracking**: Maintain an audit trail of all regulatory data submissions
 
-This feature is essential for teams working on regulatory reporting projects, enabling multiple contributors to collaborate while maintaining data integrity and review processes.
+This feature is essential for teams working on a common and open ontology projects, enabling multiple contributors to collaborate while maintaining the integrity of ontology and review processes.
 
 ## Getting Started
 
 ### Prerequisites
 Before creating pull requests, ensure:
-- Database is initialized and contains processed data
+- Database is initialized and contains processed ontology
 - Configuration is saved and validated
 - GitHub personal access token with appropriate permissions
 - Access to the target GitHub repository
@@ -30,7 +29,7 @@ There are two primary methods to create pull requests:
 
 ## Step-by-Step Guide
 
-### Method 1: Quick Actions - Create Review (Automated)
+### Method 1: Quick Actions - Create Review
 
 The recommended approach for creating pull requests is to use the automated "Create Review" feature after completing your workflow tasks.
 
@@ -42,7 +41,7 @@ When you click "Create Review", the system automatically creates a secure fork o
 
 ### Method 2: Manual Export - Database to CSV Files
 
-For advanced users who need more control over the export process, you can use the manual export functionality.
+For advanced users who need more control over the export and postprocessing process, you can use the manual export functionality.
 
 ![Export Database to CSV](images/screenshots/pull_request/pull_request.png)
 
@@ -92,7 +91,6 @@ Always use the fork workflow for isolated, secure development. Complete your wor
 
 **Export Failures:**
 - Verify database connectivity and data integrity
-- Check available system resources (memory, disk space)
 - Ensure stable network connectivity to GitHub
 - Try exporting smaller datasets if timeouts occur
 - Review export logs for specific error messages

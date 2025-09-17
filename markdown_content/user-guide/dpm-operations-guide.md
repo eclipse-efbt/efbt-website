@@ -5,21 +5,17 @@ DPM (Data Point Model) Operations is a specialized module within Eclipse Free BI
 ## Purpose
 
 DPM Operations addresses the critical need for standardized regulatory reporting in the financial sector. This feature enables:
-- **Regulatory Compliance**: Ensure your data meets EBA DPM specifications and reporting requirements
-- **Data Validation**: Automated checks throughout the process prevent non-compliant submissions
-- **Efficient Processing**: Transform complex financial data into structured regulatory formats
-- **Framework Flexibility**: Support for multiple regulatory frameworks including COREP, FINREP, and LCR
-- **Quality Assurance**: Built-in validation at each step reduces errors and rework
+- **Import of uptodate EBA Information Technical Standards (ITS)**: By using simple mappings, the application is able to translate the EBA ITS standards into SMCube methodology.
+- **Generation of Output Layers**: After importing the rendering package of the EBA ITS into our knowledge graph, we can then generate the structure used for the mapping and the generation of linking entities.
 
-Financial institutions use DPM Operations to streamline their regulatory reporting obligations, reduce manual processing errors, and maintain compliance with evolving European banking regulations.
+Financial institutions use DPM Operations to streamline their regulatory reporting obligations, and maintain compliance with evolving European banking regulations.
 
 ## Getting Started
 
 ### Prerequisites
 Before using DPM Operations, ensure:
-- Your source data is prepared in the required format
-- You have selected the appropriate regulatory framework
-- Database connectivity is established
+- You ran the first two steps of the workflow.
+- You have an internet connection.
 - You understand the 3-step sequential process
 
 ### Accessing DPM Operations
@@ -36,11 +32,11 @@ The DPM workflow consists of three sequential steps that must be executed in ord
 
 ### Step 1: Prepare DPM Data
 
-Click the "Prepare DPM Data" card to validate and stage your source data for processing. This step ensures your data meets all requirements before moving to the import phase. The system will validate your source data and confirm it is ready for import.
+Click the "Prepare DPM Data" card to import and preprocess the data from the EBA website. This step ensures the ontology represented in the EBA ITS to the import phase. The system will validate your source data and confirm it is ready for import.
 
 ### Step 2: Import DPM Data
 
-Click the "Import DPM Data" card to process your source data and apply the necessary transformations. During this step, the system imports your data into DPM structures while performing validation checks. Once complete, your data will be properly structured according to DPM specifications.
+Click the "Import DPM Data" card to process the EBA ITS ontology and apply the necessary mapping to the SMCube methodology. During this step, the system imports your data into DPM structures while performing validation checks. Once complete, your EBA ITS ontology will be properly structured according to SMCube specifications.
 
 ### Step 3: Create Output Layers
 
@@ -52,39 +48,11 @@ When creating output layers, you need to select your regulatory framework such a
 
 ## Best Practices
 
-Always execute the three steps in sequential order: Prepare, then Import, then Create Output Layers. Complete each step fully before proceeding to the next one. Address any data quality issues during the Prepare step before attempting to import. Monitor validation error rates during the Import process to catch issues early. Verify that your final outputs comply with EBA standards before submission.
-
-## Troubleshooting
-
-### Common Issues and Solutions
-
-**Data Preparation Failures:**
-- Check that your file formats and encoding are correct
-- Verify that all required data elements are present
-- Review the preparation logs for specific error messages
-- Ensure source data meets DPM specifications
-
-**Import Errors:**
-- Confirm that the preparation step completed successfully
-- Check your transformation rule configurations
-- Analyze exception reports for patterns
-- Verify data type compatibility
-
-**Output Generation Problems:**
-- Verify that the import completed successfully
-- Check your output template configurations
-- Review the calculation rules and logic for accuracy
-- Ensure selected framework version is correct
-
-**Performance Issues:**
-- Consider processing smaller data batches
-- Check available system resources
-- Verify database performance
-- Review network connectivity for remote data sources
+Always execute the three steps in sequential order: Prepare, then Import, then Create Output Layers. Complete each step fully before proceeding to the next one.
 
 ## Conclusion
 
-DPM Operations simplifies the complex task of regulatory reporting by providing a structured, validated approach to data processing. The 3-step workflow ensures that your financial data is properly prepared, imported, and transformed into compliant regulatory reports ready for submission to authorities.
+DPM Operations simplifies the complex task of importing regulatory reporting standard by providing a structured, validated approach to ontology processing. The 3-step workflow ensures that your favourite financial ontology is properly prepared, imported, and transformed into compliant regulatory reports ready for submission to authorities.
 
 ### Next Steps
 - Review the [Workflow Dashboard Guide](workflow-dashboard-guide.html) for comprehensive workflow management

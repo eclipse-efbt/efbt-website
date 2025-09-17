@@ -8,7 +8,6 @@ The Workflow Dashboard serves as the primary orchestration point for your regula
 - **Automated Sequential Processing**: Execute complex workflows with a single click
 - **Progress Tracking**: Monitor each step of your data transformation journey
 - **Configuration Management**: Centralize all workflow settings in one place
-- **Error Prevention**: Built-in validation ensures tasks execute in the correct order
 - **Quick Actions**: Accelerate common operations with one-click automation
 
 This feature is essential for organizations that need to maintain compliance with European regulatory standards while minimizing manual effort and reducing the risk of processing errors.
@@ -17,7 +16,7 @@ This feature is essential for organizations that need to maintain compliance wit
 
 ### Prerequisites
 Before using the Workflow Dashboard, ensure you have:
-- FreeBIRD Application installed and running
+- FreeBIRD Application installed and running (or in codespaces)
 - Valid GitHub repository access with appropriate permissions
 - Database connectivity established
 - Configuration files prepared in your repository
@@ -93,34 +92,6 @@ Start Task 4 by clicking the **"Do"** button, then run the configuration file te
 ## Best Practices
 
 Always execute tasks in sequential order from Task 1 through Task 4. Complete each task before proceeding to the next and use the Review function to validate completion. Save your configuration before starting any workflow execution and verify that your GitHub credentials are valid and current. Check that the system status shows "Ready" and "Configured" before beginning execution.
-
-## Troubleshooting
-
-### Common Issues and Solutions
-
-**Task Execution Failures:**
-- Verify your database connectivity and status
-- Check your GitHub repository access permissions
-- Confirm that your configuration has been saved properly
-- Ensure tasks are executed in sequential order
-
-**Configuration Problems:**
-- Always click "Save Configuration" after making changes
-- Verify that repository URLs are correctly formatted
-- Check that your GitHub token has the necessary permissions
-- Confirm branch names are valid and accessible
-
-**Database Issues:**
-- Use the "Setup Database" option in Quick Actions to reinitialize
-- Verify that the database service is running
-- Check your connection parameters
-- Clear database and restart if corruption is suspected
-
-**Quick Actions Not Responding:**
-- Ensure all prerequisites are met
-- Check system status indicators
-- Verify network connectivity to GitHub
-- Try using "Reset Tasks 1-4" to clear task history
 
 ## Conclusion
 
