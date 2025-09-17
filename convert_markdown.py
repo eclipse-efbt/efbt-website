@@ -440,6 +440,8 @@ def create_html_template(content, title="Document", relative_path=""):
 
 	<!-- Modernizr JS -->
 	<script src="{path_prefix}js/modernizr-2.6.2.min.js"></script>
+	<!-- Page Allowlist Check -->
+	<script src="{path_prefix}js/allowlist.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="{path_prefix}js/respond.min.js"></script>
