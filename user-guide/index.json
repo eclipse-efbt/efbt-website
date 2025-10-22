@@ -23,8 +23,8 @@
       "status": "available"
     },
     {
-      "title": "Mapping Editor",
-      "description": "The Mapping Editor is a sophisticated data transformation tool within Eclipse Free BIRD Tools that enables users to create, manage, and modify complex mappings between source and target data variables. This interface serves as the bridge between various source systems and regulatory reporting structures, facilitating precise data alignment and transformation for compliance purposes.",
+      "title": "Semantic Integration Editor",
+      "description": "The Semantic Integration Editor is a sophisticated data transformation tool within Eclipse Free BIRD Tools that enables users to create, manage, and modify complex mappings between source and target data variables. This interface serves as the bridge between various source systems and regulatory reporting structures, facilitating precise data alignment and transformation for compliance purposes.",
       "filename": "mapping-editor.html",
       "path": "user-guide/mapping-editor.html",
       "last_modified": "2025-11-17T21:51:01.818451",
