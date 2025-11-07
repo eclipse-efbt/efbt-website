@@ -6,7 +6,7 @@ DPM (Data Point Model) Operations is a specialized module within Eclipse Free BI
 
 DPM Operations addresses the critical need for standardized regulatory reporting in the financial sector. This feature enables:
 - **Import of uptodate EBA Information Technical Standards (ITS)**: By using simple mappings, the application is able to translate the EBA ITS standards into SMCube methodology.
-- **Generation of Output Layers**: After importing the rendering package of the EBA ITS into our knowledge graph, we can then generate the structure used for the mapping and the generation of linking entities.
+- **Generation of Output Layers**: After importing the rendering package of the EBA ITS into our structured SMCubes format, we can then generate the structure used for the mapping and the generation of linking entities.
 
 Financial institutions use DPM Operations to streamline their regulatory reporting obligations, and maintain compliance with evolving European banking regulations.
 
