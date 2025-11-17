@@ -263,75 +263,533 @@
 	<!-- Main Content -->
 	<section class="main doc-content ">
   		<div class="content-wrapper">
- 			<h2 id="feature-overview">Feature Overview</h2>
-<p>The Eclipse Free BIRD Tools Workflow Dashboard is your central control center for managing and executing regulatory reporting workflows. It provides a streamlined interface for processing BIRD data through a systematic 4-task sequential workflow, enabling efficient regulatory compliance and data transformation.</p>
-<h2 id="purpose">Purpose</h2>
-<p>The Workflow Dashboard serves as the primary orchestration point for your regulatory reporting processes. It eliminates the complexity of manual data processing by providing:</p>
+ 			<h1 id="pybird-ai-workflows-user-guide">PyBIRD AI Workflows - User Guide</h1>
+<h2 id="what-are-workflows">What are Workflows?</h2>
+<p>PyBIRD AI provides three specialized workflows for processing banking regulatory data, each designed for different reporting requirements. All workflows use a consistent dashboard interface with sequential steps and built-in review capabilities.</p>
+<h2 id="understanding-the-workflow-dashboard">Understanding the Workflow Dashboard</h2>
+<p>All workflows in PyBIRD AI share a common dashboard interface structure:</p>
+<p><strong>Dashboard Layout:</strong></p>
 <ul>
-<li><strong>Automated Sequential Processing</strong>: Execute complex workflows with a single click</li>
-<li><strong>Progress Tracking</strong>: Monitor each step of your data transformation journey</li>
-<li><strong>Configuration Management</strong>: Centralize all workflow settings in one place</li>
-<li><strong>Quick Actions</strong>: Accelerate common operations with one-click automation</li>
+<li><strong>Step Column:</strong> Lists all workflow steps in sequential order</li>
+<li><strong>Do Column:</strong> Contains &quot;Do&quot; or &quot;Execute&quot; buttons to run each step</li>
+<li><strong>Review Column:</strong> Contains &quot;Review&quot; buttons to view results and access editors</li>
 </ul>
 
-<p>This feature is essential for organizations that need to maintain compliance with European regulatory standards while minimizing manual effort and reducing the risk of processing errors.</p>
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Before using the Workflow Dashboard, ensure you have:</p>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li>Execute steps sequentially using the &quot;Do&quot; buttons</li>
+<li>Review results and make adjustments using &quot;Review&quot; buttons</li>
+<li>Each step depends on successful completion of previous steps</li>
+<li>Progress is tracked automatically within each workflow</li>
+</ol>
+
+<p>This consistent interface makes it easy to switch between different workflows while maintaining familiar navigation patterns.</p>
+<hr>
+<h2 id="choose-your-workflow">Choose Your Workflow</h2>
+<h3 id="main-workflow-finrep-reporting">Main Workflow - FINREP Reporting</h3>
+<p><strong>Use for:</strong> Standard financial regulatory reports (FINREP/DPM) based on ECB Financial Reporting Framework</p>
+<p><strong>Purpose:</strong></p>
+<p>The Main Workflow processes BIRD data through a systematic 4-task sequence, creating foundational data structures, transformation rules, and executable code for regulatory compliance. It focuses on the EIL (European Input Layer) and provides automated execution options for efficiency.</p>
+<p><strong>4-Task Sequential Process:</strong></p>
+<ol>
+<li><strong>Task 1: SMCubes Core Creation</strong></li>
 <ul>
-<li>FreeBIRD Application installed and running (or in codespaces)</li>
-<li>Valid GitHub repository access with appropriate permissions</li>
+<li>Creates foundational data structures and cube definitions</li>
+<li>Imports input model and generates report templates</li>
+<li>Processes LDM/EIL hierarchies and semantic integrations</li>
+<li>Output: 50+ cubes and 100+ templates</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Task 2: SMCubes Transformation Rules Creation</strong></li>
+<ul>
+<li>Generates transformation rules and metadata</li>
+<li>Creates filters and join metadata</li>
+<li>Prepares data processing specifications</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Task 3: Python Transformation Rules Creation</strong></li>
+<ul>
+<li>Converts transformation rules into executable Python code</li>
+<li>Generates filter code and join code</li>
+<li>Creates production-ready transformation scripts</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Task 4: Full Execution with Test Suite</strong></li>
+<ul>
+<li>Validates regulatory templates with comprehensive testing</li>
+<li>Runs configuration file tests</li>
+<li>Provides pass/fail statistics and validation reports</li>
+</ul>
+</ol>
+
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Configuration Setup:</strong> Centralized settings for GitHub repository, data model type (EIL), and sources</li>
+<li><strong>Quick Actions Panel:</strong></li>
+<ul>
+<li>Retrieve Artifacts from GitHub</li>
+<li>Setup Database initialization</li>
+<li>Run Automode for automated multi-task execution</li>
+<li>Reset options for tasks or complete workflow</li>
+</ul>
+<li><strong>Automated Execution:</strong> Select target task and run automode to execute all tasks up to that point</li>
+<li><strong>Progress Tracking:</strong> Database and configuration status displayed in dashboard</li>
+<li><strong>Session Management:</strong> Track workflows with unique session IDs</li>
+</ul>
+
+<p><strong>Access:</strong> Navigate to <strong>Workflows</strong> &gt; <strong>Main Workflow</strong> or visit <code>/pybirdai/workflow/</code></p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>Valid GitHub repository access with permissions</li>
+<li>Configuration files prepared in repository</li>
 <li>Database connectivity established</li>
-<li>Configuration files prepared in your repository</li>
 </ul>
 
-<h3 id="accessing-the-dashboard">Accessing the Dashboard</h3>
-<p>To access the dashboard, launch the FreeBIRD Application, navigate to the Home page, and click on <strong>&quot;Task Workflow Dashboard&quot;</strong>.</p>
-<p><img src="../images/screenshots/homepage/homepage_click_on_task_workflow_dashboard.png" alt="Homepage" class="img-responsive guide-image"></p>
-<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
-<h3 id="configuration-setup">Configuration Setup</h3>
-<p>Before starting any tasks, you must configure your workflow settings.</p>
-<p><img src="../images/screenshots/configuration/configurationmenu_click_on_save.png" alt="Configuration Menu" class="img-responsive guide-image"></p>
-<p>Start by selecting &quot;EIL (Input Layer)&quot; as your data model type. Enter your GitHub repository URL and specify the branch you want to use, which defaults to &quot;main&quot; if not specified. Set both the configuration files source and technical export source to &quot;GitHub Repository&quot;. After entering all settings, click the save button to store your configuration.</p>
-<h3 id="quick-actions-panel">Quick Actions Panel</h3>
-<p><img src="../images/screenshots/quickaction/quickactionmenu_setup_not_started_click_on_retrieve_artifacts.png" alt="Quick Actions Menu" class="img-responsive guide-image"></p>
-<p>The Quick Actions panel provides several important functions. Use <strong>Retrieve Artifacts</strong> to download configuration files from your GitHub repository. The <strong>Setup Database</strong> button initializes your database environment. You can select any task from 1 to 4 as your target endpoint and then use <strong>Run Automode</strong> to automatically execute from Task 1 up to your selected target. The panel also displays your current database and configuration status, along with a session ID for tracking. If you need to start over, use <strong>Reset Tasks 1-4</strong> to clear task history while keeping your configuration, or <strong>Reset Everything</strong> for a complete reset.</p>
-<h3 id="heading-4-task-sequential-workflow">4-Task Sequential Workflow</h3>
-<p>The workflow consists of four sequential tasks that must be executed in order.</p>
-<p><img src="../images/screenshots/workflow_dashboard/taskdashboard.png" alt="Task Dashboard" class="img-responsive guide-image"></p>
-<h4 id="task-1-smcubes-core-creation">Task 1: SMCubes Core Creation</h4>
-<p>This task creates foundational data structures and cube definitions.</p>
-<p><img src="../images/screenshots/dataset/step1_do.png" alt="Task 1 Review" class="img-responsive guide-image"></p>
-<p>To execute Task 1, click the <strong>&quot;Do&quot;</strong> button to start the execution. The system will then clear the database by running &quot;Delete Database&quot;, create cube structures through &quot;Import Input Model&quot;, generate report templates, import LDM/EIL hierarchies, and process semantic integrations. Alternatively, you can use the Quick Actions panel by selecting &quot;Task 1&quot; as your target and clicking &quot;Run Automode&quot; for automatic execution. After completion, click <strong>&quot;Review&quot;</strong> to verify that over 50 cubes and 100 templates have been created.</p>
-<p><img src="../images/screenshots/dataset/step1_review_part1.png" alt="Task 1 Review" class="img-responsive guide-image"></p>
-<h4 id="task-2-smcubes-transformation-rules-creation">Task 2: SMCubes Transformation Rules Creation</h4>
-<p>This task generates transformation rules and metadata for your data processing.</p>
-<p><img src="../images/screenshots/dataset/step2_do.png" alt="Task 2 Do" class="img-responsive guide-image"></p>
-<p>Start Task 2 by clicking the <strong>&quot;Do&quot;</strong> button. The system will generate filters and create join metadata for your transformations. You can also use Quick Actions by selecting &quot;Task 2&quot; as your target and running automode, which will execute both Task 1 and Task 2 automatically. Review the results to confirm that filter and join metadata creation has completed successfully.</p>
-<p><img src="../images/screenshots/dataset/step2_review.png" alt="Task 2 Review" class="img-responsive guide-image"></p>
-<h4 id="task-3-python-transformation-rules-creation">Task 3: Python Transformation Rules Creation</h4>
-<p>This task converts your transformation rules into executable Python code.</p>
-<p><img src="../images/screenshots/dataset/step3_do.png" alt="Task 3 Do" class="img-responsive guide-image"></p>
-<p>Click the <strong>&quot;Do&quot;</strong> button to begin Task 3. The system will generate filter code and join code based on the metadata created in Task 2. For automated execution, select &quot;Task 3&quot; in Quick Actions and run automode to execute Tasks 1 through 3 sequentially. Verify that the executable Python transformation code has been generated successfully.</p>
-<h4 id="task-4-full-execution-with-test-suite">Task 4: Full Execution with Test Suite</h4>
-<p>This final task validates your regulatory templates with comprehensive testing.</p>
-<p><img src="../images/screenshots/dataset/step4_do.png" alt="Task 4 Do" class="img-responsive guide-image"></p>
-<p>Start Task 4 by clicking the <strong>&quot;Do&quot;</strong> button, then run the configuration file tests. Alternatively, select &quot;Task 4: Full Execution&quot; in Quick Actions and run automode to execute the complete workflow from Task 1 through Task 4 automatically. Review the test execution reports to check pass/fail statistics and ensure all validations have completed successfully.</p>
-<p><img src="../images/screenshots/dataset/step4_review_part1.png" alt="Task 4 Review - Part 1" class="img-responsive guide-image"></p>
-<p><img src="../images/screenshots/dataset/step4_review_part2.png" alt="Task 4 Review - Part 2" class="img-responsive guide-image"></p>
-<p><img src="../images/screenshots/dataset/step4_review_part3.png" alt="Task 4 Review - Part 3" class="img-responsive guide-image"></p>
-<h2 id="best-practices">Best Practices</h2>
-<p>Always execute tasks in sequential order from Task 1 through Task 4. Complete each task before proceeding to the next and use the Review function to validate completion. Save your configuration before starting any workflow execution and verify that your GitHub credentials are valid and current. Check that the system status shows &quot;Ready&quot; and &quot;Configured&quot; before beginning execution.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>The Workflow Dashboard streamlines your regulatory reporting process by providing a unified interface for executing complex data transformations. By following the 4-task sequential workflow, you can efficiently process BIRD data while maintaining compliance with regulatory standards.</p>
-<h3 id="next-steps">Next Steps</h3>
+<p><strong>Best For:</strong> Organizations processing standard FINREP regulatory reports requiring compliance with European regulatory standards.</p>
+<hr>
+<h3 id="dataset-transformation-ancrdt-workflow">Dataset Transformation (ANCRDT) Workflow</h3>
+<p><strong>Use for:</strong> Dataset submissions to ECB, including AnaCredit (Analytical Credit Datasets) - loan-level credit data reporting</p>
+<p><strong>Note:</strong> This workflow is also labeled &quot;DATASET TRANSFORMATION (ANACREDIT)&quot; in the interface. Dataset and ANCRDT refer to the same workflow with different names.</p>
+<p><strong>Purpose:</strong></p>
+<p>The Dataset Transformation Workflow automates the processing of ECB Dataset specifications, from fetching the latest metadata to generating and executing production-ready transformations. It provides comprehensive editing capabilities for metadata and code, with built-in deployment management.</p>
+<p><strong>5-Step Sequential Process:</strong></p>
+<ol>
+<li><strong>Step 0: Fetch Metadata CSV</strong></li>
 <ul>
-<li>Explore the <a href="dpm-operations-guide.html">DPM Operations Guide</a> for alternative workflows</li>
-<li>Learn about <a href="pull-request-creation-guide.html">Pull Request Creation</a> to submit your processed data</li>
-<li>Review the <a href="execute-datapoint-guide.html">Execute Datapoint Guide</a> for advanced execution options</li>
+<li>Downloads latest Dataset specifications directly from ECB repository</li>
+<li>Retrieves authoritative regulatory requirements</li>
+<li>Saves metadata locally for processing</li>
+<li>Requires internet connection</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Step 1: Import Metadata</strong></li>
+<ul>
+<li>Processes CSV files and builds local Dataset data model</li>
+<li>Creates database structures (cubes, cube structures, variables)</li>
+<li>Imports all Dataset specifications into database</li>
+<li>Review page displays import statistics</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Step 2: Generate Joins Metadata</strong></li>
+<ul>
+<li>Analyzes data model and generates join specifications</li>
+<li>Creates cube links, structure item links, and member links</li>
+<li>Auto-generates relationships based on ECB specifications</li>
+<li><strong>Embedded Editors Available:</strong></li>
+<ul>
+<li>Edit Cube Links (table-to-table relationships)</li>
+<li>Edit Cube Structure Item Links (variable-to-variable joins)</li>
+<li>Edit Member Links (dimension value mappings)</li>
+<li>View Diagram (interactive network visualization)</li>
+</ul>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Step 3: Generate Execution Code</strong></li>
+<ul>
+<li>Transforms join metadata into production-ready Python code</li>
+<li>Generates optimized scripts with error handling and logging</li>
+<li><strong>Code Editing Features:</strong></li>
+<ul>
+<li>Individual Code Editor (Monaco editor with syntax highlighting)</li>
+<li>Unified Filter Code Editor (multi-file editing with auto-save)</li>
+<li>Deployment Status tracking (synced/not synced)</li>
+<li>Code validation and syntax checking</li>
+</ul>
+<li><strong>Deployment System:</strong></li>
+<ul>
+<li>Deploy individual files or all files at once</li>
+<li>Backup management for production files</li>
+<li>Manual edit tracking</li>
+<li>Files staged in <code>results/generated_python_joins/</code></li>
+<li>Production location: <code>pybirdai/process_steps/filter_code/</code></li>
+</ul>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Step 4: Execute Tables</strong></li>
+<ul>
+<li>Executes Dataset table transformations with deployed code</li>
+<li><strong>Table Selection:</strong> Choose from implemented Dataset tables</li>
+<li><strong>Dimension Filters:</strong> Apply optional filters for targeted processing</li>
+<li><strong>Filter Interface:</strong> Grid layout with searchable dropdowns for each dimension</li>
+<li><strong>Execution Options:</strong> Single table, batch execution, or scheduled execution</li>
+<li><strong>Results:</strong> View statistics, data preview, download CSV/Excel</li>
+<li><strong>Comparison Mode:</strong> Compare executions with different filter sets</li>
+</ul>
+</ol>
+
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>ECB Metadata Integration:</strong> Direct fetch from ECB website</li>
+<li><strong>Comprehensive Editors:</strong> Cube links, structure items, member mappings, and code</li>
+<li><strong>Code Deployment Management:</strong> Track sync status, deploy selectively, maintain backups</li>
+<li><strong>Advanced Execution:</strong> Dimension filtering, batch processing, scheduling</li>
+<li><strong>Data Quality:</strong> Built-in validation and comparison tools</li>
 </ul>
 
-<p>For additional support, contact the Eclipse Free BIRD Tools community through our <a href="https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org">Eclipse Chat</a> or email us at <a href="mailto:efbt-dev@eclipse.org">efbt-dev@eclipse.org</a>.</p>
+<p><strong>Access:</strong> Navigate to <strong>Workflows</strong> &gt; <strong>Dataset Workflow</strong> or visit <code>/pybirdai/dataset-workflow/</code></p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>Internet connection for Step 0 (ECB metadata fetch)</li>
+<li>Database setup completed</li>
+<li>Python environment verified</li>
+</ul>
+
+<p><strong>Best For:</strong> Financial institutions required to submit Dataset or AnaCredit reports to the ECB, needing automated compliance and operational efficiency.</p>
+<hr>
+<h3 id="dpm-workflow-custom-output-layers">DPM Workflow - Custom Output Layers</h3>
+<p><strong>Use for:</strong> Creating specialized DPM (Data Point Model) output layer structures and combinations</p>
+<p><strong>Purpose:</strong></p>
+<p>The DPM Workflow imports the latest DPM database and formats it to the application&#39;s metadata format. It enables semantic integration between multiple regulatory frameworks and provides an interactive way to design mappings.</p>
+<p><strong>3-Step Sequential Process:</strong></p>
+<ol>
+<li><strong>Step 1: Prepare DPM Data</strong></li>
+<ul>
+<li>Prepares DPM data for import</li>
+<li>Formats data for metadata structure</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Step 2: Import DPM Data</strong></li>
+<ul>
+<li>Imports formatted DPM data into database</li>
+<li>Creates DPM metadata structures</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Step 3: Create Output Layers</strong></li>
+<ul>
+<li>Generates output layer structures</li>
+<li>Redirects to Output Layer Mapping subworkflow</li>
+<li>Enables interactive mapping design</li>
+</ul>
+</ol>
+
+<p><strong>Key Features:</strong></p>
+<p>The DPM Workflow offers several key features that enhance its flexibility and power. Integration with Main Workflow allows it to run as either a standalone process or integrated with the main workflow. The Complete Workflow Option provides a &quot;Run Complete DPM Workflow&quot; button that executes all steps including Main Workflow Step 1 automatically. Automated Execution gives you the choice to run the full workflow in one go or progress through it step-by-step. Subworkflow Access leads you directly to the Output Layer Mapping Subworkflow after Step 3 completion. Semantic Integration capabilities allow you to integrate between multiple regulatory frameworks seamlessly.</p>
+<p><strong>Access:</strong> Through main workflow dashboard</p>
+<p><strong>Prerequisites:</strong></p>
+<p>Before starting the DPM Workflow, ensure your instance is configured with the appropriate model type (either EIL or ELDM), your repository and mandatory parameters are properly configured, you&#39;ve run the fetch artifacts command, the setup database command has been executed, and optionally, you&#39;ve completed Main Workflow Step 1 if you need reference artifacts loaded.</p>
+<p><strong>Outcome:</strong></p>
+<p>After completion, you&#39;ll have a full import of the latest DPM database in the application&#39;s metadata format, enabling diverse subsequent operations and semantic integration.</p>
+<p><strong>Best For:</strong> Organizations needing custom DPM output structures or specialized mapping designs beyond standard regulatory templates.</p>
+<hr>
+<h2 id="quick-workflow-comparison">Quick Workflow Comparison</h2>
+<table class="table table-bordered">
+<tr><td>Feature</td><td>Main Workflow</td><td>Dataset Transformation</td><td>DPM Workflow</td></tr>
+<tr><td><strong>Purpose</strong></td><td>FINREP/Financial reporting</td><td>Dataset/AnaCredit submissions</td><td>Custom DPM structures</td></tr>
+<tr><td><strong>Data Source</strong></td><td>SQLDev files, GitHub</td><td>ECB CSV metadata</td><td>DPM database</td></tr>
+<tr><td><strong>Steps</strong></td><td>4 tasks</td><td>5 steps (0-4)</td><td>3 steps</td></tr>
+<tr><td><strong>Numbering</strong></td><td>Tasks 1-4</td><td>Steps 0-4</td><td>Steps 1-3</td></tr>
+<tr><td><strong>Configuration</strong></td><td>Required (GitHub, EIL)</td><td>Optional (filters)</td><td>Required (model type)</td></tr>
+<tr><td><strong>Metadata Editing</strong></td><td>Basic</td><td>Advanced (cube/member links)</td><td>None</td></tr>
+<tr><td><strong>Code Editing</strong></td><td>Generated only</td><td>Full editor + deployment</td><td>None</td></tr>
+<tr><td><strong>Execution</strong></td><td>Task 4 (testing)</td><td>Step 4 (table execution)</td><td>Leads to subworkflow</td></tr>
+<tr><td><strong>Automation</strong></td><td>Quick Actions automode</td><td>Step-by-step</td><td>Complete workflow option</td></tr>
+<tr><td><strong>Review Pages</strong></td><td>After each task</td><td>After Steps 1-3</td><td>After each step</td></tr>
+<tr><td><strong>Dashboard Interface</strong></td><td>Task</td><td>Do</td><td>Review</td><td>Step</td><td>Do</td><td>Review</td><td>Step</td><td>Do</td><td>Review</td></tr>
+</table>
+<hr>
+<h2 id="common-features-across-all-workflows">Common Features Across All Workflows</h2>
+<h3 id="dashboard-navigation">Dashboard Navigation</h3>
+<p>All workflows share common navigation patterns that make them intuitive to use. Sequential Execution means that all workflows require steps to be completed in order. Do and Execute Buttons trigger step execution when you&#39;re ready to proceed. Review Buttons provide access to results, statistics, and embedded editors for refinement. Progress Tracking uses visual indicators to show completion status at a glance. Step Dependencies ensure that each step builds properly on the previous step&#39;s outputs, maintaining data integrity throughout the process.</p>
+<h3 id="metadata-management">Metadata Management</h3>
+<p>Metadata Management features are available in both the Main and Dataset Transformation Workflows to help you refine your data relationships. You can perform cube link editing to manage table relationships, cube structure item link editing to define variable joins, and member link editing to create value mappings. The Dataset workflow additionally provides network diagram visualization to help you understand and verify your data structure visually.</p>
+<h3 id="code-management">Code Management</h3>
+<p>Code Management capabilities are available in both the Main and Dataset Transformation Workflows to help you work with generated transformation code. These workflows provide Python code generation from metadata, code review and validation tools, and syntax highlighting with error detection to catch issues early. The Dataset workflow offers additional advanced features including an advanced code editor with a deployment system that manages staging and production versions, as well as manual modification tracking to help you keep track of changes made to generated code.</p>
+<h3 id="review-capabilities">Review Capabilities</h3>
+<p><strong>All workflows include:</strong></p>
+<ul>
+<li>Execution statistics and metrics</li>
+<li>Result verification pages</li>
+<li>Import/processing logs</li>
+<li>Success/failure indicators</li>
+</ul>
+
+<h3 id="execution-options">Execution Options</h3>
+<ul>
+<li><strong>Manual:</strong> Step-by-step execution with review between steps</li>
+<li><strong>Automated:</strong> (Main Workflow) Quick Actions automode; (DPM) Complete workflow option</li>
+<li><strong>Filtered:</strong> (Dataset) Dimension-based filtering for targeted execution</li>
+</ul>
+
+<hr>
+<h2 id="navigation-between-workflows">Navigation Between Workflows</h2>
+<h3 id="accessing-workflows">Accessing Workflows</h3>
+<ol>
+<li>From the <strong>Home page</strong>, click <strong>&quot;Workflows&quot;</strong> or <strong>&quot;Task Workflow Dashboard&quot;</strong></li>
+<li>Select your desired workflow:</li>
+<ul>
+<li><strong>Main Workflow</strong> for FINREP reporting</li>
+<li><strong>Dataset Workflow</strong> for Dataset/AnaCredit submissions</li>
+<li><strong>DPM Workflow</strong> for custom output layers</li>
+</ul>
+</ol>
+
+<h3 id="switching-workflows">Switching Workflows</h3>
+<ul>
+<li>Use the main navigation menu to switch between workflows</li>
+<li>Each workflow maintains its own execution state</li>
+<li>You can work on multiple workflows simultaneously</li>
+<li>Progress is saved independently for each workflow</li>
+</ul>
+
+<h3 id="workflow-integration">Workflow Integration</h3>
+<ul>
+<li><strong>DPM Workflow</strong> integrates with <strong>Main Workflow</strong> Step 1</li>
+<li><strong>DPM Workflow</strong> leads to <strong>Output Layer Mapping Subworkflow</strong></li>
+<li>All workflows can use common configuration settings</li>
+</ul>
+
+<hr>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="step-1-identify-your-requirement">Step 1: Identify Your Requirement</h3>
+<p><strong>Choose Main Workflow if:</strong></p>
+<ul>
+<li>You need standard FINREP regulatory reports</li>
+<li>You&#39;re processing DPM-based financial reporting</li>
+<li>You work with EIL (European Input Layer) data</li>
+<li>You need automated multi-task execution</li>
+</ul>
+
+<p><strong>Choose Dataset Transformation if:</strong></p>
+<ul>
+<li>You submit Dataset or AnaCredit reports to ECB</li>
+<li>You need granular loan-level credit data reporting</li>
+<li>You require advanced code editing and deployment</li>
+<li>You want dimension-based filtering for execution</li>
+</ul>
+
+<p><strong>Choose DPM Workflow if:</strong></p>
+<ul>
+<li>You need custom DPM output layer structures</li>
+<li>You&#39;re designing specialized mapping combinations</li>
+<li>You require semantic integration across frameworks</li>
+<li>You&#39;re extending standard regulatory templates</li>
+</ul>
+
+<h3 id="step-2-verify-prerequisites">Step 2: Verify Prerequisites</h3>
+<p><strong>For Main Workflow:</strong></p>
+<ul>
+<li>GitHub repository access and credentials</li>
+<li>Configuration files prepared</li>
+<li>Database connectivity established</li>
+</ul>
+
+<p><strong>For Dataset Transformation:</strong></p>
+<ul>
+<li>Internet connection (for ECB metadata fetch)</li>
+<li>Database setup completed</li>
+<li>Python environment active</li>
+</ul>
+
+<p><strong>For DPM Workflow:</strong></p>
+<ul>
+<li>Model type configured (EIL/ELDM)</li>
+<li>Repository parameters set</li>
+<li>Artifacts retrieved and database setup</li>
+</ul>
+
+<h3 id="step-3-navigate-to-workflow-dashboard">Step 3: Navigate to Workflow Dashboard</h3>
+<ol>
+<li>Launch FreeBIRD Application</li>
+<li>Click <strong>&quot;Workflows&quot;</strong> or <strong>&quot;Task Workflow Dashboard&quot;</strong> from home page</li>
+<li>Select your workflow from the dashboard</li>
+</ol>
+
+<h3 id="step-4-execute-sequentially">Step 4: Execute Sequentially</h3>
+<ol>
+<li>Start with the first step/task</li>
+<li>Click the <strong>&quot;Do&quot;</strong> or <strong>&quot;Execute&quot;</strong> button</li>
+<li>Wait for completion</li>
+<li>Click <strong>&quot;Review&quot;</strong> to verify results</li>
+<li>Proceed to next step</li>
+<li>Repeat until workflow completion</li>
+</ol>
+
+<h3 id="step-5-review-and-validate">Step 5: Review and Validate</h3>
+<ul>
+<li>Use Review pages after each step</li>
+<li>Check statistics and metrics</li>
+<li>Validate data quality</li>
+<li>Use embedded editors if adjustments needed (Dataset workflow)</li>
+<li>Download results when complete</li>
+</ul>
+
+<hr>
+<h2 id="dashboard-features">Dashboard Features</h2>
+<h3 id="status-indicators">Status Indicators</h3>
+<ul>
+<li><strong>Ready:</strong> System is ready for execution</li>
+<li><strong>Configured:</strong> Settings are saved and valid</li>
+<li><strong>In Progress:</strong> Step is currently executing</li>
+<li><strong>Completed:</strong> Step finished successfully</li>
+<li><strong>Failed:</strong> Step encountered errors</li>
+</ul>
+
+<h3 id="action-buttons">Action Buttons</h3>
+<ul>
+<li><strong>Do/Execute:</strong> Start step processing</li>
+<li><strong>Review:</strong> View results and access tools</li>
+<li><strong>Deploy:</strong> (Dataset) Push code to production</li>
+<li><strong>Reset:</strong> (Main) Clear task history or complete reset</li>
+</ul>
+
+<h3 id="information-displays">Information Displays</h3>
+<ul>
+<li><strong>Session ID:</strong> Unique identifier for current workflow session</li>
+<li><strong>Database Status:</strong> Connection and setup status</li>
+<li><strong>Configuration Status:</strong> Settings validation status</li>
+<li><strong>Execution Time:</strong> Duration for each step</li>
+<li><strong>Row Counts/Statistics:</strong> Quantitative results</li>
+</ul>
+
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="general-workflow-tips">General Workflow Tips</h3>
+<ol>
+<li><strong>Execute in Order:</strong> Always complete steps sequentially</li>
+<li><strong>Review Every Step:</strong> Use Review pages to validate before proceeding</li>
+<li><strong>Save Configuration:</strong> Ensure settings are saved before execution</li>
+<li><strong>Monitor Status:</strong> Check status indicators throughout execution</li>
+<li><strong>Document Changes:</strong> Keep notes on manual edits and customizations</li>
+</ol>
+
+<h3 id="main-workflow-specific">Main Workflow Specific</h3>
+<ul>
+<li>Use Quick Actions automode for efficiency</li>
+<li>Select appropriate target task before running automode</li>
+<li>Verify GitHub credentials are current</li>
+<li>Check configuration shows &quot;Ready&quot; and &quot;Configured&quot;</li>
+</ul>
+
+<h3 id="dataset-transformation-specific">Dataset Transformation Specific</h3>
+<ul>
+<li>Start with filtered executions to test</li>
+<li>Review generated code before deploying</li>
+<li>Deploy incrementally, not all at once</li>
+<li>Use embedded editors to refine auto-generated metadata</li>
+<li>Keep backups of manual code edits</li>
+</ul>
+
+<h3 id="dpm-workflow-specific">DPM Workflow Specific</h3>
+<ul>
+<li>Complete prerequisites before starting</li>
+<li>Run complete workflow for full integration</li>
+<li>Proceed to Output Layer Mapping subworkflow after completion</li>
+</ul>
+
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="cannot-execute-step">Cannot Execute Step</h3>
+<ul>
+<li>Verify previous steps completed successfully</li>
+<li>Check prerequisites are met</li>
+<li>Review error messages in logs</li>
+<li>Ensure database connectivity</li>
+</ul>
+
+<h3 id="review-page-not-loading">Review Page Not Loading</h3>
+<ul>
+<li>Check browser JavaScript console</li>
+<li>Disable ad blockers or browser extensions</li>
+<li>Clear browser cache</li>
+<li>Try different browser</li>
+</ul>
+
+<h3 id="execution-takes-too-long">Execution Takes Too Long</h3>
+<ul>
+<li>Apply filters to reduce data volume (Dataset workflow)</li>
+<li>Check system resources and load</li>
+<li>Execute during off-peak hours</li>
+<li>Review optimization opportunities</li>
+</ul>
+
+<h3 id="configuration-issues">Configuration Issues</h3>
+<ul>
+<li>Verify GitHub credentials (Main workflow)</li>
+<li>Check internet connection (Dataset Step 0)</li>
+<li>Validate configuration file format</li>
+<li>Review setup logs for errors</li>
+</ul>
+
+<hr>
+<h2 id="next-steps">Next Steps</h2>
+<p>Explore the individual workflow guides to dive deeper into each regulatory reporting process. The <a href="user-guide/main-workflow-guide.html">Main Workflow Guide</a> provides detailed instructions for FINREP reporting and the 4-task sequential process. The <a href="user-guide/dataset-transformation-guide.html">Dataset Transformation Guide</a> covers the complete AnaCredit workflow from ECB metadata fetch to code generation. Review the <a href="user-guide/execute-dataset-guide.html">Execute Dataset Guide</a> for comprehensive instructions on Step 4 table execution with filtering options. The <a href="user-guide/dpm-workflow-guide.html">DPM Workflow Guide</a> explains how to create custom DPM output layer structures. Learn about <a href="user-guide/pull-request-creation-guide.html">Pull Request Creation</a> to submit your processed data for collaborative review. Finally, explore the <a href="user-guide/output-layer-mapping-workflow.html">Output Layer Mapping Workflow</a> for the 7-step process of creating custom data transformations.</p>
+<hr>
+<h2 id="need-help">Need Help?</h2>
+<h3 id="documentation-resources">Documentation Resources</h3>
+<ul>
+<li><strong><a href="user-guide/main-workflow-guide.html">Main Workflow Guide</a></strong> - Detailed FINREP workflow instructions</li>
+<li><strong><a href="user-guide/dataset-transformation-guide.html">Dataset Transformation Guide</a></strong> - Steps 0-3 comprehensive guide</li>
+<li><strong><a href="user-guide/execute-dataset-guide.html">Dataset Execution Guide</a></strong> - Step 4 execution instructions</li>
+<li><strong><a href="user-guide/dpm-workflow-guide.html">DPM Workflow Guide</a></strong> - DPM workflow details</li>
+<li><strong><a href="user-guide/output-layer-mapping-workflow.html">Output Layer Mapping Guide</a></strong> - Subworkflow documentation</li>
+<li><strong><a href="user-guide/edit-links-features.html">Edit Links Features</a></strong> - Metadata editor instructions</li>
+<li><strong><a href="user-guide/code-editing-and-publishing.html">Code Editing and Publishing</a></strong> - Code management guide</li>
+</ul>
+
+<h3 id="technical-support">Technical Support</h3>
+<ul>
+<li><strong>Eclipse EFBT Wiki:</strong> https://github.com/eclipse/efbt/wiki</li>
+<li><strong>Getting Started:</strong> https://github.com/eclipse-efbt/efbt/wiki/Getting-Started-with-PyBIRD-AI</li>
+<li><strong>ECB Resources:</strong></li>
+<ul>
+<li>FINREP: https://www.ecb.europa.eu/stats/ecb_statistics/finrep/</li>
+<li>AnaCredit: https://www.ecb.europa.eu/stats/ecb_statistics/anacredit/</li>
+</ul>
+</ul>
+
+<hr>
+<h2 id="quick-tips">Quick Tips</h2>
+<p><strong>First-time users:</strong></p>
+<ul>
+<li>Start with Main Workflow if processing standard reports</li>
+<li>Use Dataset Transformation for ECB credit reporting</li>
+<li>Complete prerequisites before beginning any workflow</li>
+</ul>
+
+<p><strong>Experienced users:</strong></p>
+<ul>
+<li>Use automation features (automode, complete workflow)</li>
+<li>Leverage embedded editors for customization</li>
+<li>Apply filters for efficient testing</li>
+<li>Maintain documentation of customizations</li>
+</ul>
+
+<p><strong>All users:</strong></p>
+<ul>
+<li>Review outputs at every step</li>
+<li>Keep configuration backed up</li>
+<li>Monitor execution times for performance trends</li>
+<li>Document workflow decisions for auditing</li>
+</ul>
+
+<hr>
+<h2 id="summary">Summary</h2>
+<p>PyBIRD AI workflows provide comprehensive, automated solutions for regulatory reporting:</p>
+<ul>
+<li><strong>Main Workflow:</strong> Streamlines FINREP reporting with 4 automated tasks</li>
+<li><strong>Dataset Transformation:</strong> Handles ECB Dataset/AnaCredit submissions with 5 flexible steps</li>
+<li><strong>DPM Workflow:</strong> Creates custom output layers with 3 integrated steps</li>
+</ul>
+
+<p>All workflows share a consistent dashboard interface, making it easy to navigate between different regulatory requirements while maintaining familiar patterns. Choose the workflow that matches your reporting needs, follow the sequential steps, and leverage the built-in review and editing capabilities for successful regulatory compliance.</p>
   		</div>
 	</section>
 

@@ -4,20 +4,15 @@ The Mapping Editor is a sophisticated data transformation tool within Eclipse Fr
 
 ## Purpose
 
-The Mapping Editor addresses the critical challenge of data transformation in regulatory environments by providing:
-- **Semantic Integration Editor**: Map source system data to regulatory reporting requirements
-- **Variable Management**: Control both source and target variable definitions
+The Mapping Editor addresses the critical challenge of data transformation in regulatory environments by providing a Semantic Integration Editor that allows you to map source system data to regulatory reporting requirements, along with Variable Management capabilities that give you control over both source and target variable definitions.
 
 This feature is essential for data engineers, compliance officers, and business analysts who need to ensure accurate data flow from operational systems to regulatory reports while maintaining full transparency and control over transformation processes.
 
 ## Getting Started
 
 ### Prerequisites
-Before using the Mapping Editor, ensure:
-- The import of the relevant data (most likely done in step 1 of the workflow dashboard)
-- Knowledge of target regulatory requirements
-- Access and understanding to both source and target variable definitions
-- Familiarity with the reference terminology used in the BIRD
+
+Before using the Mapping Editor, ensure that you have imported the relevant data (most likely accomplished in step 1 of the workflow dashboard), possess knowledge of target regulatory requirements, have access to and understanding of both source and target variable definitions, and are familiar with the reference terminology used in the BIRD framework.
 
 ### Accessing the Mapping Editor
 Navigate to the FreeBIRD Application and access the Mapping Editor from the main dashboard. The interface provides comprehensive tools for creating and managing data mapping between frameworks.
@@ -105,8 +100,7 @@ As you can imagine, the mapping editor does not create any mapping, it only edit
 The Mapping Editor provides comprehensive capabilities for managing complex data transformations in regulatory environments. By offering both detailed control over individual mappings and powerful batch operations, it enables organizations to maintain accurate, auditable data flows from source systems to regulatory reports while ensuring compliance with evolving requirements.
 
 ### Next Steps
-- Explore the [Cube Links View and Edit](cube-links-view-and-edit.html) feature for understanding data relationships
-- Review the [Member Hierarchy Editor](member-hierarchy-editor.html) for hierarchical data organization
-- Learn about [Workflow Dashboard](workflow-dashboard-guide.html) integration for automated processing
+
+After working with the Mapping Editor, explore the [Main Workflow Guide](user-guide/main-workflow-guide.html) to understand how your mappings integrate into the complete FINREP regulatory reporting process and 4-task sequential workflow.
 
 For complex transformation logic support or advanced mapping strategies, connect with our community via [Eclipse Chat](https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org) or email [efbt-dev@eclipse.org](mailto:efbt-dev@eclipse.org).

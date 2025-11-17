@@ -14,7 +14,6 @@ from datetime import datetime
 
 # Configuration for disabled guides (coming soon pages)
 DISABLED_GUIDES = [
-    'dataset-transformation-guide',   # Add guide slugs here to disable them
     'define-executable-tests'
 ]
 

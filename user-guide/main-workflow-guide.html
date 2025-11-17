@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Main Workflow Guide - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Main Workflow Guide - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Main Workflow Guide" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Main Workflow Guide - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Main Workflow Guide documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Main Workflow Guide - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- Page Allowlist Check -->
+	<script src="../js/allowlist.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Main Workflow Guide</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h1 id="main-workflow-guide">Main Workflow Guide</h1>
+<h2 id="feature-overview">Feature Overview</h2>
+<p>The Eclipse Free BIRD Tools Workflow Dashboard is your central control center for managing and executing regulatory reporting workflows. It provides a streamlined interface for processing BIRD data through different systematic sequential workflows, enabling efficient regulatory compliance and data transformation.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The Workflow Dashboard serves as the primary orchestration point for your regulatory reporting processes by eliminating the complexity of manual data processing through automated sequential processing that executes complex workflows with a single click. The dashboard includes progress tracking capabilities that let you monitor each step of your data transformation journey, while configuration management features centralize all workflow settings in one convenient place. Quick Actions provide one-click automation for common operations, accelerating your workflow execution throughout the process.</p>
+<p>This feature is essential for organizations that need to maintain compliance with European regulatory standards while minimizing manual effort and reducing the risk of processing errors.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before using the Workflow Dashboard, ensure you have the FreeBIRD Application installed and running, either locally or in codespaces. You&#39;ll need valid GitHub repository access with appropriate permissions to retrieve configuration files. Database connectivity must be established for storing and processing your regulatory data. Finally, make sure your configuration files are prepared and available in your repository.</p>
+<h3 id="accessing-the-dashboard">Accessing the Dashboard</h3>
+<p>To access the dashboard, launch the FreeBIRD Application, navigate to the Home page, and click on &quot;Task Workflow Dashboard&quot;.</p>
+<p><img src="../images/screenshots/homepage/homepage_click_on_task_workflow_dashboard.png" alt="Homepage" class="img-responsive guide-image"></p>
+<h3 id="disclaimer">Disclaimer</h3>
+<p>This guide details the workflow for the main workflow runnable from the interface. All alternative workflows will be tackled in the next steps chapter. In case you were looking for a flow not involving (as a default) the Financial Reporting publication of the ECB, please scroll down and choose one of the alternative flows.</p>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="configuration-setup">Configuration Setup</h3>
+<p>Before starting any tasks, you must configure your workflow settings.</p>
+<p><img src="../images/screenshots/configuration/configurationmenu_click_on_save.png" alt="Configuration Menu" class="img-responsive guide-image"></p>
+<p>Start by selecting &quot;EIL (Input Layer)&quot; as your data model type. Enter your GitHub repository URL and specify the branch you want to use, which defaults to &quot;main&quot; if not specified. Set both the configuration files source and technical export source to &quot;GitHub Repository&quot;. After entering all settings, click the save button to store your configuration.</p>
+<h3 id="quick-actions-panel">Quick Actions Panel</h3>
+<p><img src="../images/screenshots/quickaction/quickactionmenu_setup_not_started_click_on_retrieve_artifacts.png" alt="Quick Actions Menu" class="img-responsive guide-image"></p>
+<p>The Quick Actions panel provides several important functions. Use Retrieve Artifacts to download configuration files from your GitHub repository. The Setup Database button initializes your database environment. You can select any task from 1 to 4 as your target endpoint and then use Run Automode to automatically execute from Task 1 up to your selected target. The panel also displays your current database and configuration status, along with a session ID for tracking. If you need to start over, use Reset Tasks 1-4 to clear task history while keeping your configuration, or Reset Everything for a complete reset.</p>
+<h3 id="heading-4-task-sequential-workflow">4-Task Sequential Workflow</h3>
+<p>The workflow consists of four sequential tasks that must be executed in order.</p>
+<p><img src="../images/screenshots/workflow_dashboard/taskdashboard.png" alt="Task Dashboard" class="img-responsive guide-image"></p>
+<h4 id="task-1-smcubes-core-creation">Task 1: SMCubes Core Creation</h4>
+<p>This task creates foundational data structures and cube definitions.</p>
+<p><img src="../images/screenshots/main_workflow/step1_do.png" alt="Task 1 Review" class="img-responsive guide-image"></p>
+<p>To execute Task 1, click the &quot;Do&quot; button to start the execution. The system will then clear the database by running &quot;Delete Database&quot;, create cube structures through &quot;Import Input Model&quot;, generate report templates, import LDM/EIL hierarchies, and process semantic integrations. Alternatively, you can use the Quick Actions panel by selecting &quot;Task 1&quot; as your target and clicking &quot;Run Automode&quot; for automatic execution. After completion, click &quot;Review&quot; to verify that over 50 cubes and 100 templates have been created.</p>
+<p><img src="../images/screenshots/main_workflow/step1_review_part1.png" alt="Task 1 Review" class="img-responsive guide-image"></p>
+<h4 id="task-2-smcubes-transformation-rules-creation">Task 2: SMCubes Transformation Rules Creation</h4>
+<p>This task generates transformation rules and metadata for your data processing.</p>
+<p><img src="../images/screenshots/main_workflow/step2_do.png" alt="Task 2 Do" class="img-responsive guide-image"></p>
+<p>Start Task 2 by clicking the &quot;Do&quot; button. The system will generate filters and create join metadata for your transformations. You can also use Quick Actions by selecting &quot;Task 2&quot; as your target and running automode, which will execute both Task 1 and Task 2 automatically. Review the results to confirm that filter and join metadata creation has completed successfully.</p>
+<p><img src="../images/screenshots/main_workflow/step2_review.png" alt="Task 2 Review" class="img-responsive guide-image"></p>
+<h4 id="task-3-python-transformation-rules-creation">Task 3: Python Transformation Rules Creation</h4>
+<p>This task converts your transformation rules into executable Python code.</p>
+<p><img src="../images/screenshots/main_workflow/step3_do.png" alt="Task 3 Do" class="img-responsive guide-image"></p>
+<p>Click the &quot;Do&quot; button to begin Task 3. The system will generate filter code and join code based on the metadata created in Task 2. For automated execution, select &quot;Task 3&quot; in Quick Actions and run automode to execute Tasks 1 through 3 sequentially. Verify that the executable Python transformation code has been generated successfully.</p>
+<h4 id="task-4-full-execution-with-test-suite">Task 4: Full Execution with Test Suite</h4>
+<p>This final task validates your regulatory templates with comprehensive testing.</p>
+<p><img src="../images/screenshots/main_workflow/step4_do.png" alt="Task 4 Do" class="img-responsive guide-image"></p>
+<p>Start Task 4 by clicking the &quot;Do&quot; button, then run the configuration file tests. Alternatively, select &quot;Task 4: Full Execution&quot; in Quick Actions and run automode to execute the complete workflow from Task 1 through Task 4 automatically. Review the test execution reports to check pass/fail statistics and ensure all validations have completed successfully.</p>
+<p><img src="../images/screenshots/main_workflow/step4_review_part1.png" alt="Task 4 Review - Part 1" class="img-responsive guide-image"></p>
+<p><img src="../images/screenshots/main_workflow/step4_review_part2.png" alt="Task 4 Review - Part 2" class="img-responsive guide-image"></p>
+<p><img src="../images/screenshots/main_workflow/step4_review_part3.png" alt="Task 4 Review - Part 3" class="img-responsive guide-image"></p>
+<h2 id="best-practices">Best Practices</h2>
+<p>Always execute tasks in sequential order from Task 1 through Task 4. Complete each task before proceeding to the next and use the Review function to validate completion. Save your configuration before starting any workflow execution and verify that your GitHub credentials are valid and current. Check that the system status shows &quot;Ready&quot; and &quot;Configured&quot; before beginning execution.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Workflow Dashboard streamlines your regulatory reporting process by providing a unified interface for executing complex data transformations. By following the 4-task sequential workflow, you can efficiently process BIRD data while maintaining compliance with regulatory standards.</p>
+<h3 id="next-steps">Next Steps</h3>
+<p>After completing the Main Workflow, explore these related features to enhance your regulatory reporting capabilities. The <a href="user-guide/mapping-editor.html">Mapping Editor</a> allows you to create and manage complex mappings between source and target data variables for semantic integration. The <a href="user-guide/member-hierarchy-editor.html">Member Hierarchy Editor</a> provides visual tools for building hierarchical relationships between data members. Review the <a href="user-guide/workflow-dashboard-guide.html">Workflow Dashboard Guide</a> to understand all available workflows and choose the right one for your reporting needs. Use <a href="user-guide/edit-links-features.html">Edit Links Features</a> to refine metadata relationships between cubes, variables, and dimension values. Finally, explore <a href="user-guide/code-editing-and-publishing.html">Code Editing and Publishing</a> to review, edit, and deploy the Python execution code generated by your workflow.</p>
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Code Editing And Publishing - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Code Editing And Publishing - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Code Editing And Publishing" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Code Editing And Publishing - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Code Editing And Publishing documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Code Editing And Publishing - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- Page Allowlist Check -->
+	<script src="../js/allowlist.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Code Editing And Publishing</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h1 id="code-editing-and-publishing-guide">Code Editing and Publishing Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>The Code Editing and Publishing features provide a comprehensive system for reviewing, editing, and deploying Python execution code generated by PyBIRD AI workflows. This system is primarily used in the ANCRDT Workflow Step 3 Review, allowing you to refine generated code and manage its deployment from staging to production.</p>
+<p>The system offers several key capabilities that streamline your workflow. You can review generated Python execution code directly in your browser, edit code using browser-based editors powered by Monaco Editor, and validate Python syntax before deployment to catch errors early. The system allows you to deploy code from staging to production with confidence, track deployment status and manual modifications to maintain awareness of changes, manage backups automatically to prevent data loss, and work with multiple files simultaneously for efficient editing sessions.</p>
+<p>You can primarily access these features through the ANCRDT Workflow Step 3 Review at <code>/pybirdai/ancrdt-workflow/step-3/review/</code> or through the Main Workflow Step 3 Review.</p>
+<hr>
+<h2 id="system-architecture">System Architecture</h2>
+<h3 id="code-lifecycle">Code Lifecycle</h3>
+<pre><code>
+Generation (Step 3 Execute)
+    ↓
+Staging Area: results/generated_python_joins/
+    ↓
+[Review &amp; Edit] (Step 3 Review)
+    ↓
+[Deployment]
+    ↓
+Production: pybirdai/process_steps/filter_code/
+    ↓
+[Execution] (Step 4)
+</code></pre>
+<h3 id="directories">Directories</h3>
+<p>The system uses three main directory areas for managing code files. The Staging Area is located at <code>results/generated_python_joins/</code> and serves to hold newly generated or modified code. This area is fully editable and provides a safe space to work on files before they&#39;re deployed to production. However, code in this area is not used during execution, making it ideal for testing and refinement.</p>
+<p>The Production Area is located at <code>pybirdai/process_steps/filter_code/</code> and contains deployed code that is actually used during execution. Files in this area can only be modified through the deployment process, ensuring that production code remains controlled and tracked. All code executed by the system runs from this location.</p>
+<p>The Backup Area is located at <code>pybirdai/process_steps/filter_code/backups/</code> and stores automatic backups created before each deployment. Files are saved with a naming convention of <code>&lt;filename&gt;.backup_&lt;timestamp&gt;</code>, such as <code>ANCRDT_INSTRMNT_C_1_logic.py.backup_20250117_103045</code>, making it easy to identify when each backup was created and restore previous versions if needed.</p>
+<h3 id="file-types">File Types</h3>
+<p><strong>Generated ANCRDT Files:</strong></p>
+<p>The system generates ANCRDT files following a consistent pattern of <code>ANCRDT_&lt;TABLE_NAME&gt;_logic.py</code>. Examples of these files include <code>ANCRDT_INSTRMNT_C_1_logic.py</code>, <code>ANCRDT_FNNCL_C_2_logic.py</code>, and <code>ANCRDT_CNTRPRTY_C_3_logic.py</code>. A typical ANCRDT workflow generates between 20 and 30 files, each corresponding to a specific table in the regulatory framework.</p>
+<p><strong>File Structure:</strong></p>
+<pre><code>
+class ANCRDT_&lt;TABLE_NAME&gt;:
+    &quot;&quot;&quot;Generated join logic for &lt;TABLE_NAME&gt; table&quot;&quot;&quot;
+
+    def __init__(self, context):
+        self.context = context
+        self.cube_id = &quot;&lt;TABLE_NAME&gt;&quot;
+
+    def calc_&lt;table_name_lower&gt;(self, filters=None):
+        &quot;&quot;&quot;Main calculation method with optional filters&quot;&quot;&quot;
+        # Join logic
+        # Filter application
+        # Return DataFrame
+
+    def apply_filters(self, df, filters):
+        &quot;&quot;&quot;Apply dimension filters to DataFrame&quot;&quot;&quot;
+        # Filter logic
+
+    # Additional helper methods...
+</code></pre>
+<hr>
+<h2 id="deployment-status-dashboard">Deployment Status Dashboard</h2>
+<h3 id="access">Access</h3>
+<p><strong>URL:</strong> <code>/pybirdai/ancrdt-workflow/step-3/review/</code></p>
+<p><strong>Location:</strong> Top section of Step 3 Review page</p>
+<h3 id="interface">Interface</h3>
+<p><strong>Statistics Summary:</strong></p>
+<pre><code>
+Deployment Status:
+✓ Total files generated: 28
+✓ Files synced to production: 18 (64%)
+⚠ Files not deployed: 10 (36%)
+ℹ Files manually edited: 2 (7%)
+</code></pre>
+<p><strong>Action Buttons:</strong></p>
+<ul>
+<li><strong>Deploy All Now</strong> - Deploy all unsynced files in batch</li>
+<li><strong>Refresh Status</strong> - Reload deployment statistics</li>
+</ul>
+
+<p><strong>Files List Table:</strong></p>
+<table class="table table-bordered">
+<tr><td>File Name</td><td>Size</td><td>Sync Status</td><td>Edit Status</td><td>Actions</td></tr>
+<tr><td>ANCRDT<em>INSTRMNT</em>C<em>1</em>logic.py</td><td>45 KB</td><td>✓ Synced</td><td>Generated</td><td>Edit \</td><td>View Diff</td></tr>
+<tr><td>ANCRDT<em>FNNCL</em>C<em>2</em>logic.py</td><td>125 KB</td><td>Not Synced</td><td>Generated</td><td>Edit \</td><td>Deploy</td></tr>
+<tr><td>ANCRDT<em>LARGE</em>TABLE_logic.py</td><td>320 KB</td><td>Not Synced</td><td>Generated</td><td>View \</td><td>Deploy</td></tr>
+<tr><td>ANCRDT<em>CNTRPRTY</em>C<em>3</em>logic.py</td><td>62 KB</td><td>✓ Synced</td><td>Edited</td><td>Edit \</td><td>View Diff</td></tr>
+</table>
+<p><strong>Column Details:</strong></p>
+<p>The File Name column displays clickable links that allow you to view or edit each file directly. By default, files are sorted alphabetically to make them easy to locate.</p>
+<p>The Size column shows the file size with color coding to help you quickly identify which files can be edited in the browser. Green indicates files smaller than 100 KB that can be edited easily in the browser. Yellow marks files between 100-300 KB that can still be edited in the browser but may experience slower performance. Red identifies files larger than 300 KB that are too large for the browser editor and can only be viewed.</p>
+<p>The Sync Status column indicates the relationship between staging and production versions of each file. A green &quot;✓ Synced&quot; status means the file has been deployed to production and the staging and production versions match exactly. A yellow &quot;Not Synced&quot; status indicates the file only exists in staging and hasn&#39;t yet been deployed. An orange &quot;Modified&quot; status shows that a production file exists but differs from the staging version, requiring review before deployment.</p>
+<p>The Edit Status column tracks whether files have been manually modified after generation. The default &quot;Generated&quot; status means the file remains as it was auto-generated with no manual edits. A blue &quot;Edited&quot; status indicates the production file has been manually modified after deployment. A gray &quot;Unmodified&quot; status shows the file has not been edited.</p>
+<p>The Actions column provides several buttons for working with each file. The &quot;Edit&quot; button appears for files smaller than 300 KB and opens the individual code editor. The &quot;View&quot; button appears for files 300 KB or larger and opens a read-only viewer. The &quot;Deploy&quot; button allows you to deploy that specific file to production. The &quot;View Diff&quot; button appears when statuses differ between staging and production, allowing you to see the differences between the two versions.</p>
+<h3 id="usage">Usage</h3>
+<h4 id="view-deployment-status">View Deployment Status</h4>
+<ol>
+<li>Navigate to ANCRDT Step 3 Review page</li>
+<li>Deployment Status Dashboard loads automatically</li>
+<li>Review statistics summary</li>
+<li>Scroll through files list</li>
+</ol>
+
+<h4 id="deploy-all-unsynced-files">Deploy All Unsynced Files</h4>
+<ol>
+<li>Review statistics - note how many files are unsynced</li>
+<li>Click <strong>&quot;Deploy All Now&quot;</strong> button</li>
+<li>Confirmation dialog appears:</li>
+<pre><code>
+   Deploy all unsynced files to production?
+   This will deploy 10 files.
+   Backups will be created automatically.
+</code></pre>
+<li>Click <strong>&quot;Confirm&quot;</strong></li>
+<li>Progress indicator shows deployment</li>
+<li>Wait for completion (typically 5-30 seconds)</li>
+<li>Success message displays:</li>
+<pre><code>
+   Deployment Complete:
+   ✓ Successfully deployed: 10 files
+   ✗ Failed: 0 files
+</code></pre>
+<li>Statistics update automatically</li>
+<li>Review updated file statuses</li>
+</ol>
+
+<h4 id="deploy-individual-file">Deploy Individual File</h4>
+<ol>
+<li>Locate file to deploy in Files List</li>
+<li>Check that <strong>Sync Status</strong> shows &quot;Not Synced&quot;</li>
+<li>Click <strong>&quot;Deploy&quot;</strong> button in Actions column</li>
+<li>Confirmation dialog:</li>
+<pre><code>
+   Deploy ANCRDT_FNNCL_C_2_logic.py to production?
+   A backup will be created if the file already exists.
+</code></pre>
+<li>Click <strong>&quot;Confirm&quot;</strong></li>
+<li>AJAX request deploys file</li>
+<li>Success message: &quot;File deployed successfully&quot;</li>
+<li>File status updates to &quot;✓ Synced&quot;</li>
+</ol>
+
+<h4 id="view-file-differences">View File Differences</h4>
+<ol>
+<li>Locate file with differing statuses in Files List</li>
+<li>Click <strong>&quot;View Diff&quot;</strong> button</li>
+<li>Opens diff viewer page showing:</li>
+<ul>
+<li><strong>Left panel:</strong> Staging version</li>
+<li><strong>Right panel:</strong> Production version</li>
+<li>Side-by-side comparison with highlighted differences</li>
+</ul>
+</ol>
+
+<p><strong>Diff viewer features:</strong></p>
+<ul>
+<li>Line-by-line comparison</li>
+<li>Added lines highlighted in green</li>
+<li>Deleted lines highlighted in red</li>
+<li>Modified lines highlighted in yellow</li>
+<li>Line numbers for easy reference</li>
+<li>Collapse unchanged sections</li>
+</ul>
+
+<h4 id="refresh-status">Refresh Status</h4>
+<ol>
+<li>Click <strong>&quot;Refresh Status&quot;</strong> button</li>
+<li>System re-checks all file statuses</li>
+<li>Statistics update</li>
+<li>Useful after external changes (manual file edits, deployments from other sessions)</li>
+</ol>
+
+<h3 id="api-endpoints">API Endpoints</h3>
+<p><strong>Get deployment status:</strong></p>
+<pre><code>
+GET /pybirdai/code-sync/status/
+Response: {
+  &quot;statistics&quot;: {
+    &quot;total_files&quot;: 28,
+    &quot;synced&quot;: 18,
+    &quot;not_synced&quot;: 10,
+    &quot;edited&quot;: 2
+  },
+  &quot;files&quot;: [
+    {
+      &quot;file_name&quot;: &quot;ANCRDT_INSTRMNT_C_1_logic.py&quot;,
+      &quot;size&quot;: 45632,
+      &quot;is_synced&quot;: true,
+      &quot;is_edited&quot;: false,
+      &quot;staging_exists&quot;: true,
+      &quot;production_exists&quot;: true,
+      &quot;staging_modified&quot;: &quot;2025-01-17T10:30:00&quot;,
+      &quot;production_modified&quot;: &quot;2025-01-17T10:30:00&quot;
+    },
+    ...
+  ]
+}
+</code></pre>
+<p><strong>Deploy single file:</strong></p>
+<pre><code>
+POST /pybirdai/code-sync/deploy/
+Body: {
+  &quot;file_name&quot;: &quot;ANCRDT_FNNCL_C_2_logic.py&quot;,
+  &quot;create_backup&quot;: true
+}
+Response: {
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;File deployed successfully&quot;,
+  &quot;backup_created&quot;: &quot;ANCRDT_FNNCL_C_2_logic.py.backup_20250117_103045&quot;
+}
+</code></pre>
+<p><strong>Deploy all files:</strong></p>
+<pre><code>
+POST /pybirdai/code-sync/deploy-all/
+Response: {
+  &quot;success&quot;: true,
+  &quot;deployed&quot;: 10,
+  &quot;failed&quot;: 0,
+  &quot;details&quot;: [...]
+}
+</code></pre>
+<p><strong>View diff:</strong></p>
+<pre><code>
+GET /pybirdai/code-sync/diff/&lt;file_name&gt;/
+Response: Unified diff format text
+</code></pre>
+<hr>
+<h2 id="individual-code-editor">Individual Code Editor</h2>
+<h3 id="purpose">Purpose</h3>
+<p>Edit single Python files &lt; 300 KB with full IDE-like experience.</p>
+<h3 id="access-1">Access</h3>
+<p><strong>From Dashboard:</strong></p>
+<ul>
+<li>Click <strong>&quot;Edit&quot;</strong> button next to file in Files List</li>
+</ul>
+
+<p><strong>Direct URL:</strong></p>
+<ul>
+<li><code>/pybirdai/execution-code-editing/edit/joins/&lt;file_name&gt;/</code></li>
+<li>Example: <code>/pybirdai/execution-code-editing/edit/joins/ANCRDT_INSTRMNT_C_1_logic.py/</code></li>
+</ul>
+
+<p><strong>View:</strong> <code>execution_code_editor_views.edit_execution_code()</code></p>
+<p><strong>Template:</strong> <code>execution_code_editing_workflow/code_editor.html</code></p>
+<h3 id="interface-1">Interface</h3>
+<p><strong>Layout:</strong> Two-panel layout with action bar</p>
+<p>The Left Panel provides a Code Structure viewer using Abstract Syntax Tree (AST) analysis to give you a tree view of your code&#39;s organization. This panel displays classes, methods and functions, and docstrings in a hierarchical format. You can click on any function name to jump directly to that code section, collapse or expand sections as needed, and navigate large files easily without scrolling through the entire document.</p>
+<p>The Right Panel features the full Microsoft Monaco Editor, which uses the same engine as VS Code. This powerful editor provides Python syntax highlighting, auto-indentation, error underlining for basic Python syntax issues, line numbers for easy reference, a minimap for large files, find and replace functionality, and multi-cursor editing capabilities for efficient code manipulation.</p>
+<p>The Bottom Action Bar contains several buttons for managing your code. The Validate button allows you to check Python syntax before saving. The Save button saves your changes to the staging area without deploying. The Save &amp; Deploy button saves your changes and immediately deploys them to production in a single action. The Cancel button lets you discard your changes and return to the previous screen.</p>
+<h3 id="usage-1">Usage</h3>
+<h4 id="open-file-for-editing">Open File for Editing</h4>
+<ol>
+<li>From Step 3 Review Dashboard, click <strong>&quot;Edit&quot;</strong> next to desired file</li>
+<li>Individual Code Editor page loads</li>
+<li>Left panel shows code structure</li>
+<li>Right panel shows code content in Monaco Editor</li>
+</ol>
+
+<h4 id="navigate-code-structure">Navigate Code Structure</h4>
+<p><strong>Using AST viewer (left panel):</strong></p>
+<ol>
+<li>Expand class node (e.g., <code>class ANCRDT_INSTRMNT_C_1</code>)</li>
+<li>View list of methods:</li>
+<ul>
+<li><code>__init__(self, context)</code></li>
+<li><code>calc_instrmnt_c_1(self, filters=None)</code></li>
+<li><code>apply_filters(self, df, filters)</code></li>
+<li>...</li>
+</ul>
+<li>Click method name (e.g., <code>calc_instrmnt_c_1</code>)</li>
+<li>Right panel scrolls to that method</li>
+<li>Cursor positioned at method definition</li>
+</ol>
+
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Quickly find specific functions in large files</li>
+<li>Understand code organization at a glance</li>
+<li>Navigate without scrolling through entire file</li>
+</ul>
+
+<h4 id="edit-code">Edit Code</h4>
+<p><strong>In Monaco Editor (right panel):</strong></p>
+<ol>
+<li>Click to position cursor</li>
+<li>Type to edit</li>
+<li>Use standard editing features:</li>
+<ul>
+<li><strong>Copy/Paste:</strong> Ctrl+C / Ctrl+V (Cmd on Mac)</li>
+<li><strong>Undo/Redo:</strong> Ctrl+Z / Ctrl+Y</li>
+<li><strong>Find:</strong> Ctrl+F</li>
+<li><strong>Replace:</strong> Ctrl+H</li>
+<li><strong>Comment line:</strong> Ctrl+/</li>
+<li><strong>Move line:</strong> Alt+↑/↓</li>
+<li><strong>Duplicate line:</strong> Shift+Alt+↓</li>
+<li><strong>Multi-cursor:</strong> Alt+Click</li>
+<li><strong>Select all occurrences:</strong> Ctrl+Shift+L</li>
+</ul>
+</ol>
+
+<p><strong>Example edits:</strong></p>
+<p><strong>Fix join condition:</strong></p>
+<pre><code>
+# Before
+df_result = df_primary.merge(df_foreign, on=&#39;INSTRMNT_ID&#39;, how=&#39;inner&#39;)
+
+# After (add additional join key)
+df_result = df_primary.merge(df_foreign, on=[&#39;INSTRMNT_ID&#39;, &#39;RPRTNG_AGNT&#39;], how=&#39;inner&#39;)
+</code></pre>
+<p><strong>Add error handling:</strong></p>
+<pre><code>
+# Before
+def calc_instrmnt_c_1(self, filters=None):
+    df = self.load_data()
+    return df
+
+# After (add try/except)
+def calc_instrmnt_c_1(self, filters=None):
+    try:
+        df = self.load_data()
+        return df
+    except Exception as e:
+        logger.error(f&quot;Error in calc_instrmnt_c_1: {e}&quot;)
+        raise
+</code></pre>
+<p><strong>Optimize performance:</strong></p>
+<pre><code>
+# Before (inefficient)
+for index, row in df.iterrows():
+    df.at[index, &#39;result&#39;] = row[&#39;value&#39;] * 2
+
+# After (vectorized)
+df[&#39;result&#39;] = df[&#39;value&#39;] * 2
+</code></pre>
+<h4 id="validate-syntax">Validate Syntax</h4>
+<ol>
+<li>After making edits, click <strong>&quot;Validate&quot;</strong> button</li>
+<li>System runs Python syntax check:</li>
+<pre><code>
+   try:
+       compile(code, &#39;&lt;string&gt;&#39;, &#39;exec&#39;)
+   except SyntaxError as e:
+       return error
+</code></pre>
+<li>Results display:</li>
+<ul>
+<li><strong>✓ Success:</strong> &quot;Syntax is valid&quot;</li>
+<li><strong>✗ Error:</strong> Shows error message and line number</li>
+</ul>
+</ol>
+
+<p><strong>Example validation error:</strong></p>
+<pre><code>
+Syntax Error at line 45:
+    df_result = df_primary.merge(df_foreign on=&#39;INSTRMNT_ID&#39;)
+                                            ^
+SyntaxError: invalid syntax
+</code></pre>
+<ol>
+<li>If error, fix and validate again</li>
+<li>Continue until syntax is valid</li>
+</ol>
+
+<h4 id="save-changes">Save Changes</h4>
+<p><strong>Save to Staging:</strong></p>
+<ol>
+<li>Click <strong>&quot;Save&quot;</strong> button</li>
+<li>AJAX request saves file to <code>results/generated_python_joins/</code></li>
+<li>Success message: &quot;File saved successfully&quot;</li>
+<li>File remains in staging (not deployed)</li>
+<li>Can continue editing</li>
+</ol>
+
+<p><strong>Save &amp; Deploy:</strong></p>
+<ol>
+<li>Click <strong>&quot;Save &amp; Deploy&quot;</strong> button</li>
+<li>Confirmation dialog:</li>
+<pre><code>
+   Save changes and deploy to production?
+   This will:
+   - Save to staging area
+   - Create backup of production file
+   - Deploy to production
+   Continue?
+</code></pre>
+<li>Click <strong>&quot;Confirm&quot;</strong></li>
+<li>System:</li>
+<ul>
+<li>Saves to staging</li>
+<li>Validates syntax (blocks if invalid)</li>
+<li>Creates backup of production file</li>
+<li>Deploys to production</li>
+<li>Updates deployment status</li>
+</ul>
+<li>Success message: &quot;File saved and deployed successfully&quot;</li>
+<li>Returns to Step 3 Review Dashboard</li>
+</ol>
+
+<h4 id="cancel-editing">Cancel Editing</h4>
+<ol>
+<li>Click <strong>&quot;Cancel&quot;</strong> button</li>
+<li>Confirmation if unsaved changes:</li>
+<pre><code>
+   You have unsaved changes. Discard them?
+</code></pre>
+<li>Click <strong>&quot;Discard&quot;</strong></li>
+<li>Returns to Step 3 Review Dashboard</li>
+</ol>
+
+<h3 id="api-endpoints-1">API Endpoints</h3>
+<p><strong>Load file:</strong></p>
+<pre><code>
+GET /pybirdai/execution-code-editing/api/load/joins/&lt;file_name&gt;/
+Response: {
+  &quot;file_name&quot;: &quot;ANCRDT_INSTRMNT_C_1_logic.py&quot;,
+  &quot;content&quot;: &quot;class ANCRDT_INSTRMNT_C_1:...&quot;,
+  &quot;size&quot;: 45632
+}
+</code></pre>
+<p><strong>Get AST structure:</strong></p>
+<pre><code>
+GET /pybirdai/execution-code-editing/api/structure/joins/&lt;file_name&gt;/
+Response: {
+  &quot;classes&quot;: [
+    {
+      &quot;name&quot;: &quot;ANCRDT_INSTRMNT_C_1&quot;,
+      &quot;line&quot;: 1,
+      &quot;methods&quot;: [
+        {&quot;name&quot;: &quot;__init__&quot;, &quot;line&quot;: 5},
+        {&quot;name&quot;: &quot;calc_instrmnt_c_1&quot;, &quot;line&quot;: 12},
+        ...
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><strong>Validate syntax:</strong></p>
+<pre><code>
+POST /pybirdai/execution-code-editing/api/validate/
+Body: {&quot;code&quot;: &quot;Python code...&quot;}
+Response: {
+  &quot;valid&quot;: true,
+  &quot;error&quot;: null
+} or {
+  &quot;valid&quot;: false,
+  &quot;error&quot;: &quot;SyntaxError at line 45: ...&quot;,
+  &quot;line&quot;: 45
+}
+</code></pre>
+<p><strong>Save file:</strong></p>
+<pre><code>
+POST /pybirdai/execution-code-editing/save/
+Body: {
+  &quot;file_name&quot;: &quot;ANCRDT_INSTRMNT_C_1_logic.py&quot;,
+  &quot;content&quot;: &quot;Updated Python code...&quot;,
+  &quot;file_type&quot;: &quot;joins&quot;
+}
+Response: {
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;File saved successfully&quot;
+}
+</code></pre>
+<p><strong>Save and deploy:</strong></p>
+<pre><code>
+POST /pybirdai/execution-code-editing/save-and-deploy/
+Body: {
+  &quot;file_name&quot;: &quot;ANCRDT_INSTRMNT_C_1_logic.py&quot;,
+  &quot;content&quot;: &quot;Updated Python code...&quot;,
+  &quot;file_type&quot;: &quot;joins&quot;
+}
+Response: {
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;File saved and deployed successfully&quot;,
+  &quot;backup_created&quot;: &quot;ANCRDT_INSTRMNT_C_1_logic.py.backup_20250117_110000&quot;
+}
+</code></pre>
+<h3 id="best-practices">Best Practices</h3>
+<p><strong>Before Editing:</strong></p>
+<ul>
+<li>Read entire file to understand structure</li>
+<li>Identify specific changes needed</li>
+<li>Consider impact on execution</li>
+</ul>
+
+<p><strong>During Editing:</strong></p>
+<ul>
+<li>Make small, focused changes</li>
+<li>Test changes incrementally (save, don&#39;t deploy yet)</li>
+<li>Add comments for complex logic</li>
+<li>Preserve auto-generated structure when possible</li>
+</ul>
+
+<p><strong>Before Deploying:</strong></p>
+<ul>
+<li>Validate syntax</li>
+<li>Review all changes</li>
+<li>Consider testing in Step 4 with filters first</li>
+<li>Document manual changes for future reference</li>
+</ul>
+
+<p><strong>File Size Limits:</strong></p>
+<ul>
+<li>&lt; 100 KB: Edit freely</li>
+<li>100-300 KB: Edit with caution (may be slow)</li>
+<li>&gt; 300 KB: Do not edit in browser (use IDE, upload)</li>
+</ul>
+
+<hr>
+<h2 id="unified-filter-code-editor">Unified Filter Code Editor</h2>
+<h3 id="purpose-1">Purpose</h3>
+<p>Edit multiple files seamlessly in a single interface with file tree navigation.</p>
+<h3 id="access-2">Access</h3>
+<p><strong>From Step 3 Review:</strong></p>
+<ul>
+<li>Scroll to &quot;Unified Filter Code Editor&quot; section</li>
+<li>Editor loads in iframe</li>
+</ul>
+
+<p><strong>Direct URL:</strong></p>
+<ul>
+<li><code>/pybirdai/filter-code-editor/</code></li>
+<li>With file filter: <code>/pybirdai/filter-code-editor/?f=&lt;hex_encoded_file_list&gt;</code></li>
+<li>With default file: <code>/pybirdai/filter-code-editor/?default_file=smallest</code></li>
+</ul>
+
+<p><strong>View:</strong> <code>execution_code_editor_views.unified_filter_code_editor()</code></p>
+<p><strong>Template:</strong> <code>execution_code_editing_workflow/unified_filter_code_editor.html</code></p>
+<h3 id="interface-2">Interface</h3>
+<p><strong>Layout:</strong> Three-panel layout</p>
+<p><strong>Left Sidebar: File Tree</strong></p>
+<ul>
+<li>Shows filtered list of ANCRDT files</li>
+<li>File names with size indicators</li>
+<li>Click file to open in editor</li>
+<li>Current file highlighted</li>
+<li>Search/filter files (if available)</li>
+</ul>
+
+<p><strong>Center Panel: Monaco Editor</strong></p>
+<ul>
+<li>Full Monaco Editor</li>
+<li>Python syntax highlighting</li>
+<li>Auto-save functionality (saves to staging after 2 seconds of inactivity)</li>
+<li>Change indicator (asterisk * when unsaved)</li>
+<li>All Monaco features available</li>
+</ul>
+
+<p><strong>Bottom Status Bar:</strong></p>
+<ul>
+<li>Current file name</li>
+<li>Cursor position (line:column)</li>
+<li>File encoding (UTF-8)</li>
+<li>Save status: &quot;Saved&quot; or &quot;Saving...&quot; or &quot;Unsaved changes *&quot;</li>
+</ul>
+
+<h3 id="usage-2">Usage</h3>
+<h4 id="open-unified-editor">Open Unified Editor</h4>
+<ol>
+<li>Navigate to ANCRDT Step 3 Review</li>
+<li>Scroll to &quot;Unified Filter Code Editor&quot; section</li>
+<li>Click <strong>&quot;Open Editor&quot;</strong> link (or editor loads automatically in iframe)</li>
+<li>Editor interface loads</li>
+<li>Left sidebar shows all ANCRDT files</li>
+<li>Smallest file opens by default in center panel</li>
+</ol>
+
+<h4 id="navigate-between-files">Navigate Between Files</h4>
+<ol>
+<li><strong>Click file in left sidebar:</strong></li>
+<ul>
+<li>File content loads in center panel</li>
+<li>Previous file auto-saved if modified</li>
+<li>New file syntax highlighting applies</li>
+</ul>
+</ol>
+
+<ol>
+<li><strong>Use keyboard shortcuts (if available):</strong></li>
+<ul>
+<li>Ctrl+P: File picker</li>
+<li>Ctrl+Tab: Next file</li>
+<li>Ctrl+Shift+Tab: Previous file</li>
+</ul>
+</ol>
+
+<h4 id="edit-multiple-files">Edit Multiple Files</h4>
+<ol>
+<li>Open first file from sidebar (e.g., <code>ANCRDT_INSTRMNT_C_1_logic.py</code>)</li>
+<li>Make edits</li>
+<li>Wait 2 seconds (auto-save triggers)</li>
+<li>Status bar shows &quot;Saved&quot;</li>
+<li>Click second file in sidebar (e.g., <code>ANCRDT_FNNCL_C_2_logic.py</code>)</li>
+<li>First file automatically saved</li>
+<li>Second file loads</li>
+<li>Make edits</li>
+<li>Repeat for additional files</li>
+</ol>
+
+<p><strong>Auto-save behavior:</strong></p>
+<ul>
+<li>Triggers 2 seconds after last keystroke</li>
+<li>Saves to staging area only (not deployed)</li>
+<li>Status bar updates to &quot;Saving...&quot; then &quot;Saved&quot;</li>
+<li>Asterisk (*) removed from file name</li>
+</ul>
+
+<p><strong>Manual save:</strong></p>
+<ul>
+<li>Press Ctrl+S / Cmd+S to force immediate save</li>
+<li>Useful before switching files or closing editor</li>
+</ul>
+
+<h4 id="search-across-files-if-available">Search Across Files (if available)</h4>
+<ol>
+<li>Press Ctrl+Shift+F</li>
+<li>Enter search term</li>
+<li>Results show matches across all files</li>
+<li>Click result to open file at that location</li>
+</ol>
+
+<h3 id="features">Features</h3>
+<p><strong>File Filtering:</strong></p>
+<ul>
+<li>Only shows ANCRDT files (<code>ANCRDT_*_logic.py</code>)</li>
+<li>Filters out non-ANCRDT generated code</li>
+<li>Keeps list manageable</li>
+</ul>
+
+<p><strong>Size Indicators:</strong></p>
+<ul>
+<li>Small icon/badge next to file name</li>
+<li>Green: &lt; 100 KB</li>
+<li>Yellow: 100-300 KB</li>
+<li>Red: &gt; 300 KB (may be slow to edit)</li>
+</ul>
+
+<p><strong>Smart Default File:</strong></p>
+<ul>
+<li><code>default_file=smallest</code>: Opens smallest file first</li>
+<li>Faster initial load</li>
+<li>Less likely to have performance issues</li>
+</ul>
+
+<p><strong>Session Persistence:</strong></p>
+<ul>
+<li>Remembers last opened file (localStorage)</li>
+<li>Returns to same file on reload</li>
+<li>Preserves scroll position</li>
+</ul>
+
+<h3 id="deployment-from-unified-editor">Deployment from Unified Editor</h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li>Edit files in Unified Editor</li>
+<li>All changes auto-saved to staging</li>
+<li>Close/exit Unified Editor</li>
+<li>Return to Step 3 Review Dashboard</li>
+<li>Use &quot;Deploy All&quot; or individual &quot;Deploy&quot; buttons</li>
+<li>Files deployed from staging to production</li>
+</ol>
+
+<p><strong>No direct deployment from Unified Editor:</strong></p>
+<ul>
+<li>Must use Dashboard to deploy</li>
+<li>Separation between editing and deployment</li>
+<li>Encourages review before deployment</li>
+</ul>
+
+<h3 id="api-endpoints-2">API Endpoints</h3>
+<p><strong>Load file:</strong></p>
+<pre><code>
+GET /pybirdai/filter-code-editor/api/load/
+Query params: ?file_path=&lt;relative_path&gt;
+Response: {
+  &quot;file_name&quot;: &quot;ANCRDT_INSTRMNT_C_1_logic.py&quot;,
+  &quot;content&quot;: &quot;Python code...&quot;,
+  &quot;size&quot;: 45632
+}
+</code></pre>
+<p><strong>Save file:</strong></p>
+<pre><code>
+POST /pybirdai/filter-code-editor/api/save/
+Body: {
+  &quot;file_path&quot;: &quot;ANCRDT_INSTRMNT_C_1_logic.py&quot;,
+  &quot;content&quot;: &quot;Updated Python code...&quot;
+}
+Response: {
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;File saved successfully&quot;,
+  &quot;timestamp&quot;: &quot;2025-01-17T11:00:00&quot;
+}
+</code></pre>
+<h3 id="best-practices-1">Best Practices</h3>
+<p><strong>Workflow:</strong></p>
+<ul>
+<li>Start with smallest files</li>
+<li>Edit related files together (e.g., all dimension filters)</li>
+<li>Let auto-save work (don&#39;t manually save constantly)</li>
+<li>Review changes in Dashboard before deploying</li>
+</ul>
+
+<p><strong>Performance:</strong></p>
+<ul>
+<li>Avoid opening very large files (&gt; 300 KB)</li>
+<li>Close editor when done to free browser resources</li>
+<li>Use file filtering to reduce sidebar list</li>
+</ul>
+
+<p><strong>Organization:</strong></p>
+<ul>
+<li>Group edits by purpose (e.g., all join condition fixes)</li>
+<li>Document changes in code comments</li>
+<li>Keep track of which files modified</li>
+</ul>
+
+<hr>
+<h2 id="ancrdt-output-tables-editor">ANCRDT Output Tables Editor</h2>
+<h3 id="purpose-2">Purpose</h3>
+<p>Edit the master <code>ancrdt_output_tables.py</code> file that defines output table structures and union logic.</p>
+<h3 id="access-3">Access</h3>
+<p><strong>URL:</strong> <code>/pybirdai/edit-ancrdt-output-tables/</code></p>
+<p><strong>Embedded:</strong> May be in Step 3 Review as additional tab</p>
+<p><strong>Template:</strong> <code>execution_code_editing_workflow/edit_ancrdt_output_tables_embed.html</code></p>
+<h3 id="file-structure">File Structure</h3>
+<p><strong>File:</strong> <code>pybirdai/process_steps/ancrdt_output_tables.py</code></p>
+<p><strong>Contents:</strong></p>
+<pre><code>
+class AnaCreditOutputTables:
+    &quot;&quot;&quot;Master class for ANCRDT output table definitions&quot;&quot;&quot;
+
+    @staticmethod
+    def get_all_tables():
+        &quot;&quot;&quot;Returns list of all ANCRDT output table names&quot;&quot;&quot;
+        return [
+            &#39;INSTRMNT_C_1&#39;,
+            &#39;FNNCL_C_2&#39;,
+            &#39;CNTRPRTY_C_3&#39;,
+            ...
+        ]
+
+    @staticmethod
+    def get_table_structure(table_name):
+        &quot;&quot;&quot;Returns column definitions for table&quot;&quot;&quot;
+        structures = {
+            &#39;INSTRMNT_C_1&#39;: [
+                {&#39;name&#39;: &#39;INSTRMNT_ID&#39;, &#39;type&#39;: &#39;VARCHAR(50)&#39;},
+                {&#39;name&#39;: &#39;RPRTNG_AGNT&#39;, &#39;type&#39;: &#39;VARCHAR(20)&#39;},
+                ...
+            ],
+            ...
+        }
+        return structures.get(table_name, [])
+
+    @staticmethod
+    def calc_union_tables():
+        &quot;&quot;&quot;Creates union tables from individual outputs&quot;&quot;&quot;
+        # Union logic
+        pass
+</code></pre>
+<h3 id="usage-3">Usage</h3>
+<ol>
+<li>Navigate to ANCRDT Output Tables Editor</li>
+<li>File content loads in Monaco Editor</li>
+<li>Edit table structures or logic:</li>
+<ul>
+<li>Add new tables to <code>get_all_tables()</code></li>
+<li>Modify column definitions in <code>get_table_structure()</code></li>
+<li>Update union logic in <code>calc_union_tables()</code></li>
+</ul>
+<li>Validate syntax</li>
+<li>Click <strong>&quot;Save&quot;</strong> to save changes</li>
+<li>Changes take effect on next execution</li>
+</ol>
+
+<h3 id="use-cases">Use Cases</h3>
+<p><strong>Add new ANCRDT table:</strong></p>
+<ol>
+<li>Add table name to <code>get_all_tables()</code> list</li>
+<li>Define structure in <code>get_table_structure()</code> dict</li>
+<li>Update union logic if needed</li>
+</ol>
+
+<p><strong>Modify output columns:</strong></p>
+<ol>
+<li>Find table in <code>get_table_structure()</code></li>
+<li>Add/remove/modify column definitions</li>
+<li>Ensure consistency with generated logic files</li>
+</ol>
+
+<p><strong>Update union logic:</strong></p>
+<ol>
+<li>Modify <code>calc_union_tables()</code> method</li>
+<li>Adjust how individual table outputs combine</li>
+<li>Test with sample data</li>
+</ol>
+
+<hr>
+<h2 id="advanced-topics">Advanced Topics</h2>
+<h3 id="manual-edit-detection">Manual Edit Detection</h3>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>When file deployed, system stores hash of content</li>
+<li>On status check, compares current production file hash with stored hash</li>
+<li>If different, marks as &quot;Edited&quot;</li>
+</ul>
+
+<p><strong>Implications:</strong></p>
+<ul>
+<li>Edited files show in Dashboard with blue &quot;Edited&quot; status</li>
+<li>Warns before re-deploying (overwrites manual edits)</li>
+<li>Can view diff to see what was manually changed</li>
+</ul>
+
+<p><strong>Handling manually edited files:</strong></p>
+<ol>
+<li>View diff to see changes</li>
+<li>Decide:</li>
+<ul>
+<li><strong>Keep manual edits:</strong> Don&#39;t re-deploy from staging</li>
+<li><strong>Overwrite manual edits:</strong> Deploy from staging</li>
+<li><strong>Merge:</strong> Edit in staging to include manual changes, then deploy</li>
+</ul>
+</ol>
+
+<h3 id="backup-management">Backup Management</h3>
+<p><strong>Automatic backups:</strong></p>
+<ul>
+<li>Created before every deployment</li>
+<li>Timestamped filename</li>
+<li>Stored in <code>pybirdai/process_steps/filter_code/backups/</code></li>
+</ul>
+
+<p><strong>Manual restore:</strong></p>
+<ol>
+<li>Navigate to backup directory</li>
+<li>Find desired backup (by timestamp)</li>
+<li>Copy to staging or production as needed</li>
+<li>Rename to remove <code>.backup_&lt;timestamp&gt;</code> suffix</li>
+</ol>
+
+<p><strong>Backup cleanup:</strong></p>
+<ul>
+<li>Backups accumulate over time</li>
+<li>Manually delete old backups if disk space concern</li>
+<li>Consider keeping last 5-10 backups per file</li>
+</ul>
+
+<h3 id="large-file-handling">Large File Handling</h3>
+<p><strong>For files &gt; 300 KB:</strong></p>
+<ul>
+<li>Cannot edit in browser (too slow)</li>
+<li>Use external IDE (VS Code, PyCharm, etc.)</li>
+<li>Edit locally</li>
+<li>Upload to staging area manually</li>
+<li>Deploy via Dashboard</li>
+</ul>
+
+<p><strong>Upload process:</strong></p>
+<ol>
+<li>Edit file in local IDE</li>
+<li>Save to local directory</li>
+<li>Use file upload feature (if available) or</li>
+<li>SCP/SFTP to server <code>results/generated_python_joins/</code></li>
+<li>Deploy via Dashboard</li>
+</ol>
+
+<h3 id="testing-edited-code">Testing Edited Code</h3>
+<p><strong>Before deploying:</strong></p>
+<ol>
+<li>Save to staging</li>
+<li>Manually test import:</li>
+<pre><code>
+   cd birds_nest
+   python manage.py shell
+</code></pre>
+<pre><code>
+   import sys
+   sys.path.insert(0, &#39;results/generated_python_joins/&#39;)
+   from ANCRDT_INSTRMNT_C_1_logic import ANCRDT_INSTRMNT_C_1
+   # Test instantiation and methods
+</code></pre>
+<li>Fix any import or runtime errors</li>
+<li>Re-save and test again</li>
+<li>When working, deploy to production</li>
+</ol>
+
+<p><strong>After deploying:</strong></p>
+<ol>
+<li>Navigate to ANCRDT Step 4</li>
+<li>Select table</li>
+<li>Apply restrictive filters (small data set)</li>
+<li>Execute</li>
+<li>Verify results</li>
+<li>If successful, execute with larger data sets</li>
+</ol>
+
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<p><strong>Issue: Monaco Editor not loading</strong></p>
+<ul>
+<li><strong>Solution:</strong> Check internet connection (Monaco CDN-hosted)</li>
+<li>Disable browser extensions</li>
+<li>Clear browser cache</li>
+<li>Try different browser</li>
+<li>Check browser console for errors</li>
+</ul>
+
+<p><strong>Issue: Auto-save not working in Unified Editor</strong></p>
+<ul>
+<li><strong>Solution:</strong> Check JavaScript console for errors</li>
+<li>Verify CSRF token is present</li>
+<li>Try manual save (Ctrl+S)</li>
+<li>Check network tab for failed AJAX requests</li>
+</ul>
+
+<p><strong>Issue: Deploy fails with &quot;File not found&quot;</strong></p>
+<ul>
+<li><strong>Solution:</strong> Verify file exists in staging area</li>
+<li>Check file path and name (case-sensitive)</li>
+<li>Refresh deployment status</li>
+<li>Check server logs for specific error</li>
+</ul>
+
+<p><strong>Issue: Syntax validation passes but execution fails</strong></p>
+<ul>
+<li><strong>Solution:</strong> Browser validation is basic (syntax only)</li>
+<li>Runtime errors not caught until execution</li>
+<li>Test imports in Python shell</li>
+<li>Review execution logs in Step 4</li>
+<li>Check for logic errors (not syntax errors)</li>
+</ul>
+
+<p><strong>Issue: Backup not created during deployment</strong></p>
+<ul>
+<li><strong>Solution:</strong> Check write permissions on backup directory</li>
+<li>Verify disk space available</li>
+<li>Review deployment logs</li>
+<li>Check <code>create_backup</code> parameter is true</li>
+</ul>
+
+<p><strong>Issue: Cannot edit file - &quot;File too large&quot; message</strong></p>
+<ul>
+<li><strong>Solution:</strong> File &gt; 300 KB limit for browser</li>
+<li>Use external IDE to edit</li>
+<li>Consider splitting file into modules</li>
+<li>Optimize code to reduce size</li>
+</ul>
+
+<p><strong>Issue: Changes not taking effect in Step 4 execution</strong></p>
+<ul>
+<li><strong>Solution:</strong> Verify file is deployed (not just saved to staging)</li>
+<li>Check deployment status shows &quot;Synced&quot;</li>
+<li>Verify correct file is imported in execution</li>
+<li>Clear Python cache: <code>find . -name &quot;*.pyc&quot; -delete</code></li>
+<li>Restart Django server if persistent</li>
+</ul>
+
+<h3 id="performance-issues">Performance Issues</h3>
+<p><strong>Editor slow to load:</strong></p>
+<ul>
+<li>File may be very large</li>
+<li>Close other browser tabs</li>
+<li>Use Individual Editor instead of Unified Editor</li>
+<li>Consider editing largest files externally</li>
+</ul>
+
+<p><strong>Auto-save laggy:</strong></p>
+<ul>
+<li>Reduce auto-save frequency (if configurable)</li>
+<li>Use manual save instead</li>
+<li>Edit smaller files first</li>
+<li>Check browser resources (memory, CPU)</li>
+</ul>
+
+<hr>
+<h2 id="next-steps">Next Steps</h2>
+<p>After editing and deploying your code, continue with related workflow processes. Return to the <a href="user-guide/main-workflow-guide.html">Main Workflow Guide</a> to understand how code editing fits into the complete FINREP regulatory reporting workflow. Review the <a href="user-guide/dataset-transformation-guide.html">Dataset Transformation Guide</a> to see how the code management system integrates with Steps 0-3 of the AnaCredit transformation process.</p>
+<h2 id="support-resources">Support Resources</h2>
+<ul>
+<li>Eclipse EFBT Wiki: https://github.com/eclipse/efbt/wiki</li>
+<li>Getting Started: https://github.com/eclipse-efbt/efbt/wiki/Getting-Started-with-PyBIRD-AI</li>
+<li>Monaco Editor Docs: https://microsoft.github.io/monaco-editor/</li>
+</ul>
+
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>

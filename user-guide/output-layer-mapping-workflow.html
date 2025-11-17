@@ -1,0 +1,613 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Output Layer Mapping Workflow - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Output Layer Mapping Workflow - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Output Layer Mapping Workflow" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Output Layer Mapping Workflow - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Output Layer Mapping Workflow documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Output Layer Mapping Workflow - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- Page Allowlist Check -->
+	<script src="../js/allowlist.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Output Layer Mapping Workflow</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h1 id="output-layer-mapping-workflow">Output Layer Mapping Workflow</h1>
+<h2 id="feature-overview">Feature Overview</h2>
+<p>Output Layer Mapping is a 7-step wizard that helps you create custom connections between your source data and regulatory reporting formats. The workflow guides you through defining exactly how your data transforms into required output structures for FINREP, COREP, or custom reporting frameworks.</p>
+<h2 id="purpose">Purpose</h2>
+<p>This workflow provides a comprehensive set of features for managing output layer mappings. Structured Mapping Creation guides you through a step-by-step process for defining data transformations, while Multi-Dimensional Support allows you to handle complex report structures with multiple axes. Code List Management capabilities enable you to map source values to target codes automatically, and Transformation Logic features let you apply calculations and conversions during the mapping process. Validation Tools help you verify mappings before generation to ensure accuracy.</p>
+<p>Use this workflow when creating new output structures or updating existing mappings.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before beginning the Output Layer Mapping workflow, ensure that your source data tables are imported in the system, you have a clear understanding of the target report structure, you&#39;ve prepared a field mappings list that defines source to target relationships, and you have member value mappings prepared for code translations.</p>
+<h3 id="accessing-the-workflow">Accessing the Workflow</h3>
+<p>Navigate to <strong>Tools</strong> &gt; <strong>Output Layer Mapping</strong> or visit <code>/pybirdai/output-layer-mapping/</code></p>
+<p><strong>Time required</strong>: 15-45 minutes depending on complexity</p>
+<h2 id="the-7-step-process">The 7-Step Process</h2>
+<h3 id="step-1-choose-your-report">Step 1: Choose Your Report</h3>
+<p>Select which report table you want to create mappings for.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Choose <strong>Framework</strong> (FINREP, COREP, etc.)</li>
+<li>Select <strong>Version</strong> (e.g., 3.0)</li>
+<li>Pick specific <strong>Table</strong> (e.g., F<em>01</em>01 - Balance Sheet)</li>
+<li>Review preview to confirm</li>
+<li>Click <strong>Continue</strong></li>
+</ol>
+
+<p><strong>Tips</strong>: Dropdowns filter automatically as you select. Verify you&#39;re selecting the correct version.</p>
+<hr>
+<h3 id="step-2-check-existing-mappings">Step 2: Check Existing Mappings</h3>
+<p>Review any existing mappings for this table and decide your approach.</p>
+<p><strong>Scenarios</strong>:</p>
+<ul>
+<li><strong>No existing mappings</strong>: Green message - proceed</li>
+<li><strong>Existing mappings found</strong>: Choose to delete, update, or select different table</li>
+</ul>
+
+<p><strong>Options</strong>:</p>
+<ul>
+<li><strong>Delete old mappings</strong>: Start fresh (recommended for new versions)</li>
+<li><strong>Update existing</strong>: Modify current mappings</li>
+<li><strong>Choose different table</strong>: Go back to Step 1</li>
+</ul>
+
+<p><strong>Tip</strong>: Document why you&#39;re replacing mappings for future reference.</p>
+<hr>
+<h3 id="step-3-select-report-cells">Step 3: Select Report Cells</h3>
+<p>Choose which specific cells (combinations) in your report you want to create.</p>
+<p><strong>Understanding Axes</strong>:</p>
+<p>Reports are multi-dimensional. For example:</p>
+<ul>
+<li><strong>Axis X</strong> (Rows): Asset types - Loans, Securities, Cash</li>
+<li><strong>Axis Y</strong> (Columns): Maturities - Up to 1 year, 1-5 years, Over 5 years</li>
+<li><strong>Axis Z</strong> (Sheets): Currencies - EUR, USD, GBP</li>
+</ul>
+
+<p><strong>How to Select</strong>:</p>
+<ol>
+<li>For each axis, tick the values you need</li>
+<li>System calculates total combinations</li>
+<li>Preview shows report cells to be created</li>
+</ol>
+
+<p><strong>Example</strong>: 3 asset types × 2 maturities × 2 currencies = 12 report cells</p>
+<p><strong>Tips</strong>: Select only what you need. More selections = more combinations = longer processing.</p>
+<hr>
+<h3 id="step-4-organize-your-variables">Step 4: Organize Your Variables</h3>
+<p>Group variables by type to make mapping easier.</p>
+<p><strong>Three Variable Types</strong>:</p>
+<p><strong>Dimensions</strong> - Categories that classify data</p>
+<ul>
+<li>Examples: Country, Currency, Instrument Type, Date</li>
+<li>Usually need value mappings (EUR → Euro)</li>
+</ul>
+
+<p><strong>Observations</strong> - Actual measured values</p>
+<ul>
+<li>Examples: Amount, Quantity, Balance, Count</li>
+<li>Typically numbers to be reported</li>
+</ul>
+
+<p><strong>Attributes</strong> - Additional information</p>
+<ul>
+<li>Examples: Status flags, Confidentiality markers, Quality indicators</li>
+<li>Provide metadata about the data</li>
+</ul>
+
+<p><strong>Process</strong>:</p>
+<ul>
+<li>System suggests groupings automatically</li>
+<li>Review and adjust if needed</li>
+<li>Give each group a clear name</li>
+<li>These become separate mapping sets</li>
+</ul>
+
+<p><strong>Tips</strong>: Use descriptive names like &quot;Account_Dimensions&quot; not &quot;Group1&quot;. Accept suggested groupings unless you have specific needs.</p>
+<hr>
+<h3 id="step-5-create-the-mappings">Step 5: Create the Mappings</h3>
+<p>Define exactly how source data maps to target report fields.</p>
+<p><strong>The Interface</strong>: One tab for each variable group from Step 4.</p>
+<p><strong>For Each Target Variable</strong>:</p>
+<p><strong>1. Select Source Variable</strong></p>
+<ul>
+<li>Choose matching field from your source data</li>
+<li>Example: Your &quot;GL<em>ACCOUNT&quot; → Report&#39;s &quot;INSTRUMENT</em>TYPE&quot;</li>
+</ul>
+
+<p><strong>2. Add Transformation</strong> (if needed)</p>
+<ul>
+<li>Leave blank for direct copy</li>
+<li>Add formula for calculations</li>
+<li>Examples: Convert currency, apply text functions, conditional rules</li>
+</ul>
+
+<p><strong>3. Map Member Values</strong> (for dimensions)</p>
+<ul>
+<li>Click &quot;Add Member Mapping&quot;</li>
+<li>Match source codes to report codes</li>
+<li>Example: Your &quot;001&quot; → Report &quot;LOANS&quot;</li>
+</ul>
+
+<p><strong>Common Transformations</strong>:</p>
+<ul>
+<li>Scale amounts: <code>source_amount / 1000</code> (report in thousands)</li>
+<li>Convert text: Change case or format</li>
+<li>Conditional logic: Different outputs based on value</li>
+<li>Combine fields: Add multiple sources</li>
+</ul>
+
+<p><strong>Tips</strong>: Work through one tab at a time. Start with simple direct mappings. System auto-saves your work.</p>
+<hr>
+<h3 id="step-6-review-and-name">Step 6: Review and Name</h3>
+<p>Check all mappings and give them meaningful names.</p>
+<p><strong>Review Checklist</strong>:</p>
+<ul>
+<li>Total mapping sets created</li>
+<li>Total variable mappings</li>
+<li>Total member mappings</li>
+<li>All names clear and descriptive</li>
+</ul>
+
+<p><strong>Naming Mappings</strong>:</p>
+<p>System suggests: <code>F_01_01_Group_1_20250117</code></p>
+<p>Change to: <code>F_01_01_GL_to_FINREP_Dimensions</code></p>
+<p><strong>Good Names Include</strong>:</p>
+<ul>
+<li>Table reference (F<em>01</em>01)</li>
+<li>Purpose (GL<em>to</em>FINREP)</li>
+<li>Type (Dimensions, Amounts, Attributes)</li>
+</ul>
+
+<p><strong>Validation</strong>:</p>
+<ol>
+<li>Click <strong>&quot;Validate All Mappings&quot;</strong></li>
+<li>Fix any errors shown</li>
+<li>Address warnings</li>
+<li>Green checkmarks = ready</li>
+</ol>
+
+<p><strong>Tips</strong>: Use consistent naming across your organization. Include dates for multiple versions.</p>
+<hr>
+<h3 id="step-7-generate-everything">Step 7: Generate Everything</h3>
+<p>Create all structures in the database.</p>
+<p><strong>Before Generating</strong>:</p>
+<p>Review the summary:</p>
+<ul>
+<li>Number of mappings to create</li>
+<li>Variable connections</li>
+<li>Member mappings</li>
+<li>Report cells (combinations)</li>
+<li>Estimated structures</li>
+</ul>
+
+<p><strong>Generate Process</strong>:</p>
+<ol>
+<li>Click <strong>&quot;Generate All Structures&quot;</strong></li>
+<li>Confirm you&#39;re ready</li>
+<li>Wait for progress bar (10-60 seconds)</li>
+<li>Review results</li>
+</ol>
+
+<p><strong>Success Screen Shows</strong>:</p>
+<ul>
+<li>✓ Mappings created</li>
+<li>✓ Variables mapped</li>
+<li>✓ Member mappings added</li>
+<li>✓ Report structure built</li>
+<li>✓ All connections made</li>
+</ul>
+
+<p><strong>Next Actions</strong>:</p>
+<ul>
+<li><strong>View Mappings</strong>: Check created mappings</li>
+<li><strong>Test Execution</strong>: Run test to verify</li>
+<li><strong>Create Another</strong>: Start new mapping</li>
+<li><strong>Return to Dashboard</strong>: Go back to main menu</li>
+</ul>
+
+<p><strong>Tips</strong>: Generate during quiet times for large mappings. Verify immediately after generation. Run a test before full execution.</p>
+<hr>
+<h2 id="complete-example-finrep-balance-sheet">Complete Example: FINREP Balance Sheet</h2>
+<p><strong>Step 1</strong>: Framework: FINREP, Version: 3.0, Table: F<em>01</em>01 (Balance Sheet - Assets)</p>
+<p><strong>Step 2</strong>: Found 1 old mapping, deleted to start fresh</p>
+<p><strong>Step 3</strong>: Selected 10 asset types × 5 maturities × 3 currencies = 150 report cells</p>
+<p><strong>Step 4</strong>: Created 3 groups:</p>
+<ul>
+<li>Dimensions: 8 variables (Country, Currency, Instrument, etc.)</li>
+<li>Amounts: 2 variables (Balance, Transaction Count)</li>
+<li>Flags: 3 variables (Status, Confidentiality, Quality)</li>
+</ul>
+
+<p><strong>Step 5</strong>: Created mappings:</p>
+<ul>
+<li>GL_COUNTRY → COUNTRY (27 member mappings)</li>
+<li>GL_CURRENCY → CURRENCY (5 member mappings)</li>
+<li>GL_ACCOUNT → INSTRUMENT (150 mappings)</li>
+<li>GL_BALANCE → AMOUNT (transformation: divide by 1000)</li>
+<li>TRANSACTION_COUNT → QUANTITY (direct)</li>
+<li>RECORD_STATUS → STATUS (A→Active, I→Inactive)</li>
+</ul>
+
+<p><strong>Step 6</strong>: Renamed to:</p>
+<ul>
+<li><code>F_01_01_GL_to_FINREP_Dimensions</code></li>
+<li><code>F_01_01_Balance_Amounts</code></li>
+<li><code>F_01_01_Status_Flags</code></li>
+</ul>
+
+<p><strong>Step 7</strong>: Generated in 15 seconds - 3 mapping sets, 13 variable mappings, 187 member mappings</p>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="planning">Planning</h3>
+<ul>
+<li>Map requirements on paper first</li>
+<li>List all source-to-target matches</li>
+<li>Prepare member mappings in advance</li>
+<li>Understand transformations before starting</li>
+</ul>
+
+<h3 id="variable-grouping">Variable Grouping</h3>
+<ul>
+<li>Keep related variables together</li>
+<li>Separate dimensions from amounts</li>
+<li>Don&#39;t create too many groups (3-5 typical)</li>
+<li>Use clear, searchable names</li>
+</ul>
+
+<h3 id="creating-mappings">Creating Mappings</h3>
+<ul>
+<li>Start with direct mappings</li>
+<li>Test transformations before applying</li>
+<li>For large code lists, use spreadsheet first</li>
+<li>Document complex logic</li>
+</ul>
+
+<h3 id="naming-convention">Naming Convention</h3>
+<ul>
+<li>Include table reference</li>
+<li>Add descriptive purpose</li>
+<li>Keep under 100 characters</li>
+<li>Use underscores, not spaces</li>
+<li>Example: <code>TableCode_Source_to_Target_Type</code></li>
+</ul>
+
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Can&#39;t see source table</strong>: Verify data is imported, check correct framework, confirm table in database</p>
+<p><strong>Dropdowns not loading</strong>: Refresh page, check network connection, verify previous selection made</p>
+<p><strong>Too many combinations warning</strong>: Reduce ordinate selections, consider if all necessary, split into smaller mappings</p>
+<p><strong>Member mapping not saving</strong>: Check both values selected, verify dimension type, try refreshing</p>
+<p><strong>Generation fails</strong>: Review error message, check required fields mapped, verify source variables exist</p>
+<p><strong>Validation errors</strong>: Read error messages, go back to relevant step, fix issues, re-validate</p>
+<hr>
+<h2 id="common-questions">Common Questions</h2>
+<p><strong>Q: Can I edit mappings after creation?</strong></p>
+<p>A: Yes, return to Step 2 and choose &quot;Continue (Regenerate)&quot; to update.</p>
+<p><strong>Q: What if I make a mistake?</strong></p>
+<p>A: Use &quot;Back&quot; button to previous steps, or delete and recreate if already generated.</p>
+<p><strong>Q: How to handle large code lists (100+ mappings)?</strong></p>
+<p>A: Prepare in spreadsheet first, then consider bulk upload in Step 5.</p>
+<p><strong>Q: What happens to unmapped source values?</strong></p>
+<p>A: They typically result in null/empty output. Add default mapping or transformation to handle.</p>
+<p><strong>Q: How long does generation take?</strong></p>
+<p>A: Usually 10-60 seconds. Large mappings with thousands of combinations may take longer.</p>
+<hr>
+<h2 id="quick-reference">Quick Reference</h2>
+<p><strong>Access</strong>: Tools &gt; Output Layer Mapping (<code>/pybirdai/output-layer-mapping/</code>)</p>
+<p><strong>Time</strong>: 15-45 minutes</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Choose Report (Framework, Version, Table)</li>
+<li>Check Existing (Delete or Update)</li>
+<li>Select Cells (Axis ordinates)</li>
+<li>Organize Variables (Dimensions, Observations, Attributes)</li>
+<li>Create Mappings (Source→Target, Transformations, Members)</li>
+<li>Review and Name (Validate and name)</li>
+<li>Generate (Create structures)</li>
+</ol>
+
+<p><strong>After Completion</strong>:</p>
+<ul>
+<li>View mappings in mapping management</li>
+<li>Test execution before production</li>
+<li>Document for future reference</li>
+</ul>
+
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Output Layer Mapping Workflow provides a structured approach to creating complex data transformations for regulatory reporting. By following the 7-step process, you can efficiently define how your source data maps to target reporting formats while ensuring accuracy through validation at each stage.</p>
+<h3 id="next-steps">Next Steps</h3>
+<p>After completing the Output Layer Mapping workflow, continue with related processes to finalize your custom DPM structures. Review the <a href="user-guide/dpm-workflow-guide.html">DPM Workflow Guide</a> to understand the complete 3-step process that leads to this mapping subworkflow and how it integrates with the main workflow. Return to the <a href="user-guide/workflow-dashboard-guide.html">Workflow Dashboard Guide</a> to explore other available workflows and understand how output layer mapping fits into your broader regulatory reporting strategy.</p>
+<h3 id="support-resources">Support Resources</h3>
+<ul>
+<li>Eclipse EFBT Wiki: https://github.com/eclipse/efbt/wiki</li>
+<li>Getting Started: https://github.com/eclipse-efbt/efbt/wiki/Getting-Started-with-PyBIRD-AI</li>
+<li>Technical Support: https://github.com/eclipse/efbt/issues</li>
+<li>Community Chat: <a href="https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org">Eclipse Chat</a></li>
+<li>Email: <a href="mailto:efbt-dev@eclipse.org">efbt-dev@eclipse.org</a></li>
+</ul>
+
+<p><strong>Remember</strong>: Take your time, plan ahead, and validate at each step. Good mappings save hours of debugging later!</p>
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>

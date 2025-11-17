@@ -4,21 +4,15 @@ The Member Hierarchy Editor is an intuitive visual tool within Eclipse Free BIRD
 
 ## Purpose
 
-The Member Hierarchy Editor addresses the critical need for structured data organization in regulatory environments by providing:
-- **Visual Hierarchy Management**: Create and modify complex data relationships through an intuitive interface
-- **Drag-and-Drop Functionality**: Easily organize members without complex coding or configuration
-- **Export Capabilities**: Share hierarchy structures across systems and teams
+The Member Hierarchy Editor addresses the critical need for structured data organization in regulatory environments by providing Visual Hierarchy Management that allows you to create and modify complex data relationships through an intuitive interface, Drag-and-Drop Functionality that lets you easily organize members without complex coding or configuration, and Export Capabilities that enable you to share hierarchy structures across systems and teams.
 
 Data architects and compliance teams rely on this feature to maintain organized, compliant data structures that support accurate regulatory reporting and data governance initiatives.
 
 ## Getting Started
 
 ### Prerequisites
-Before using the Member Hierarchy Editor, ensure:
-- Access to the FreeBIRD Application with appropriate permissions
-- Understanding of your organization's data taxonomy requirements
-- Knowledge of the hierarchical relationships needed for your use case
-- Familiarity with regulatory reporting structures if applicable
+
+Before using the Member Hierarchy Editor, ensure you have access to the FreeBIRD Application with appropriate permissions, possess an understanding of your organization's data taxonomy requirements, have knowledge of the hierarchical relationships needed for your use case, and are familiar with regulatory reporting structures if applicable to your work.
 
 ### Accessing the Editor
 Navigate to the FreeBIRD Application and access the Member Hierarchy Editor from the main dashboard. The interface provides a visual workspace for creating and managing hierarchical relationships.
@@ -133,8 +127,7 @@ The Member Hierarchy Editor consists of several key components:
 The Member Hierarchy Editor streamlines the process of creating and maintaining complex data relationships essential for regulatory compliance and data governance. Its visual approach makes sophisticated hierarchy management accessible to both technical and business users, ensuring that organizational data structures remain accurate and well-maintained.
 
 ### Next Steps
-- Explore the [Cube Links View and Edit](cube-links-view-and-edit.html) feature for related data relationship management
-- Review the [Mapping Editor](mapping-editor.html) for detailed transformation rules
-- Learn about [Workflow Dashboard](workflow-dashboard-guide.html) integration with hierarchy data
+
+After creating hierarchical relationships, review the [Main Workflow Guide](user-guide/main-workflow-guide.html) to see how your member hierarchies are used within the complete regulatory reporting workflow and data transformation process.
 
 For assistance with complex hierarchy design or advanced member relationship modeling, connect with our community via [Eclipse Chat](https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org) or email [efbt-dev@eclipse.org](mailto:efbt-dev@eclipse.org).
