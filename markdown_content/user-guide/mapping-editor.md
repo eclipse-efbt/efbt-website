@@ -1,10 +1,12 @@
 ## Feature Overview
 
-The Mapping Editor is a sophisticated data transformation tool within Eclipse Free BIRD Tools that enables users to create, manage, and modify complex mappings between source and target data variables. This interface serves as the bridge between various source systems and regulatory reporting structures, facilitating precise data alignment and transformation for compliance purposes.
+The Semantic Integration Editor is a sophisticated data transformation tool within Eclipse Free BIRD Tools that enables users to create, manage, and modify complex mappings between source and target data variables. This interface serves as the bridge between various source systems and regulatory reporting structures, facilitating precise data alignment and transformation for compliance purposes.
 
 ## Purpose
 
-The Mapping Editor addresses the critical challenge of data transformation in regulatory environments by providing a Semantic Integration Editor that allows you to map source system data to regulatory reporting requirements, along with Variable Management capabilities that give you control over both source and target variable definitions.
+The Semantic Integration Editor addresses the critical challenge of data transformation in regulatory environments by providing:
+- **Semantic Integration Editor**: Map source system data to regulatory reporting requirements
+- **Variable Management**: Control both source and target variable definitions
 
 This feature is essential for data engineers, compliance officers, and business analysts who need to ensure accurate data flow from operational systems to regulatory reports while maintaining full transparency and control over transformation processes.
 
@@ -14,8 +16,8 @@ This feature is essential for data engineers, compliance officers, and business 
 
 Before using the Mapping Editor, ensure that you have imported the relevant data (most likely accomplished in step 1 of the workflow dashboard), possess knowledge of target regulatory requirements, have access to and understanding of both source and target variable definitions, and are familiar with the reference terminology used in the BIRD framework.
 
-### Accessing the Mapping Editor
-Navigate to the FreeBIRD Application and access the Mapping Editor from the main dashboard. The interface provides comprehensive tools for creating and managing data mapping between frameworks.
+### Accessing the Semantic Integration Editor
+Navigate to the FreeBIRD Application and access the Semantic Integration Editor from the main dashboard. The interface provides comprehensive tools for creating and managing data mapping between frameworks.
 
 ![Mapping Editor Main Interface](images/screenshots/mapping_editor/Mapping_Editor_Screenshot__4.20.17PM.png)
 
@@ -23,7 +25,7 @@ Navigate to the FreeBIRD Application and access the Mapping Editor from the main
 
 ### Understanding the Interface
 
-The Mapping Editor consists of several key areas:
+The Semantic Integration Editor consists of several key areas:
 
 #### Control Panel Components
 - **Select Mapping ID**: Dropdown menu to choose from existing mappings (e.g., `DPM_BAS_MCY_SST_AE_F32.03.b`)
