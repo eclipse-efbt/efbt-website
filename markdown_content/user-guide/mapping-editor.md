@@ -14,7 +14,7 @@ This feature is essential for data engineers, compliance officers, and business 
 
 ### Prerequisites
 
-Before using the Mapping Editor, ensure that you have imported the relevant data (most likely accomplished in step 1 of the workflow dashboard), possess knowledge of target regulatory requirements, have access to and understanding of both source and target variable definitions, and are familiar with the reference terminology used in the BIRD framework.
+Before using the Semantic Integration Editor, ensure that you have imported the relevant data (most likely accomplished in step 1 of the workflow dashboard), possess knowledge of target regulatory requirements, have access to and understanding of both source and target variable definitions, and are familiar with the reference terminology used in the BIRD framework.
 
 ### Accessing the Semantic Integration Editor
 Navigate to the FreeBIRD Application and access the Semantic Integration Editor from the main dashboard. The interface provides comprehensive tools for creating and managing data mapping between frameworks.
