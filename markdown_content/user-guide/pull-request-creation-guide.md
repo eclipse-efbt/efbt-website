@@ -4,23 +4,15 @@ Eclipse Free BIRD Tools provides seamless GitHub integration for creating pull r
 
 ## Purpose
 
-The Pull Request Creation feature serves as the bridge between your local data processing and collaborative repository management. It provides:
-- **Version Control Integration**: Seamlessly export processed data to GitHub repositories
-- **Collaborative Review Process**: Submit work for peer review and approval before integration
-- **Secure Development**: Work in isolated forks without affecting the main repository
-- **Automated Workflow**: One-click creation of forks, branches, and pull requests
+The Pull Request Creation feature serves as the bridge between your local data processing and collaborative repository management by providing several key capabilities. Version Control Integration allows you to seamlessly export processed data to GitHub repositories, while the Collaborative Review Process enables you to submit work for peer review and approval before integration. Secure Development features let you work in isolated forks without affecting the main repository, and the Automated Workflow provides one-click creation of forks, branches, and pull requests.
 
-This feature is essential for teams working on a common and open ontology projects, enabling multiple contributors to collaborate while maintaining the integrity of ontology and review processes.
+This feature is essential for teams working on common and open ontology projects, enabling multiple contributors to collaborate while maintaining the integrity of ontology and review processes.
 
 ## Getting Started
 
 ### Prerequisites
-Before creating pull requests, ensure:
-- Database is initialized and contains processed ontology
-- Configuration is saved and validated
-- GitHub personal access token with appropriate permissions
-- Access to the target GitHub repository
-- Workflow processing tasks are completed (recommended)
+
+Before creating pull requests, ensure that your database is initialized and contains the processed ontology, your configuration is saved and validated, you have a GitHub personal access token with appropriate permissions, you have access to the target GitHub repository, and your workflow processing tasks are completed (recommended for best results).
 
 ### Access Methods
 There are two primary methods to create pull requests:
@@ -100,8 +92,7 @@ Always use the fork workflow for isolated, secure development. Complete your wor
 The Pull Request Creation feature streamlines the process of submitting regulatory data for review and integration. Whether using the automated Quick Actions approach or the manual export method, you can efficiently share your processed data while maintaining security and compliance standards.
 
 ### Next Steps
-- Learn about [Workflow Dashboard](workflow-dashboard-guide.html) to prepare data for pull requests
-- Explore [DPM Operations](dpm-operations-guide.html) for data processing workflows
-- Review [Execute Datapoint Guide](execute-datapoint-guide.html) for execution details
+
+After creating your pull request, return to the [Workflow Dashboard Guide](user-guide/workflow-dashboard-guide.html) to explore other available workflows or start a new regulatory reporting process with your updated repository.
 
 For GitHub integration support or collaboration assistance, connect with us on [Eclipse Chat](https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org) or email [efbt-dev@eclipse.org](mailto:efbt-dev@eclipse.org).

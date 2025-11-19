@@ -13,13 +13,19 @@
         '/documentation.html',
         '/freebirdapplication.html',
         '/page-not-available.html',
-        '/user-guide/cube-links-view-and-edit.html',
         '/user-guide/execute-datapoint-guide.html',
+        '/user-guide/execute-dataset-guide.html',
         '/user-guide/mapping-editor.html',
         '/user-guide/member-hierarchy-editor.html',
         '/user-guide/pull-request-creation-guide.html',
         '/user-guide/workflow-dashboard-guide.html',
-        '/user-guide/dpm-operations-guide.html'
+        '/user-guide/dataset-transformation-guide.html',
+        '/user-guide/dpm-workflow-guide.html',
+        '/user-guide/edit-links-features.html',
+        '/user-guide/output-layer-mapping-workflow.html',
+        '/user-guide/main-workflow-guide.html',
+        '/user-guide/code-editing-and-publishing.html',
+        '/user-guide/workflows-overview.html'
     ];
 
     // Get current page path

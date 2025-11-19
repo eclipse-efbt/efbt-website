@@ -3,19 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Dpm Operations Guide - Eclipse Free BIRD Tools</title>
+	<title>Dpm Workflow Guide - Eclipse Free BIRD Tools</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Dpm Operations Guide - Eclipse Free BIRD Tools Documentation" />
-	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Dpm Operations Guide" />
+	<meta name="description" content="Dpm Workflow Guide - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Dpm Workflow Guide" />
 	<meta name="author" content="Eclipse Free BIRD Tools" />
 
 	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="Dpm Operations Guide - Eclipse Free BIRD Tools"/>
+	<meta property="og:title" content="Dpm Workflow Guide - Eclipse Free BIRD Tools"/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
 	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
-	<meta property="og:description" content="Dpm Operations Guide documentation for Eclipse Free BIRD Tools"/>
-	<meta name="twitter:title" content="Dpm Operations Guide - Eclipse Free BIRD Tools" />
+	<meta property="og:description" content="Dpm Workflow Guide documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Dpm Workflow Guide - Eclipse Free BIRD Tools" />
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
@@ -251,7 +251,7 @@
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h1>Dpm Operations Guide</h1>
+					<h1>Dpm Workflow Guide</h1>
 					<h2>Eclipse Free BIRD Tools Documentation</h2>
 				</div>
 			</div>
@@ -263,51 +263,30 @@
 	<!-- Main Content -->
 	<section class="main doc-content ">
   		<div class="content-wrapper">
- 			<h2 id="feature-overview">Feature Overview</h2>
-<p>DPM (Data Point Model) Operations is a specialized module within Eclipse Free BIRD Tools that provides a streamlined 3-step workflow for processing regulatory data according to European Banking Authority (EBA) standards. This feature transforms raw financial data into compliant regulatory reports through a systematic preparation, import, and output generation process.</p>
-<h2 id="purpose">Purpose</h2>
-<p>DPM Operations addresses the critical need for standardized regulatory reporting in the financial sector. This feature enables:</p>
-<ul>
-<li><strong>Import of uptodate EBA Information Technical Standards (ITS)</strong>: By using simple mappings, the application is able to translate the EBA ITS standards into SMCube methodology.</li>
-<li><strong>Generation of Output Layers</strong>: After importing the rendering package of the EBA ITS into our knowledge graph, we can then generate the structure used for the mapping and the generation of linking entities.</li>
-</ul>
-
-<p>Financial institutions use DPM Operations to streamline their regulatory reporting obligations, and maintain compliance with evolving European banking regulations.</p>
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Before using DPM Operations, ensure:</p>
-<ul>
-<li>You ran the first two steps of the workflow.</li>
-<li>You have an internet connection.</li>
-<li>You understand the 3-step sequential process</li>
-</ul>
-
-<h3 id="accessing-dpm-operations">Accessing DPM Operations</h3>
-<p>To access DPM Operations, launch the FreeBIRD Application, navigate to the Home page, and click on <strong>&quot;DPM Data Operations&quot;</strong>. You will then follow a 3-step sequential process.</p>
-<p><img src="../images/screenshots/dpm_operations/dpm_operations.png" alt="DPM Operations" class="img-responsive guide-image"></p>
-<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
-<h3 id="overview-of-the-3-step-dpm-workflow">Overview of the 3-Step DPM Workflow</h3>
-<p>The DPM workflow consists of three sequential steps that must be executed in order: Prepare, Import, and Create Output Layers.</p>
-<h3 id="step-1-prepare-dpm-data">Step 1: Prepare DPM Data</h3>
-<p>Click the &quot;Prepare DPM Data&quot; card to import and preprocess the data from the EBA website. This step ensures the ontology represented in the EBA ITS to the import phase. The system will validate your source data and confirm it is ready for import.</p>
-<h3 id="step-2-import-dpm-data">Step 2: Import DPM Data</h3>
-<p>Click the &quot;Import DPM Data&quot; card to process the EBA ITS ontology and apply the necessary mapping to the SMCube methodology. During this step, the system imports your data into DPM structures while performing validation checks. Once complete, your EBA ITS ontology will be properly structured according to SMCube specifications.</p>
-<h3 id="step-3-create-output-layers">Step 3: Create Output Layers</h3>
-<p>Click the &quot;Create Output Layers&quot; card to generate your final regulatory reporting outputs. This step produces all required regulatory reports that are ready for submission to authorities.</p>
-<p><img src="../images/screenshots/dpm_operations/dpm_operations_output_layer_generation.png" alt="DPM Output Layer Generation" class="img-responsive guide-image"></p>
-<p>When creating output layers, you need to select your regulatory framework such as COREP, FINREP, or LCR. Then choose the specific version of your selected framework. You can also pick specific table codes if you want targeted output generation. After making your selections, the system will generate regulatory reports in the required smcube format, and your selected outputs will be ready for integration.</p>
-<h2 id="best-practices">Best Practices</h2>
-<p>Always execute the three steps in sequential order: Prepare, then Import, then Create Output Layers. Complete each step fully before proceeding to the next one.</p>
+ 			<h1 id="dpm-workflow-guide">DPM Workflow Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>The DPM (Data Point Model) Workflow is a specialized 3-step process for creating DPM output layer structures and combinations. This workflow integrates seamlessly with the Main Workflow to provide enhanced DPM functionality, enabling you to design custom output layers and mapping structures for your regulatory reporting needs.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting the DPM Workflow, you need to ensure your system is properly configured. First, configure your instance with the model type you want to work with, selecting either EIL (European Input Layer) or ELDM (European Logical Data Model). You&#39;ll also need to set up your repository connection and configure other mandatory parameters required for running the application. Next, run the fetch artifacts command and execute the setup database operation from the quick action command panel. Optionally, you can run the Main Workflow Step 1 to get reference artifacts loaded into the system, which can be helpful for certain mapping scenarios.</p>
+<h2 id="workflow-structure">Workflow Structure</h2>
+<p>The DPM Workflow consists of three sequential steps that build upon each other. The workflow can optionally start with Step 0 from the Main Workflow, which loads reference data into the database. Step 1 prepares the DPM data for import by formatting and validating it according to the application&#39;s requirements. Step 2 imports the prepared DPM data into the database, creating the necessary metadata structures. Finally, Step 3 creates the output layers based on the imported data, redirecting you to the subworkflow for detailed output layer configuration.</p>
+<pre><code>
+(Main Workflow) Step 0: optional - load reference data into the database
+    ↓
+Step 1: Prepare DPM Data
+    ↓
+Step 2: Import DPM Data
+    ↓
+Step 3: Create Output Layers
+</code></pre>
+<p>Similar to the main workflow, you have flexibility in how you execute these steps. You can trigger the steps one at a time, reviewing the results after each step before proceeding to the next. Alternatively, you can run the complete workflow by clicking the &quot;Run Complete DPM Workflow&quot; button, which automatically executes all steps in sequence, including the optional first step from the Main Workflow.</p>
+<p>When the workflow completes successfully, Step 3 will redirect you to the Output Layer Mapping subworkflow. This subworkflow provides an interactive interface for designing your custom mappings and output layer structures. You can find more information about this subsequent step in the Next Steps section below.</p>
+<h2 id="outcome">Outcome</h2>
+<p>After running the complete DPM workflow, your application will contain a full import of the latest DPM Database, formatted according to the application&#39;s metadata format. This comprehensive import enables diverse subsequent operations and facilitates semantic integration between multiple regulatory frameworks. The structured metadata allows you to create mappings between different regulatory requirements, design custom output layers that meet specific reporting needs, and maintain consistency across various regulatory submissions.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>DPM Operations simplifies the complex task of importing regulatory reporting standard by providing a structured, validated approach to ontology processing. The 3-step workflow ensures that your favourite financial ontology is properly prepared, imported, and transformed into compliant regulatory reports ready for submission to authorities.</p>
-<h3 id="next-steps">Next Steps</h3>
-<ul>
-<li>Review the <a href="workflow-dashboard-guide.html">Workflow Dashboard Guide</a> for comprehensive workflow management</li>
-<li>Explore <a href="execute-datapoint-guide.html">Execute Datapoint Guide</a> for detailed execution options</li>
-<li>Learn about <a href="pull-request-creation-guide.html">Pull Request Creation</a> to submit your reports</li>
-</ul>
-
-<p>For regulatory framework updates or technical support, reach out through <a href="https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org">Eclipse Chat</a> or contact us at <a href="mailto:efbt-dev@eclipse.org">efbt-dev@eclipse.org</a>.</p>
+<p>The DPM workflow provides a streamlined approach for importing the latest branch of the DPM database into your regulatory reporting system. Beyond simple data import, this workflow opens up a new and interactive way to design mappings between different regulatory frameworks. The output layer creation capabilities allow you to customize your reporting structures to match evolving regulatory requirements while maintaining the semantic relationships that ensure data consistency and accuracy across different reporting contexts.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>After completing the DPM Workflow, explore these related guides to continue your work. The <a href="user-guide/workflow-dashboard-guide.html">Workflow Dashboard Guide</a> provides an overview of all available workflows and helps you understand how the DPM workflow fits into your broader regulatory reporting strategy. Proceed to the <a href="user-guide/output-layer-mapping-workflow.html">Output Layer Mapping Workflow</a> for the detailed 7-step process that follows DPM import, allowing you to design custom mapping structures and output layers.</p>
   		</div>
 	</section>
 

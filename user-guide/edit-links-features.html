@@ -1,0 +1,509 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Edit Links Features - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Edit Links Features - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Edit Links Features" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Edit Links Features - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Edit Links Features documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Edit Links Features - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- Page Allowlist Check -->
+	<script src="../js/allowlist.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Edit Links Features</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h1 id="edit-links-features-guide">Edit Links Features Guide</h1>
+<h2 id="feature-overview">Feature Overview</h2>
+<p>The Edit Links Features provide an integrated system for managing metadata relationships between data cubes, variables, and dimension values. These interactive editors allow you to create, modify, and visualize the connections that define how your regulatory data structures relate to each other.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The Edit Links features serve as your metadata relationship management center, providing comprehensive tools for defining and managing data relationships at multiple levels. The system allows you to define cube-level relationships that specify which data cubes can be joined together, create variable-level mappings that determine which columns should be linked between cubes, and establish value-level conversions that map individual dimension values for code list transformations. You can generate visual relationship diagrams that display network graphs showing cube connections, and the system provides seamless workflow integration so you can edit metadata without leaving your workflow.</p>
+<p>This feature is essential for organizations processing regulatory data where precise metadata relationships ensure accurate transformations and reporting.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before using Edit Links, ensure you have completed Step 1 of your workflow (whether ANCRDT, DPM, or Main), have a database with cube definitions populated, possess an understanding of the data relationships needed for your use case, and have business logic documentation available for reference when creating mappings.</p>
+<h3 id="accessing-edit-links-features">Accessing Edit Links Features</h3>
+<p><strong>Within Workflows (Recommended)</strong></p>
+<p>Navigate to <strong>Task 2: Review</strong> in your workflow. You&#39;ll find three embedded editor tabs:</p>
+<ul>
+<li>Edit Cube Links</li>
+<li>Edit Cube Structure Item Links</li>
+<li>Edit Member Links</li>
+</ul>
+
+<p><strong>Standalone URLs</strong></p>
+<ul>
+<li>Edit Cube Links: <code>/pybirdai/edit-cube-links/</code></li>
+<li>Edit Cube Structure Item Links: <code>/pybirdai/edit-cube-structure-item-links/</code></li>
+<li>Edit Member Links: <code>/pybirdai/edit-member-links/</code></li>
+</ul>
+
+<p><img src="../images/screenshots/task2_review_edit_links.png" alt="Task 2 Review Page with Edit Links Tabs" class="img-responsive guide-image"></p>
+<p>The screenshot shows the Task 2 Review page with Filter Review, Join Metadata Review, and Edit Joins Metadata sections.</p>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="understanding-the-three-link-types">Understanding the Three Link Types</h3>
+<p>The Edit Links system uses a hierarchical structure with three distinct types of links that build upon each other. Cube Links operate at the table level and establish relationships between data cubes, such as linking the INSTRMNT cube to the CNTRPRTY cube. Cube Structure Item Links work at the variable level to specify which columns should be joined between linked cubes, for example linking INSTRMNT<em>ID to INSTRMNT</em>ID, and these require an existing Cube Link to function. Member Links operate at the value level to map individual dimension values, such as mapping &quot;US&quot; to &quot;USA&quot;, and these require an existing Cube Structure Item Link.</p>
+<p>It&#39;s important to note that you must create links in the proper order: Cube Links first, then Structure Item Links, then Member Links, as each level depends on the existence of the previous level.</p>
+<hr>
+<h3 id="working-with-cube-links">Working with Cube Links</h3>
+<h4 id="creating-a-cube-link">Creating a Cube Link</h4>
+<ol>
+<li>Scroll to <strong>&quot;Add New Cube Link&quot;</strong> section</li>
+<li><strong>Select Primary Cube</strong> (source cube)</li>
+<li><strong>Select Foreign Cube</strong> (target cube)</li>
+<li><strong>Enter Join Identifier</strong>: Use descriptive names like <code>INSTRMNT_CNTRPRTY_JOIN</code></li>
+<li><strong>Add Description</strong> (optional but recommended)</li>
+<li><strong>Click &quot;Add&quot;</strong> - Link appears immediately</li>
+</ol>
+
+<p><strong>Example</strong>:</p>
+<ul>
+<li>Primary Cube: <code>INSTRMNT</code></li>
+<li>Foreign Cube: <code>CNTRPRTY</code></li>
+<li>Join Identifier: <code>INSTRMNT_CNTRPRTY_JOIN</code></li>
+<li>Description: &quot;Links instruments to counterparty information&quot;</li>
+</ul>
+
+<h4 id="filtering-and-managing-links">Filtering and Managing Links</h4>
+<p><strong>Filters</strong>: Use Foreign Cube and Join Identifier dropdowns to narrow your view. Filters cascade intelligently.</p>
+<p><strong>Deleting</strong>: Click Delete button. <strong>Warning</strong>: Also removes all associated structure item and member links.</p>
+<hr>
+<h3 id="visualizing-cube-relationships">Visualizing Cube Relationships</h3>
+<h4 id="network-graph">Network Graph</h4>
+<p>Generate interactive diagrams showing how cubes connect:</p>
+<ol>
+<li>Navigate to <strong>Cube Links Visualization</strong> section</li>
+<li><strong>Select Foreign Cube</strong> and <strong>Join Identifier</strong> from dropdowns</li>
+<li><strong>Click &quot;View Network Graph&quot;</strong></li>
+</ol>
+
+<p><img src="../images/screenshots/cube_links_view/CubeLinksView_Screenshot__4.38.39PM.png" alt="Network Graph Visualization" class="img-responsive guide-image"></p>
+<p><strong>Understanding the Graph</strong>:</p>
+<ul>
+<li><strong>Legend</strong>: Source Cube → Source Item → Target Item → Target Cube</li>
+<li>Each relationship grouped in its own panel</li>
+<li>Arrows show data flow direction</li>
+<li><strong>Controls</strong>: Zoom with mouse wheel, pan by dragging, export to save</li>
+</ul>
+
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Verify all required relationships exist</li>
+<li>Identify missing connections</li>
+<li>Understand data flow at a glance</li>
+<li>Document metadata architecture</li>
+</ul>
+
+<hr>
+<h3 id="working-with-cube-structure-item-links">Working with Cube Structure Item Links</h3>
+<p>Define which variables should be joined between linked cubes.</p>
+<h4 id="creating-a-structure-item-link">Creating a Structure Item Link</h4>
+<ol>
+<li><strong>Select Cube Link</strong> (parent relationship)</li>
+<li><strong>Select Primary Variable</strong> from source cube</li>
+<li><strong>Select Foreign Variable</strong> from target cube</li>
+<li><strong>Review compatibility warnings</strong> if any</li>
+<li><strong>Click &quot;Add&quot;</strong></li>
+</ol>
+
+<p><strong>Example</strong>:</p>
+<ul>
+<li>Cube Link: <code>INSTRMNT_CNTRPRTY_JOIN</code></li>
+<li>Primary Variable: <code>CNTRPRTY_ID</code> (from INSTRMNT)</li>
+<li>Foreign Variable: <code>CNTRPRTY_ID</code> (from CNTRPRTY)</li>
+</ul>
+
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Filters cascade - selecting a cube link updates variable dropdowns</li>
+<li>System warns about incompatible data types</li>
+<li>Deleting removes associated member links</li>
+</ul>
+
+<hr>
+<h3 id="working-with-member-links">Working with Member Links</h3>
+<p>Map individual dimension values for code list conversions.</p>
+<h4 id="creating-a-member-link">Creating a Member Link</h4>
+<ol>
+<li><strong>Select Cube Structure Item Link</strong></li>
+<li><strong>Search and select Primary Member</strong> (source value) - Type to search</li>
+<li><strong>Search and select Foreign Member</strong> (target value)</li>
+<li><strong>Click &quot;Add&quot;</strong></li>
+</ol>
+
+<p><strong>Example Mappings</strong>:</p>
+<p><strong>One-to-One</strong>: <code>US</code> → <code>USA</code> (format standardization)</p>
+<p><strong>Many-to-One</strong>:</p>
+<ul>
+<li><code>PROD_001</code> (Savings A) → <code>SAVINGS</code></li>
+<li><code>PROD_002</code> (Savings B) → <code>SAVINGS</code></li>
+</ul>
+
+<h4 id="handling-unmapped-values">Handling Unmapped Values</h4>
+<p><strong>Option 1</strong>: Create &quot;OTHER&quot; category and map exceptions</p>
+<p><strong>Option 2</strong>: Handle in transformation code with conditionals</p>
+<p><strong>Option 3</strong>: Reject records with unmapped values</p>
+<p>Choose based on your regulatory requirements and data quality standards.</p>
+<hr>
+<h2 id="integration-with-workflows">Integration with Workflows</h2>
+<h3 id="step-2-review-page-structure">Step 2 Review Page Structure</h3>
+<p><strong>Tab 1</strong>: Statistics Dashboard - Overview of auto-generated metadata</p>
+<p><strong>Tab 2</strong>: Edit Cube Links - Cube-level relationships</p>
+<p><strong>Tab 3</strong>: Edit Cube Structure Item Links - Variable-level mappings</p>
+<p><strong>Tab 4</strong>: Edit Member Links - Value-level mappings</p>
+<p><strong>Tab 5</strong>: Cube Link Diagram - Visual network graph</p>
+<h3 id="workflow-benefits">Workflow Benefits</h3>
+<ul>
+<li><strong>Auto-save</strong>: Changes persist immediately via AJAX</li>
+<li><strong>No reloads</strong>: Instant updates without page refreshes</li>
+<li><strong>Context maintained</strong>: Stay within workflow, no page jumping</li>
+</ul>
+
+<h3 id="refinement-process">Refinement Process</h3>
+<ol>
+<li>Review auto-generated results (Tab 1)</li>
+<li>Add/modify cube links (Tab 2)</li>
+<li>Refine structure item links (Tab 3)</li>
+<li>Complete member link mappings (Tab 4)</li>
+<li>Verify with visual diagram (Tab 5)</li>
+<li>Proceed to Step 3</li>
+</ol>
+
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<ul>
+<li>Use descriptive join identifiers: <code>SOURCE_TARGET_JOIN</code></li>
+<li>Uppercase with underscores convention</li>
+<li>Document purpose in description field</li>
+</ul>
+
+<h3 id="creation-order">Creation Order</h3>
+<ol>
+<li>Create Cube Links first</li>
+<li>Add Cube Structure Item Links</li>
+<li>Define Member Links last</li>
+<li>Verify prerequisites exist before creating</li>
+</ol>
+
+<h3 id="variable-selection">Variable Selection</h3>
+<ul>
+<li>Link variables representing the same concept</li>
+<li>Match data types (string-to-string, integer-to-integer)</li>
+<li>Test with representative data before production</li>
+</ul>
+
+<h3 id="member-link-strategy">Member Link Strategy</h3>
+<ul>
+<li>Map all values in actual data, not just samples</li>
+<li>Document complex conversion rationale</li>
+<li>Monitor unmapped values in production</li>
+</ul>
+
+<h3 id="performance">Performance</h3>
+<ul>
+<li>Use filters aggressively for large datasets</li>
+<li>Ensure database indexes on foreign key columns</li>
+</ul>
+
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Variables Not Appearing</strong>: Verify parent relationship selected first, refresh page, clear browser cache</p>
+<p><strong>Incompatible Domain Warnings</strong>: Review data types carefully - warnings are advisory but genuine incompatibilities cause runtime errors</p>
+<p><strong>Duplicate Warnings</strong>: Use filters to locate existing link, delete old link before creating new one</p>
+<p><strong>Deletion Failures</strong>: Cascade delete should handle dependencies automatically. If it fails, manually delete child records first (member links → structure item links → cube link)</p>
+<p><strong>Performance Issues</strong>: Use aggressive filtering, ensure database indexes exist on CUBE<em>LINK, CUBE</em>STRUCTURE<em>ITEM</em>LINK, and MEMBER_LINK tables</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Edit Links Features provide comprehensive metadata relationship management for regulatory data processing. The hierarchical structure ensures referential integrity, while embedded workflow integration allows seamless metadata refinement. Combined with filtering, search capabilities, and visual diagrams, these features give you complete control over your metadata architecture.</p>
+<h3 id="next-steps">Next Steps</h3>
+<p>After refining your metadata links, continue with related workflow processes. Return to the <a href="user-guide/main-workflow-guide.html">Main Workflow Guide</a> to see how your cube and member links integrate into the FINREP reporting workflow. Review the <a href="user-guide/dataset-transformation-guide.html">Dataset Transformation Guide</a> to understand how these link editing features fit into the AnaCredit workflow Steps 0-3.</p>
+<h3 id="support-resources">Support Resources</h3>
+<ul>
+<li>Eclipse EFBT Wiki: https://github.com/eclipse/efbt/wiki</li>
+<li>Getting Started: https://github.com/eclipse-efbt/efbt/wiki/Getting-Started-with-PyBIRD-AI</li>
+<li>Technical Support: https://github.com/eclipse/efbt/issues</li>
+<li>Community Chat: <a href="https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org">Eclipse Chat</a></li>
+<li>Email: <a href="mailto:efbt-dev@eclipse.org">efbt-dev@eclipse.org</a></li>
+</ul>
+
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Execute Dataset Guide - Eclipse Free BIRD Tools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Execute Dataset Guide - Eclipse Free BIRD Tools Documentation" />
+	<meta name="keywords" content="Eclipse Free BIRD Tools, Documentation, Execute Dataset Guide" />
+	<meta name="author" content="Eclipse Free BIRD Tools" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Execute Dataset Guide - Eclipse Free BIRD Tools"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Eclipse Free BIRD Tools"/>
+	<meta property="og:description" content="Execute Dataset Guide documentation for Eclipse Free BIRD Tools"/>
+	<meta name="twitter:title" content="Execute Dataset Guide - Eclipse Free BIRD Tools" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- Page Allowlist Check -->
+	<script src="../js/allowlist.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		/* Clean, modern documentation styles */
+		.doc-content {
+			padding: 60px 0;
+			min-height: 600px;
+			background: white;
+		}
+
+		.content-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* Typography */
+		.doc-content h1 {
+			color: #192a45;
+			font-size: 2.5rem;
+			font-weight: 700;
+			border-bottom: 3px solid #17B794;
+			padding-bottom: 15px;
+			margin-bottom: 35px;
+		}
+
+		.doc-content h2 {
+			color: #2c3e50;
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-top: 45px;
+			margin-bottom: 25px;
+			padding-top: 20px;
+		}
+
+		.doc-content h3 {
+			color: #34495e;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 35px;
+			margin-bottom: 20px;
+		}
+
+		.doc-content p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin: 20px 0;
+		}
+
+		/* Code blocks */
+		.doc-content pre {
+			background: #f7fafc;
+			border: 1px solid #e2e8f0;
+			border-left: 4px solid #17B794;
+			padding: 20px;
+			border-radius: 8px;
+			overflow-x: auto;
+			margin: 25px 0;
+			font-size: 14px;
+		}
+
+		.doc-content code {
+			background: #f7fafc;
+			padding: 3px 6px;
+			border-radius: 4px;
+			font-family: 'Monaco', 'Courier New', monospace;
+			font-size: 0.9em;
+			color: #e53e3e;
+		}
+
+		.doc-content pre code {
+			background: transparent;
+			padding: 0;
+			color: #2d3748;
+		}
+
+		/* Blockquotes */
+		.doc-content blockquote {
+			background: #f0fdf4;
+			border-left: 4px solid #17B794;
+			margin: 25px 0;
+			padding: 20px 25px;
+			color: #2d3748;
+			font-style: italic;
+			border-radius: 0 8px 8px 0;
+		}
+
+		/* Lists */
+		.doc-content ul, .doc-content ol {
+			margin: 20px 0;
+			padding-left: 35px;
+			color: #4a5568;
+		}
+
+		.doc-content li {
+			margin: 10px 0;
+			line-height: 1.7;
+		}
+
+		/* Images */
+		.doc-content img {
+			margin: 30px auto;
+			display: block;
+		}
+
+		.doc-content .guide-image {
+			max-width: 100%;
+			height: auto;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			margin: 35px auto;
+			display: block;
+			transition: all 0.3s ease;
+		}
+
+		.doc-content .guide-image:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+			border-color: #008793;
+		}
+
+		/* Links */
+		.doc-content a {
+			color: #17B794;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			border-bottom: 1px solid transparent;
+		}
+
+		.doc-content a:hover {
+			color: #0e7c61;
+			border-bottom-color: #17B794;
+		}
+
+		/* Tables */
+		.doc-content table {
+			width: 100%;
+			margin: 30px 0;
+			border-collapse: collapse;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.doc-content table th {
+			background: #f7fafc;
+			padding: 12px 15px;
+			text-align: left;
+			font-weight: 600;
+			color: #2d3748;
+			border-bottom: 2px solid #e2e8f0;
+		}
+
+		.doc-content table td {
+			padding: 12px 15px;
+			border-bottom: 1px solid #e2e8f0;
+		}
+
+		.doc-content table tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* Horizontal rule */
+		.doc-content hr {
+			border: none;
+			height: 2px;
+			background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+			margin: 50px 0;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.content-wrapper {
+				padding: 0 20px;
+			}
+
+			.doc-content h1 {
+				font-size: 2rem;
+			}
+
+			.doc-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.doc-content h3 {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+	<!-- Navigation Include -->
+	<div w3-include-html="../navbar.html"></div>
+
+	<header class="hero-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Execute Dataset Guide</h1>
+					<h2>Eclipse Free BIRD Tools Documentation</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Dynamic Sidebar will be inserted here by JavaScript -->
+
+	<!-- Main Content -->
+	<section class="main doc-content ">
+  		<div class="content-wrapper">
+ 			<h1 id="execute-dataset-tables-user-guide">Execute Dataset Tables - User Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>The Execute Dataset Tables feature allows you to run Dataset table transformations and view results. This is Step 4 in the Dataset Transformation Workflow, representing the final operational step where you execute the code generated in previous steps to process your regulatory data.</p>
+<p>To access this feature, navigate to <strong>Workflows</strong> &gt; <strong>Dataset Workflow</strong> &gt; <strong>Step 4: Execute Tables</strong> in your FreeBIRD Application.</p>
+<p><img src="../images/screenshots/execute_dataset/execute_dataset.png" alt="Execute Dataset Tables" class="img-responsive guide-image"></p>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you can execute Dataset tables, you must complete the first three steps of the workflow in sequence. Step 0 fetches the metadata from ECB, providing the regulatory specifications your transformations will use. Step 1 imports this metadata into your database, creating the necessary data structures. Step 2 generates the joins metadata that defines how your tables relate to each other. Finally, Step 3 generates the Python execution code and deploys it to the production environment. Each of these steps builds upon the previous one, and all must be completed successfully for the execution functionality to work properly.</p>
+<hr>
+<h2 id="how-to-execute-dataset-tables">How to Execute Dataset Tables</h2>
+<h3 id="step-1-load-fixtures-into-the-database">Step 1: Load Fixtures into the Database</h3>
+<p>Before executing tables, you need to load test data (fixtures) into your database. Fixtures are sample data files that provide test data for your Dataset tables, allowing you to verify that your transformations work correctly before processing production data.</p>
+<p>To load fixtures, first ensure your fixture files are prepared in the correct format according to your Dataset specifications. Then use the database loading tool or command provided by your system to import these fixtures into the database. After the import completes, verify that the data has been loaded successfully by checking that all required source tables contain data. This step is typically done once at the beginning of your testing cycle, unless you need to refresh or update your test data with new scenarios or corrected values.</p>
+<hr>
+<h3 id="step-2-choose-your-filters">Step 2: Choose Your Filters</h3>
+<p>Once your fixtures are loaded, you can select your table and optionally apply dimension filters to process specific data subsets rather than the entire dataset.</p>
+<h4 id="heading-21-select-dataset-table">2.1 Select Dataset Table</h4>
+<p>To begin, click the &quot;Select ANCRDT Table&quot; dropdown selector at the top of the page. This dropdown displays all Dataset tables that have been implemented and have deployed code available. Select the Dataset table you want to execute from this list. After making your selection, the page will display important implementation details about the table.</p>
+<p>The Table Implementation Details section shows several key pieces of information. The join identifier is the unique identifier for this table&#39;s join logic. The calc function is the specific Python function that will be executed when you run this table. The return type indicates what kind of data structure the function will produce, and the source tables field describes which source data tables will be used in the transformation. This information helps you understand exactly what will be executed and which data sources are involved in the process.</p>
+<h4 id="heading-22-apply-dimension-filters-optional">2.2 Apply Dimension Filters (Optional)</h4>
+<p>Below the table selection, you&#39;ll find the Filter Parameters section, which displays multiple filter fields arranged in a grid layout. These filters allow you to narrow down the data that will be processed, which is particularly useful for testing, improving performance, or generating targeted reports.</p>
+<p>The available dimensions vary depending on which table you&#39;ve selected. Common dimensions include RPYMNT RGHTS (Repayment Rights), TYP INSTRMNT (Type of Instrument), RCRS (Recourse), PRPS (Purpose), RFRNC RT (Reference Rate), TYP AMRTSTN (Type of Amortization), SBRDNTD DBT (Subordinated Debt), PRJCT FNNC LN (Project Finance Loan), TYP INTRST RT (Type of Interest Rate), and CRRNCY DNMNTN (Currency Denomination).</p>
+<p>To add filters, click on the dropdown field for your desired dimension. You can type to search for specific values by name or code, making it easy to find the exact values you need. Select one or multiple values from the list that appears, and repeat this process for as many dimensions as needed to define your data subset. If you prefer to process all available data, simply leave all filter dropdowns empty.</p>
+<p>Understanding filter logic is important for getting the results you expect. When you select multiple values for the same dimension, they create an OR condition, meaning the system will include records matching any of the selected values. When you set filters on multiple different dimensions, these create an AND condition, meaning records must match all the criteria you&#39;ve specified. If you leave all filters empty, the system will process all data in the table.</p>
+<p>Filters serve several important purposes in your workflow. They allow you to test transformations on small data subsets first, which helps you identify any issues before processing large volumes of data. They reduce processing time significantly by limiting the amount of data the system needs to handle. They enable you to generate targeted reports for specific data segments, and they help you isolate issues for debugging by allowing you to focus on specific data patterns that may be causing problems.</p>
+<hr>
+<h3 id="step-3-click-execute-table">Step 3: Click Execute Table</h3>
+<p>Once you&#39;ve configured your table selection and any desired filters, you&#39;re ready to run the execution.</p>
+<h4 id="heading-31-review-your-selections">3.1 Review Your Selections</h4>
+<p>Before clicking the execute button, take a moment to verify your configuration. Check that the correct table is selected in the dropdown and that the table implementation details are displayed as expected. Confirm that your filters are set as desired, or that they&#39;re empty if you intend to process all data. Finally, make sure that fixtures have been loaded into the database, as the execution will fail without source data.</p>
+<h4 id="heading-32-execute">3.2 Execute</h4>
+<p>To start the execution, click the &quot;Execute Table&quot; button (the blue button on the page). The system will begin processing immediately, and you&#39;ll see a progress indicator showing that execution is underway. The time required for execution varies based on your data volume and complexity, typically ranging from 10 seconds for small filtered datasets to several minutes for larger or complete table executions.</p>
+<h4 id="heading-33-view-results">3.3 View Results</h4>
+<p>After execution completes successfully, the results page displays comprehensive information about the processing that occurred.</p>
+<p>The Execution Statistics section shows the total execution time, giving you insight into performance. It displays the number of rows that were processed and generated, allowing you to verify that the expected amount of data was handled. The page also shows which filters were applied during execution and provides the name of the output table where results were stored.</p>
+<p>The Data Preview section shows the first 100 rows of your results, displaying all columns from the output table in a scrollable and sortable format. This preview lets you quickly verify that the transformation produced the expected output structure and values.</p>
+<p>Several actions are available for working with your results. You can download the data as CSV format, which exports the results as comma-separated values suitable for use in spreadsheet applications or data analysis tools. Alternatively, you can download as an Excel workbook in .xlsx format that opens directly in Microsoft Excel. The View Full Data option lets you see all results with pagination if you need to examine more than the preview rows. For advanced users, the View SQL option shows the actual SQL query that was used to generate the results.</p>
+<hr>
+<h2 id="navigation">Navigation</h2>
+<p>At the bottom of the execution page, you&#39;ll find two navigation buttons that help you move through the workflow. The Previous Step button, marked with a left arrow, returns you to Step 3 where you can review or modify the generated execution code. The Main Dashboard button, marked with a home icon, takes you back to the workflow dashboard home page where you can see an overview of all workflow steps and their status.</p>
+<hr>
+<h2 id="tips-for-success">Tips for Success</h2>
+<p>When working with Dataset table execution, following certain practices will help ensure successful results. Start with filters to test your transformations on small data subsets before processing the full dataset. This approach lets you identify and fix any issues quickly without waiting for long execution times. Always verify that fixtures are loaded before executing, as attempting to run transformations without source data will result in errors. Review the data preview carefully before downloading the full results to ensure the transformation produced the expected output. Use filters for initial testing and validation, then remove them for full execution once you&#39;re confident the transformation works correctly. Finally, download important results for record-keeping and audit purposes, as these files provide documentation of your regulatory reporting process.</p>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you find that you cannot select a table from the dropdown, verify that Step 3 code generation and deployment completed successfully for that table.</p>
+<p>When execution fails with an error message, ensure that fixtures are loaded and that code is deployed properly. Check that your database connection is active and that you have the necessary permissions.</p>
+<p>If execution completes but returns no results, check that fixture data exists in the source tables and verify that your filters aren&#39;t too restrictive. Review the join logic in your Step 3 code to ensure it&#39;s producing the expected output.</p>
+<p>When execution takes too long, apply more restrictive filters to reduce the data volume being processed. This will help you identify whether the issue is related to data volume or transformation logic.</p>
+<p>If downloads fail, check your browser permissions and verify that execution completed successfully before attempting to download results.</p>
+<hr>
+<h2 id="next-steps">Next Steps</h2>
+<p>After executing Dataset tables, explore these related guides for additional context. Return to the <a href="user-guide/workflow-dashboard-guide.html">Workflow Dashboard Guide</a> to understand the complete workflow context and explore other available regulatory reporting workflows. Review the <a href="user-guide/dataset-transformation-guide.html">Dataset Transformation Guide</a> for comprehensive details about Steps 0-3 that prepare the code and metadata used in table execution.</p>
+<hr>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>To execute Dataset tables, follow these three essential steps. First, load fixtures by importing test data into your database. Second, choose your filters by selecting the desired table and optionally setting dimension filters to narrow your data subset. Third, execute the table by clicking the execute button and viewing the results that are generated.</p>
+<p>Successfully executing Dataset tables completes the entire Dataset Transformation Workflow, providing you with the transformed regulatory data you need for ECB submissions.</p>
+  		</div>
+	</section>
+
+	<!-- Footer Include -->
+	<div w3-include-html="../footer.html"></div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="../js/main.js"></script>
+<!-- W3 Include -->
+<script src="../js/w3-include.js"></script>
+<!-- Dynamic Sidebar -->
+<script src="../js/dynamic-sidebar.js"></script>
+
+</body>
+</html>
