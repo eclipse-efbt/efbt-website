@@ -1,11 +1,44 @@
 <!doctype html>
-<html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<html>
+<head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>Workflow Task</title>
-<style>body{font-family:system-ui;margin:0;background:#0b1020;color:#e5e7eb}.wrap{max-width:1000px;margin:24px auto;padding:0 16px}.card{background:#121a33;border:1px solid #263257;border-radius:12px;padding:14px;margin:10px 0}a{color:#93c5fd}</style>
-</head><body><div class='wrap'>
-<a href='../nextgen.html'>← Back to subprocess map</a>
-<h1 id='title'>Task</h1><p id='summary'></p>
+<link href='https://fonts.googleapis.com/css?family=Raleway:100,300,400,700' rel='stylesheet'>
+<link rel='stylesheet' href='../css/animate.css'>
+<link rel='stylesheet' href='../css/icomoon.css'>
+<link rel='stylesheet' href='../css/themify-icons.css'>
+<link rel='stylesheet' href='../css/bootstrap.css'>
+<link rel='stylesheet' href='../css/magnific-popup.css'>
+<link rel='stylesheet' href='../css/owl.carousel.min.css'>
+<link rel='stylesheet' href='../css/owl.theme.default.min.css'>
+<link rel='stylesheet' href='../css/style.css'>
+<script src='../js/modernizr-2.6.2.min.js'></script>
+<script src='../js/allowlist.js'></script>
+<style>
+body{font-family:'Raleway',Arial,sans-serif;margin:0;background:#f7f9fc;color:#333}
+.wrap{max-width:1000px;margin:32px auto;padding:0 16px}
+.back-link{display:inline-block;margin-bottom:18px;color:#0077be;font-weight:600}
+.page-title{margin:0 0 10px}
+#summary{font-size:18px;color:#666;margin-bottom:22px}
+.card{background:#fff;border:1px solid #e0e6ed;border-radius:12px;padding:20px;margin:16px 0;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.card h3{margin-top:0;color:#333}
+.card p{color:#555}
+a{color:#0077be}
+a:hover{color:#008793}
+</style>
+</head><body>
+<div class='gtco-loader'></div>
+<div id='page'>
+<div w3-include-html='../navbar.html'></div>
+<main class='wrap'>
+<a class='back-link' href='../nextgen.html'>← Back to subprocess map</a>
+<h1 class='page-title' id='title'>Task</h1><p id='summary'></p>
 <div id='steps'></div>
+</main>
+<div w3-include-html='../footer.html'></div>
+</div>
+<div class='gototop js-top'>
+  <a href='#' class='js-gotop'><i class='icon-arrow-up'></i></a>
 </div>
 <script>
 const id=new URLSearchParams(location.search).get('id');
@@ -28,7 +61,7 @@ fetch('../data/workflow.json')
       overview.className='card';
       overview.innerHTML = `
         <h3>Workflow Setup Visual Overview</h3>
-        <img src='../assets/workflow-setup-overview.jpg' alt='Workflow setup overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+        <img src='../assets/workflow-setup-overview.jpg' alt='Workflow setup overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #e0e6ed'>
       `;
       root.appendChild(overview);
     }
@@ -38,7 +71,7 @@ fetch('../data/workflow.json')
       overview.className='card';
       overview.innerHTML = `
         <h3>SMCubes Metadata Core Creation Visual Overview</h3>
-        <img src='../assets/smcubes-core-creation-overview.jpg' alt='SMCubes Metadata Core Creation overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+        <img src='../assets/smcubes-core-creation-overview.jpg' alt='SMCubes Metadata Core Creation overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #e0e6ed'>
       `;
       root.appendChild(overview);
     }
@@ -48,7 +81,7 @@ fetch('../data/workflow.json')
       overview.className='card';
       overview.innerHTML = `
         <h3>SMCubes Transformation Rules Creation Visual Overview</h3>
-        <img src='../assets/smcubes-transformation-rules-overview.jpg' alt='SMCubes Transformation Rules Creation overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+        <img src='../assets/smcubes-transformation-rules-overview.jpg' alt='SMCubes Transformation Rules Creation overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #e0e6ed'>
       `;
       root.appendChild(overview);
     }
@@ -58,7 +91,7 @@ fetch('../data/workflow.json')
       overview.className='card';
       overview.innerHTML = `
         <h3>Task 3: Generate Executable Transformation Code — Visual Overview</h3>
-        <img src='../assets/task3-executable-transformation-overview.jpg' alt='Task 3 Generate Executable Transformation Code overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+        <img src='../assets/task3-executable-transformation-overview.jpg' alt='Task 3 Generate Executable Transformation Code overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #e0e6ed'>
       `;
       root.appendChild(overview);
     }
@@ -68,7 +101,7 @@ fetch('../data/workflow.json')
       overview.className='card';
       overview.innerHTML = `
         <h3>Task 4: Full Execution with Test Suite — Visual Overview</h3>
-        <img src='../assets/task4-full-execution-test-suite-overview.jpg' alt='Task 4 Full Execution with Test Suite overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+        <img src='../assets/task4-full-execution-test-suite-overview.jpg' alt='Task 4 Full Execution with Test Suite overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #e0e6ed'>
       `;
       root.appendChild(overview);
     }
@@ -78,7 +111,7 @@ fetch('../data/workflow.json')
       overview.className='card';
       overview.innerHTML = `
         <h3>Task 5: Review, Approve, Merge — Visual Overview</h3>
-        <img src='../assets/task5-review-approve-merge-overview.jpg' alt='Task 5 Review Approve Merge overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+        <img src='../assets/task5-review-approve-merge-overview.jpg' alt='Task 5 Review Approve Merge overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #e0e6ed'>
       `;
       root.appendChild(overview);
     }
@@ -98,4 +131,13 @@ fetch('../data/workflow.json')
     document.getElementById('summary').textContent=String(err);
   });
 </script>
+<script src='../js/jquery.min.js'></script>
+<script src='../js/jquery.easing.1.3.js'></script>
+<script src='../js/bootstrap.min.js'></script>
+<script src='../js/jquery.waypoints.min.js'></script>
+<script src='../js/owl.carousel.min.js'></script>
+<script src='../js/jquery.magnific-popup.min.js'></script>
+<script src='../js/magnific-popup-options.js'></script>
+<script src='../js/main.js'></script>
+<script src='../js/w3-include.js'></script>
 </body></html>
