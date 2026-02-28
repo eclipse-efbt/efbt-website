@@ -413,6 +413,14 @@
 									<p>Browse our comprehensive guides and tutorials to get started</p>
 								</a>
 
+								<a href="nextgen.html" class="nav-card">
+									<div class="icon">
+										<i class="ti-rocket"></i>
+									</div>
+									<h4>NEXTgEN Process</h4>
+									<p>Learn about NEXTGen</p>
+								</a>
+
 								<a href="freebirdapplication.html" class="nav-card">
 									<div class="icon">
 										<i class="ti-rocket"></i>
@@ -497,6 +505,8 @@ document.getElementById('search-input').addEventListener('keypress', function(e)
 				window.location.href = 'documentation.html';
 			} else if (searchTerm.toLowerCase().includes('freebird') || searchTerm.toLowerCase().includes('application')) {
 				window.location.href = 'freebirdapplication.html';
+			} else if (searchTerm.toLowerCase().includes('nextgen') || searchTerm.toLowerCase().includes('application')) {
+				window.location.href = 'nextgen.html';
 			} else if (searchTerm.toLowerCase().includes('home') || searchTerm.toLowerCase().includes('main')) {
 				window.location.href = 'index.html';
 			} else {

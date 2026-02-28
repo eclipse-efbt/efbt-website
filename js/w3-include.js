@@ -18,6 +18,7 @@ function includeHTML() {
               /* We're in user-guide directory, adjust navbar paths to go up one level */
               content = content.replace(/href="index\.html"/g, 'href="../index.html"');
               content = content.replace(/href="freebirdapplication\.html"/g, 'href="../freebirdapplication.html"');
+              content = content.replace(/href="nextgen\.html"/g, 'href="../nextgen.html"');
               content = content.replace(/href="documentation\.html"/g, 'href="../documentation.html"');
             }
             elmnt.innerHTML = content;
