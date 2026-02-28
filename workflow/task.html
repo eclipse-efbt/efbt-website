@@ -1,0 +1,101 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Workflow Task</title>
+<style>body{font-family:system-ui;margin:0;background:#0b1020;color:#e5e7eb}.wrap{max-width:1000px;margin:24px auto;padding:0 16px}.card{background:#121a33;border:1px solid #263257;border-radius:12px;padding:14px;margin:10px 0}a{color:#93c5fd}</style>
+</head><body><div class='wrap'>
+<a href='../nextgen.html'>← Back to subprocess map</a>
+<h1 id='title'>Task</h1><p id='summary'></p>
+<div id='steps'></div>
+</div>
+<script>
+const id=new URLSearchParams(location.search).get('id');
+fetch('../data/workflow.json')
+  .then(r=>r.json())
+  .then(d=>{
+    const workflows = (d.workflows && d.workflows.length)
+      ? d.workflows
+      : [{ id:'default', subprocesses: d.subprocesses || [] }];
+    const all = workflows.reduce((acc,w)=>acc.concat(w.subprocesses||[]),[]);
+    const sp = all.find(x=>x.id===id);
+    if(!sp){document.getElementById('title').textContent='Subprocess not found';return;}
+    document.getElementById('title').textContent=sp.title;
+    document.getElementById('summary').textContent=sp.summary || '';
+    const root=document.getElementById('steps');
+    root.innerHTML='';
+
+    if (sp.id === 'setup-database-derivation') {
+      const overview=document.createElement('div');
+      overview.className='card';
+      overview.innerHTML = `
+        <h3>Workflow Setup Visual Overview</h3>
+        <img src='../assets/workflow-setup-overview.jpg' alt='Workflow setup overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+      `;
+      root.appendChild(overview);
+    }
+
+    if (sp.id === 'smcubes-core-creation') {
+      const overview=document.createElement('div');
+      overview.className='card';
+      overview.innerHTML = `
+        <h3>SMCubes Metadata Core Creation Visual Overview</h3>
+        <img src='../assets/smcubes-core-creation-overview.jpg' alt='SMCubes Metadata Core Creation overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+      `;
+      root.appendChild(overview);
+    }
+
+    if (sp.id === 'transformation-metadata') {
+      const overview=document.createElement('div');
+      overview.className='card';
+      overview.innerHTML = `
+        <h3>SMCubes Transformation Rules Creation Visual Overview</h3>
+        <img src='../assets/smcubes-transformation-rules-overview.jpg' alt='SMCubes Transformation Rules Creation overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+      `;
+      root.appendChild(overview);
+    }
+
+    if (sp.id === 'python-rule-generation') {
+      const overview=document.createElement('div');
+      overview.className='card';
+      overview.innerHTML = `
+        <h3>Task 3: Generate Executable Transformation Code — Visual Overview</h3>
+        <img src='../assets/task3-executable-transformation-overview.jpg' alt='Task 3 Generate Executable Transformation Code overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+      `;
+      root.appendChild(overview);
+    }
+
+    if (sp.id === 'full-execution-test-suite') {
+      const overview=document.createElement('div');
+      overview.className='card';
+      overview.innerHTML = `
+        <h3>Task 4: Full Execution with Test Suite — Visual Overview</h3>
+        <img src='../assets/task4-full-execution-test-suite-overview.jpg' alt='Task 4 Full Execution with Test Suite overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+      `;
+      root.appendChild(overview);
+    }
+
+    if (sp.id === 'review-merge-governance') {
+      const overview=document.createElement('div');
+      overview.className='card';
+      overview.innerHTML = `
+        <h3>Task 5: Review, Approve, Merge — Visual Overview</h3>
+        <img src='../assets/task5-review-approve-merge-overview.jpg' alt='Task 5 Review Approve Merge overview' style='max-width:100%;height:auto;border-radius:8px;border:1px solid #263257'>
+      `;
+      root.appendChild(overview);
+    }
+    (sp.steps||[]).forEach(st=>{
+      const div=document.createElement('div');div.className='card';div.id='step-'+st.id;
+      div.innerHTML=`<h3>${st.title}</h3>
+      <p><b>Purpose:</b> ${st.purpose || ''}</p>
+      <p><b>Inputs:</b> ${(st.inputs||[]).join(', ')}</p>
+      <p><b>Outputs:</b> ${(st.outputs||[]).join(', ')}</p>
+      <p><a href='${st.wikiUrl || '#'}'>Wiki detail</a> · <a href='${st.discussionUrl || '#'}'>Discussion</a> · <a href='https://github.com/eclipse-efbt/efbt/tree/master'>Reference implementation code</a> · <a href='https://eclipse.dev/efbt/documentation.html'>Reference implementation tools</a></p>
+      <p><small>Anchor: <code>#step-${st.id}</code></small></p>`;
+      root.appendChild(div);
+    })
+  })
+  .catch(err=>{
+    document.getElementById('title').textContent='Unable to load subprocess';
+    document.getElementById('summary').textContent=String(err);
+  });
+</script>
+</body></html>

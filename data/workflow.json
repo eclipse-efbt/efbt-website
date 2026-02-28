@@ -1,0 +1,131 @@
+{
+  "title": "NextGEN Workflow",
+  "subtitle": "From BIRD artefacts to executable confidence",
+  "workflows": [
+    {
+      "id": "main-workflow",
+      "title": "Main Workflow",
+      "summary": "From artefact setup through executable transformation generation.",
+      "subprocesses": [
+        {
+          "id": "setup-database-derivation",
+          "title": "Setup: Database + Derivation Rules",
+          "summary": "Retrieve artefacts, build model descriptions, create physical DB baseline.",
+          "status": "stable",
+          "steps": [
+            {
+              "id": "choose-artifact-location",
+              "title": "Choose/Edit artifact source locations",
+              "purpose": "Define source-controlled artefact inputs.",
+              "inputs": ["Repo URLs", "Branch"],
+              "outputs": ["Source configuration"],
+              "wikiUrl": "#",
+              "discussionUrl": "#"
+            },
+            {
+              "id": "retrieve-csv-artefacts",
+              "title": "Retrieve CSV artefacts",
+              "purpose": "Download LDM/EIL and config artefacts.",
+              "inputs": ["Source configuration"],
+              "outputs": ["Local artefact set"],
+              "wikiUrl": "#",
+              "discussionUrl": "#"
+            }
+          ]
+        },
+        {
+          "id": "smcubes-core-creation",
+          "title": "Task 1: SMCubes Metadata Core Creation",
+          "summary": "Create input-layer cubes, report templates, hierarchies, and semantic mappings.",
+          "status": "stable",
+          "steps": [
+            {
+              "id": "import-input-model",
+              "title": "Create input layer cube metadata",
+              "purpose": "Build cube structures from source artefacts.",
+              "inputs": ["LDM/EIL exports"],
+              "outputs": ["Cube metadata"],
+              "wikiUrl": "#",
+              "discussionUrl": "#"
+            }
+          ]
+        },
+        {
+          "id": "transformation-metadata",
+          "title": "Task 2: Transformation Metadata Creation",
+          "summary": "Generate joins, filters, and aggregation metadata.",
+          "status": "evolving",
+          "steps": [
+            {
+              "id": "create-joins-metadata",
+              "title": "Create joins metadata",
+              "purpose": "Define product-oriented join strategy.",
+              "inputs": ["Input layer metadata", "join configs"],
+              "outputs": ["Join metadata"],
+              "wikiUrl": "#",
+              "discussionUrl": "#"
+            }
+          ]
+        },
+        {
+          "id": "python-rule-generation",
+          "title": "Task 3: Generate Executable Transformation Code",
+          "summary": "Generate executable Python filter/join transformations.",
+          "status": "evolving",
+          "steps": [
+            {
+              "id": "generate-filter-code",
+              "title": "Generate filter code",
+              "purpose": "Compile filter metadata to executable code.",
+              "inputs": ["Filter metadata"],
+              "outputs": ["Python filter modules"],
+              "wikiUrl": "#",
+              "discussionUrl": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supplemental-workflow",
+      "title": "Supplemental Workflow",
+      "summary": "Testing and merge governance to ensure confidence and controlled release.",
+      "subprocesses": [
+        {
+          "id": "full-execution-test-suite",
+          "title": "Task 4: Full Execution with Test Suite",
+          "summary": "Run executable transformations against test suites and capture results.",
+          "status": "stable",
+          "steps": [
+            {
+              "id": "execute-test-suite",
+              "title": "Execute test suite",
+              "purpose": "Validate outputs against expected results.",
+              "inputs": ["Executable code", "test data"],
+              "outputs": ["Pass/fail evidence"],
+              "wikiUrl": "#",
+              "discussionUrl": "#"
+            }
+          ]
+        },
+        {
+          "id": "review-merge-governance",
+          "title": "Task 5: Review, Approve, Merge",
+          "summary": "Structured contribution governance and release confidence.",
+          "status": "stable",
+          "steps": [
+            {
+              "id": "review-contribution",
+              "title": "Review contribution",
+              "purpose": "Assess change quality, risk, and alignment.",
+              "inputs": ["PR/change request"],
+              "outputs": ["Decision"],
+              "wikiUrl": "#",
+              "discussionUrl": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
