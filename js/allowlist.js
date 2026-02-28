@@ -20,7 +20,8 @@
         '/user-guide/member-hierarchy-editor.html',
         '/user-guide/pull-request-creation-guide.html',
         '/user-guide/workflow-dashboard-guide.html',
-        '/user-guide/dpm-operations-guide.html'
+        '/user-guide/dpm-operations-guide.html',
+        '/workflow/task.html'
     ];
 
     // Get current page path
