@@ -11,6 +11,7 @@
         '/',
         '/index.html',
         '/documentation.html',
+        '/nextgen.html',
         '/freebirdapplication.html',
         '/page-not-available.html',
         '/user-guide/cube-links-view-and-edit.html',
