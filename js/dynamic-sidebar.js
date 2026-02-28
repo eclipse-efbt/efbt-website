@@ -247,6 +247,8 @@ class DynamicSidebar {
             return 'documentation';
         } else if (path.includes('/user-guide/')) {
             return 'userguide';
+        } else if (path.includes('nextgen.html')) {
+            return 'nextgen';
         }
 
         return 'default';
@@ -271,7 +273,6 @@ class DynamicSidebar {
                 title: 'Navigation',
                 items: [
                     { text: 'About', href: '#about', icon: 'ti-info' },
-                    { text: 'FreeBIRD', href: '#freebird', icon: 'ti-package' },
                     { text: 'What is BIRD', href: '#what-is-bird', icon: 'ti-help' }
                 ],
                 githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
@@ -300,6 +301,12 @@ class DynamicSidebar {
                 items: [
                     { text: 'All Guides', href: `${this.pathPrefix}documentation.html#user-guides`, icon: 'ti-list' },
                     ...this.getGuideSpecificItems()
+                ],
+                githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
+            },
+            nextgen: {
+                title: 'NEXTGEN',
+                items: [
                 ],
                 githubLink: { text: 'GitHub', href: 'https://github.com/eclipse/efbt', icon: 'ti-github', target: '_blank' }
             },
