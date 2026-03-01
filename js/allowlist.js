@@ -21,7 +21,7 @@
         '/user-guide/pull-request-creation-guide.html',
         '/user-guide/workflow-dashboard-guide.html',
         '/user-guide/dpm-operations-guide.html',
-        '/workflow/task.html'
+        '/task.html'
     ];
 
     // Get current page path
