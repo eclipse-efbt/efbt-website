@@ -134,7 +134,6 @@ The Member Hierarchy Editor streamlines the process of creating and maintaining 
 
 ### Next Steps
 - Explore the [Cube Links View and Edit](cube-links-view-and-edit.html) feature for related data relationship management
-- Review the [Mapping Editor](mapping-editor.html) for detailed transformation rules
 - Learn about [Workflow Dashboard](workflow-dashboard-guide.html) integration with hierarchy data
 
 For assistance with complex hierarchy design or advanced member relationship modeling, connect with our community via [Eclipse Chat](https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org) or email [efbt-dev@eclipse.org](mailto:efbt-dev@eclipse.org).

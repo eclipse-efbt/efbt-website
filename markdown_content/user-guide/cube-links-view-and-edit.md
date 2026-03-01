@@ -122,6 +122,5 @@ The Cube Links View and Edit feature provides essential capabilities for managin
 ### Next Steps
 - Explore the [Workflow Dashboard Guide](workflow-dashboard-guide.html) to understand how cube links integrate with workflows
 - Review the [Member Hierarchy Editor](member-hierarchy-editor.html) for related data structure management
-- Learn about [Mapping Editor](mapping-editor.html) for detailed transformation rules
 
 For assistance with cube link design or complex relationship modeling, connect with the community via [Eclipse Chat](https://chat.eclipse.org/#/room/%23technology.efbt:matrix.eclipse.org) or email [efbt-dev@eclipse.org](mailto:efbt-dev@eclipse.org).

@@ -355,7 +355,7 @@ fetch('./data/workflow.json')
         div.className = 'subprocess-card';
         div.innerHTML = '<div><b>' + sp.title + '</b></div>' +
           '<p>' + (sp.summary || '') + '</p>' +
-          '<a href="./workflow/task.html?id=' + encodeURIComponent(sp.id) + '">Drill down &rarr;</a>';
+          '<a href="./task.html?id=' + encodeURIComponent(sp.id) + '">Drill down &rarr;</a>';
         grid.appendChild(div);
       });
 
